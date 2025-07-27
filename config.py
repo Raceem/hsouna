@@ -16,6 +16,13 @@ PLATFORM_VERSION = "9"
 APP_PACKAGE = "com.moh.nusukapp"
 APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 
+# Additional configuration
+PAYS = "Iraq"
+PAYS_UPPER = "iraq"
+TARGET_DATE = "30/07"
+START_DATE = "26_07_2025"
+DURATION_DAYS = 8
+
 def setup_driver():
     """Create and return a configured Appium driver."""
     options = UiAutomator2Options()

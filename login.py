@@ -13,19 +13,20 @@ from test import date_available
 from datetime import datetime, timedelta
 import keyboard  # pip install keyboard
 from appium.webdriver.common.touch_action import TouchAction
-from config import CSV_FILE, setup_driver
-
-
-
-
-
-
+import threading
+from config import (
+    CSV_FILE,
+    setup_driver,
+    TARGET_DATE,
+    START_DATE,
+    DURATION_DAYS,
+)
 
 csv_file = CSV_FILE
-target_date = "30/07"
-start_date = "26_07_2025"
-duration_days = 8  # Durée en jours
-import threading
+target_date = TARGET_DATE
+start_date = START_DATE
+duration_days = DURATION_DAYS  # Durée en jours
+
 
 def get_input_with_timeout(prompt, timeout):
     user_input = [None]

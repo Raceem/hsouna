@@ -12,11 +12,19 @@ from test import date_available
 from utils import mois_en_lettres
 from pdf import pop_first_variant
 from selenium.webdriver.common.action_chains import ActionChains
-from config import CSV_FILE, EMAIL_JSON_FILE, NUMBER_JSON_FILE, setup_driver
+from config import (
+    CSV_FILE,
+    EMAIL_JSON_FILE,
+    NUMBER_JSON_FILE,
+    setup_driver,
+    PAYS,
+    PAYS_UPPER,
+    TARGET_DATE,
+)
 
-pays="Iraq"
-paysUpper = "iraq"
-target_date = "30/07"  # Adjust logic as needed
+pays = PAYS
+paysUpper = PAYS_UPPER
+target_date = TARGET_DATE  # Adjust logic as needed
 csv_file = CSV_FILE
 filename_email_json = EMAIL_JSON_FILE
 filename_number_json = NUMBER_JSON_FILE
