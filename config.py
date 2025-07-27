@@ -1,0 +1,28 @@
+import os
+from appium import webdriver
+from appium.options.android import UiAutomator2Options
+
+# Base paths
+FOLDER_NAME = "Indonesia10"
+BASE_DIR = "C:/Users/SBS/Desktop/Hsouna"
+CSV_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "informations.csv")
+EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
+NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
+
+# Appium configuration
+APPIUM_SERVER = "http://127.0.0.1:4723"
+DEVICE_NAME = "DEF4C19312001213"
+PLATFORM_VERSION = "9"
+APP_PACKAGE = "com.moh.nusukapp"
+APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
+
+def setup_driver():
+    """Create and return a configured Appium driver."""
+    options = UiAutomator2Options()
+    options.platform_name = "Android"
+    options.platform_version = PLATFORM_VERSION
+    options.device_name = DEVICE_NAME
+    options.app_package = APP_PACKAGE
+    options.app_activity = APP_ACTIVITY
+    options.automation_name = "uiautomator2"
+    return webdriver.Remote(APPIUM_SERVER, options=options)

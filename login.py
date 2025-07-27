@@ -1,6 +1,4 @@
 import traceback
-from appium import webdriver
-from appium.options.android import UiAutomator2Options  # Nouvelle méthode pour définir les capacités
 import time
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
@@ -14,8 +12,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from test import date_available
 from datetime import datetime, timedelta
 import keyboard  # pip install keyboard
-from datetime import datetime, timedelta
 from appium.webdriver.common.touch_action import TouchAction
+from config import CSV_FILE, setup_driver
 
 
 
@@ -23,7 +21,7 @@ from appium.webdriver.common.touch_action import TouchAction
 
 
 
-csv_file = "C:/Users/SBS/Desktop/Hsouna/Indonesia10/informations.csv"
+csv_file = CSV_FILE
 target_date = "30/07"
 start_date = "26_07_2025"
 duration_days = 8  # Durée en jours
@@ -44,15 +42,6 @@ def get_input_with_timeout(prompt, timeout):
         return None
     return user_input[0].strip().lower()
 
-def setup_driver():
-    options = UiAutomator2Options()
-    options.platform_name = "Android"
-    options.platform_version = "9"  # from adb shell getprop
-    options.device_name = "DEF4C19312001213"  # from adb devices
-    options.app_package = "com.moh.nusukapp"  # known from app details
-    options.app_activity = "com.app.nusuk.LoginRegistrationActivity"  # assumed (update if needed)
-    options.automation_name = "uiautomator2"
-    return webdriver.Remote("http://127.0.0.1:4723", options=options)
 
 # Attendre un peu que l'application se charge
 df = pd.read_csv(csv_file, dtype=str)
@@ -77,6 +66,7 @@ for index, row in df.iterrows():
                     driver.implicitly_wait(10)
                     # Attendre que le bouton soit visible
                     wait = WebDriverWait(driver, 10)
+
 
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvSignIn")))
                     

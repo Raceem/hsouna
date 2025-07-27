@@ -136,30 +136,26 @@ def merge_pdfs_in_folder(folder_path, output_file):
     print(f"\nTous les fichiers PDF ont été fusionnés dans : {output_file}")
 
 # Exemple d'utilisation
+from config import FOLDER_NAME, BASE_DIR, CSV_FILE, EMAIL_JSON_FILE, NUMBER_JSON_FILE
+
 if __name__ == "__main__":
-    folder_name = "Indonesia10"
-    csv_file = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/informations.csv"
     
+    csv_file = CSV_FILE
 
     fieldnames = ["id","nom", "prenom", "date_de_naissance", "numero_visa","email","numero_tlf", "numero_passport","type_voyage","date_entree_madinah","duree_jours","have_a_compte","CREATION","RESERVATION","CONFIRMATION","date_reservation","heure"]
 
-    create_csv(csv_file,fieldnames)
-    dossier = "C:/Users/SBS/Desktop/Hsouna/PDFs"
-    fichier_sortie = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/VISA 23_07_2025.pdf"
+    create_csv(csv_file, fieldnames)
+    dossier = os.path.join(BASE_DIR, "PDFs")
+    fichier_sortie = os.path.join(BASE_DIR, FOLDER_NAME, "VISA 23_07_2025.pdf")
 
     merge_pdfs_in_folder(dossier, fichier_sortie)
 
 
     """
-    filename_number_json = "C:/Users/SBS/Desktop/Hsouna/saudi_numbers.json"
-    
-
-    # Définition des colonnes (avec la nouvelle colonne 'creation')
-    
-    save_saudi_numbers_to_json(filename_number_json, count=10280)
+    # Exemple de génération de numéros et d'e-mails
+    save_saudi_numbers_to_json(NUMBER_JSON_FILE, count=10280)
     email_base = "mailboybanana@gmail.com"
-    filename_email_json = "C:/Users/SBS/Desktop/Hsouna/email_variants.json"
-    save_variants_to_json(email_base, filename_email_json)
+    save_variants_to_json(email_base, EMAIL_JSON_FILE)
     
 
     
@@ -181,5 +177,3 @@ if __name__ == "__main__":
 
     df.reset_index(drop=True, inplace=True)  # Réinitialise l'index après suppression
     """
-
-    

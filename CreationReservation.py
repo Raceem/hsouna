@@ -1,5 +1,3 @@
-from appium import webdriver
-from appium.options.android import UiAutomator2Options
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.common.touch_action import TouchAction  # Added for coordinate clicks
 from selenium.webdriver.support.ui import WebDriverWait
@@ -14,27 +12,14 @@ from test import date_available
 from utils import mois_en_lettres
 from pdf import pop_first_variant
 from selenium.webdriver.common.action_chains import ActionChains
+from config import CSV_FILE, EMAIL_JSON_FILE, NUMBER_JSON_FILE, setup_driver
 
 pays="Iraq"
-paysUpper="iraq"
-folder_name = "Indonesia10"
-# File paths
-csv_file = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/informations.csv"
-filename_email_json = "C:/Users/SBS/Desktop/Hsouna/email_variants.json"
-filename_number_json = "C:/Users/SBS/Desktop/Hsouna/saudi_numbers.json"
-
+paysUpper = "iraq"
 target_date = "30/07"  # Adjust logic as needed
-time.sleep(60*0)
-
-def setup_driver():
-    options = UiAutomator2Options()
-    options.platform_name = "Android"
-    options.platform_version = "9"  # from adb shell getprop
-    options.device_name = "DEF4C19312001213"  # from adb devices
-    options.app_package = "com.moh.nusukapp"  # known from app details
-    options.app_activity = "com.app.nusuk.LoginRegistrationActivity"  # assumed (update if needed)
-    options.automation_name = "uiautomator2"
-    return webdriver.Remote("http://127.0.0.1:4723", options=options)
+csv_file = CSV_FILE
+filename_email_json = EMAIL_JSON_FILE
+filename_number_json = NUMBER_JSON_FILE
 
 
 # Load CSV
