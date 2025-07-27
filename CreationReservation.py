@@ -15,25 +15,27 @@ from utils import mois_en_lettres
 from pdf import pop_first_variant
 from selenium.webdriver.common.action_chains import ActionChains
 
-pays="Indonesia"
-paysUpper="indonesia"
-folder_name = "indonesia4"
+pays="Iraq"
+paysUpper="iraq"
+folder_name = "Indonesia10"
 # File paths
-csv_file = f"C:/Users/lenovo/Desktop/riadh/omra/{folder_name}/informations.csv"
-filename_email_json = "C:/Users/lenovo/Desktop/riadh/omra/email_variants.json"
-filename_number_json = "C:/Users/lenovo/Desktop/riadh/omra/saudi_numbers.json"
+csv_file = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/informations.csv"
+filename_email_json = "C:/Users/SBS/Desktop/Hsouna/email_variants.json"
+filename_number_json = "C:/Users/SBS/Desktop/Hsouna/saudi_numbers.json"
 
-target_date = "29/07"  # Adjust logic as needed
+target_date = "30/07"  # Adjust logic as needed
 time.sleep(60*0)
+
 def setup_driver():
     options = UiAutomator2Options()
     options.platform_name = "Android"
-    options.platform_version = "14"
-    options.device_name = "RFCW50CH1ND"
-    options.app_package = "com.moh.nusukapp"
-    options.app_activity = "com.moh.nusukapp/com.app.nusuk.LoginRegistrationActivity"
+    options.platform_version = "9"  # from adb shell getprop
+    options.device_name = "DEF4C19312001213"  # from adb devices
+    options.app_package = "com.moh.nusukapp"  # known from app details
+    options.app_activity = "com.app.nusuk.LoginRegistrationActivity"  # assumed (update if needed)
     options.automation_name = "uiautomator2"
     return webdriver.Remote("http://127.0.0.1:4723", options=options)
+
 
 # Load CSV
 df = pd.read_csv(csv_file, dtype=str)
@@ -255,9 +257,20 @@ for index, row in df.iterrows():
             # Handle permissions and location
             create_now = 0
             try:
-                elements = driver.find_elements(AppiumBy.ID, "com.android.permissioncontroller:id/permission_message")
+                
+                wait = WebDriverWait(driver, 10)
+                driver.save_screenshot("before_check.png")
+                print(driver.page_source)
+
+                element = wait.until(
+                        EC.presence_of_element_located(
+                            (AppiumBy.ID, "com.android.packageinstaller:id/permission_message")
+                        )
+                    )
+                print("Permission popup found:", element.text)
                 if elements and "Autoriser" in elements[0].text:
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_button")))
+                    print("Autorisation de l'application requise.\n")
+                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
                     sign_in_button.click()
                     df.at[index, 'CREATION'] = "1"
                     df.to_csv(csv_file, index=False, encoding="utf-8")
@@ -266,7 +279,7 @@ for index, row in df.iterrows():
                     # Handle location permissions
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvShareLocation")))
                     sign_in_button.click()
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_foreground_only_button")))
+                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_foreground_only_button")))
                     sign_in_button.click()
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvNo")))
                     sign_in_button.click()
@@ -334,7 +347,7 @@ for index, row in df.iterrows():
 
                     # Define date range
                     start_date = dict_row["date_entree_madinah"]  # e.g., "25_07_2025"
-                    duration_days = 7  # Define or get from CSV
+                    duration_days = 14  # Define or get from CSV
                     start_dt = datetime.strptime(start_date, "%d_%m_%Y") + timedelta(days=1)
                     end_dt = start_dt + timedelta(days=duration_days - 1)
                     start_str = start_dt.strftime("%d/%m")

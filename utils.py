@@ -18,7 +18,7 @@ def generate_all_saudi_numbers():
     Génère toutes les possibilités de numéros mobiles saoudiens commençant par '058'
     et suivis de 7 chiffres (de 0000000 à 9999999).
     """
-    prefix = "51"
+    prefix = "59"
     for i in range(10**7):
         yield prefix + f"{i:07d}"
 
@@ -137,48 +137,49 @@ def merge_pdfs_in_folder(folder_path, output_file):
 
 # Exemple d'utilisation
 if __name__ == "__main__":
-    """filename_number_json = "C:/Users/lenovo/Desktop/riadh/omra/saudi_numbers.json"
+    folder_name = "Indonesia10"
+    csv_file = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/informations.csv"
+    
+
+    fieldnames = ["id","nom", "prenom", "date_de_naissance", "numero_visa","email","numero_tlf", "numero_passport","type_voyage","date_entree_madinah","duree_jours","have_a_compte","CREATION","RESERVATION","CONFIRMATION","date_reservation","heure"]
+
+    create_csv(csv_file,fieldnames)
+    dossier = "C:/Users/SBS/Desktop/Hsouna/PDFs"
+    fichier_sortie = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/VISA 23_07_2025.pdf"
+
+    merge_pdfs_in_folder(dossier, fichier_sortie)
+
+
+    """
+    filename_number_json = "C:/Users/SBS/Desktop/Hsouna/saudi_numbers.json"
     
 
     # Définition des colonnes (avec la nouvelle colonne 'creation')
     
-    save_saudi_numbers_to_json(filename_number_json, count=1028)
+    save_saudi_numbers_to_json(filename_number_json, count=10280)
+    email_base = "mailboybanana@gmail.com"
+    filename_email_json = "C:/Users/SBS/Desktop/Hsouna/email_variants.json"
+    save_variants_to_json(email_base, filename_email_json)
+    
 
     
         df = pd.read_csv(csv_file, dtype=str)
     for i in range(159,165):
         df.at[i,"RESERVATION"]="1"
         df.at[i,"CONFIRMATION"]="1"
-    email_base = "oskkskdjskks.kskslkhsounsjkeksn@gmail.com"
-    filename_email_json = "C:/Users/lenovo/Desktop/riadh/omra/email_variants.json"
-    save_variants_to_json(email_base, filename_email_json)
+
 
     df = pd.read_csv(csv_file, dtype=str)
     for i in range(0,70):
         df.at[i,"CREATION"]="1"
     df.to_csv(csv_file, index=False, encoding="utf-8")
-    """
-    """"""
-    folder_name = "indonesia5"
-    csv_file = f"C:/Users/lenovo/Desktop/riadh/omra/{folder_name}/informations.csv"
+    
     
 
-    fieldnames = ["id","nom", "prenom", "date_de_naissance", "numero_visa","email","numero_tlf", "numero_passport","type_voyage","date_entree_madinah","duree_jours","have_a_compte","CREATION","RESERVATION","CONFIRMATION","date_reservation","heure"]
-
-    create_csv(csv_file,fieldnames)
-    dossier = "C:/Users/lenovo/Desktop/riadh/omra/pdfs"
-    fichier_sortie = f"C:/Users/lenovo/Desktop/riadh/omra/{folder_name}/VISA 23_07_2025.pdf"
-
-    merge_pdfs_in_folder(dossier, fichier_sortie)
-
         
-    """ df.drop(i, inplace=True)  
+    df.drop(i, inplace=True)  
 
     df.reset_index(drop=True, inplace=True)  # Réinitialise l'index après suppression
     """
-
-    
-    """"""
-
 
     

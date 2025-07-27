@@ -23,10 +23,10 @@ from appium.webdriver.common.touch_action import TouchAction
 
 
 
-csv_file = "C:/Users/lenovo/Desktop/riadh/omra/iraq/informations.csv"
-target_date = "27/07"
+csv_file = "C:/Users/SBS/Desktop/Hsouna/Indonesia10/informations.csv"
+target_date = "30/07"
 start_date = "26_07_2025"
-duration_days = 1  # Durée en jours
+duration_days = 8  # Durée en jours
 import threading
 
 def get_input_with_timeout(prompt, timeout):
@@ -47,10 +47,10 @@ def get_input_with_timeout(prompt, timeout):
 def setup_driver():
     options = UiAutomator2Options()
     options.platform_name = "Android"
-    options.platform_version = "14"  # Remplace par la version exacte de ton appareil
-    options.device_name = "RFCW50CH1ND"  # Remplace par l'ID de ton appareil (adb devices)
-    options.app_package = "com.moh.nusukapp"
-    options.app_activity = "com.moh.nusukapp/com.app.nusuk.LoginRegistrationActivity"
+    options.platform_version = "9"  # from adb shell getprop
+    options.device_name = "DEF4C19312001213"  # from adb devices
+    options.app_package = "com.moh.nusukapp"  # known from app details
+    options.app_activity = "com.app.nusuk.LoginRegistrationActivity"  # assumed (update if needed)
     options.automation_name = "uiautomator2"
     return webdriver.Remote("http://127.0.0.1:4723", options=options)
 
@@ -162,21 +162,29 @@ for index, row in df.iterrows():
                     else:
                         print("❌ Aucune validation trouvée.")
 
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_button")))
+                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
                     sign_in_button.click()
+                   
 
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvShareLocation")))
-                    sign_in_button.click()
-
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_foreground_only_button")))
-                    sign_in_button.click()
-
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvNo")))
+                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL")))
                     sign_in_button.click()
                     
+                    time.sleep(2)
+                    # Récupérer tous les éléments visibles
+                    all_elements = driver.find_elements(AppiumBy.XPATH, "//*")
+                    book=0
+                    print("\n📌 Contenu complet de l'écran :\n")
+                    for element in all_elements:
+                            element_id = element.get_attribute("resource-id") or "Aucun ID"
+                            element_text = element.text or "Aucun texte"
+                            if "You already have an existing booking for" in element_text or "Vous avez déjà une réservation" in element_text or " have an active permit" in element_text:
+                                        df.at[index, 'RESERVATION'] ="1"
+                                        df.to_csv(csv_file, index=False, encoding="utf-8")
+                                        book=1
+                                        
+                            element_class = element.get_attribute("class") or "Aucune classe"
+                            print(f"🔹 ID: {element_id}, Texte: {element_text}, Classe: {element_class}")
 
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvNobleRawdahTitle")))
-                    sign_in_button.click()
                     
 
                     type = None  # initialiser la variable
@@ -229,9 +237,10 @@ for index, row in df.iterrows():
                     screen_size = driver.get_window_size()
                     start_x = screen_size['width'] // 2
                     start_y = int(screen_size['height'] * 0.6)
-                    end_y = int(screen_size['height'] * 0.55)
-
-                    driver.swipe(start_x, start_y, start_x, end_y, 500)
+                    end_y = int(screen_size['height'] * 0.51)
+                    time.sleep(0.5)
+                    driver.swipe(start_x, start_y, start_x, end_y, 100)
+                    time.sleep(1.5)
                     screenshot_path = "images/calendar_screenshot.png"
                     driver.save_screenshot(screenshot_path)
                     print(f"Screenshot sauvegardé à : {screenshot_path}")
@@ -259,10 +268,17 @@ for index, row in df.iterrows():
 
 
                     # Filtrer les dates disponibles entre `start_date` et `end_date`
-                    filtered_dates = [
-                        (date, x,y) for date, x,y in available_dates
-                        if start_str <= date <= end_str  # Comparaison uniquement sur JJ/MM
-                    ]
+                    filtered_dates = []
+                    for date_str, x, y in available_dates:
+                        try:
+                            date_obj = datetime.strptime(date_str, "%d/%m")
+                            # Replace year so it matches start_dt and end_dt
+                            date_obj = date_obj.replace(year=start_dt.year)
+
+                            if start_dt <= date_obj <= end_dt:
+                                filtered_dates.append((date_str, x, y))
+                        except ValueError:
+                            print(f"⚠ Date format error with '{date_str}'")
 
                     # Afficher les résultats
                     print(f"\n🔹 Plage de dates : {start_str} → {end_str}")

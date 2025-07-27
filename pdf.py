@@ -4,16 +4,15 @@ import pandas as pd
 import json
 
 
-folder_name = "indonesia5"
-email_base = "hsounakobbi@enis.tn"
-filename_email_json = "C:/Users/lenovo/Desktop/riadh/omra/email_variants.json"
-filename_number_json = "C:/Users/lenovo/Desktop/riadh/omra/saudi_numbers.json"
+folder_name = "Indonesia10"
+filename_email_json = "C:/Users/SBS/Desktop/Hsouna/email_variants.json"
+filename_number_json = "C:/Users/SBS/Desktop/Hsouna/saudi_numbers.json"
 
 # Nom du fichier CSV à créer
-csv_file = f"C:/Users/lenovo/Desktop/riadh/omra/{folder_name}/informations.csv"
+csv_file = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/informations.csv"
 # Définition des colonnes (avec la nouvelle colonne 'creation')
 fieldnames = ["id","nom", "prenom", "date_de_naissance", "numero_visa","email","numero_tlf", "numero_passport","type_voyage","date_entree_madinah","duree_jours","have_a_compte","CREATION","RESERVATION","CONFIRMATION","date_reservation","heure"]
-pdf_path = f"C:/Users/lenovo/Desktop/riadh/omra/{folder_name}/VISA 23_07_2025.pdf"
+pdf_path = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/VISA 23_07_2025.pdf"
 def pop_first_variant(filename_email_json):
     
     # Charger le contenu du fichier JSON
