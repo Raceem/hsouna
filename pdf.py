@@ -3,16 +3,13 @@ import re
 import pandas as pd
 import json
 
-
-folder_name = "Indonesia10"
-filename_email_json = "C:/Users/SBS/Desktop/Hsouna/email_variants.json"
-filename_number_json = "C:/Users/SBS/Desktop/Hsouna/saudi_numbers.json"
-
-# Nom du fichier CSV à créer
-csv_file = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/informations.csv"
-# Définition des colonnes (avec la nouvelle colonne 'creation')
-fieldnames = ["id","nom", "prenom", "date_de_naissance", "numero_visa","email","numero_tlf", "numero_passport","type_voyage","date_entree_madinah","duree_jours","have_a_compte","CREATION","RESERVATION","CONFIRMATION","date_reservation","heure"]
-pdf_path = f"C:/Users/SBS/Desktop/Hsouna/{folder_name}/VISA 23_07_2025.pdf"
+from config import (
+    CSV_FILE,
+    EMAIL_JSON_FILE,
+    NUMBER_JSON_FILE,
+    FIELDNAMES,
+    PDF_FILE,
+)
 def pop_first_variant(filename_email_json):
     
     # Charger le contenu du fichier JSON
@@ -58,12 +55,12 @@ def extract_text_by_pages(file_path):
 
 if __name__ == "__main__":
     print("ss")
-    pages = extract_text_by_pages(pdf_path)
+    pages = extract_text_by_pages(PDF_FILE)
 
     print("ss")
-    if pdf_path.find("visa_libre")== -1 :
+    if PDF_FILE.find("visa_libre") == -1:
         type_voyage="Groupe"
-        date = re.findall(r'(\d{2}_\d{2}_\d{4})', pdf_path)
+        date = re.findall(r'(\d{2}_\d{2}_\d{4})', PDF_FILE)
         date_entree_madinah="22_07_2025"
         duree_jours=1
     else :
@@ -89,10 +86,7 @@ if __name__ == "__main__":
         # Extraction du numéro visa (supposons qu'il soit composé de 10 chiffres)
         match_visa = re.search(r'(\d{10})', texte)
         print(match_visa)
-        numero_visa = match_visa.group(1) if match_visa else "Non trouvé"
-
-        # Extraction du numéro de passport (supposons qu'il commence par une lettre suivie de chiffres)
-        patterns = {
+@@ -96,60 +93,60 @@ if __name__ == "__main__":
             "IRQ": r'([A-Z]\d{8})\d?IRQ',              # Iraq
             "IDN": r'([A-Z][0-9]{7})<\d?IDN',          # Indonesia
             "IND": r'([A-Z][0-9]{7})<\d?IND',          # India
@@ -118,15 +112,15 @@ if __name__ == "__main__":
         pattern = rf"{country_code}([A-Z]+)<<([A-Z]+)"
         match = re.search(pattern, texte)
         print(match)
-        email=pop_first_variant(filename_email_json)
-        numero_tlf=pop_first_variant(filename_number_json)
+        email = pop_first_variant(EMAIL_JSON_FILE)
+        numero_tlf = pop_first_variant(NUMBER_JSON_FILE)
         if match:
             nom = match.group(1) 
             prenom = match.group(2) 
         else:
             print("Aucune correspondance trouvée.")
 
-        df = pd.read_csv(csv_file, encoding="utf-8")
+        df = pd.read_csv(CSV_FILE, encoding="utf-8")
         new_muatamer = {
         "id": len(df)+1,  # sera écrasé par l'ID généré si besoin
         "nom": nom,
@@ -152,4 +146,4 @@ if __name__ == "__main__":
             # Convertir le dictionnaire en DataFrame (avec une seule ligne)
             df_new = pd.DataFrame([new_muatamer])
             # Ajout en mode append sans réécrire l'en-tête
-            df_new.to_csv(csv_file, mode="a", index=False, header=False)
+            df_new.to_csv(CSV_FILE, mode="a", index=False, header=False)

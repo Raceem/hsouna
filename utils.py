@@ -136,17 +136,23 @@ def merge_pdfs_in_folder(folder_path, output_file):
     print(f"\nTous les fichiers PDF ont été fusionnés dans : {output_file}")
 
 # Exemple d'utilisation
-from config import FOLDER_NAME, BASE_DIR, CSV_FILE, EMAIL_JSON_FILE, NUMBER_JSON_FILE
+from config import (
+    FOLDER_NAME,
+    BASE_DIR,
+    CSV_FILE,
+    EMAIL_JSON_FILE,
+    NUMBER_JSON_FILE,
+    FIELDNAMES,
+    PDF_FILE,
+)
 
 if __name__ == "__main__":
     
     csv_file = CSV_FILE
 
-    fieldnames = ["id","nom", "prenom", "date_de_naissance", "numero_visa","email","numero_tlf", "numero_passport","type_voyage","date_entree_madinah","duree_jours","have_a_compte","CREATION","RESERVATION","CONFIRMATION","date_reservation","heure"]
-
-    create_csv(csv_file, fieldnames)
+    create_csv(csv_file, FIELDNAMES)
     dossier = os.path.join(BASE_DIR, "PDFs")
-    fichier_sortie = os.path.join(BASE_DIR, FOLDER_NAME, "VISA 23_07_2025.pdf")
+    fichier_sortie =PDF_FILE
 
     merge_pdfs_in_folder(dossier, fichier_sortie)
 

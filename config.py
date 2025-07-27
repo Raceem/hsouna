@@ -23,6 +23,31 @@ TARGET_DATE = "30/07"
 START_DATE = "26_07_2025"
 DURATION_DAYS = 8
 
+# CSV configuration
+FIELDNAMES = [
+    "id",
+    "nom",
+    "prenom",
+    "date_de_naissance",
+    "numero_visa",
+    "email",
+    "numero_tlf",
+    "numero_passport",
+    "type_voyage",
+    "date_entree_madinah",
+    "duree_jours",
+    "have_a_compte",
+    "CREATION",
+    "RESERVATION",
+    "CONFIRMATION",
+    "date_reservation",
+    "heure",
+]
+
+# Default PDF path
+PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "VISA 23_07_2025.pdf")
+
+
 def setup_driver():
     """Create and return a configured Appium driver."""
     options = UiAutomator2Options()
