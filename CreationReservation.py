@@ -246,7 +246,7 @@ for index, row in df.iterrows():
             else:
                 print("❌ Aucune validation trouvée.")
                 break
-
+            df.at[index, 'CREATION'] = "1"
             # Handle permissions and location
             create_now = 0
             try:
@@ -264,7 +264,7 @@ for index, row in df.iterrows():
                 print("Autorisation de l'application requise.\n")
                 sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
                 sign_in_button.click()
-                df.at[index, 'CREATION'] = "1"
+                
                 df.to_csv(csv_file, index=False, encoding="utf-8")
                 create_now = 1
                 # Navigate to Noble Rawdah booking

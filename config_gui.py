@@ -3,17 +3,18 @@ import re
 import subprocess
 from tempfile import NamedTemporaryFile
 import base64
-
+from PyPDF2 import PdfReader
 import streamlit as st
 import io
 import time
+import pandas as pd
 
 from PIL import Image
 import config
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.py')
 
-def update_config(folder_name, target_date, pays, start_date, pdf_filename):
+def update_config(folder_name, target_date, pays,  pdf_filename):
     """Update selected variables in config.py."""
     with open(CONFIG_PATH, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -22,7 +23,7 @@ def update_config(folder_name, target_date, pays, start_date, pdf_filename):
         'FOLDER_NAME': f'"{folder_name}"',
         'TARGET_DATE': f'"{target_date}"',
         'PAYS': f'"{pays}"',
-        'START_DATE': f'"{start_date}"',
+        
         'PDF_FILE': f'os.path.join(BASE_DIR, FOLDER_NAME, "{pdf_filename}")',
     }
 
@@ -47,28 +48,102 @@ def capture_screenshot():
         return None
 
     return result.stdout
+def get_folder_color(folder):
+    """Determine color for a folder based on its informations.csv."""
+    csv_path = os.path.join(config.BASE_DIR, folder, "informations.csv")
+    if not os.path.exists(csv_path):
+        return None
+    try:
+        df = pd.read_csv(csv_path, dtype=str)
+    except Exception:
+        return None
+    if df.empty or len(df.columns) == 0:
+        return None
+    if 'CREATION' not in df.columns:
+        return None
 
+    creation = df['CREATION'].astype(str)
+    if (creation == '0').any():
+        return 'red'
+
+    if 'RESERVATION' not in df.columns:
+        return 'green'
+    reservation = df['RESERVATION'].astype(str)
+
+    if ((creation == '1') & (reservation == '0')).any():
+        return 'yellow'
+
+    if 'CONFIRMATION' in df.columns:
+        confirmation = df['CONFIRMATION'].astype(str)
+        if ((creation == '1') & (reservation == '1') & (confirmation == '0')).any():
+            return 'blue'
+
+    return 'green'
 
 def main():
-    col1, col2 = st.columns([3, 1])  # Wider left column, narrower right
+    col_editor, col_preview = st.columns([ 5, 2])
+    
+        
+    with col_editor:
+        st.markdown("### 🗂️ Folder Color Legend")
+        color_meanings = {
+            '🟥 Red': 'We have not yet created accounts.',
+            '🟨 Yellow': 'We have not yet made reservations',
+            '🟦 Blue': 'Reservation made, confirmation not yet done',
+            '🟩 Green': 'All steps completed ',
+            '• None': 'No informations.csv found or empty'
+        }
 
-    with col1:
+        for symbol, meaning in color_meanings.items():
+            st.markdown(f"<div style='margin-bottom: 8px;'>- {symbol}: {meaning}</div>", unsafe_allow_html=True)
         # Left side: Configuration editor
         st.title("Configuration Editor")
+        color_priority = ['red', 'yellow', 'blue', 'green',None]
 
-        folder_options = [d for d in os.listdir(config.BASE_DIR)
-                          if os.path.isdir(os.path.join(config.BASE_DIR, d))]
+        all_folders = [d for d in os.listdir(config.BASE_DIR)
+                    if os.path.isdir(os.path.join(config.BASE_DIR, d))]
+
+        # Get color for each folder
+        folder_colors = {folder: get_folder_color(folder) for folder in all_folders}
+
+        # Sort folders by color priority
+        folder_options = sorted(
+            all_folders,
+            key=lambda f: (color_priority.index(folder_colors.get(f, 'green')), f)
+        )
+
         default_index = folder_options.index(config.FOLDER_NAME) if config.FOLDER_NAME in folder_options else 0
-        folder_name = st.selectbox("Select Folder", folder_options, index=default_index)
+
+        color_symbols = {
+            'yellow': '🟨',
+            'red': '🟥',
+            'blue': '🟦',
+            'green': '🟩'
+        }
+        def format_folder(folder):
+            color = folder_colors.get(folder)
+            symbol = color_symbols.get(color, '')
+            return f"{symbol} {folder}" if symbol else folder
+
+        folder_name = st.selectbox(
+            "Select Folder",
+            folder_options,
+            index=default_index,
+            format_func=format_folder  # 🟨🟥🟦🟩 folder label formatter
+        )
+
+
+
+       
         target_date = st.text_input("Target Date", config.TARGET_DATE)
         pays = st.text_input("Pays", config.PAYS)
-        start_date = st.text_input("Start Date", config.START_DATE)
+        
         pdf_filename = st.text_input("PDF File Name", os.path.basename(config.PDF_FILE))
 
         uploaded_pdf = st.file_uploader("Select PDF", type=["pdf"])
 
         if st.button("Save config"):
-            update_config(folder_name, target_date, pays, start_date, pdf_filename)
+            update_config(folder_name, target_date, pays, pdf_filename)
             st.success("Configuration saved")
 
         if uploaded_pdf is not None and st.button("Prepare folder"):
@@ -77,7 +152,7 @@ def main():
                 tmp_path = tmp.name
 
             try:
-                from PyPDF2 import PdfReader
+                
 
                 reader = PdfReader(tmp_path)
                 num_people = len(reader.pages)
@@ -85,7 +160,9 @@ def main():
                 st.error(f"Failed to read PDF: {e}")
                 return
 
-            folder_name_generated = f"{pays}_{num_people}_{start_date}"
+            safe_target_date = target_date.replace("/", "_")
+            folder_name_generated = f"{pays}_{num_people}_{safe_target_date}"
+
             folder_path = os.path.join(config.BASE_DIR, folder_name_generated)
             os.makedirs(folder_path, exist_ok=True)
 
@@ -98,7 +175,7 @@ def main():
                 folder_name_generated,
                 target_date,
                 pays,
-                start_date,
+                
                 uploaded_pdf.name,
             )
             st.success(f"Folder prepared: {folder_path}")
@@ -123,7 +200,7 @@ def main():
             if result.stderr:
                 st.error(result.stderr)
 
-    with col2:
+    with col_preview:
         st.markdown("### 📱 Live Phone Preview")
 
         show_preview = st.checkbox("Show Phone Screen")
