@@ -3,7 +3,7 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 
 # Base paths
-FOLDER_NAME = "Iraq_14_26_07_2025"
+FOLDER_NAME = "Indonesia10"
 BASE_DIR = "C:/Users/SBS/Desktop/Hsouna"
 CSV_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "informations.csv")
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
@@ -19,7 +19,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "Iraq"
 PAYS_UPPER = "iraq"
-TARGET_DATE = "31/07"
+TARGET_DATE = "30/07"
 START_DATE = "26_07_2025"
 DURATION_DAYS = 8
 
@@ -46,7 +46,8 @@ FIELDNAMES = [
 
 # Default PDF path
 PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "الـ 14 النقص النساء.pdf")
-
+# Directory where confirmation screenshots will be stored
+RAWDHA_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "rawdha")
 
 def setup_driver():
     """Create and return a configured Appium driver."""
