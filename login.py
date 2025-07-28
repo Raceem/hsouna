@@ -20,6 +20,7 @@ from config import (
     TARGET_DATE,
     START_DATE,
     DURATION_DAYS,
+    PAYS_UPPER
 )
 
 csv_file = CSV_FILE
@@ -98,11 +99,11 @@ for index, row in df.iterrows():
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/edtSearch")))
                     
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/edtSearch")))
-                    sign_in_button.send_keys("Iraq")
+                    sign_in_button.send_keys(PAYS_UPPER)
                     elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTitle")
                     found = False
                     for el in elements:
-                        if el.text.strip().lower() == "iraq":
+                        if el.text.strip().lower() == PAYS_UPPER:
                             el.click()
                             found = True
                             print("✅ 'Morocco' cliqué avec succès.")
@@ -227,8 +228,8 @@ for index, row in df.iterrows():
                     #scroller l'ecran un peu
                     screen_size = driver.get_window_size()
                     start_x = screen_size['width'] // 2
-                    start_y = int(screen_size['height'] * 0.6)
-                    end_y = int(screen_size['height'] * 0.51)
+                    start_y = int(screen_size['height'] * 0.7)
+                    end_y = int(screen_size['height'] * 0.05)
                     time.sleep(0.5)
                     driver.swipe(start_x, start_y, start_x, end_y, 100)
                     time.sleep(1.5)

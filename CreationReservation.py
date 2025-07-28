@@ -260,154 +260,166 @@ for index, row in df.iterrows():
                             (AppiumBy.ID, "com.android.packageinstaller:id/permission_message")
                         )
                     )
-                if elements and "Autoriser" in elements[0].text:
-                    print("Autorisation de l'application requise.\n")
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
-                    sign_in_button.click()
-                    df.at[index, 'CREATION'] = "1"
+                
+                print("Autorisation de l'application requise.\n")
+                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
+                sign_in_button.click()
+                df.at[index, 'CREATION'] = "1"
+                df.to_csv(csv_file, index=False, encoding="utf-8")
+                create_now = 1
+                # Navigate to Noble Rawdah booking
+                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL")))
+                sign_in_button.click()
+
+                # Select gender
+                gender = dict_row.get("gender", "Unknown")  # Assuming 'gender' column in CSV
+                if gender == "Unknown":
+                    try:
+                        sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv")))
+                        sign_in_button.click()
+                        gender = "F"
+                        print("✅ Bouton femme cliqué.")
+                    except:
+                        try:
+                            sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv")))
+                            sign_in_button.click()
+                            gender = "H"
+                            print("✅ Bouton homme cliqué.")
+                        except Exception as e:
+                            print(f"❌ Aucun bouton de genre trouvé : {e}")
+                            break
+
+                # Check for existing booking
+                all_elements = driver.find_elements(AppiumBy.XPATH, "//*")
+                book = 0
+                for element in all_elements:
+                    element_text = element.text or ""
+                    if any(phrase in element_text for phrase in [
+                        "You already have an existing booking for",
+                        "Vous avez déjà une réservation",
+                        "have an active permit"
+                    ]):
+                        df.at[index, 'RESERVATION'] = "1"
+                        df.to_csv(csv_file, index=False, encoding="utf-8")
+                        book = 1
+                        break
+
+                if book:
+                    break
+
+                time.sleep(1.5)
+                # Select date
+                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/ed_selected_date")))
+                sign_in_button.click()
+                time.sleep(1.5)
+
+                # Scroll calendar
+                screen_size = driver.get_window_size()
+                start_x = screen_size['width'] // 2
+                start_y = int(screen_size['height'] * 0.7)
+                end_y = int(screen_size['height'] * 0.05)
+                driver.swipe(start_x, start_y, start_x, end_y, 100)
+                time.sleep(1)
+                # Save screenshot
+                screenshot_path = "images/calendar_screenshot.png"
+                driver.save_screenshot(screenshot_path)
+                print(f"Screenshot sauvegardé à : {screenshot_path}")
+
+                # Get available dates (assuming date_available is defined)
+                available_dates = date_available(screenshot_path)
+
+                # Define date range
+                start_date = dict_row["date_entree_madinah"]  # e.g., "25_07_2025"
+                duration_days = 14  # Define or get from CSV
+                start_dt = datetime.strptime(start_date, "%d_%m_%Y") + timedelta(days=1)
+                end_dt = start_dt + timedelta(days=duration_days - 1)
+                start_str = start_dt.strftime("%d/%m")
+                end_str = end_dt.strftime("%d/%m")
+
+                # Filtrer les dates disponibles entre `start_date` et `end_date`
+                filtered_dates = []
+                for date_str, x, y in available_dates:
+                    try:
+                        date_obj = datetime.strptime(date_str, "%d/%m")
+                        # Replace year so it matches start_dt and end_dt
+                        date_obj = date_obj.replace(year=start_dt.year)
+
+                        if start_dt <= date_obj <= end_dt:
+                            filtered_dates.append((date_str, x, y))
+                    except ValueError:
+                        print(f"⚠ Date format error with '{date_str}'")
+
+                # Afficher les résultats
+                print(f"\n🔹 Plage de dates : {start_str} → {end_str}")
+                print("\n📅 Dates disponibles dans la plage sélectionnée :")
+
+                # Select target date
+                clicked = False
+                actions = ActionChains(driver)
+                for date, x, y in filtered_dates:
+                    if date == target_date:
+                        print(f"🎯 Date ciblée trouvée : {date} | 📍 Coordonnées originales: ({x}, {y})")
+                        actions.w3c_actions.pointer_action.move_to_location(x, y)
+                        actions.w3c_actions.pointer_action.click()
+                        actions.w3c_actions.perform()
+                        date_reser = date
+                        print(f"✅ Cliqué sur la date {date} à : x={x}, y={y}")
+                        clicked = True
+                        break
+
+                if not clicked:
+                    print(f"❌ La date {target_date} n'a pas été trouvée.")
+                    break
+
+                # Confirm date
+                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//android.widget.TextView[@text='Confirmer']")))
+                sign_in_button.click()
+
+                # Select time
+                all_texts = set()
+                elements_list = []
+                while True:
+                    all_elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTime")
+                    new_texts = [element.text for element in all_elements if element.text not in all_texts]
+                    if not new_texts:
+                        break
+                    for element in all_elements:
+                        if element.text not in all_texts:
+                            all_texts.add(element.text)
+                            elements_list.append(element)
+
+                target_text = "06:00 PM" if gender == "M" else "10:00 AM"
+                trouve = 0
+                for element in elements_list:
+                    if element.text == target_text:
+                        element.click()
+                        trouve = 1
+                        break
+                if not trouve:
+                    elements_list[-1].click()
+                    print(f"Élément '{target_text}' non trouvé, dernier élément sélectionné.")
+
+                # Confirm time and booking
+                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/continue_button")))
+                sign_in_button.click()
+                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/btn_approve_continue")))
+                sign_in_button.click()
+
+                # Verify booking
+                elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
+                if elements and "Neutre" in elements[0].text:
+                    df.at[index, 'RESERVATION'] = "1"
+                    df.at[index, 'heure'] = target_text
+                    df.at[index, 'date_reservation'] = f"{date_reser}/{start_dt.year}"
+                    reservation_date = pd.to_datetime(df.at[index, "date_reservation"], format="%d/%m/%Y")
+                    now = datetime.now()
+                    if now - reservation_date > timedelta(hours=48):
+                        print("Plus de 48 heures se sont écoulées depuis la réservation.")
+                    else:
+                        print("Moins de 48 heures se sont écoulées.")
                     df.to_csv(csv_file, index=False, encoding="utf-8")
                     create_now = 1
-                    # Navigate to Noble Rawdah booking
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL")))
-                    sign_in_button.click()
-
-                    # Select gender
-                    gender = dict_row.get("gender", "Unknown")  # Assuming 'gender' column in CSV
-                    if gender == "Unknown":
-                        try:
-                            sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv")))
-                            sign_in_button.click()
-                            gender = "F"
-                            print("✅ Bouton femme cliqué.")
-                        except:
-                            try:
-                                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv")))
-                                sign_in_button.click()
-                                gender = "H"
-                                print("✅ Bouton homme cliqué.")
-                            except Exception as e:
-                                print(f"❌ Aucun bouton de genre trouvé : {e}")
-                                break
-
-                    # Check for existing booking
-                    all_elements = driver.find_elements(AppiumBy.XPATH, "//*")
-                    book = 0
-                    for element in all_elements:
-                        element_text = element.text or ""
-                        if any(phrase in element_text for phrase in [
-                            "You already have an existing booking for",
-                            "Vous avez déjà une réservation",
-                            "have an active permit"
-                        ]):
-                            df.at[index, 'RESERVATION'] = "1"
-                            df.to_csv(csv_file, index=False, encoding="utf-8")
-                            book = 1
-                            break
-
-                    if book:
-                        break
-
-                    time.sleep(1.5)
-                    # Select date
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/ed_selected_date")))
-                    sign_in_button.click()
-                    time.sleep(1.5)
-
-                    # Scroll calendar
-                    screen_size = driver.get_window_size()
-                    start_x = screen_size['width'] // 2
-                    start_y = int(screen_size['height'] * 0.6)
-                    end_y = int(screen_size['height'] * 0.51)
-                    driver.swipe(start_x, start_y, start_x, end_y, 100)
-                    time.sleep(1)
-                    # Save screenshot
-                    screenshot_path = "images/calendar_screenshot.png"
-                    driver.save_screenshot(screenshot_path)
-                    print(f"Screenshot sauvegardé à : {screenshot_path}")
-
-                    # Get available dates (assuming date_available is defined)
-                    available_dates = date_available(screenshot_path)
-
-                    # Define date range
-                    start_date = dict_row["date_entree_madinah"]  # e.g., "25_07_2025"
-                    duration_days = 14  # Define or get from CSV
-                    start_dt = datetime.strptime(start_date, "%d_%m_%Y") + timedelta(days=1)
-                    end_dt = start_dt + timedelta(days=duration_days - 1)
-                    start_str = start_dt.strftime("%d/%m")
-                    end_str = end_dt.strftime("%d/%m")
-
-                    # Filter available dates
-                    filtered_dates = [(date, x, y) for date, x, y in available_dates if start_str <= date <= end_str]
-                    print(f"\n🔹 Plage de dates : {start_str} → {end_str}")
-                    print(f"Dates disponibles : {len(filtered_dates)}")
-
-                    # Select target date
-                    clicked = False
-                    actions = ActionChains(driver)
-                    for date, x, y in filtered_dates:
-                        if date == target_date:
-                            print(f"🎯 Date ciblée trouvée : {date} | 📍 Coordonnées originales: ({x}, {y})")
-                            actions.w3c_actions.pointer_action.move_to_location(x, y)
-                            actions.w3c_actions.pointer_action.click()
-                            actions.w3c_actions.perform()
-                            date_reser = date
-                            print(f"✅ Cliqué sur la date {date} à : x={x}, y={y}")
-                            clicked = True
-                            break
-
-                    if not clicked:
-                        print(f"❌ La date {target_date} n'a pas été trouvée.")
-                        break
-
-                    # Confirm date
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//android.widget.TextView[@text='Confirmer']")))
-                    sign_in_button.click()
-
-                    # Select time
-                    all_texts = set()
-                    elements_list = []
-                    while True:
-                        all_elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTime")
-                        new_texts = [element.text for element in all_elements if element.text not in all_texts]
-                        if not new_texts:
-                            break
-                        for element in all_elements:
-                            if element.text not in all_texts:
-                                all_texts.add(element.text)
-                                elements_list.append(element)
-
-                    target_text = "06:00 PM" if gender == "M" else "10:00 AM"
-                    trouve = 0
-                    for element in elements_list:
-                        if element.text == target_text:
-                            element.click()
-                            trouve = 1
-                            break
-                    if not trouve:
-                        elements_list[-1].click()
-                        print(f"Élément '{target_text}' non trouvé, dernier élément sélectionné.")
-
-                    # Confirm time and booking
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/continue_button")))
-                    sign_in_button.click()
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/btn_approve_continue")))
-                    sign_in_button.click()
-
-                    # Verify booking
-                    elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
-                    if elements and "Neutre" in elements[0].text:
-                        df.at[index, 'RESERVATION'] = "1"
-                        df.at[index, 'heure'] = target_text
-                        df.at[index, 'date_reservation'] = f"{date_reser}/{start_dt.year}"
-                        reservation_date = pd.to_datetime(df.at[index, "date_reservation"], format="%d/%m/%Y")
-                        now = datetime.now()
-                        if now - reservation_date > timedelta(hours=48):
-                            print("Plus de 48 heures se sont écoulées depuis la réservation.")
-                        else:
-                            print("Moins de 48 heures se sont écoulées.")
-                        df.to_csv(csv_file, index=False, encoding="utf-8")
-                        create_now = 1
-                        break
+                    break
 
             except Exception as e:
                 print(f"Une erreur est survenue : {e}")

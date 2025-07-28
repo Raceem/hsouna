@@ -56,7 +56,10 @@ def main():
         # Left side: Configuration editor
         st.title("Configuration Editor")
 
-        folder_name = st.text_input("Folder Name", config.FOLDER_NAME)
+        folder_options = [d for d in os.listdir(config.BASE_DIR)
+                          if os.path.isdir(os.path.join(config.BASE_DIR, d))]
+        default_index = folder_options.index(config.FOLDER_NAME) if config.FOLDER_NAME in folder_options else 0
+        folder_name = st.selectbox("Select Folder", folder_options, index=default_index)
         target_date = st.text_input("Target Date", config.TARGET_DATE)
         pays = st.text_input("Pays", config.PAYS)
         start_date = st.text_input("Start Date", config.START_DATE)
