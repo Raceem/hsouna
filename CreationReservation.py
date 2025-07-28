@@ -260,7 +260,6 @@ for index, row in df.iterrows():
                             (AppiumBy.ID, "com.android.packageinstaller:id/permission_message")
                         )
                     )
-                print("Permission popup found:", element.text)
                 if elements and "Autoriser" in elements[0].text:
                     print("Autorisation de l'application requise.\n")
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
@@ -268,17 +267,8 @@ for index, row in df.iterrows():
                     df.at[index, 'CREATION'] = "1"
                     df.to_csv(csv_file, index=False, encoding="utf-8")
                     create_now = 1
-
-                    # Handle location permissions
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvShareLocation")))
-                    sign_in_button.click()
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_foreground_only_button")))
-                    sign_in_button.click()
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvNo")))
-                    sign_in_button.click()
-
                     # Navigate to Noble Rawdah booking
-                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvNobleRawdahTitle")))
+                    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL")))
                     sign_in_button.click()
 
                     # Select gender
@@ -327,8 +317,8 @@ for index, row in df.iterrows():
                     screen_size = driver.get_window_size()
                     start_x = screen_size['width'] // 2
                     start_y = int(screen_size['height'] * 0.6)
-                    end_y = int(screen_size['height'] * 0.55)
-                    driver.swipe(start_x, start_y, start_x, end_y, 500)
+                    end_y = int(screen_size['height'] * 0.51)
+                    driver.swipe(start_x, start_y, start_x, end_y, 100)
                     time.sleep(1)
                     # Save screenshot
                     screenshot_path = "images/calendar_screenshot.png"

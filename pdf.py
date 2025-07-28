@@ -2,6 +2,7 @@ from pdfminer.high_level import extract_text
 import re
 import pandas as pd
 import json
+from datetime import datetime
 
 from config import (
     CSV_FILE,
@@ -73,9 +74,16 @@ if __name__ == "__main__":
         print("s")
         print(f"📄 Page {i} :\n")
         print("=" * 50)  # Séparateur entre les pages
-        dates = re.findall(r'(\d{2}/\d{2}/\d{4})', texte)
+        raw_dates = re.findall(r'(\d{2}/\d{2}/\d{4}|\d{4}-\d{2}-\d{2})', texte)
+
+        # Conversion éventuelle au format DD/MM/YYYY
+        dates = [
+            datetime.strptime(d, "%Y-%m-%d").strftime("%d/%m/%Y") if "-" in d else d
+            for d in raw_dates
+        ]
         # Filtrer les dates dont l'année est entre 1800 et 2025
         dates_naissances = []
+        print(dates)
         for date in dates:
             jour, mois, annee = date.split('/')
             annee = int(annee)
@@ -86,13 +94,15 @@ if __name__ == "__main__":
         # Extraction du numéro visa (supposons qu'il soit composé de 10 chiffres)
         match_visa = re.search(r'(\d{10})', texte)
         print(match_visa)
-@@ -96,60 +93,60 @@ if __name__ == "__main__":
+        numero_visa = match_visa.group(1) if match_visa else "Non trouvé"
+        patterns = {
             "IRQ": r'([A-Z]\d{8})\d?IRQ',              # Iraq
             "IDN": r'([A-Z][0-9]{7})<\d?IDN',          # Indonesia
             "IND": r'([A-Z][0-9]{7})<\d?IND',          # India
             "MAR": r'([A-Z][0-9]{7})<\d?MAR',          # Maroc
             "GEN": r'([A-Z]\d{7})',                    # Générique
         }
+
 
         match_passport = None
         country_code = None

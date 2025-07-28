@@ -3,7 +3,7 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 
 # Base paths
-FOLDER_NAME = "Indonesia8"
+FOLDER_NAME = "Iraq_14_26_07_2025"
 BASE_DIR = "C:/Users/SBS/Desktop/Hsouna"
 CSV_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "informations.csv")
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
@@ -19,7 +19,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "Iraq"
 PAYS_UPPER = "iraq"
-TARGET_DATE = "30/07"
+TARGET_DATE = "31/07"
 START_DATE = "26_07_2025"
 DURATION_DAYS = 8
 
@@ -45,7 +45,7 @@ FIELDNAMES = [
 ]
 
 # Default PDF path
-PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "VISA 23_07_2025.pdf")
+PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "الـ 14 النقص النساء.pdf")
 
 
 def setup_driver():
