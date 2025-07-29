@@ -11,6 +11,40 @@ import pandas as pd
 
 from PIL import Image
 import config
+st.markdown("""
+    <style>
+        .custom-btn button {
+            border: 2px solid transparent;
+            background-color: transparent;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .red-border button {
+            border-color: #e74c3c;
+        }
+        .red-border button:hover {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .yellow-border button {
+            border-color: #f1c40f;
+            color: black;
+        }
+        .yellow-border button:hover {
+            background-color: #f1c40f;
+            color: black;
+        }
+        .green-border button {
+            border-color: #27ae60;
+        }
+        .green-border button:hover {
+            background-color: #27ae60;
+            color: white;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.py')
 
@@ -124,7 +158,7 @@ def main():
             color = folder_colors.get(folder)
             symbol = color_symbols.get(color, '')
             return f"{symbol} {folder}" if symbol else folder
-
+        
         folder_name = st.selectbox(
             "Select Folder",
             folder_options,
@@ -138,9 +172,13 @@ def main():
         target_date = st.text_input("Target Date", config.TARGET_DATE)
         pays = st.text_input("Pays", config.PAYS)
         
-        pdf_filename = st.text_input("PDF File Name", os.path.basename(config.PDF_FILE))
-
+        # Automatically update session state when a PDF is uploaded
         uploaded_pdf = st.file_uploader("Select PDF", type=["pdf"])
+        if uploaded_pdf is not None:
+            st.session_state.pdf_filename = uploaded_pdf.name
+
+        # Show the PDF filename input (auto-filled if uploaded)
+        pdf_filename = st.text_input("PDF File Name", value=st.session_state.get("pdf_filename", ""), key="pdf_filename")
 
         if st.button("Save config"):
             update_config(folder_name, target_date, pays, pdf_filename)
@@ -195,6 +233,113 @@ def main():
             env["PYTHONIOENCODING"] = "utf-8"
             result = subprocess.run(
                 ["python", "pdf.py"], capture_output=True, text=True, env=env
+            )
+            st.text(result.stdout)
+            if result.stderr:
+                st.error(result.stderr)
+        col_a, col_b, col_c = st.columns(3)
+
+    with col_a:
+        st.markdown("""
+            <style>
+                .custom-red-btn {
+                    border: 2px solid #e74c3c;
+                    color: #e74c3c;
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    width: 100%;
+                }
+                .custom-red-btn:hover {
+                    background-color: #e74c3c;
+                    color: white;
+                }
+            </style>
+
+            <form action="" method="post">
+                <button class="custom-red-btn" name="create_reserve">Create + Reserve</button>
+            </form>
+        """, unsafe_allow_html=True)
+
+        if st.session_state.get("create_reserve_button_clicked"):
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            result = subprocess.run(
+                ["python", "CreationReservation.py"], capture_output=True, text=True, env=env
+            )
+            st.text(result.stdout)
+            if result.stderr:
+                st.error(result.stderr)
+
+    with col_b:
+        st.markdown("""
+            <style>
+                .custom-yellow-btn {
+                    border: 2px solid #f1c40f;
+                    color: #f1c40f;
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    width: 100%;
+                }
+                .custom-yellow-btn:hover {
+                    background-color: #f1c40f;
+                    color: black;
+                }
+            </style>
+
+            <form action="" method="post">
+                <button class="custom-yellow-btn" name="reserve">Reserve</button>
+            </form>
+        """, unsafe_allow_html=True)
+
+        if st.session_state.get("reserve_button_clicked"):
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            result = subprocess.run(
+                ["python", "login.py"], capture_output=True, text=True, env=env
+            )
+            st.text(result.stdout)
+            if result.stderr:
+                st.error(result.stderr)
+
+
+    with col_c:
+        st.markdown("""
+            <style>
+                .custom-green-btn {
+                    border: 2px solid #27ae60;
+                    color: #27ae60;
+                    background-color: transparent;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    width: 100%;
+                }
+                .custom-green-btn:hover {
+                    background-color: #27ae60;
+                    color: white;
+                }
+            </style>
+
+            <form action="" method="post">
+                <button class="custom-green-btn" name="confirmer">Confirmer</button>
+            </form>
+        """, unsafe_allow_html=True)
+
+        if st.session_state.get("confirmer_button_clicked"):
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            result = subprocess.run(
+                ["python", "confirmation.py"], capture_output=True, text=True, env=env
             )
             st.text(result.stdout)
             if result.stderr:
