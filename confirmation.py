@@ -2,7 +2,7 @@ import os
 import traceback
 import time
 from datetime import datetime, timedelta
-
+from selenium.common.exceptions import TimeoutException
 import pandas as pd
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
@@ -80,15 +80,17 @@ for index, row in df.iterrows():
                 EC.element_to_be_clickable((AppiumBy.ID, "com.moh.nusukapp:id/edtSearch"))
             )
             sign_in_button.send_keys(PAYS)
-            sign_in_button = wait.until(
-                EC.element_to_be_clickable(
-                    (
-                        AppiumBy.XPATH,
-                        f"//android.widget.TextView[@resource-id='com.moh.nusukapp:id/tvTitle' and @text='{PAYS}']",
-                    )
-                )
-            )
-            sign_in_button.click()
+            elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTitle")
+            found = False
+            for el in elements:
+                if el.text.strip().lower() == PAYS_UPPER:
+                    el.click()
+                    found = True
+                    print("✅ 'Iraq' cliqué avec succès.")
+                    break
+            if not found:
+                print("❌ 'Iraq' introuvable dans la liste.")
+                break
 
             sign_in_button = wait.until(
                 EC.element_to_be_clickable((AppiumBy.ID, "com.moh.nusukapp:id/edtPassport"))
@@ -120,12 +122,6 @@ for index, row in df.iterrows():
                     login_attempt += 1
                 else:
                     break
-            if login_attempt >= max_login_attempts:
-                df.at[index, 'CREATION'] = "-1"
-                df.at[index, 'RESERVATION'] = "0"
-                df.at[index, 'heure'] = ""
-                df.at[index, 'date_reservation'] = ""
-                break
 
             time.sleep(1)
             code = get_verification_code(data['email'])
@@ -150,6 +146,17 @@ for index, row in df.iterrows():
                     break
             if have_a_account:
                 break
+            try:
+                    sign_in_button = wait.until(
+                            EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/check_message"))
+                        )
+                    sign_in_button.click()
+                    sign_in_button = wait.until(
+                            EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/btn_confirm"))
+                        )
+                    sign_in_button.click()
+            except TimeoutException:
+                    pass  # Element not found, skip
 
             sign_in_button = wait.until(
                 EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button"))

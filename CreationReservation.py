@@ -3,6 +3,7 @@ from appium.webdriver.common.touch_action import TouchAction  # Added for coordi
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+import os
 import time
 import pandas as pd
 from datetime import datetime, timedelta  # Added for date handling
@@ -20,14 +21,21 @@ from config import (
     PAYS,
     PAYS_UPPER,
     TARGET_DATE,
+    START_DATE,
+    DURATION_DAYS ,
+    RESERVATION_DIR,
+
 )
 
+start_date = START_DATE
+duration_days = DURATION_DAYS 
 pays = PAYS
 paysUpper = PAYS_UPPER
-target_date = TARGET_DATE  # Adjust logic as needed
+
 csv_file = CSV_FILE
 filename_email_json = EMAIL_JSON_FILE
 filename_number_json = NUMBER_JSON_FILE
+target_date = TARGET_DATE 
 
 
 # Load CSV
@@ -254,7 +262,17 @@ for index, row in df.iterrows():
                 wait = WebDriverWait(driver, 10)
                 driver.save_screenshot("before_check.png")
                 print(driver.page_source)
-
+                try:
+                    sign_in_button = wait.until(
+                            EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/check_message"))
+                        )
+                    sign_in_button.click()
+                    sign_in_button = wait.until(
+                            EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/btn_confirm"))
+                        )
+                    sign_in_button.click()
+                except TimeoutException:
+                        pass  # Element not found, skip
                 element = wait.until(
                         EC.presence_of_element_located(
                             (AppiumBy.ID, "com.android.packageinstaller:id/permission_message")
@@ -288,7 +306,7 @@ for index, row in df.iterrows():
                         except Exception as e:
                             print(f"❌ Aucun bouton de genre trouvé : {e}")
                             break
-
+                
                 # Check for existing booking
                 all_elements = driver.find_elements(AppiumBy.XPATH, "//*")
                 book = 0
@@ -313,28 +331,36 @@ for index, row in df.iterrows():
                 sign_in_button.click()
                 time.sleep(1.5)
 
-                # Scroll calendar
+              #scroller l'ecran un peu
                 screen_size = driver.get_window_size()
                 start_x = screen_size['width'] // 2
                 start_y = int(screen_size['height'] * 0.7)
-                end_y = int(screen_size['height'] * 0.05)
-                driver.swipe(start_x, start_y, start_x, end_y, 100)
-                time.sleep(1)
-                # Save screenshot
+                end_y = int(screen_size['height'] * 0.60)
+                time.sleep(0.5)
+                driver.swipe(start_x, start_y, start_x, end_y, 500)
+                #time.sleep(1.5)
                 screenshot_path = "images/calendar_screenshot.png"
                 driver.save_screenshot(screenshot_path)
                 print(f"Screenshot sauvegardé à : {screenshot_path}")
 
-                # Get available dates (assuming date_available is defined)
-                available_dates = date_available(screenshot_path)
+                available_dates=date_available(screenshot_path)
+                # Définir la date de début (format "JJ_MM_YYYY")
+                
 
-                # Define date range
-                start_date = dict_row["date_entree_madinah"]  # e.g., "25_07_2025"
-                duration_days = 14  # Define or get from CSV
-                start_dt = datetime.strptime(start_date, "%d_%m_%Y") + timedelta(days=1)
+                # Convertir `start_date` en format date
+                start_dt = datetime.strptime(start_date, "%d_%m_%Y")
+                start_dt=start_dt+timedelta(days=1)
+
+                # Calculer la date de fin (start + durée)
                 end_dt = start_dt + timedelta(days=duration_days - 1)
+
+
+                # Reformater les dates sous "JJ/MM" pour la comparaison
                 start_str = start_dt.strftime("%d/%m")
                 end_str = end_dt.strftime("%d/%m")
+                print(available_dates)
+
+
 
                 # Filtrer les dates disponibles entre `start_date` et `end_date`
                 filtered_dates = []
@@ -352,7 +378,7 @@ for index, row in df.iterrows():
                 # Afficher les résultats
                 print(f"\n🔹 Plage de dates : {start_str} → {end_str}")
                 print("\n📅 Dates disponibles dans la plage sélectionnée :")
-
+                print(len(filtered_dates))
                 # Select target date
                 clicked = False
                 actions = ActionChains(driver)
@@ -360,10 +386,13 @@ for index, row in df.iterrows():
                     if date == target_date:
                         print(f"🎯 Date ciblée trouvée : {date} | 📍 Coordonnées originales: ({x}, {y})")
                         actions.w3c_actions.pointer_action.move_to_location(x, y)
+                        time.sleep(0.5)
                         actions.w3c_actions.pointer_action.click()
+                        time.sleep(0.5)  # Pause pour s'assurer que le clic est enregistré
                         actions.w3c_actions.perform()
+                        time.sleep(0.5)
                         date_reser = date
-                        print(f"✅ Cliqué sur la date {date} à : x={x}, y={y}")
+                       
                         clicked = True
                         break
 
@@ -374,7 +403,8 @@ for index, row in df.iterrows():
                 # Confirm date
                 sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//android.widget.TextView[@text='Confirmer']")))
                 sign_in_button.click()
-
+                
+               
                 # Select time
                 all_texts = set()
                 elements_list = []
@@ -398,6 +428,15 @@ for index, row in df.iterrows():
                 if not trouve:
                     elements_list[-1].click()
                     print(f"Élément '{target_text}' non trouvé, dernier élément sélectionné.")
+                 # Juste avant ta boucle ou au début, définis et crée le dossier :
+                os.makedirs(RESERVATION_DIR, exist_ok=True)
+
+                # … puis, juste après ta ligne df.to_csv(...), insère :
+                screenshot_filename = f"{dict_row['nom']}_{dict_row['numero_passport']}.png"
+                screenshot_path = os.path.join(RESERVATION_DIR, screenshot_filename)
+                driver.get_screenshot_as_file(screenshot_path)
+                print(f"📷 Capture d'écran de la réservation enregistrée sous : {screenshot_path}")
+
 
                 # Confirm time and booking
                 sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/continue_button")))

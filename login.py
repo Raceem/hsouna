@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from mail import get_verification_code
 import pandas as pd
+import os
 from datetime import datetime, timedelta
 import cv2
 import numpy as np
@@ -13,18 +14,25 @@ from test import date_available
 from datetime import datetime, timedelta
 import keyboard  # pip install keyboard
 from appium.webdriver.common.touch_action import TouchAction
+from selenium.common.exceptions import TimeoutException
 import threading
 from config import (
     CSV_FILE,
+    EMAIL_JSON_FILE,
+    NUMBER_JSON_FILE,
     setup_driver,
+    PAYS,
+    PAYS_UPPER,
     TARGET_DATE,
     START_DATE,
-    DURATION_DAYS,
-    PAYS_UPPER
+    DURATION_DAYS ,
+    RESERVATION_DIR,
+
+
 )
 
 csv_file = CSV_FILE
-target_date = TARGET_DATE
+target_date = TARGET_DATE  # Adjust logic as needed
 start_date = START_DATE
 duration_days = DURATION_DAYS  # Durée en jours
 
@@ -92,10 +100,6 @@ for index, row in df.iterrows():
                     # Cliquer sur le bouton
                     sign_in_button.click()
 
-                    
-
-
-                    
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/edtSearch")))
                     
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/edtSearch")))
@@ -153,6 +157,17 @@ for index, row in df.iterrows():
                         print(f"✅ Code trouvé : {code}")
                     else:
                         print("❌ Aucune validation trouvée.")
+                    try:
+                        sign_in_button = wait.until(
+                                EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/check_message"))
+                            )
+                        sign_in_button.click()
+                        sign_in_button = wait.until(
+                                EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/btn_confirm"))
+                            )
+                        sign_in_button.click()
+                    except TimeoutException:
+                            pass  # Element not found, skip
 
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.android.packageinstaller:id/permission_allow_button")))
                     sign_in_button.click()
@@ -160,7 +175,24 @@ for index, row in df.iterrows():
 
                     sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL")))
                     sign_in_button.click()
-                    
+                    # Select gender
+                    gender = dict.get("gender", "Unknown")  # Assuming 'gender' column in CSV
+                    if gender == "Unknown":
+                        try:
+                            sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv")))
+                            sign_in_button.click()
+                            gender = "F"
+                            print("✅ Bouton femme cliqué.")
+                        except:
+                            try:
+                                sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv")))
+                                sign_in_button.click()
+                                gender = "H"
+                                print("✅ Bouton homme cliqué.")
+                            except Exception as e:
+                                print(f"❌ Aucun bouton de genre trouvé : {e}")
+                                break
+
                     time.sleep(2)
                     # Récupérer tous les éléments visibles
                     all_elements = driver.find_elements(AppiumBy.XPATH, "//*")
@@ -229,14 +261,11 @@ for index, row in df.iterrows():
                     screen_size = driver.get_window_size()
                     start_x = screen_size['width'] // 2
                     start_y = int(screen_size['height'] * 0.7)
-                    end_y = int(screen_size['height'] * 0.05)
+                    end_y = int(screen_size['height'] * 0.60)
                     time.sleep(0.5)
-                    driver.swipe(start_x, start_y, start_x, end_y, 100)
-                    time.sleep(1.5)
+                    driver.swipe(start_x, start_y, start_x, end_y, 500)
+                    #time.sleep(1.5)
                     screenshot_path = "images/calendar_screenshot.png"
-                    driver.save_screenshot(screenshot_path)
-                    print(f"Screenshot sauvegardé à : {screenshot_path}")
-                    screenshot_path = "calendar_screenshot.png"
                     driver.save_screenshot(screenshot_path)
                     print(f"Screenshot sauvegardé à : {screenshot_path}")
 
@@ -289,6 +318,7 @@ for index, row in df.iterrows():
                         if date == target_date:
                             print(f"🎯 Date ciblée trouvée : {date} | 📍 Coordonnées originales: ({x}, {y})")
                             actions.w3c_actions.pointer_action.move_to_location(x, y)
+                            time.sleep(0.5)  # Attendre un peu pour que le mouvement soit visible
                             actions.w3c_actions.pointer_action.click()
                             actions.w3c_actions.perform()
                             date_reser = date
@@ -299,20 +329,27 @@ for index, row in df.iterrows():
                     if not clicked:
                         print(f"❌ La date {target_date} n'a pas été trouvée dans les dates disponibles.")
 
+
+
                     # Continuer si cliqué avec succès
                     if clicked:                        
                         sign_in_button = wait.until(EC.presence_of_element_located((
                             AppiumBy.XPATH, "//android.widget.TextView[@text='Confirmer']"
                         )))
                         sign_in_button.click()
-
+                    
                         
 
-                        time.sleep(1)
+                        time.sleep(2)
 
                         all_texts = set()  # Utiliser un set pour éviter les doublons
                         elements_list = []  # Stocker les éléments trouvés (Appium WebElements)
-
+                        os.makedirs(RESERVATION_DIR, exist_ok=True)
+                        # Prendre et sauvegarder une capture d'écran du résultat du login
+                        screenshot_name = f"{dict['nom']}_{dict['numero_passport']}_login.png"
+                        screenshot_path = os.path.join(RESERVATION_DIR, screenshot_name)
+                        driver.get_screenshot_as_file(screenshot_path)
+                        print(f"📷 Capture d'écran du login enregistrée sous : {screenshot_path}")
                         while True:
                             # Récupérer les éléments visibles
                             all_elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTime")

@@ -8,12 +8,15 @@ import streamlit as st
 import io
 import time
 import pandas as pd
-
+from datetime import datetime,date
+import streamlit as st
 from PIL import Image
 import config
 st.markdown("""
     <style>
-        .custom-btn button {
+        /* Style applied to a Streamlit button immediately following
+           a placeholder div with class 'custom-btn'. */
+        .custom-btn + div.stButton > button {
             border: 2px solid transparent;
             background-color: transparent;
             padding: 10px 20px;
@@ -21,25 +24,25 @@ st.markdown("""
             border-radius: 5px;
             transition: 0.3s ease;
         }
-        .red-border button {
+        .red-border + div.stButton > button {
             border-color: #e74c3c;
         }
-        .red-border button:hover {
+        .red-border + div.stButton > button:hover {
             background-color: #e74c3c;
             color: white;
         }
-        .yellow-border button {
+        .yellow-border + div.stButton > button {
             border-color: #f1c40f;
             color: black;
         }
-        .yellow-border button:hover {
+        .yellow-border + div.stButton > button:hover {
             background-color: #f1c40f;
             color: black;
         }
-        .green-border button {
+        .green-border + div.stButton > button {
             border-color: #27ae60;
         }
-        .green-border button:hover {
+        .green-border + div.stButton > button:hover {
             background-color: #27ae60;
             color: white;
         }
@@ -83,7 +86,7 @@ def capture_screenshot():
 
     return result.stdout
 def get_folder_color(folder):
-    """Determine color for a folder based on its informations.csv."""
+    """Détermine la couleur d’un dossier en fonction de son informations.csv."""
     csv_path = os.path.join(config.BASE_DIR, folder, "informations.csv")
     if not os.path.exists(csv_path):
         return None
@@ -91,26 +94,46 @@ def get_folder_color(folder):
         df = pd.read_csv(csv_path, dtype=str)
     except Exception:
         return None
-    if df.empty or len(df.columns) == 0:
-        return None
+
+    # Si pas de colonne CREATION, on ne peut rien dire
     if 'CREATION' not in df.columns:
         return None
 
-    creation = df['CREATION'].astype(str)
+    creation    = df['CREATION'].astype(str)
+    reservation = df.get('RESERVATION', pd.Series([], dtype=str)).astype(str)
+    confirmation= df.get('CONFIRMATION', pd.Series([], dtype=str)).astype(str)
+
+    # Pas encore de création
     if (creation == '0').any():
         return 'red'
 
-    if 'RESERVATION' not in df.columns:
-        return 'green'
-    reservation = df['RESERVATION'].astype(str)
-
+    # Création OK, pas encore de résa
     if ((creation == '1') & (reservation == '0')).any():
         return 'yellow'
 
-    if 'CONFIRMATION' in df.columns:
-        confirmation = df['CONFIRMATION'].astype(str)
-        if ((creation == '1') & (reservation == '1') & (confirmation == '0')).any():
+    # Résa faite, confirmation pas encore faite
+    if ((creation == '1') & (reservation == '1') & (confirmation == '0')).any():
+        # on tente d'extraire JJ et MM en fin de nom de dossier
+        parts = folder.split("_")
+        try:
+            day, month = int(parts[-2]), int(parts[-1])
+            today = datetime.today()
+            year = today.year + (1 if month < today.month else 0)
+            target_date = date(year, month, day)
+            days_to_target = (target_date - today.date()).days
+            # si on est encore avant (ou jour même) de la date cible
+            if 0 <= days_to_target <= 2:
+                return 'purple'
+            # sinon, date dépassée → on met “blue” pour “en retard”
+            else:
+                return 'blue'
+        except Exception:
+            # si parsing échoue, on retombe sur le bleu standard
             return 'blue'
+
+    # Tout est confirmé
+    if ((creation == '1') & (reservation == '1') & (confirmation == '1')).any():
+        return 'green'
 
     return 'green'
 
@@ -119,20 +142,22 @@ def main():
     
         
     with col_editor:
+        
         st.markdown("### 🗂️ Folder Color Legend")
         color_meanings = {
-            '🟥 Red': 'We have not yet created accounts.',
-            '🟨 Yellow': 'We have not yet made reservations',
-            '🟦 Blue': 'Reservation made, confirmation not yet done',
-            '🟩 Green': 'All steps completed ',
-            '• None': 'No informations.csv found or empty'
-        }
+             '🟥 Red': 'We have not yet created accounts.',
+             '🟨 Yellow': 'We have not yet made reservations',
+             '🟪 Purple': 'Reservation made can confirm',
+             '🟦 Blue': 'Reservation made .awaiting confirmation date',
+             '🟩 Green': 'All steps completed ',
+             '• None': 'No informations.csv found or empty'
+         }
 
         for symbol, meaning in color_meanings.items():
             st.markdown(f"<div style='margin-bottom: 8px;'>- {symbol}: {meaning}</div>", unsafe_allow_html=True)
         # Left side: Configuration editor
         st.title("Configuration Editor")
-        color_priority = ['red', 'yellow', 'blue', 'green',None]
+        color_priority = ['purple','red', 'yellow', 'blue', 'green',None]
 
         all_folders = [d for d in os.listdir(config.BASE_DIR)
                     if os.path.isdir(os.path.join(config.BASE_DIR, d))]
@@ -149,11 +174,12 @@ def main():
         default_index = folder_options.index(config.FOLDER_NAME) if config.FOLDER_NAME in folder_options else 0
 
         color_symbols = {
-            'yellow': '🟨',
-            'red': '🟥',
-            'blue': '🟦',
-            'green': '🟩'
-        }
+             'red'   : '🟥',
+             'yellow': '🟨',
+             'purple': '🟪',
+             'blue'  : '🟦',
+             'green' : '🟩'
+         }
         def format_folder(folder):
             color = folder_colors.get(folder)
             symbol = color_symbols.get(color, '')
@@ -164,7 +190,8 @@ def main():
             folder_options,
             index=default_index,
             format_func=format_folder  # 🟨🟥🟦🟩 folder label formatter
-        )
+        ) 
+
 
 
 
@@ -239,111 +266,42 @@ def main():
                 st.error(result.stderr)
         col_a, col_b, col_c = st.columns(3)
 
-    with col_a:
-        st.markdown("""
-            <style>
-                .custom-red-btn {
-                    border: 2px solid #e74c3c;
-                    color: #e74c3c;
-                    background-color: transparent;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    width: 100%;
-                }
-                .custom-red-btn:hover {
-                    background-color: #e74c3c;
-                    color: white;
-                }
-            </style>
+        with col_a:
+            st.markdown("<div class='custom-btn red-border'></div>", unsafe_allow_html=True)
+            if st.button("Create + Reserve", key="create_reserve"):
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+                result = subprocess.run(
+                    ["python", "CreationReservation.py"], capture_output=True, text=True, env=env
+                )
+                st.text(result.stdout)
+                if result.stderr:
+                    st.error(result.stderr)
 
-            <form action="" method="post">
-                <button class="custom-red-btn" name="create_reserve">Create + Reserve</button>
-            </form>
-        """, unsafe_allow_html=True)
-
-        if st.session_state.get("create_reserve_button_clicked"):
-            env = os.environ.copy()
-            env["PYTHONIOENCODING"] = "utf-8"
-            result = subprocess.run(
-                ["python", "CreationReservation.py"], capture_output=True, text=True, env=env
-            )
-            st.text(result.stdout)
-            if result.stderr:
-                st.error(result.stderr)
-
-    with col_b:
-        st.markdown("""
-            <style>
-                .custom-yellow-btn {
-                    border: 2px solid #f1c40f;
-                    color: #f1c40f;
-                    background-color: transparent;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    width: 100%;
-                }
-                .custom-yellow-btn:hover {
-                    background-color: #f1c40f;
-                    color: black;
-                }
-            </style>
-
-            <form action="" method="post">
-                <button class="custom-yellow-btn" name="reserve">Reserve</button>
-            </form>
-        """, unsafe_allow_html=True)
-
-        if st.session_state.get("reserve_button_clicked"):
-            env = os.environ.copy()
-            env["PYTHONIOENCODING"] = "utf-8"
-            result = subprocess.run(
-                ["python", "login.py"], capture_output=True, text=True, env=env
-            )
-            st.text(result.stdout)
-            if result.stderr:
-                st.error(result.stderr)
+        with col_b:
+            st.markdown("<div class='custom-btn yellow-border'></div>", unsafe_allow_html=True)
+            if st.button("Reserve", key="reserve"):
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+                result = subprocess.run(
+                    ["python", "login.py"], capture_output=True, text=True, env=env
+                )
+                st.text(result.stdout)
+                if result.stderr:
+                    st.error(result.stderr)
 
 
-    with col_c:
-        st.markdown("""
-            <style>
-                .custom-green-btn {
-                    border: 2px solid #27ae60;
-                    color: #27ae60;
-                    background-color: transparent;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    width: 100%;
-                }
-                .custom-green-btn:hover {
-                    background-color: #27ae60;
-                    color: white;
-                }
-            </style>
-
-            <form action="" method="post">
-                <button class="custom-green-btn" name="confirmer">Confirmer</button>
-            </form>
-        """, unsafe_allow_html=True)
-
-        if st.session_state.get("confirmer_button_clicked"):
-            env = os.environ.copy()
-            env["PYTHONIOENCODING"] = "utf-8"
-            result = subprocess.run(
-                ["python", "confirmation.py"], capture_output=True, text=True, env=env
-            )
-            st.text(result.stdout)
-            if result.stderr:
-                st.error(result.stderr)
+        with col_c:
+            st.markdown("<div class='custom-btn green-border'></div>", unsafe_allow_html=True)
+            if st.button("Confirmer", key="confirmer"):
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+                result = subprocess.run(
+                    ["python", "confirmation.py"], capture_output=True, text=True, env=env
+                )
+                st.text(result.stdout)
+                if result.stderr:
+                    st.error(result.stderr)
 
     with col_preview:
         st.markdown("### 📱 Live Phone Preview")

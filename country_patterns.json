@@ -1,0 +1,22 @@
+{
+  "indonesia": {
+    "name_pattern": "IDN([A-Z]+)<<([A-Z]+)",
+    "passport_pattern": "\\b([A-Z]{1}\\d{7})\\b"
+  },
+  "morocco": {
+    "name_pattern": "MAR([A-Z]+)<<([A-Z]+)",
+    "passport_pattern": "\\b([A-Z]{2}\\d{7})\\b"
+  },
+  "iraq": {
+    "name_pattern": "IRQ([A-Z]+)<<([A-Z]+)",
+    "passport_pattern": "\\b([A-Z]{1}\\d{8})\\b"
+  },
+  "nigeria": {
+    "name_pattern": "NGA([A-Z]+)<<([A-Z]+)",
+    "passport_pattern": "\\b([A-Z]{1}\\d{8})\\b"
+  },
+  "india": {
+    "name_pattern": "IND([A-Z]+)<<([A-Z]+)",
+    "passport_pattern": "\\b([A-Z]{1}\\d{7})\\b"
+  }
+}

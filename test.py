@@ -16,7 +16,7 @@ def date_available(pathScreen, output_path="output_with_grid.jpg"):
     rows, cols = 5, 7
     cell_width = width / cols
     cell_height = height / rows
-
+    cv2.imwrite("debug_crop.jpg", calendar)
     date_matrix = [
             ["",  "",  "",  "",  "",  "01/08", "02/08"],
             ["03/08",  "04/08",  "05/08",  "06/08",  "07/08",  "08/08",  "09/08"],
