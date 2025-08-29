@@ -335,7 +335,7 @@ for index, row in df.iterrows():
                 screen_size = driver.get_window_size()
                 start_x = screen_size['width'] // 2
                 start_y = int(screen_size['height'] * 0.7)
-                end_y = int(screen_size['height'] * 0.60)
+                end_y = int(screen_size['height'] * 0.56)
                 time.sleep(0.5)
                 driver.swipe(start_x, start_y, start_x, end_y, 500)
                 #time.sleep(1.5)
