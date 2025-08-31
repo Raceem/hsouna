@@ -39,6 +39,8 @@ from config import (
     setup_driver,
     PAYS_UPPER,
     TARGET_DATE,
+    HIJRI_DAY,
+
     START_DATE,
 )
 
@@ -77,6 +79,8 @@ APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
 csv_file = CSV_FILE
 target_date = TARGET_DATE            # "DD/MM"
 start_date = START_DATE              # "DD_MM_YYYY"
+greg_day = target_date.split("/")[0] if "/" in target_date else target_date
+hijri_day = HIJRI_DAY
 
 logger.info("Loading CSV: %s", csv_file)
 df = pd.read_csv(csv_file, dtype=str)
@@ -132,7 +136,7 @@ def has_existing_booking(driver) -> bool:
             pass
     return False
 
-def safe_click(driver, locator, name="element", timeout=8, retries=2, poll=0.25, clickable=True):
+def safe_click(driver, locator, name="element", timeout=3, retries=1, poll=0.25, clickable=True):
     by, value = locator
     last_err = None
     for attempt in range(1, retries + 1):
@@ -154,7 +158,7 @@ def safe_click(driver, locator, name="element", timeout=8, retries=2, poll=0.25,
     logger.error("[safe_click] failed to click %s after %s attempts: %s", name, retries, last_err)
     return False
 
-def safe_send_keys(driver, locator, text, name="field", timeout=8, retries=3, poll=0.25, clear_first=False):
+def safe_send_keys(driver, locator, text, name="field", timeout=3, retries=1, poll=0.25, clear_first=False):
     by, value = locator
     last_err = None
     for attempt in range(1, retries + 1):
@@ -279,7 +283,7 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
     logger.error("[%s] All tap methods failed at (%s,%s): %s", label, x, y, last_err)
     return False
 
-def click_calendar_pair_cell_precise(driver, greg_day: str = "6", hijri_day: str = "14", timeout=8) -> bool:
+def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, timeout=8) -> bool:
     """
     Click the smallest android.view.View whose descendants include BOTH text labels:
     TextView[@text=greg_day] AND TextView[@text=hijri_day].
@@ -322,7 +326,7 @@ def click_calendar_pair_cell_precise(driver, greg_day: str = "6", hijri_day: str
             logger.info("Chosen cell for %s/%s: bounds=%s area=%s (of %d candidates)", g, h, bounds, area, len(scored))
 
             # Prefer a bounds tap; it's fast and avoids interception
-            if tap_xy(driver, bounds["cx"], bounds["cy"], label=f"pair_{g}_{h}", retries=2):
+            if tap_xy(driver, bounds["cx"], bounds["cy"], label=f"pair_{g}_{h}", retries=1):
                 time.sleep(0.12)
                 if _confirmer_is_interactable(driver):
                     logger.info("Selected %s/%s via bounds tap.", g, h)
@@ -347,7 +351,7 @@ def click_calendar_pair_cell_precise(driver, greg_day: str = "6", hijri_day: str
             if bg and bh:
                 cx = (bg["cx"] + bh["cx"]) // 2
                 cy = (bg["cy"] + bh["cy"]) // 2
-                if tap_xy(driver, cx, cy, label=f"pair_{g}_{h}_childfallback", retries=2):
+                if tap_xy(driver, cx, cy, label=f"pair_{g}_{h}_childfallback", retries=1):
                     time.sleep(0.15)
                     if _confirmer_is_interactable(driver):
                         logger.info("Selected %s/%s via child-center fallback.", g, h)
@@ -448,12 +452,8 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
     time.sleep(0.08)
 
     # Date selection (native)
-    # NOTE: your target is 6 Sept / 14 Hijri for now (hard-coded example).
-    # If you want to map TARGET_DATE -> hijri automatically, inject that here.
-    if not click_calendar_pair_cell_precise(driver, greg_day="6", hijri_day="14"):
-        logger.error("❌ Target 6/14 cell not found. Moving to next person.")
-        return "NO_TARGET_DATE"
-
+    if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
+        logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)
     # Confirm the day selection in the calendar sheet
     if not safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Confirmer")'), name="Confirmer"):
         logger.error("Could not click Confirmer.")
@@ -616,7 +616,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
         logger.error("Too many login errors; marking CREATION='-1'")
         _set_df(index, "CREATION", "1", flush=True)
         return
-
+    time.sleep(2)
     # OTP
     email = dict_row["email"]
     logger.info("[login_user] Fetching OTP for email: %s", email)

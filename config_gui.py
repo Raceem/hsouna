@@ -51,7 +51,7 @@ st.markdown("""
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.py')
 
-def update_config(folder_name, target_date, pays,  pdf_filename):
+def update_config(folder_name, target_date,hijri_day, pays ,  pdf_filename):
     """Update selected variables in config.py."""
     with open(CONFIG_PATH, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -59,6 +59,8 @@ def update_config(folder_name, target_date, pays,  pdf_filename):
     replacements = {
         'FOLDER_NAME': f'"{folder_name}"',
         'TARGET_DATE': f'"{target_date}"',
+        'HIJRI_DAY': f'"{hijri_day}"',
+
         'PAYS': f'"{pays}"',
         
         'PDF_FILE': f'os.path.join(BASE_DIR, FOLDER_NAME, "{pdf_filename}")',
@@ -197,6 +199,8 @@ def main():
 
        
         target_date = st.text_input("Target Date", config.TARGET_DATE)
+        hijri_day = st.text_input("Hijri Day", config.HIJRI_DAY)
+
         pays = st.text_input("Pays", config.PAYS)
         
         # Automatically update session state when a PDF is uploaded
@@ -208,7 +212,7 @@ def main():
         pdf_filename = st.text_input("PDF File Name", value=st.session_state.get("pdf_filename", ""), key="pdf_filename")
 
         if st.button("Save config"):
-            update_config(folder_name, target_date, pays, pdf_filename)
+            update_config(folder_name, target_date, hijri_day, pays, pdf_filename)
             st.success("Configuration saved")
 
         if uploaded_pdf is not None and st.button("Prepare folder"):
@@ -240,7 +244,7 @@ def main():
                 folder_name_generated,
                 target_date,
                 pays,
-                
+                hijri_day,
                 uploaded_pdf.name,
             )
             st.success(f"Folder prepared: {folder_path}")

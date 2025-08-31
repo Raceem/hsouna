@@ -13963,3 +13963,188 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-08-31 22:53:06 | INFO | reservation | login.py:324 | Chosen cell for 6/14: bounds={'x1': 853, 'y1': 836, 'x2': 972, 'y2': 1018, 'w': 119, 'h': 182, 'cx': 912, 'cy': 927, 'area': 21658} area=21658 (of 3 candidates)
 2025-08-31 22:53:07 | INFO | reservation | login.py:330 | Selected 6/14 via bounds tap.
 2025-08-31 22:53:13 | INFO | reservation | login.py:709 | === Session end ===
+2025-08-31 23:04:42 | INFO | reservation | login.py:81 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-08-31 23:04:42 | INFO | reservation | login.py:83 | CSV loaded. Rows: 26, Columns: 18
+2025-08-31 23:04:42 | INFO | reservation | login.py:654 | === Session start ===
+2025-08-31 23:04:42 | INFO | reservation | login.py:660 | Planned rows (need app): 15 of 26 total
+2025-08-31 23:04:42 | INFO | reservation | login.py:663 | ---- Processing row 1/15 (orig index=7) ----
+2025-08-31 23:04:52 | INFO | reservation | login.py:110 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:04:52 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:04:52 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:04:52 | INFO | reservation | login.py:554 | [login_user] Row 7: SUPARDI Sari | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:04:52 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:04:52 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:04:58 | INFO | reservation | login.py:591 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-08-31 23:05:00 | INFO | reservation | login.py:622 | [login_user] Fetching OTP for email: m.a.ilbo.y.b.ana.na@gmail.com
+2025-08-31 23:05:03 | INFO | reservation | login.py:627 | [login_user] OTP received: 4930
+2025-08-31 23:05:06 | INFO | reservation | login.py:543 | Dismissed OTP error dialog (OK).
+2025-08-31 23:05:06 | WARNING | reservation | login.py:633 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-08-31 23:05:28 | INFO | reservation | login.py:409 | [make_reservation] Start for row 7 (passport=X5824213)
+2025-08-31 23:05:28 | INFO | reservation | login.py:419 | [make_reservation] Gender normalized: F
+2025-08-31 23:05:39 | INFO | reservation | login.py:301 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='6'] and .//android.widget.TextView[@text='14']]
+2025-08-31 23:05:41 | INFO | reservation | login.py:322 | Chosen cell for 6/14: bounds={'x1': 81, 'y1': 691, 'x2': 972, 'y2': 1650, 'w': 891, 'h': 959, 'cx': 526, 'cy': 1170, 'area': 854469} area=854469 (of 2 candidates)
+2025-08-31 23:05:42 | INFO | reservation | login.py:328 | Selected 6/14 via bounds tap.
+2025-08-31 23:05:53 | WARNING | reservation | login.py:470 | No timeslots available within timeout.
+2025-08-31 23:05:53 | INFO | reservation | login.py:649 | [login_user] Reservation step finished for row 7
+2025-08-31 23:05:54 | INFO | reservation | login.py:663 | ---- Processing row 2/15 (orig index=8) ----
+2025-08-31 23:06:02 | INFO | reservation | login.py:110 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:06:02 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:06:03 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:06:03 | INFO | reservation | login.py:554 | [login_user] Row 8: ZAINAB EJEN | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:06:03 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:06:03 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:06:13 | INFO | reservation | login.py:591 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-08-31 23:06:15 | INFO | reservation | login.py:622 | [login_user] Fetching OTP for email: m.a.ilbo.y.b.ana.n.a@gmail.com
+2025-08-31 23:06:19 | INFO | reservation | login.py:627 | [login_user] OTP received: 2784
+2025-08-31 23:06:22 | INFO | reservation | login.py:543 | Dismissed OTP error dialog (OK).
+2025-08-31 23:06:22 | WARNING | reservation | login.py:633 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-08-31 23:06:39 | INFO | reservation | login.py:409 | [make_reservation] Start for row 8 (passport=X5821237)
+2025-08-31 23:06:40 | INFO | reservation | login.py:419 | [make_reservation] Gender normalized: F
+2025-08-31 23:06:50 | INFO | reservation | login.py:301 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='6'] and .//android.widget.TextView[@text='14']]
+2025-08-31 23:06:52 | INFO | reservation | login.py:322 | Chosen cell for 6/14: bounds={'x1': 853, 'y1': 990, 'x2': 972, 'y2': 1172, 'w': 119, 'h': 182, 'cx': 912, 'cy': 1081, 'area': 21658} area=21658 (of 3 candidates)
+2025-08-31 23:06:53 | INFO | reservation | login.py:328 | Selected 6/14 via bounds tap.
+2025-08-31 23:07:04 | WARNING | reservation | login.py:470 | No timeslots available within timeout.
+2025-08-31 23:07:04 | INFO | reservation | login.py:649 | [login_user] Reservation step finished for row 8
+2025-08-31 23:07:05 | INFO | reservation | login.py:663 | ---- Processing row 3/15 (orig index=9) ----
+2025-08-31 23:07:13 | INFO | reservation | login.py:110 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:07:13 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:07:13 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:07:13 | INFO | reservation | login.py:554 | [login_user] Row 9: KARLINA DINA | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:07:13 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:07:13 | INFO | reservation | login.py:190 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:07:17 | INFO | reservation | login.py:707 | === Session end ===
+2025-08-31 23:17:13 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-08-31 23:17:13 | INFO | reservation | login.py:87 | CSV loaded. Rows: 26, Columns: 18
+2025-08-31 23:17:13 | INFO | reservation | login.py:654 | === Session start ===
+2025-08-31 23:17:13 | INFO | reservation | login.py:660 | Planned rows (need app): 15 of 26 total
+2025-08-31 23:17:13 | INFO | reservation | login.py:663 | ---- Processing row 1/15 (orig index=7) ----
+2025-08-31 23:17:21 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:17:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:17:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:17:21 | INFO | reservation | login.py:554 | [login_user] Row 7: SUPARDI Sari | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:17:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:17:22 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:17:27 | INFO | reservation | login.py:591 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-08-31 23:17:30 | INFO | reservation | login.py:622 | [login_user] Fetching OTP for email: m.a.ilbo.y.b.ana.na@gmail.com
+2025-08-31 23:17:33 | INFO | reservation | login.py:627 | [login_user] OTP received: 9431
+2025-08-31 23:17:36 | INFO | reservation | login.py:543 | Dismissed OTP error dialog (OK).
+2025-08-31 23:17:36 | WARNING | reservation | login.py:633 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-08-31 23:17:52 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-08-31 23:18:01 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 2)
+2025-08-31 23:18:10 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 3)
+2025-08-31 23:18:10 | ERROR | reservation | login.py:180 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-08-31 23:18:19 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-08-31 23:18:28 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 2)
+2025-08-31 23:18:37 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 3)
+2025-08-31 23:18:37 | ERROR | reservation | login.py:180 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-08-31 23:18:39 | INFO | reservation | login.py:543 | Dismissed OTP error dialog (OK).
+2025-08-31 23:18:39 | ERROR | reservation | login.py:644 | [login_user] Post-OTP state not successful: OTP_ERROR
+2025-08-31 23:18:40 | INFO | reservation | login.py:663 | ---- Processing row 2/15 (orig index=8) ----
+2025-08-31 23:18:47 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:18:47 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:18:47 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:18:47 | INFO | reservation | login.py:554 | [login_user] Row 8: ZAINAB EJEN | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:18:47 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:18:47 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:18:52 | INFO | reservation | login.py:707 | === Session end ===
+2025-08-31 23:19:39 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-08-31 23:19:39 | INFO | reservation | login.py:87 | CSV loaded. Rows: 26, Columns: 18
+2025-08-31 23:19:39 | INFO | reservation | login.py:654 | === Session start ===
+2025-08-31 23:19:39 | INFO | reservation | login.py:660 | Planned rows (need app): 15 of 26 total
+2025-08-31 23:19:39 | INFO | reservation | login.py:663 | ---- Processing row 1/15 (orig index=7) ----
+2025-08-31 23:19:46 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:19:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:19:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:19:46 | INFO | reservation | login.py:554 | [login_user] Row 7: SUPARDI Sari | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:19:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:19:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:19:52 | INFO | reservation | login.py:591 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-08-31 23:19:55 | INFO | reservation | login.py:622 | [login_user] Fetching OTP for email: m.a.ilbo.y.b.ana.na@gmail.com
+2025-08-31 23:19:57 | INFO | reservation | login.py:627 | [login_user] OTP received: 2885
+2025-08-31 23:20:00 | INFO | reservation | login.py:543 | Dismissed OTP error dialog (OK).
+2025-08-31 23:20:00 | WARNING | reservation | login.py:633 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-08-31 23:20:17 | INFO | reservation | login.py:413 | [make_reservation] Start for row 7 (passport=X5824213)
+2025-08-31 23:20:17 | INFO | reservation | login.py:423 | [make_reservation] Gender normalized: F
+2025-08-31 23:20:28 | INFO | reservation | login.py:305 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='11'] and .//android.widget.TextView[@text='19']]
+2025-08-31 23:20:29 | INFO | reservation | login.py:326 | Chosen cell for 11/19: bounds={'x1': 591, 'y1': 1209, 'x2': 722, 'y2': 1391, 'w': 131, 'h': 182, 'cx': 656, 'cy': 1300, 'area': 23842} area=23842 (of 3 candidates)
+2025-08-31 23:20:30 | INFO | reservation | login.py:332 | Selected 11/19 via bounds tap.
+2025-08-31 23:20:32 | INFO | reservation | login.py:468 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-08-31 23:20:33 | INFO | reservation | login.py:404 | Pre-book check: label='jeudi, 11 septembre' | expect day in ['11'] and month='septembre' -> True/True
+2025-08-31 23:20:35 | INFO | reservation | login.py:96 | DF Update [row=7, col=RESERVATION]: '0' -> '1'
+2025-08-31 23:20:35 | INFO | reservation | login.py:96 | DF Update [row=7, col=heure]: nan -> '10:00 AM'
+2025-08-31 23:20:35 | INFO | reservation | login.py:96 | DF Update [row=7, col=date_reservation]: nan -> '11/09/2025'
+2025-08-31 23:20:35 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-08-31 23:20:35 | INFO | reservation | login.py:649 | [login_user] Reservation step finished for row 7
+2025-08-31 23:20:36 | INFO | reservation | login.py:663 | ---- Processing row 2/15 (orig index=8) ----
+2025-08-31 23:20:46 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:20:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:20:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:20:46 | INFO | reservation | login.py:554 | [login_user] Row 8: ZAINAB EJEN | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:20:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:20:46 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:20:51 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for tvNationality (attempt 1)
+2025-08-31 23:20:51 | ERROR | reservation | login.py:158 | [safe_click] failed to click tvNationality after 1 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-08-31 23:20:52 | INFO | reservation | login.py:663 | ---- Processing row 3/15 (orig index=9) ----
+2025-08-31 23:20:59 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:20:59 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:20:59 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:20:59 | INFO | reservation | login.py:554 | [login_user] Row 9: KARLINA DINA | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:20:59 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:20:59 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:21:05 | INFO | reservation | login.py:591 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-08-31 23:21:09 | INFO | reservation | login.py:622 | [login_user] Fetching OTP for email: m.a.ilbo.y.b.an.ana@gmail.com
+2025-08-31 23:21:15 | INFO | reservation | login.py:627 | [login_user] OTP received: 5897
+2025-08-31 23:21:28 | INFO | reservation | login.py:413 | [make_reservation] Start for row 9 (passport=X5720496)
+2025-08-31 23:21:28 | INFO | reservation | login.py:423 | [make_reservation] Gender normalized: F
+2025-08-31 23:21:38 | INFO | reservation | login.py:305 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='11'] and .//android.widget.TextView[@text='19']]
+2025-08-31 23:21:40 | INFO | reservation | login.py:326 | Chosen cell for 11/19: bounds={'x1': 591, 'y1': 1210, 'x2': 722, 'y2': 1392, 'w': 131, 'h': 182, 'cx': 656, 'cy': 1301, 'area': 23842} area=23842 (of 3 candidates)
+2025-08-31 23:21:41 | INFO | reservation | login.py:332 | Selected 11/19 via bounds tap.
+2025-08-31 23:21:43 | INFO | reservation | login.py:468 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-08-31 23:21:43 | INFO | reservation | login.py:404 | Pre-book check: label='jeudi, 11 septembre' | expect day in ['11'] and month='septembre' -> True/True
+2025-08-31 23:21:46 | INFO | reservation | login.py:96 | DF Update [row=9, col=RESERVATION]: '0' -> '1'
+2025-08-31 23:21:46 | INFO | reservation | login.py:96 | DF Update [row=9, col=heure]: nan -> '10:00 AM'
+2025-08-31 23:21:46 | INFO | reservation | login.py:96 | DF Update [row=9, col=date_reservation]: nan -> '11/09/2025'
+2025-08-31 23:21:46 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-08-31 23:21:46 | INFO | reservation | login.py:649 | [login_user] Reservation step finished for row 9
+2025-08-31 23:21:46 | INFO | reservation | login.py:663 | ---- Processing row 4/15 (orig index=10) ----
+2025-08-31 23:21:53 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:21:53 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:21:53 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:21:53 | INFO | reservation | login.py:554 | [login_user] Row 10: NURJAYA JURIYAH | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:21:53 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:21:53 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:22:00 | INFO | reservation | login.py:591 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-08-31 23:22:04 | INFO | reservation | login.py:622 | [login_user] Fetching OTP for email: m.a.ilbo.y.b.an.an.a@gmail.com
+2025-08-31 23:22:10 | INFO | reservation | login.py:627 | [login_user] OTP received: 4279
+2025-08-31 23:22:23 | INFO | reservation | login.py:413 | [make_reservation] Start for row 10 (passport=X5353903)
+2025-08-31 23:22:23 | INFO | reservation | login.py:423 | [make_reservation] Gender normalized: F
+2025-08-31 23:22:26 | INFO | reservation | login.py:442 | Existing booking detected; marking RESERVATION=1.
+2025-08-31 23:22:26 | INFO | reservation | login.py:96 | DF Update [row=10, col=RESERVATION]: '0' -> '1'
+2025-08-31 23:22:26 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-08-31 23:22:26 | INFO | reservation | login.py:649 | [login_user] Reservation step finished for row 10
+2025-08-31 23:22:27 | INFO | reservation | login.py:663 | ---- Processing row 5/15 (orig index=12) ----
+2025-08-31 23:22:35 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-08-31 23:22:35 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:22:35 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:22:35 | INFO | reservation | login.py:554 | [login_user] Row 12: Asni Sarimah | type_voyage=nan | CREATION=1 | RESERVATION=0
+2025-08-31 23:22:35 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-08-31 23:22:35 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-08-31 23:22:42 | INFO | reservation | login.py:707 | === Session end ===
