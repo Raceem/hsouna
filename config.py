@@ -19,7 +19,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "Indonesia"
 PAYS_UPPER = PAYS.lower()
-TARGET_DATE = "31/08"
+TARGET_DATE = "06/09"
 START_DATE = "02_08_2025"
 DURATION_DAYS = 31
 
@@ -52,6 +52,10 @@ RESERVATION_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "reservations")
 
 def setup_driver():
     """Create and return a configured Appium driver."""
+    autoGrantPermissions: true
+    dontStopAppOnReset: true
+    ignoreUnimportantViews: true
+    waitForIdleTimeout: 0
     options = UiAutomator2Options()
     options.platform_name = "Android"
     options.platform_version = PLATFORM_VERSION
