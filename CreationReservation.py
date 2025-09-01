@@ -29,8 +29,6 @@ filename_number_json = NUMBER_JSON_FILE
 # Load CSV
 df = pd.read_csv(csv_file, dtype=str)
 
-
-
 def process_user(driver, index, row):
     dict_row = row.to_dict()
     print(f"Ligne {index+1}: {dict_row['nom']} {dict_row['prenom']} || {dict_row['type_voyage']} || {dict_row['date_entree_madinah']}")
