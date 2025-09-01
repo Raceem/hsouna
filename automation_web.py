@@ -6,6 +6,7 @@ from datetime import datetime
 from flask import (
     Flask,
     flash,
+    jsonify,
     redirect,
     render_template,
     request,
@@ -13,6 +14,7 @@ from flask import (
     send_from_directory,
     url_for,
 )
+from werkzeug.utils import secure_filename
 
 import automation
 import config
@@ -20,15 +22,13 @@ import config
 app = Flask(__name__)
 app.secret_key = "changeme"
 
+# Use cross-platform temp upload dir
+UPLOAD_DIR = os.path.join(tempfile.gettempdir(), "reservation_uploads")
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
 
 def _extract_date(name: str) -> datetime:
-    """Extract a date from a folder name.
-
-    Supports patterns like ``DD_MM_YYYY`` or ``YYYY-MM-DD``. If no
-    recognizable date is found, ``datetime.min`` is returned so such
-    folders fall to the end of the sorted list.
-    """
-
+    """Extract a date from a folder name (DD_MM_YYYY or YYYY-MM-DD)."""
     patterns = [r"(\d{2}_\d{2}_\d{4})", r"(\d{4}-\d{2}-\d{2})"]
     for pattern in patterns:
         match = re.search(pattern, name)
@@ -42,8 +42,13 @@ def _extract_date(name: str) -> datetime:
     return datetime.min
 
 
+def _urlpath(*parts: str) -> str:
+    """Join path parts and normalize to forward slashes for URLs."""
+    return os.path.join(*parts).replace("\\", "/")
+
+
 def get_runs(sort_by: str = "date"):
-    """Collect information about previously imported PDF folders."""
+    """Collect previous runs (folders under BASE_DIR) for UI listing."""
     runs = []
     base_dir = config.BASE_DIR
 
@@ -55,34 +60,34 @@ def get_runs(sort_by: str = "date"):
         if not os.path.isdir(folder_path):
             continue
 
+        # PDFs in the run folder
         pdf_entries = []
         for name in sorted(os.listdir(folder_path)):
             if name.lower().endswith(".pdf"):
                 pdf_entries.append({
                     "name": name,
-                    "path": os.path.join(folder, name),
+                    "path": _urlpath(folder, name),  # normalized for URLs
                 })
 
+        # CSV (optional)
         csv_name = "informations.csv"
-        csv_rel = os.path.join(folder, csv_name)
-        csv_abs = os.path.join(base_dir, csv_rel)
+        csv_rel = _urlpath(folder, csv_name)  # normalized for URLs
+        csv_abs = os.path.join(base_dir, folder, csv_name)
         csv_path = csv_rel if os.path.exists(csv_abs) else None
 
-        has_rawdha = os.path.isdir(os.path.join(folder_path, "rawdha"))
-
-        reservations = []
-        res_dir = os.path.join(folder_path, "reservations")
-        if os.path.isdir(res_dir):
-            for img in sorted(os.listdir(res_dir)):
+        # Rawdha images (optional)
+        rawdha_images = []
+        rawdha_dir = os.path.join(folder_path, "rawdha")
+        if os.path.isdir(rawdha_dir):
+            for img in sorted(os.listdir(rawdha_dir)):
                 if img.lower().endswith((".png", ".jpg", ".jpeg")):
-                    reservations.append(os.path.join(folder, "reservations", img))
+                    rawdha_images.append(_urlpath(folder, "rawdha", img))  # normalized
 
         runs.append({
             "folder": folder,
             "pdfs": pdf_entries,
             "csv": csv_path,
-            "has_rawdha": has_rawdha,
-            "reservations": reservations,
+            "rawdha_images": rawdha_images,
             "mtime": os.path.getmtime(folder_path),
         })
 
@@ -97,6 +102,10 @@ def get_runs(sort_by: str = "date"):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
+        if automation.get_status()["running"]:
+            flash("A pipeline is already running.")
+            return redirect(url_for("index"))
+
         pdf = request.files.get("pdf")
         target_date = request.form.get("target_date")
         hijri_day = request.form.get("hijri_day")
@@ -106,35 +115,54 @@ def index():
             flash("No file selected.")
             return redirect(request.url)
 
-        tmp_path = os.path.join("/tmp", pdf.filename)
+        # Safe cross-platform temp file path
+        fname = secure_filename(pdf.filename) or "upload.pdf"
+        tmp_path = os.path.join(UPLOAD_DIR, fname)
         pdf.save(tmp_path)
 
         try:
-            automation.run_pipeline(
+            # Start in background so the UI returns immediately
+            automation.run_pipeline_async(
                 pdf=tmp_path,
+                folder=None,                 # keep config default unless you add a field
                 target_date=target_date,
                 hijri_day=hijri_day,
                 country=country,
             )
-            flash("All steps completed successfully.")
-        except Exception as exc:  # pragma: no cover - runtime feedback
+            flash("Pipeline started.")
+        except Exception as exc:
             flash(str(exc))
-        finally:
-            try:
-                os.remove(tmp_path)
-            except OSError:
-                pass
+        # Do NOT delete tmp_path here — the child process needs it.
 
         return redirect(url_for("index"))
 
     sort_by = request.args.get("sort", "date")
     runs = get_runs(sort_by=sort_by)
-    return render_template("index.html", runs=runs, sort=sort_by)
+    status = automation.get_status()
+    return render_template("index.html", runs=runs, sort=sort_by, status=status)
+
+
+@app.route("/status")
+def status():
+    """JSON status for polling."""
+    return jsonify(automation.get_status())
+
+
+@app.route("/pause", methods=["POST"])
+def pause():
+    """Kill current running step and abort pipeline."""
+    ok = automation.cancel_current()
+    if ok:
+        flash("Pipeline cancelled.")
+    else:
+        flash("No running pipeline.")
+    return redirect(url_for("index"))
 
 
 @app.route("/files/<path:filename>")
 def serve_file(filename):
     """Serve files from the configured BASE_DIR."""
+    # filename is URL-style (forward slashes); send_from_directory handles Windows paths.
     return send_from_directory(config.BASE_DIR, filename)
 
 
@@ -173,4 +201,4 @@ def download_rawdha(folder):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

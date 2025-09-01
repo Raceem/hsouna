@@ -17,10 +17,10 @@ APP_PACKAGE = "com.moh.nusukapp"
 APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 
 # Additional configuration
-PAYS = "Indonesia"
+PAYS = "egypt"
 PAYS_UPPER = PAYS.lower()
-TARGET_DATE = "11/09"
-HIJRI_DAY = "19"
+TARGET_DATE = "12/09"
+HIJRI_DAY = "20"
 START_DATE = "02_08_2025"
 DURATION_DAYS = 31
 
@@ -46,7 +46,7 @@ FIELDNAMES = [
 ]
 
 # Default PDF path
-PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "")
+PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "4.pdf")
 # Directory where confirmation screenshots will be stored
 RAWDHA_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "rawdha")
 RESERVATION_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "reservations")

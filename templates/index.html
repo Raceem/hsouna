@@ -3,82 +3,142 @@
 <head>
   <meta charset="utf-8">
   <title>Reservation Automation</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    form { margin-bottom: 2em; }
-    .run { border-top: 1px solid #ccc; padding-top: 1em; margin-top: 1em; }
-    .images img { max-width: 200px; margin: 5px; }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-  <h1>Upload PDF and Enter Details</h1>
-  <form method="post" enctype="multipart/form-data">
-    <label>PDF File: <input type="file" name="pdf" accept="application/pdf" required></label><br>
-    <label>Target date (DD/MM): <input type="text" name="target_date" required></label><br>
-    <label>Hijri day: <input type="text" name="hijri_day" required></label><br>
-    <label>Nationality: <input type="text" name="country" required></label><br>
-    <input type="submit" value="Run">
-  </form>
-
-  <form method="get">
-    <label>Sort by:
-      <select name="sort" onchange="this.form.submit()">
-        <option value="date" {% if sort == 'date' %}selected{% endif %}>Date in name</option>
-        <option value="mtime" {% if sort == 'mtime' %}selected{% endif %}>Modification date</option>
-      </select>
-    </label>
-  </form>
-
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <ul>
-        {% for message in messages %}
-          <li>{{ message }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
-
-  <h2>Previous Imports</h2>
-  {% if runs %}
-    {% for run in runs %}
-      <details class="run">
-        <summary>{{ run.folder }}</summary>
-
-        {% if run.pdfs %}
-          <ul>
-            {% for pdf in run.pdfs %}
-              <li><a href="{{ url_for('serve_file', filename=pdf.path) }}">{{ pdf.name }}</a></li>
-            {% endfor %}
-          </ul>
+<body class="bg-light">
+  <div class="container my-4">
+    <h1 class="mb-4">Reservation Automation</h1>
+    <div class="alert alert-secondary d-flex justify-content-between align-items-center" id="status-bar">
+    <div>
+      <strong>Status:</strong>
+      <span id="status-text">
+        {% if status.running %}
+          Running — step: <code>{{ status.current_step }}</code>
+        {% else %}
+          Idle
         {% endif %}
+      </span>
+    </div>
+    <form method="post" action="{{ url_for('pause') }}">
+      <button class="btn btn-warning" id="pause-btn" {% if not status.running %}disabled{% endif %}>
+        Pause / Stop
+      </button>
+    </form>
+  </div>
+    <form method="post" enctype="multipart/form-data" class="row g-3 mb-5">
+      <div class="col-md-3">
+        <label for="pdf" class="form-label">PDF File</label>
+        <input class="form-control" type="file" id="pdf" name="pdf" accept="application/pdf" required>
+      </div>
+      <div class="col-md-3">
+        <label for="target_date" class="form-label">Target date (DD/MM)</label>
+        <input class="form-control" type="text" id="target_date" name="target_date" required>
+      </div>
+      <div class="col-md-3">
+        <label for="hijri_day" class="form-label">Hijri day</label>
+        <input class="form-control" type="text" id="hijri_day" name="hijri_day" required>
+      </div>
+      <div class="col-md-3">
+        <label for="country" class="form-label">Nationality</label>
+        <input class="form-control" type="text" id="country" name="country" required>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Run</button>
+      </div>
+    </form>
 
-        {% if run.csv %}
-          <p>CSV: <a href="{{ url_for('serve_file', filename=run.csv) }}">informations.csv</a></p>
-        {% endif %}
+    <form method="get" class="mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="sort" class="col-form-label">Sort by</label>
+        </div>
+        <div class="col-auto">
+          <select id="sort" name="sort" class="form-select" onchange="this.form.submit()">
+            <option value="date" {% if sort == 'date' %}selected{% endif %}>Date in name</option>
+            <option value="mtime" {% if sort == 'mtime' %}selected{% endif %}>Modification date</option>
+          </select>
+        </div>
+      </div>
+    </form>
 
-        {% if run.has_rawdha %}
-          <details>
-            <summary>rawdah</summary>
-            <p><a href="{{ url_for('download_rawdha', folder=run.folder) }}">Download rawdha folder</a></p>
-          </details>
-        {% endif %}
+    {% with messages = get_flashed_messages() %}
+      {% for message in messages %}
+        <div class="alert alert-info">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
 
-        {% if run.reservations %}
-          <details>
-            <summary>reservations</summary>
-            <div class="images">
-              {% for img in run.reservations %}
-                <img src="{{ url_for('serve_file', filename=img) }}" alt="{{ img }}">
-              {% endfor %}
+    <h2 class="mb-3">Previous Imports</h2>
+    {% if runs %}
+      <div class="accordion" id="runs">
+        {% for run in runs %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{ loop.index }}">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse{{ loop.index }}"
+                      aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                {{ run.folder }}
+              </button>
+            </h2>
+            <div id="collapse{{ loop.index }}" class="accordion-collapse collapse"
+                 aria-labelledby="heading{{ loop.index }}" data-bs-parent="#runs">
+              <div class="accordion-body">
+                {% if run.pdfs %}
+                  <h5>PDFs</h5>
+                  <ul class="list-group mb-3">
+                    {% for pdf in run.pdfs %}
+                      <li class="list-group-item">
+                        <a href="{{ url_for('serve_file', filename=pdf.path) }}">{{ pdf.name }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                {% if run.csv %}
+                  <p><strong>CSV:</strong> <a href="{{ url_for('serve_file', filename=run.csv) }}">informations.csv</a></p>
+                {% endif %}
+                {% if run.rawdha_images %}
+                  <h5>Rawdha Images</h5>
+                  <div class="row g-2">
+                    {% for img in run.rawdha_images %}
+                      <div class="col-auto">
+                        <a href="{{ url_for('serve_file', filename=img) }}" download>
+                          <img src="{{ url_for('serve_file', filename=img) }}" class="img-thumbnail" style="max-width: 200px;">
+                        </a>
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <a class="btn btn-sm btn-secondary mt-2" href="{{ url_for('download_rawdha', folder=run.folder) }}">Download all</a>
+                {% endif %}
+              </div>
             </div>
-          </details>
-        {% endif %}
-
-      </details>
-    {% endfor %}
-  {% else %}
-    <p>No previous imports found.</p>
-  {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No previous imports found.</p>
+    {% endif %}
+  </div>
 </body>
+<script>
+async function refreshStatus() {
+  try {
+    const r = await fetch("{{ url_for('status') }}", {cache:'no-store'});
+    const s = await r.json();
+    const text = document.getElementById('status-text');
+    const btn  = document.getElementById('pause-btn');
+    if (s.running) {
+      text.textContent = `Running — step: ${s.current_step}`;
+      btn.removeAttribute('disabled');
+    } else {
+      text.textContent = 'Idle';
+      btn.setAttribute('disabled', 'disabled');
+    }
+  } catch (e) {
+    // noop
+  }
+}
+setInterval(refreshStatus, 1000);
+</script>
+
 </html>

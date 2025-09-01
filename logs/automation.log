@@ -14148,3 +14148,13 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-08-31 23:22:35 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
 2025-08-31 23:22:35 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
 2025-08-31 23:22:42 | INFO | reservation | login.py:707 | === Session end ===
+2025-09-01 15:10:37 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-09-01 15:10:38 | INFO | reservation | login.py:87 | CSV loaded. Rows: 17, Columns: 17
+2025-09-01 15:21:14 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-09-01 15:21:14 | INFO | reservation | login.py:87 | CSV loaded. Rows: 17, Columns: 17
+2025-09-01 16:17:41 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-09-01 16:17:41 | INFO | reservation | login.py:87 | CSV loaded. Rows: 17, Columns: 17
+2025-09-01 17:26:32 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-09-01 17:26:32 | INFO | reservation | login.py:87 | CSV loaded. Rows: 27, Columns: 17
+2025-09-01 17:42:11 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\UPGRADE\informations.csv
+2025-09-01 17:42:11 | INFO | reservation | login.py:87 | CSV loaded. Rows: 9, Columns: 17
