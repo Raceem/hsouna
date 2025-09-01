@@ -1,32 +1,62 @@
 import os
-from flask import Flask, flash, redirect, render_template_string, request, url_for
+from flask import (
+    Flask,
+    flash,
+    redirect,
+    render_template,
+    request,
+    send_from_directory,
+    url_for,
+)
 
 import automation
+import config
 
 app = Flask(__name__)
 app.secret_key = "changeme"
 
-FORM_TEMPLATE = """
-<!doctype html>
-<title>Reservation Automation</title>
-<h1>Upload PDF and Enter Details</h1>
-<form method=post enctype=multipart/form-data>
-  <label>PDF File: <input type=file name=pdf accept="application/pdf" required></label><br>
-  <label>Target date (DD/MM): <input type=text name=target_date required></label><br>
-  <label>Hijri day: <input type=text name=hijri_day required></label><br>
-  <label>Nationality: <input type=text name=country required></label><br>
-  <input type=submit value=Run>
-</form>
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul>
-      {% for message in messages %}
-        <li>{{ message }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
-"""
+
+def get_runs():
+    """Collect information about previously imported PDF folders."""
+    runs = []
+    base_dir = config.BASE_DIR
+
+    if not os.path.isdir(base_dir):
+        return runs
+
+    for folder in sorted(os.listdir(base_dir)):
+        folder_path = os.path.join(base_dir, folder)
+        if not os.path.isdir(folder_path):
+            continue
+
+        pdf_entries = []
+        for name in sorted(os.listdir(folder_path)):
+            if name.lower().endswith(".pdf"):
+                pdf_entries.append({
+                    "name": name,
+                    "path": os.path.join(folder, name),
+                })
+
+        csv_name = "informations.csv"
+        csv_rel = os.path.join(folder, csv_name)
+        csv_abs = os.path.join(base_dir, csv_rel)
+        csv_path = csv_rel if os.path.exists(csv_abs) else None
+
+        reservations = []
+        res_dir = os.path.join(folder_path, "reservations")
+        if os.path.isdir(res_dir):
+            for img in sorted(os.listdir(res_dir)):
+                if img.lower().endswith((".png", ".jpg", ".jpeg")):
+                    reservations.append(os.path.join(folder, "reservations", img))
+
+        runs.append({
+            "folder": folder,
+            "pdfs": pdf_entries,
+            "csv": csv_path,
+            "reservations": reservations,
+        })
+
+    return runs
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -62,7 +92,14 @@ def index():
 
         return redirect(url_for("index"))
 
-    return render_template_string(FORM_TEMPLATE)
+    runs = get_runs()
+    return render_template("index.html", runs=runs)
+
+
+@app.route("/files/<path:filename>")
+def serve_file(filename):
+    """Serve files from the configured BASE_DIR."""
+    return send_from_directory(config.BASE_DIR, filename)
 
 
 if __name__ == "__main__":

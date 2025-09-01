@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reservation Automation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { margin-bottom: 2em; }
+    .run { border-top: 1px solid #ccc; padding-top: 1em; margin-top: 1em; }
+    .images img { max-width: 200px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Upload PDF and Enter Details</h1>
+  <form method="post" enctype="multipart/form-data">
+    <label>PDF File: <input type="file" name="pdf" accept="application/pdf" required></label><br>
+    <label>Target date (DD/MM): <input type="text" name="target_date" required></label><br>
+    <label>Hijri day: <input type="text" name="hijri_day" required></label><br>
+    <label>Nationality: <input type="text" name="country" required></label><br>
+    <input type="submit" value="Run">
+  </form>
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <h2>Previous Imports</h2>
+  {% if runs %}
+    {% for run in runs %}
+      <div class="run">
+        <h3>{{ run.folder }}</h3>
+        {% if run.pdfs %}
+          <ul>
+            {% for pdf in run.pdfs %}
+              <li><a href="{{ url_for('serve_file', filename=pdf.path) }}">{{ pdf.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if run.csv %}
+          <p>CSV: <a href="{{ url_for('serve_file', filename=run.csv) }}">informations.csv</a></p>
+        {% endif %}
+        {% if run.reservations %}
+          <div class="images">
+            {% for img in run.reservations %}
+              <img src="{{ url_for('serve_file', filename=img) }}" alt="{{ img }}">
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No previous imports found.</p>
+  {% endif %}
+</body>
+</html>
