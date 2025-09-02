@@ -125,7 +125,7 @@ def normalize_gender(raw: str | None) -> str:
 
 def has_existing_booking(driver) -> bool:
     needles = [
-        "existing booking", "réservation", "have an active permit",
+        "existing booking", "have an active permit",
         "You already have an existing booking for", "Vous avez déjà une réservation",
     ]
     for t in needles:
@@ -136,7 +136,7 @@ def has_existing_booking(driver) -> bool:
             pass
     return False
 
-def safe_click(driver, locator, name="element", timeout=3, retries=1, poll=0.25, clickable=True):
+def safe_click(driver, locator, name="element", timeout=7, retries=2, poll=0.25, clickable=True):
     by, value = locator
     last_err = None
     for attempt in range(1, retries + 1):
@@ -294,13 +294,13 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
     h = (hijri_day or "").lstrip("0") or "0"
 
     # Nudge sheet and allow layout to settle
-    screen_size = driver.get_window_size()
-    start_x = screen_size["width"] // 2
-    start_y = int(screen_size["height"] * 0.7)
-    end_y = int(screen_size["height"] * 0.3)
-    time.sleep(0.5)
-    driver.swipe(start_x, start_y, start_x, end_y, 500)
-    time.sleep(1.5)
+    #screen_size = driver.get_window_size()
+    #start_x = screen_size["width"] // 2
+    #start_y = int(screen_size["height"] * 0.7)
+    #end_y = int(screen_size["height"] * 0.3)
+    #time.sleep(0.5)
+    #driver.swipe(start_x, start_y, start_x, end_y, 500)
+    #time.sleep(1.5)
     xp = f"//android.view.View[.//android.widget.TextView[@text='{g}'] and .//android.widget.TextView[@text='{h}']]"
     logger.info("Looking for calendar cell with XPath: %s", xp)
 
@@ -363,6 +363,66 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
 
     logger.info("No parent cell with valid bounds for %s/%s after wait.", g, h)
     return False
+def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
+    """
+    If the post-OTP 'policy/privacy' sheet appears, tick the checkbox
+    and press 'Confirmer et continuer'. Returns True if handled or not present.
+    """
+    box_id = "com.moh.nusukapp:id/check_message"
+    confirm_id = "com.moh.nusukapp:id/btn_confirm"
+    ignore_id = "com.moh.nusukapp:id/btn_ignore"  # unused; we accept
+
+    try:
+        # Quick probe: is the sheet present?
+        sheet_present = False
+        end = time.time() + timeout
+        while time.time() < end:
+            if driver.find_elements(AppiumBy.ID, box_id) or driver.find_elements(AppiumBy.ID, confirm_id):
+                sheet_present = True
+                break
+            time.sleep(0.2)
+
+        if not sheet_present:
+            logger.info("[privacy] Consent sheet not present.")
+            return True
+
+        logger.info("[privacy] Consent sheet detected; accepting…")
+
+        # Tick the checkbox if needed
+        try:
+            cb = WebDriverWait(driver, 4, 0.2).until(
+                EC.presence_of_element_located((AppiumBy.ID, box_id))
+            )
+            checked = (cb.get_attribute("checked") or "").lower() == "true"
+            if not checked:
+                try:
+                    cb.click()
+                except Exception:
+                    # try tapping its bounds center as fallback
+                    b = _parse_bounds(cb.get_attribute("bounds"))
+                    if b:
+                        tap_xy(driver, b["cx"], b["cy"], label="privacy_checkbox")
+                time.sleep(0.1)
+            else:
+                logger.info("[privacy] Checkbox already checked.")
+        except Exception as e:
+            logger.info("[privacy] Checkbox not found or not required: %s", e)
+
+        # Press confirm
+        if not safe_click(driver, (AppiumBy.ID, confirm_id), name="privacy_confirm", timeout=5, retries=3):
+            # try by text as a fallback
+            safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR,
+                                'new UiSelector().textContains("Confirmer")'),
+                       name="privacy_confirm_text", timeout=3, retries=2)
+
+        time.sleep(0.3)
+        logger.info("[privacy] Consent accepted.")
+        return True
+
+    except Exception as e:
+        logger.warning("[privacy] Could not handle consent sheet: %s", e)
+        return False
+
 
 # --- pre-book visible date verification --------------------------------------
 
@@ -409,6 +469,9 @@ def verify_selected_date_label(driver, target_ddmm: str, timeout: int = 5) -> bo
 # Reservation Flow
 
 def make_reservation(driver, index: int, dict_row: dict) -> None:
+    # New UI: privacy/terms consent after OTP
+    logger.info(dict_row)
+    accept_privacy_if_present(driver, timeout=6)
     driver.implicitly_wait(1)
     logger.info("[make_reservation] Start for row %s (passport=%s)", index, dict_row.get("numero_passport"))
     wait = WebDriverWait(driver, 10)
@@ -421,27 +484,48 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
     # Gender
     gender = normalize_gender(dict_row.get("gender", "Unknown"))
     logger.info("[make_reservation] Gender normalized: %s", gender)
-    if gender == "F":
-        if not (safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"), name="permit_woman_tv", timeout=5)
-                or safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"), name="permit_men_tv", timeout=3)):
-            logger.error("No gender button clickable (F).")
-            return
-    elif gender == "H":
-        if not (safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"), name="permit_men_tv", timeout=5)
-                or safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"), name="permit_woman_tv", timeout=3)):
-            logger.error("No gender button clickable (H).")
-            return
-    else:
-        if not (safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"), name="permit_woman_tv", timeout=3)
-                or safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"), name="permit_men_tv", timeout=3)):
-            logger.error("No gender button clickable (Unknown).")
-            return
-
     # Existing booking?
     if has_existing_booking(driver):
         logger.info("Existing booking detected; marking RESERVATION=1.")
+        _set_df(index, "CREATION", "1",flush=True)     
         _set_df(index, "RESERVATION", "1", flush=True)
         return
+    if gender == "F":
+        try:
+            if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+                            name="permit_woman_tv", timeout=5):
+                # fallback if first fails
+                safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+                        name="permit_men_tv", timeout=3)
+        except Exception as e:
+            logger.warning("permit_woman_tv failed, trying men: %s", e)
+            safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+                    name="permit_men_tv", timeout=3)
+
+    elif gender == "H":
+        try:
+            if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+                            name="permit_men_tv", timeout=5):
+                safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+                        name="permit_woman_tv", timeout=3)
+        except Exception as e:
+            logger.warning("permit_men_tv failed, trying woman: %s", e)
+            safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+                    name="permit_woman_tv", timeout=3)
+
+    else:
+        try:
+            if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+                            name="permit_woman_tv", timeout=3):
+                safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+                        name="permit_men_tv", timeout=3)
+        except Exception as e:
+            logger.warning("permit_woman_tv failed, trying men: %s", e)
+            safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+                    name="permit_men_tv", timeout=3)
+
+
+
 
     # Date field
     if not ensure_date_picker_visible(driver, wait):
@@ -503,11 +587,13 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
     elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
     if elements and "Neutre" in (elements[0].text or ""):
         year = datetime.strptime(start_date, "%d_%m_%Y").year
+        _set_df(index, "CREATION", "1")     
         _set_df(index, "RESERVATION", "1")
         _set_df(index, "heure", preferred)
         _set_df(index, "date_reservation", f"{target_date}/{year}", flush=True)
     else:
         logger.error("Reservation success element not found or does not contain 'Neutre'.")
+    
 
 # -----------------------------------------------------------------------------
 # Login Flow
@@ -614,7 +700,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
             break
     else:
         logger.error("Too many login errors; marking CREATION='-1'")
-        _set_df(index, "CREATION", "1", flush=True)
+        _set_df(index, "CREATION", "-1", flush=True)
         return
     time.sleep(2)
     # OTP
@@ -643,6 +729,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
     if state != "SUCCESS":
         logger.error("[login_user] Post-OTP state not successful: %s", state)
         return
+
 
     # Reservation
     make_reservation(driver, index, dict_row)

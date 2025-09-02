@@ -15,7 +15,7 @@ from flask import (
     url_for,
 )
 from werkzeug.utils import secure_filename
-
+import pdfplumber
 import automation
 import config
 
@@ -120,11 +120,21 @@ def index():
         tmp_path = os.path.join(UPLOAD_DIR, fname)
         pdf.save(tmp_path)
 
+       # Determine folder name nationality_pages_targetdate
+        try:
+            with pdfplumber.open(tmp_path) as pdf_file:
+                page_count = len(pdf_file.pages)
+        except Exception:
+            page_count = 0
+
+        safe_date = (target_date or "").replace("/", "_").replace("-", "_")
+        folder_name = secure_filename(f"{country}_{page_count}_{safe_date}")
+
         try:
             # Start in background so the UI returns immediately
             automation.run_pipeline_async(
                 pdf=tmp_path,
-                folder=None,                 # keep config default unless you add a field
+                folder=folder_name,
                 target_date=target_date,
                 hijri_day=hijri_day,
                 country=country,
