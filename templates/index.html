@@ -47,7 +47,16 @@
         <button type="submit" class="btn btn-primary">Run</button>
       </div>
     </form>
-
+    <h2 class="mb-3">Merge PDFs</h2>
+    <form method="post" action="{{ url_for('merge_pdfs') }}" enctype="multipart/form-data" class="row g-3 mb-5">
+      <div class="col-md-6">
+        <label for="merge_pdfs_input" class="form-label">Select PDF files</label>
+        <input class="form-control" type="file" id="merge_pdfs_input" name="pdfs" accept="application/pdf" multiple required>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-secondary">Merge and Download</button>
+      </div>
+    </form>
     <form method="get" class="mb-4">
       <div class="row g-3 align-items-center">
         <div class="col-auto">

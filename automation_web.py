@@ -3,6 +3,7 @@ import re
 import tempfile
 import zipfile
 from datetime import datetime
+from io import BytesIO
 from flask import (
     Flask,
     flash,
@@ -16,6 +17,7 @@ from flask import (
 )
 from werkzeug.utils import secure_filename
 import pdfplumber
+from PyPDF2 import PdfMerger
 import automation
 import config
 
@@ -157,6 +159,30 @@ def status():
     """JSON status for polling."""
     return jsonify(automation.get_status())
 
+@app.route("/merge_pdfs", methods=["POST"])
+def merge_pdfs():
+    """Merge uploaded PDF files into a single document for download."""
+    files = request.files.getlist("pdfs")
+    if not files or all(f.filename == "" for f in files):
+        flash("No PDF files selected.")
+        return redirect(url_for("index"))
+
+    merger = PdfMerger()
+    for f in files:
+        if f and f.filename.lower().endswith(".pdf"):
+            merger.append(f)
+
+    merged = BytesIO()
+    merger.write(merged)
+    merger.close()
+    merged.seek(0)
+
+    return send_file(
+        merged,
+        as_attachment=True,
+        download_name="merged.pdf",
+        mimetype="application/pdf",
+    )
 
 @app.route("/pause", methods=["POST"])
 def pause():

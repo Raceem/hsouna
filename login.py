@@ -53,7 +53,7 @@ LOG_FILE = os.path.join(LOG_DIR, "automation.log")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 
 logger = logging.getLogger("reservation")
-logger.setLevel(getattr(logging, LOG_LEVEL, logging.INFO))
+logger.setLevel(getattr(logging, LOG_LEVEL, logging.DEBUG))
 logger.propagate = False
 logger.handlers.clear()
 
@@ -125,8 +125,9 @@ def normalize_gender(raw: str | None) -> str:
 
 def has_existing_booking(driver) -> bool:
     needles = [
-        "existing booking", "have an active permit",
+        "La confirmation de","existing booking", "have an active permit",
         "You already have an existing booking for", "Vous avez déjà une réservation",
+        'existing'
     ]
     for t in needles:
         try:
@@ -371,7 +372,7 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
     box_id = "com.moh.nusukapp:id/check_message"
     confirm_id = "com.moh.nusukapp:id/btn_confirm"
     ignore_id = "com.moh.nusukapp:id/btn_ignore"  # unused; we accept
-
+    
     try:
         # Quick probe: is the sheet present?
         sheet_present = False
@@ -470,8 +471,7 @@ def verify_selected_date_label(driver, target_ddmm: str, timeout: int = 5) -> bo
 
 def make_reservation(driver, index: int, dict_row: dict) -> None:
     # New UI: privacy/terms consent after OTP
-    logger.info(dict_row)
-    accept_privacy_if_present(driver, timeout=6)
+    accept_privacy_if_present(driver, timeout=1)
     driver.implicitly_wait(1)
     logger.info("[make_reservation] Start for row %s (passport=%s)", index, dict_row.get("numero_passport"))
     wait = WebDriverWait(driver, 10)
@@ -690,7 +690,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
     safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtPassword"), "Hssouna1105@", name="edtPassword")
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvSignIn"), name="tvSignIn_submit"):
         return
-
+    time.sleep(0.5)
     # Possible login error popups
     for _ in range(5):
         if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_error_desc"):

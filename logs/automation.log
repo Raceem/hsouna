@@ -16251,3 +16251,1374 @@ NoSuchElementError: An element could not be located on the page using the given 
     at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
     at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
 2025-09-02 13:52:14 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-02 19:46:16 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 19:46:16 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 19:46:25 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 19:55:17 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 19:55:17 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 19:55:25 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 19:56:09 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 19:56:09 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 19:56:17 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 19:57:25 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 19:57:25 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:11:37 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:11:37 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:11:45 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:17:17 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:17:17 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:17:24 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:17:47 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:17:47 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:17:56 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:20:39 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:20:39 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:20:47 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:21:26 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:21:26 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:21:45 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:21:45 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:21:52 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:23:37 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:23:37 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:23:46 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:26:30 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:26:30 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:26:38 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:28:42 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:28:42 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:28:42 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-02 20:28:42 | INFO | reservation | login.py:747 | Planned rows (need app): 5 of 28 total
+2025-09-02 20:28:42 | INFO | reservation | login.py:750 | ---- Processing row 1/5 (orig index=2) ----
+2025-09-02 20:28:49 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:28:49 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:28:49 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:28:49 | INFO | reservation | login.py:640 | [login_user] Row 2: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:28:49 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:28:49 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:28:56 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:29:03 | ERROR | reservation | login.py:702 | Too many login errors; marking CREATION='-1'
+2025-09-02 20:29:03 | INFO | reservation | login.py:96 | DF Update [row=2, col=CREATION]: '1' -> '-1'
+2025-09-02 20:29:03 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:29:04 | INFO | reservation | login.py:750 | ---- Processing row 2/5 (orig index=15) ----
+2025-09-02 20:29:10 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:29:10 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:29:11 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:29:11 | INFO | reservation | login.py:640 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:29:11 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:29:11 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:29:17 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:29:21 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:29:23 | INFO | reservation | login.py:713 | [login_user] OTP received: 6648
+2025-09-02 20:29:37 | INFO | reservation | login.py:473 | {'id': '16', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '14/07/2011', 'numero_visa': '6148113981', 'email': 'm.a.i.lb.o.y.b.ana.n.a@gmail.com', 'numero_tlf': '590003923', 'numero_passport': 'B30404613', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:29:45 | INFO | reservation | login.py:386 | [privacy] Consent sheet not present.
+2025-09-02 20:29:45 | INFO | reservation | login.py:476 | [make_reservation] Start for row 15 (passport=B30404613)
+2025-09-02 20:29:45 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:29:51 | WARNING | reservation | login.py:153 | [safe_click] retry 1 for ed_selected_date due to StaleElementReferenceException
+2025-09-02 20:29:58 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for ed_selected_date (attempt 2)
+2025-09-02 20:29:58 | ERROR | reservation | login.py:158 | [safe_click] failed to click ed_selected_date after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:29:58 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 15
+2025-09-02 20:30:00 | INFO | reservation | login.py:750 | ---- Processing row 3/5 (orig index=18) ----
+2025-09-02 20:30:08 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:30:08 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:30:08 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:30:08 | INFO | reservation | login.py:640 | [login_user] Row 18: HASSOON HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:30:08 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:30:08 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:30:15 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:30:19 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boybanan.a@gmail.com
+2025-09-02 20:30:21 | INFO | reservation | login.py:713 | [login_user] OTP received: 6648
+2025-09-02 20:30:23 | INFO | reservation | login.py:629 | Dismissed OTP error dialog (OK).
+2025-09-02 20:30:23 | WARNING | reservation | login.py:719 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:30:36 | INFO | reservation | login.py:473 | {'id': '19', 'nom': 'HASSOON', 'prenom': 'HUSSEIN', 'date_de_naissance': '24/05/2010', 'numero_visa': '6148113960', 'email': 'm.a.i.l.boybanan.a@gmail.com', 'numero_tlf': '590003940', 'numero_passport': 'B19701436', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:30:44 | INFO | reservation | login.py:386 | [privacy] Consent sheet not present.
+2025-09-02 20:30:44 | INFO | reservation | login.py:476 | [make_reservation] Start for row 18 (passport=B19701436)
+2025-09-02 20:30:44 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:30:52 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-02 20:30:56 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-02 20:30:56 | ERROR | reservation | login.py:158 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:31:05 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for ed_selected_date (attempt 1)
+2025-09-02 20:31:12 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for ed_selected_date (attempt 2)
+2025-09-02 20:31:12 | ERROR | reservation | login.py:158 | [safe_click] failed to click ed_selected_date after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:31:12 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 18
+2025-09-02 20:31:13 | INFO | reservation | login.py:750 | ---- Processing row 4/5 (orig index=22) ----
+2025-09-02 20:31:20 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:31:20 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:31:20 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:31:20 | INFO | reservation | login.py:640 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:31:20 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:31:20 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:31:28 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:31:32 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.a.na.na@gmail.com
+2025-09-02 20:31:34 | INFO | reservation | login.py:713 | [login_user] OTP received: 2863
+2025-09-02 20:31:38 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-02 20:31:38 | ERROR | reservation | login.py:180 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:31:40 | INFO | reservation | login.py:629 | Dismissed OTP error dialog (OK).
+2025-09-02 20:31:40 | WARNING | reservation | login.py:719 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:31:46 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-02 20:31:46 | ERROR | reservation | login.py:180 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:31:50 | WARNING | reservation | login.py:179 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-02 20:31:50 | ERROR | reservation | login.py:180 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:32:10 | ERROR | reservation | login.py:730 | [login_user] Post-OTP state not successful: UNKNOWN
+2025-09-02 20:32:11 | INFO | reservation | login.py:750 | ---- Processing row 5/5 (orig index=27) ----
+2025-09-02 20:32:21 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:32:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:32:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:32:21 | INFO | reservation | login.py:640 | [login_user] Row 27: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:32:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:32:21 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:32:28 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:32:32 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boybana.na@gmail.com
+2025-09-02 20:32:34 | INFO | reservation | login.py:713 | [login_user] OTP received: 2863
+2025-09-02 20:32:36 | INFO | reservation | login.py:629 | Dismissed OTP error dialog (OK).
+2025-09-02 20:32:36 | WARNING | reservation | login.py:719 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:32:42 | INFO | reservation | login.py:473 | {'id': '28', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '20/12/1977', 'numero_visa': '6148113974', 'email': 'm.a.i.l.boybana.na@gmail.com', 'numero_tlf': '590003941', 'numero_passport': 'A20309134', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:32:42 | INFO | reservation | login.py:389 | [privacy] Consent sheet detected; accepting…
+2025-09-02 20:32:42 | INFO | reservation | login.py:419 | [privacy] Consent accepted.
+2025-09-02 20:32:42 | INFO | reservation | login.py:476 | [make_reservation] Start for row 27 (passport=A20309134)
+2025-09-02 20:32:52 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:32:58 | INFO | reservation | login.py:305 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 20:33:03 | INFO | reservation | login.py:357 | Selected 14/22 via child-center fallback.
+2025-09-02 20:33:14 | WARNING | reservation | login.py:554 | No timeslots available within timeout.
+2025-09-02 20:33:14 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 27
+2025-09-02 20:33:16 | INFO | reservation | login.py:784 | All planned rows processed.
+2025-09-02 20:33:16 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-02 20:46:28 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:46:28 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:46:28 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-02 20:46:28 | INFO | reservation | login.py:747 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:46:28 | INFO | reservation | login.py:750 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:46:36 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:46:36 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:46:36 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:46:36 | INFO | reservation | login.py:640 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:46:36 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:46:36 | INFO | reservation | login.py:194 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:46:41 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:46:45 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:46:48 | INFO | reservation | login.py:713 | [login_user] OTP received: 5761
+2025-09-02 20:47:00 | INFO | reservation | login.py:473 | {'id': '16', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '14/07/2011', 'numero_visa': '6148113981', 'email': 'm.a.i.lb.o.y.b.ana.n.a@gmail.com', 'numero_tlf': '590003923', 'numero_passport': 'B30404613', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:47:08 | INFO | reservation | login.py:386 | [privacy] Consent sheet not present.
+2025-09-02 20:47:08 | INFO | reservation | login.py:476 | [make_reservation] Start for row 15 (passport=B30404613)
+2025-09-02 20:47:08 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:47:22 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for ed_selected_date (attempt 1)
+2025-09-02 20:47:29 | WARNING | reservation | login.py:157 | [safe_click] timeout waiting for ed_selected_date (attempt 2)
+2025-09-02 20:47:29 | ERROR | reservation | login.py:158 | [safe_click] failed to click ed_selected_date after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:47:29 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 15
+2025-09-02 20:47:30 | INFO | reservation | login.py:750 | ---- Processing row 2/4 (orig index=18) ----
+2025-09-02 20:47:39 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-02 20:48:18 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:48:18 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:48:18 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:48:18 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:48:18 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:48:26 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:48:28 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:48:28 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:48:28 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:48:28 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:48:28 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:48:35 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:48:35 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:48:35 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:48:36 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:48:36 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:48:36 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:48:44 | ERROR | reservation | login.py:773 | ❌ Fatal error for row 1 (orig index=15): Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 770, in <module>
+    login_user(driver, index, row_series)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 669, in login_user
+    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvNationality"), name="tvNationality"):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\login.py", line 146, in safe_click
+    el = wait.until(EC.element_to_be_clickable((by, value))) if clickable \
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 624, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:48:45 | INFO | reservation | login.py:751 | ---- Processing row 2/4 (orig index=18) ----
+2025-09-02 20:48:53 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:48:53 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:48:53 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:48:53 | INFO | reservation | login.py:641 | [login_user] Row 18: HASSOON HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:48:53 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:48:53 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:48:58 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:49:02 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybanan.a@gmail.com
+2025-09-02 20:49:04 | INFO | reservation | login.py:714 | [login_user] OTP received: 5761
+2025-09-02 20:49:06 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 20:49:06 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:49:26 | INFO | reservation | login.py:474 | {'id': '19', 'nom': 'HASSOON', 'prenom': 'HUSSEIN', 'date_de_naissance': '24/05/2010', 'numero_visa': '6148113960', 'email': 'm.a.i.l.boybanan.a@gmail.com', 'numero_tlf': '590003940', 'numero_passport': 'B19701436', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:49:32 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:229:14)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)
+2025-09-02 20:49:32 | INFO | reservation | login.py:477 | [make_reservation] Start for row 18 (passport=B19701436)
+2025-09-02 20:49:32 | ERROR | reservation | login.py:773 | ❌ Fatal error for row 2 (orig index=18): Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 770, in <module>
+    login_user(driver, index, row_series)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 736, in login_user
+    make_reservation(driver, index, dict_row)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 481, in make_reservation
+    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL"):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\login.py", line 146, in safe_click
+    el = wait.until(EC.element_to_be_clickable((by, value))) if clickable \
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 624, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:49:32 | INFO | reservation | login.py:751 | ---- Processing row 3/4 (orig index=22) ----
+2025-09-02 20:49:40 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:49:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:49:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:49:40 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:49:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:49:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:49:48 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:49:55 | ERROR | reservation | login.py:703 | Too many login errors; marking CREATION='-1'
+2025-09-02 20:49:55 | INFO | reservation | login.py:96 | DF Update [row=22, col=CREATION]: '1' -> '-1'
+2025-09-02 20:49:55 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:49:56 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:50:22 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:50:22 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:50:22 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:50:22 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:50:22 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:50:28 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:50:28 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:50:28 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:50:28 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:50:28 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:50:29 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:50:35 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:50:39 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:50:40 | INFO | reservation | login.py:714 | [login_user] OTP received: 2922
+2025-09-02 20:50:43 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 20:50:43 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:50:55 | INFO | reservation | login.py:474 | {'id': '16', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '14/07/2011', 'numero_visa': '6148113981', 'email': 'm.a.i.lb.o.y.b.ana.n.a@gmail.com', 'numero_tlf': '590003923', 'numero_passport': 'B30404613', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:51:00 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 20:51:00 | INFO | reservation | login.py:477 | [make_reservation] Start for row 15 (passport=B30404613)
+2025-09-02 20:51:00 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:51:09 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:51:31 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:51:31 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:51:34 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:51:34 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:51:34 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:51:42 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:51:55 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:51:55 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:51:55 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:51:55 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:51:55 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:52:02 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:52:02 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:52:02 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:52:02 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:52:02 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:52:03 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:52:09 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:52:13 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:52:15 | INFO | reservation | login.py:714 | [login_user] OTP received: 5226
+2025-09-02 20:52:17 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 20:52:17 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:52:30 | INFO | reservation | login.py:474 | {'id': '16', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '14/07/2011', 'numero_visa': '6148113981', 'email': 'm.a.i.lb.o.y.b.ana.n.a@gmail.com', 'numero_tlf': '590003923', 'numero_passport': 'B30404613', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:52:32 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 20:52:32 | INFO | reservation | login.py:477 | [make_reservation] Start for row 15 (passport=B30404613)
+2025-09-02 20:52:33 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:53:17 | WARNING | reservation | login.py:524 | permit_woman_tv failed, trying men: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:53:17 | ERROR | reservation | login.py:773 | ❌ Fatal error for row 1 (orig index=15): Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 519, in make_reservation
+    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\login.py", line 146, in safe_click
+    el = wait.until(EC.element_to_be_clickable((by, value))) if clickable \
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 624, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 770, in <module>
+    login_user(driver, index, row_series)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 736, in login_user
+    make_reservation(driver, index, dict_row)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 525, in make_reservation
+    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+  File "C:\Users\SBS\Downloads\agence\login.py", line 146, in safe_click
+    el = wait.until(EC.element_to_be_clickable((by, value))) if clickable \
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 624, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 20:53:18 | INFO | reservation | login.py:751 | ---- Processing row 2/4 (orig index=18) ----
+2025-09-02 20:53:26 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:53:26 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:53:26 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:53:26 | INFO | reservation | login.py:641 | [login_user] Row 18: HASSOON HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:53:26 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:53:26 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:53:34 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:53:38 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybanan.a@gmail.com
+2025-09-02 20:53:40 | INFO | reservation | login.py:714 | [login_user] OTP received: 6802
+2025-09-02 20:53:42 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 20:53:42 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:53:54 | INFO | reservation | login.py:474 | {'id': '19', 'nom': 'HASSOON', 'prenom': 'HUSSEIN', 'date_de_naissance': '24/05/2010', 'numero_visa': '6148113960', 'email': 'm.a.i.l.boybanan.a@gmail.com', 'numero_tlf': '590003940', 'numero_passport': 'B19701436', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:53:57 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 20:53:57 | INFO | reservation | login.py:477 | [make_reservation] Start for row 18 (passport=B19701436)
+2025-09-02 20:53:57 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:55:13 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:55:13 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:55:13 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:55:13 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:55:13 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:55:20 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:55:20 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:55:21 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:55:21 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:55:21 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:55:21 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:55:27 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:55:31 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:55:32 | INFO | reservation | login.py:714 | [login_user] OTP received: 3758
+2025-09-02 20:55:44 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:55:49 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:55:49 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:55:49 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:55:49 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:55:49 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:55:56 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:55:56 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:55:56 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:55:56 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:55:56 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:55:56 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:56:06 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:56:12 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:56:17 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:56:17 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:56:17 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:56:17 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:56:17 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:56:24 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:56:24 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:56:24 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:56:24 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:56:24 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:56:24 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:56:31 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:56:35 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:56:37 | INFO | reservation | login.py:714 | [login_user] OTP received: 7929
+2025-09-02 20:56:42 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 20:56:50 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 20:56:50 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 20:56:50 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 20:56:50 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 20:56:50 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=15) ----
+2025-09-02 20:56:57 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:56:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:56:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:56:57 | INFO | reservation | login.py:641 | [login_user] Row 15: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:56:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:56:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:57:03 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:57:07 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 20:57:09 | INFO | reservation | login.py:714 | [login_user] OTP received: 8318
+2025-09-02 20:57:18 | INFO | reservation | login.py:474 | {'id': '16', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '14/07/2011', 'numero_visa': '6148113981', 'email': 'm.a.i.lb.o.y.b.ana.n.a@gmail.com', 'numero_tlf': '590003923', 'numero_passport': 'B30404613', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:57:21 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 20:57:21 | INFO | reservation | login.py:477 | [make_reservation] Start for row 15 (passport=B30404613)
+2025-09-02 20:57:21 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:57:23 | INFO | reservation | login.py:490 | Existing booking detected; marking RESERVATION=1.
+2025-09-02 20:57:23 | INFO | reservation | login.py:96 | DF Update [row=15, col=CREATION]: '1' -> '1'
+2025-09-02 20:57:23 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:57:23 | INFO | reservation | login.py:96 | DF Update [row=15, col=RESERVATION]: '0' -> '1'
+2025-09-02 20:57:23 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:57:23 | INFO | reservation | login.py:737 | [login_user] Reservation step finished for row 15
+2025-09-02 20:57:24 | INFO | reservation | login.py:751 | ---- Processing row 2/4 (orig index=18) ----
+2025-09-02 20:57:30 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:57:30 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:57:30 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:57:31 | INFO | reservation | login.py:641 | [login_user] Row 18: HASSOON HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:57:31 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:57:31 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:57:39 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:57:43 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybanan.a@gmail.com
+2025-09-02 20:57:45 | INFO | reservation | login.py:714 | [login_user] OTP received: 8318
+2025-09-02 20:57:48 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 20:57:48 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:58:05 | INFO | reservation | login.py:474 | {'id': '19', 'nom': 'HASSOON', 'prenom': 'HUSSEIN', 'date_de_naissance': '24/05/2010', 'numero_visa': '6148113960', 'email': 'm.a.i.l.boybanan.a@gmail.com', 'numero_tlf': '590003940', 'numero_passport': 'B19701436', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:58:08 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 20:58:08 | INFO | reservation | login.py:477 | [make_reservation] Start for row 18 (passport=B19701436)
+2025-09-02 20:58:09 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:58:10 | INFO | reservation | login.py:490 | Existing booking detected; marking RESERVATION=1.
+2025-09-02 20:58:10 | INFO | reservation | login.py:96 | DF Update [row=18, col=CREATION]: '1' -> '1'
+2025-09-02 20:58:10 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:58:10 | INFO | reservation | login.py:96 | DF Update [row=18, col=RESERVATION]: '0' -> '1'
+2025-09-02 20:58:10 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:58:10 | INFO | reservation | login.py:737 | [login_user] Reservation step finished for row 18
+2025-09-02 20:58:10 | INFO | reservation | login.py:751 | ---- Processing row 3/4 (orig index=22) ----
+2025-09-02 20:58:18 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:58:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:58:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:58:18 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:58:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:58:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:58:25 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:58:32 | ERROR | reservation | login.py:703 | Too many login errors; marking CREATION='-1'
+2025-09-02 20:58:32 | INFO | reservation | login.py:96 | DF Update [row=22, col=CREATION]: '1' -> '-1'
+2025-09-02 20:58:32 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 20:58:33 | INFO | reservation | login.py:751 | ---- Processing row 4/4 (orig index=27) ----
+2025-09-02 20:58:44 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 20:58:44 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:58:44 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:58:44 | INFO | reservation | login.py:641 | [login_user] Row 27: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 20:58:44 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 20:58:44 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 20:58:51 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 20:58:55 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybana.na@gmail.com
+2025-09-02 20:58:57 | INFO | reservation | login.py:714 | [login_user] OTP received: 2276
+2025-09-02 20:59:00 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 20:59:00 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 20:59:16 | INFO | reservation | login.py:474 | {'id': '28', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '20/12/1977', 'numero_visa': '6148113974', 'email': 'm.a.i.l.boybana.na@gmail.com', 'numero_tlf': '590003941', 'numero_passport': 'A20309134', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 20:59:18 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 20:59:18 | INFO | reservation | login.py:477 | [make_reservation] Start for row 27 (passport=A20309134)
+2025-09-02 20:59:18 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 20:59:26 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 20:59:32 | INFO | reservation | login.py:358 | Selected 14/22 via child-center fallback.
+2025-09-02 20:59:43 | WARNING | reservation | login.py:555 | No timeslots available within timeout.
+2025-09-02 20:59:43 | INFO | reservation | login.py:737 | [login_user] Reservation step finished for row 27
+2025-09-02 20:59:44 | INFO | reservation | login.py:785 | All planned rows processed.
+2025-09-02 20:59:44 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:00:48 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:00:48 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:00:48 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:00:48 | INFO | reservation | login.py:748 | Planned rows (need app): 2 of 28 total
+2025-09-02 21:00:48 | INFO | reservation | login.py:751 | ---- Processing row 1/2 (orig index=22) ----
+2025-09-02 21:00:59 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:00:59 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:00:59 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:00:59 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:00:59 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:00:59 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:01:06 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:01:10 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.a.na.na@gmail.com
+2025-09-02 21:01:12 | INFO | reservation | login.py:714 | [login_user] OTP received: 7324
+2025-09-02 21:01:16 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-02 21:01:16 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 21:01:19 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 21:01:19 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 21:01:25 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:01:26 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:01:26 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:01:26 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:01:26 | INFO | reservation | login.py:748 | Planned rows (need app): 2 of 28 total
+2025-09-02 21:01:26 | INFO | reservation | login.py:751 | ---- Processing row 1/2 (orig index=22) ----
+2025-09-02 21:01:33 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:01:33 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:01:33 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:01:33 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:01:33 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:01:33 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:01:39 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:01:46 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:03:11 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:03:11 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:03:11 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:03:11 | INFO | reservation | login.py:748 | Planned rows (need app): 2 of 28 total
+2025-09-02 21:03:11 | INFO | reservation | login.py:751 | ---- Processing row 1/2 (orig index=22) ----
+2025-09-02 21:03:19 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:03:19 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:03:19 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:03:19 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:03:19 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:03:19 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:03:26 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:03:29 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.lb.o.y.b.a.na.na@gmail.com
+2025-09-02 21:03:31 | INFO | reservation | login.py:714 | [login_user] OTP received: 7324
+2025-09-02 21:03:35 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-02 21:03:35 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 21:03:37 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:04:59 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:04:59 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:04:59 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:04:59 | INFO | reservation | login.py:748 | Planned rows (need app): 2 of 28 total
+2025-09-02 21:04:59 | INFO | reservation | login.py:751 | ---- Processing row 1/2 (orig index=22) ----
+2025-09-02 21:05:06 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:05:06 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:05:06 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:05:06 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:05:06 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:05:06 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:05:15 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:05:23 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:05:33 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:05:33 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:05:33 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:05:33 | INFO | reservation | login.py:748 | Planned rows (need app): 2 of 28 total
+2025-09-02 21:05:33 | INFO | reservation | login.py:751 | ---- Processing row 1/2 (orig index=22) ----
+2025-09-02 21:05:40 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:05:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:05:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:05:40 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:05:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:05:40 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:05:46 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:05:53 | ERROR | reservation | login.py:703 | Too many login errors; marking CREATION='-1'
+2025-09-02 21:05:53 | INFO | reservation | login.py:96 | DF Update [row=22, col=CREATION]: '1' -> '-1'
+2025-09-02 21:05:53 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:05:54 | INFO | reservation | login.py:751 | ---- Processing row 2/2 (orig index=27) ----
+2025-09-02 21:06:01 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:06:01 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:06:01 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:06:01 | INFO | reservation | login.py:641 | [login_user] Row 27: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:06:01 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:06:01 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:06:08 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:06:13 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybana.na@gmail.com
+2025-09-02 21:06:15 | INFO | reservation | login.py:714 | [login_user] OTP received: 6594
+2025-09-02 21:06:27 | INFO | reservation | login.py:474 | {'id': '28', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '20/12/1977', 'numero_visa': '6148113974', 'email': 'm.a.i.l.boybana.na@gmail.com', 'numero_tlf': '590003941', 'numero_passport': 'A20309134', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 21:06:30 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 21:06:30 | INFO | reservation | login.py:477 | [make_reservation] Start for row 27 (passport=A20309134)
+2025-09-02 21:06:30 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:06:38 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:06:42 | INFO | reservation | login.py:358 | Selected 14/22 via child-center fallback.
+2025-09-02 21:06:53 | WARNING | reservation | login.py:555 | No timeslots available within timeout.
+2025-09-02 21:06:53 | INFO | reservation | login.py:737 | [login_user] Reservation step finished for row 27
+2025-09-02 21:06:54 | INFO | reservation | login.py:785 | All planned rows processed.
+2025-09-02 21:06:54 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:07:00 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:07:00 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:07:00 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:07:00 | INFO | reservation | login.py:748 | Planned rows (need app): 1 of 28 total
+2025-09-02 21:07:00 | INFO | reservation | login.py:751 | ---- Processing row 1/1 (orig index=27) ----
+2025-09-02 21:07:07 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:07:07 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:07:07 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:07:07 | INFO | reservation | login.py:641 | [login_user] Row 27: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:07:07 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:07:07 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:07:15 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:07:22 | ERROR | reservation | login.py:703 | Too many login errors; marking CREATION='-1'
+2025-09-02 21:07:22 | INFO | reservation | login.py:96 | DF Update [row=27, col=CREATION]: '1' -> '-1'
+2025-09-02 21:07:22 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:07:23 | INFO | reservation | login.py:785 | All planned rows processed.
+2025-09-02 21:07:23 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:08:11 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 21:08:11 | INFO | reservation | login.py:87 | CSV loaded. Rows: 28, Columns: 17
+2025-09-02 21:08:11 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:08:11 | INFO | reservation | login.py:748 | Planned rows (need app): 4 of 28 total
+2025-09-02 21:08:11 | INFO | reservation | login.py:751 | ---- Processing row 1/4 (orig index=0) ----
+2025-09-02 21:08:18 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:08:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:08:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:08:18 | INFO | reservation | login.py:641 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:08:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:08:18 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:08:26 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:08:31 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybanana@gmail.com
+2025-09-02 21:08:32 | INFO | reservation | login.py:714 | [login_user] OTP received: 6594
+2025-09-02 21:08:35 | INFO | reservation | login.py:630 | Dismissed OTP error dialog (OK).
+2025-09-02 21:08:35 | WARNING | reservation | login.py:720 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-02 21:08:47 | INFO | reservation | login.py:474 | {'id': '1', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '01/03/1974', 'numero_visa': '6148113984', 'email': 'm.a.i.l.boybanana@gmail.com', 'numero_tlf': '590003936', 'numero_passport': 'B29977032', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 21:08:50 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 21:08:50 | INFO | reservation | login.py:477 | [make_reservation] Start for row 0 (passport=B29977032)
+2025-09-02 21:08:50 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:08:52 | INFO | reservation | login.py:490 | Existing booking detected; marking RESERVATION=1.
+2025-09-02 21:08:52 | INFO | reservation | login.py:96 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-02 21:08:52 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:08:52 | INFO | reservation | login.py:96 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-09-02 21:08:52 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:08:52 | INFO | reservation | login.py:737 | [login_user] Reservation step finished for row 0
+2025-09-02 21:08:53 | INFO | reservation | login.py:751 | ---- Processing row 2/4 (orig index=2) ----
+2025-09-02 21:09:00 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:09:00 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:09:00 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:09:00 | INFO | reservation | login.py:641 | [login_user] Row 2: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:09:00 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:09:00 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:09:07 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:09:14 | ERROR | reservation | login.py:703 | Too many login errors; marking CREATION='-1'
+2025-09-02 21:09:14 | INFO | reservation | login.py:96 | DF Update [row=2, col=CREATION]: '1' -> '-1'
+2025-09-02 21:09:14 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:09:15 | INFO | reservation | login.py:751 | ---- Processing row 3/4 (orig index=22) ----
+2025-09-02 21:09:21 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:09:21 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:09:22 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:09:22 | INFO | reservation | login.py:641 | [login_user] Row 22: ABDULLAH HUSSEIN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:09:22 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:09:22 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:09:29 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:09:37 | ERROR | reservation | login.py:703 | Too many login errors; marking CREATION='-1'
+2025-09-02 21:09:37 | INFO | reservation | login.py:96 | DF Update [row=22, col=CREATION]: '1' -> '-1'
+2025-09-02 21:09:37 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:09:38 | INFO | reservation | login.py:751 | ---- Processing row 4/4 (orig index=27) ----
+2025-09-02 21:09:45 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:09:45 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:09:45 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:09:45 | INFO | reservation | login.py:641 | [login_user] Row 27: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-02 21:09:45 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-02 21:09:45 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-02 21:09:53 | INFO | reservation | login.py:678 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-02 21:09:57 | INFO | reservation | login.py:709 | [login_user] Fetching OTP for email: m.a.i.l.boybana.na@gmail.com
+2025-09-02 21:09:59 | INFO | reservation | login.py:714 | [login_user] OTP received: 8010
+2025-09-02 21:10:12 | INFO | reservation | login.py:474 | {'id': '28', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '20/12/1977', 'numero_visa': '6148113974', 'email': 'm.a.i.l.boybana.na@gmail.com', 'numero_tlf': '590003941', 'numero_passport': 'A20309134', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 21:10:14 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-02 21:10:14 | INFO | reservation | login.py:477 | [make_reservation] Start for row 27 (passport=A20309134)
+2025-09-02 21:10:15 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:10:23 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:10:26 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 21:10:27 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 21:10:29 | INFO | reservation | login.py:553 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 21:10:29 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 21:10:32 | INFO | reservation | login.py:96 | DF Update [row=27, col=CREATION]: '1' -> '1'
+2025-09-02 21:10:32 | INFO | reservation | login.py:96 | DF Update [row=27, col=RESERVATION]: '0' -> '1'
+2025-09-02 21:10:32 | INFO | reservation | login.py:96 | DF Update [row=27, col=heure]: nan -> '10:00 AM'
+2025-09-02 21:10:32 | INFO | reservation | login.py:96 | DF Update [row=27, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 21:10:32 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:10:32 | INFO | reservation | login.py:737 | [login_user] Reservation step finished for row 27
+2025-09-02 21:10:33 | INFO | reservation | login.py:785 | All planned rows processed.
+2025-09-02 21:10:33 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:16:18 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:16:18 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:16:26 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:17:17 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:17:37 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount submit (attempt 1)
+2025-09-02 21:17:57 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:19:23 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:19:23 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:19:31 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:19:55 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:20:33 | INFO | reservation | login.py:474 | {'id': '2', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '04/09/1959', 'numero_visa': '6147324259', 'email': 'm.a.i.l.boyban.ana@gmail.com', 'numero_tlf': '590003943', 'numero_passport': 'A39307574', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 21:20:35 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 21:20:36 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 21:21:00 | INFO | reservation | login.py:477 | [make_reservation] Start for row 1 (passport=A39307574)
+2025-09-02 21:21:02 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:21:37 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:21:38 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 21:21:40 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 21:21:54 | INFO | reservation | login.py:553 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 21:22:11 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 21:22:30 | INFO | reservation | login.py:96 | DF Update [row=1, col=CREATION]: '0' -> '1'
+2025-09-02 21:22:53 | INFO | reservation | login.py:96 | DF Update [row=1, col=RESERVATION]: '0' -> '1'
+2025-09-02 21:22:53 | INFO | reservation | login.py:96 | DF Update [row=1, col=heure]: nan -> '10:00 AM'
+2025-09-02 21:22:53 | INFO | reservation | login.py:96 | DF Update [row=1, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 21:22:53 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:23:19 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:23:19 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:23:19 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:23:19 | INFO | reservation | login.py:748 | Planned rows (need app): 0 of 21 total
+2025-09-02 21:23:19 | INFO | reservation | login.py:785 | All planned rows processed.
+2025-09-02 21:23:19 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:23:50 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:23:50 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:23:50 | INFO | reservation | login.py:742 | === Session start ===
+2025-09-02 21:23:50 | INFO | reservation | login.py:748 | Planned rows (need app): 0 of 21 total
+2025-09-02 21:23:50 | INFO | reservation | login.py:785 | All planned rows processed.
+2025-09-02 21:23:50 | INFO | reservation | login.py:795 | === Session end ===
+2025-09-02 21:24:27 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:24:27 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:24:34 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:25:00 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:25:29 | INFO | reservation | login.py:474 | {'id': '3', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '01/02/1966', 'numero_visa': '6147311298', 'email': 'm.a.i.l.boyban.an.a@gmail.com', 'numero_tlf': '590003944', 'numero_passport': 'A04275982', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 21:25:30 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 21:25:30 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 21:25:30 | INFO | reservation | login.py:477 | [make_reservation] Start for row 2 (passport=A04275982)
+2025-09-02 21:25:38 | INFO | reservation | login.py:487 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:25:47 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:25:49 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 21:25:51 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 21:25:52 | INFO | reservation | login.py:553 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 21:25:56 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 21:25:57 | INFO | reservation | login.py:96 | DF Update [row=2, col=CREATION]: '0' -> '1'
+2025-09-02 21:25:57 | INFO | reservation | login.py:96 | DF Update [row=2, col=RESERVATION]: '0' -> '1'
+2025-09-02 21:25:57 | INFO | reservation | login.py:96 | DF Update [row=2, col=heure]: nan -> '10:00 AM'
+2025-09-02 21:25:57 | INFO | reservation | login.py:96 | DF Update [row=2, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 21:25:57 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:29:28 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:29:28 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:29:36 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:30:00 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:30:30 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 21:30:31 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 21:30:31 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 21:30:31 | INFO | reservation | login.py:476 | [make_reservation] Start for row 3 (passport=A42461581)
+2025-09-02 21:30:40 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 21:30:42 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:30:50 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:30:53 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 21:30:54 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 21:30:56 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 21:30:56 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 21:30:58 | INFO | reservation | login.py:96 | DF Update [row=3, col=CREATION]: '0' -> '1'
+2025-09-02 21:30:58 | INFO | reservation | login.py:96 | DF Update [row=3, col=RESERVATION]: '0' -> '1'
+2025-09-02 21:30:58 | INFO | reservation | login.py:96 | DF Update [row=3, col=heure]: nan -> '10:00 AM'
+2025-09-02 21:30:58 | INFO | reservation | login.py:96 | DF Update [row=3, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 21:30:58 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:31:06 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:31:41 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 21:31:41 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 21:31:42 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 21:31:42 | INFO | reservation | login.py:476 | [make_reservation] Start for row 4 (passport=A30908764)
+2025-09-02 21:31:51 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:31:58 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:32:01 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 21:32:02 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 21:32:04 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 21:32:04 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 21:32:06 | INFO | reservation | login.py:96 | DF Update [row=4, col=CREATION]: '0' -> '1'
+2025-09-02 21:32:06 | INFO | reservation | login.py:96 | DF Update [row=4, col=RESERVATION]: '0' -> '1'
+2025-09-02 21:32:06 | INFO | reservation | login.py:96 | DF Update [row=4, col=heure]: nan -> '10:00 AM'
+2025-09-02 21:32:06 | INFO | reservation | login.py:96 | DF Update [row=4, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 21:32:06 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 21:32:18 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:32:50 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 21:32:50 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 21:32:51 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 21:32:51 | INFO | reservation | login.py:476 | [make_reservation] Start for row 5 (passport=A27336082)
+2025-09-02 21:33:07 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 21:33:14 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 21:33:17 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 21:33:18 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 21:33:20 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 21:33:20 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 21:33:23 | ERROR | reservation | login.py:595 | Reservation success element not found or does not contain 'Neutre'.
+2025-09-02 21:39:29 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:39:29 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:41:36 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:41:36 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:42:28 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:42:28 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:42:44 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:42:44 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:44:42 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:44:42 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:46:35 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:46:35 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:48:59 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:48:59 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:52:24 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:52:24 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:54:06 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:54:06 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:54:10 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:54:40 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:54:40 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:54:43 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:54:51 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-02 21:54:59 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-02 21:54:59 | ERROR | reservation | login.py:159 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 21:55:07 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-02 21:55:18 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:55:18 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:55:21 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:55:30 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-02 21:55:48 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:55:48 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:56:31 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:56:31 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:56:43 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:56:51 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-02 21:56:58 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-02 21:56:58 | ERROR | reservation | login.py:159 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 21:57:11 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 21:57:11 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 21:57:17 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:57:42 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:58:09 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:58:33 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:58:56 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:59:19 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 21:59:42 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:00:13 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:00:13 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:00:14 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:00:14 | INFO | reservation | login.py:476 | [make_reservation] Start for row 12 (passport=A41007285)
+2025-09-02 22:00:24 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 22:01:07 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 22:01:07 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 22:01:17 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:07:08 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 22:07:08 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 22:07:49 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 22:07:49 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 22:07:57 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:08:29 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:08:29 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:08:29 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:08:29 | INFO | reservation | login.py:476 | [make_reservation] Start for row 13 (passport=A42317460)
+2025-09-02 22:08:38 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 22:08:45 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 22:08:47 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 22:08:49 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 22:08:50 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 22:08:51 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 22:08:52 | INFO | reservation | login.py:96 | DF Update [row=13, col=CREATION]: '0' -> '1'
+2025-09-02 22:08:52 | INFO | reservation | login.py:96 | DF Update [row=13, col=RESERVATION]: '0' -> '1'
+2025-09-02 22:08:52 | INFO | reservation | login.py:96 | DF Update [row=13, col=heure]: nan -> '10:00 AM'
+2025-09-02 22:08:52 | INFO | reservation | login.py:96 | DF Update [row=13, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 22:08:52 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 22:09:01 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:09:32 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:09:32 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:09:33 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:09:33 | INFO | reservation | login.py:476 | [make_reservation] Start for row 14 (passport=A41893748)
+2025-09-02 22:09:41 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 22:09:49 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 22:09:51 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 22:09:52 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 22:09:54 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 22:09:54 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 22:09:56 | INFO | reservation | login.py:96 | DF Update [row=14, col=CREATION]: '0' -> '1'
+2025-09-02 22:09:56 | INFO | reservation | login.py:96 | DF Update [row=14, col=RESERVATION]: '0' -> '1'
+2025-09-02 22:09:56 | INFO | reservation | login.py:96 | DF Update [row=14, col=heure]: nan -> '10:00 AM'
+2025-09-02 22:09:56 | INFO | reservation | login.py:96 | DF Update [row=14, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 22:09:56 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 22:10:05 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:10:40 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:11:09 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:11:09 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:11:10 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:11:10 | INFO | reservation | login.py:476 | [make_reservation] Start for row 16 (passport=A30318496)
+2025-09-02 22:11:20 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 22:11:21 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 22:11:29 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 22:11:33 | INFO | reservation | login.py:358 | Selected 14/22 via child-center fallback.
+2025-09-02 22:11:44 | WARNING | reservation | login.py:554 | No timeslots available within timeout.
+2025-09-02 22:11:57 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:12:28 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:12:28 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:12:29 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:12:29 | INFO | reservation | login.py:476 | [make_reservation] Start for row 17 (passport=A42514259)
+2025-09-02 22:12:45 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 22:12:52 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 22:12:56 | INFO | reservation | login.py:358 | Selected 14/22 via child-center fallback.
+2025-09-02 22:13:07 | WARNING | reservation | login.py:554 | No timeslots available within timeout.
+2025-09-02 22:13:16 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:13:42 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:14:25 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-02 22:14:32 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-02 22:14:32 | ERROR | reservation | login.py:159 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 22:14:40 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-02 22:14:48 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-02 22:14:48 | ERROR | reservation | login.py:159 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 22:14:56 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-02 22:15:04 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-02 22:15:04 | ERROR | reservation | login.py:159 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 22:15:08 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for Search nationality (attempt 1)
+2025-09-02 22:15:08 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into Search nationality: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 22:15:20 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:15:50 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:15:50 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:15:51 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:15:51 | INFO | reservation | login.py:476 | [make_reservation] Start for row 20 (passport=A40391368)
+2025-09-02 22:16:01 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 22:16:09 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 22:16:11 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 22:16:12 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 22:16:14 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 22:16:14 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 22:16:16 | INFO | reservation | login.py:96 | DF Update [row=20, col=CREATION]: '0' -> '1'
+2025-09-02 22:16:16 | INFO | reservation | login.py:96 | DF Update [row=20, col=RESERVATION]: '0' -> '1'
+2025-09-02 22:16:16 | INFO | reservation | login.py:96 | DF Update [row=20, col=heure]: nan -> '10:00 AM'
+2025-09-02 22:16:16 | INFO | reservation | login.py:96 | DF Update [row=20, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 22:16:16 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-02 22:35:14 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-02 22:35:14 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-02 22:35:22 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:35:56 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:36:15 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-02 22:36:23 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-02 22:36:23 | ERROR | reservation | login.py:159 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 22:36:44 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:37:15 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:37:37 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-02 22:38:07 | WARNING | reservation | login.py:424 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-02 22:38:07 | INFO | reservation | login.py:390 | [privacy] Consent sheet detected; accepting…
+2025-09-02 22:38:08 | INFO | reservation | login.py:420 | [privacy] Consent accepted.
+2025-09-02 22:38:08 | INFO | reservation | login.py:476 | [make_reservation] Start for row 19 (passport=A32796229)
+2025-09-02 22:38:16 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 22:38:18 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-02 22:38:25 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 22:38:27 | INFO | reservation | login.py:327 | Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 22:38:29 | INFO | reservation | login.py:333 | Selected 14/22 via bounds tap.
+2025-09-02 22:38:31 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 22:38:31 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 22:38:33 | INFO | reservation | login.py:96 | DF Update [row=19, col=CREATION]: '0' -> '1'
+2025-09-02 22:38:33 | INFO | reservation | login.py:96 | DF Update [row=19, col=RESERVATION]: '0' -> '1'
+2025-09-02 22:38:33 | INFO | reservation | login.py:96 | DF Update [row=19, col=heure]: nan -> '10:00 AM'
+2025-09-02 22:38:33 | INFO | reservation | login.py:96 | DF Update [row=19, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 22:38:33 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:39:09 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-03 00:39:09 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-03 00:39:18 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:39:33 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for Password (attempt 1)
+2025-09-03 00:39:33 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into Password: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-03 00:39:49 | WARNING | reservation | login.py:158 | [safe_click] timeout waiting for CreateAccount submit (attempt 1)
+2025-09-03 00:40:18 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:40:44 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:41:12 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:41:49 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-03 00:41:49 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-03 00:41:49 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-03 00:41:49 | INFO | reservation | login.py:747 | Planned rows (need app): 4 of 21 total
+2025-09-03 00:41:49 | INFO | reservation | login.py:750 | ---- Processing row 1/4 (orig index=3) ----
+2025-09-03 00:41:56 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:41:56 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:41:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:41:57 | INFO | reservation | login.py:640 | [login_user] Row 3: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 00:41:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:41:57 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:42:03 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 00:42:08 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boyban.a.na@gmail.com
+2025-09-03 00:42:10 | INFO | reservation | login.py:713 | [login_user] OTP received: 6726
+2025-09-03 00:42:22 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-03 00:42:22 | INFO | reservation | login.py:476 | [make_reservation] Start for row 3 (passport=A42461581)
+2025-09-03 00:42:22 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-03 00:42:23 | INFO | reservation | login.py:489 | Existing booking detected; marking RESERVATION=1.
+2025-09-03 00:42:23 | INFO | reservation | login.py:96 | DF Update [row=3, col=CREATION]: '1' -> '1'
+2025-09-03 00:42:23 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:42:23 | INFO | reservation | login.py:96 | DF Update [row=3, col=RESERVATION]: '0' -> '1'
+2025-09-03 00:42:23 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:42:23 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 3
+2025-09-03 00:42:24 | INFO | reservation | login.py:750 | ---- Processing row 2/4 (orig index=4) ----
+2025-09-03 00:42:32 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:42:32 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:42:32 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:42:32 | INFO | reservation | login.py:640 | [login_user] Row 4: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 00:42:32 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:42:32 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:42:38 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 00:42:42 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boyban.a.n.a@gmail.com
+2025-09-03 00:42:48 | INFO | reservation | login.py:713 | [login_user] OTP received: 4442
+2025-09-03 00:42:59 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-03 00:42:59 | INFO | reservation | login.py:476 | [make_reservation] Start for row 4 (passport=A30908764)
+2025-09-03 00:43:00 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-03 00:43:01 | INFO | reservation | login.py:489 | Existing booking detected; marking RESERVATION=1.
+2025-09-03 00:43:01 | INFO | reservation | login.py:96 | DF Update [row=4, col=CREATION]: '1' -> '1'
+2025-09-03 00:43:01 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:43:01 | INFO | reservation | login.py:96 | DF Update [row=4, col=RESERVATION]: '0' -> '1'
+2025-09-03 00:43:01 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:43:01 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 4
+2025-09-03 00:43:02 | INFO | reservation | login.py:750 | ---- Processing row 3/4 (orig index=5) ----
+2025-09-03 00:43:10 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:43:10 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:43:10 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:43:10 | INFO | reservation | login.py:640 | [login_user] Row 5: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 00:43:10 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:43:10 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:43:17 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 00:43:21 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boyba.nana@gmail.com
+2025-09-03 00:43:25 | INFO | reservation | login.py:713 | [login_user] OTP received: 3394
+2025-09-03 00:43:36 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-03 00:43:36 | INFO | reservation | login.py:476 | [make_reservation] Start for row 5 (passport=A27336082)
+2025-09-03 00:43:36 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-03 00:43:38 | INFO | reservation | login.py:489 | Existing booking detected; marking RESERVATION=1.
+2025-09-03 00:43:38 | INFO | reservation | login.py:96 | DF Update [row=5, col=CREATION]: '1' -> '1'
+2025-09-03 00:43:38 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:43:38 | INFO | reservation | login.py:96 | DF Update [row=5, col=RESERVATION]: '0' -> '1'
+2025-09-03 00:43:38 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:43:38 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 5
+2025-09-03 00:43:38 | INFO | reservation | login.py:750 | ---- Processing row 4/4 (orig index=12) ----
+2025-09-03 00:43:46 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:43:46 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:43:46 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:43:46 | INFO | reservation | login.py:640 | [login_user] Row 12: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 00:43:46 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:43:46 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:43:52 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 00:43:56 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boyba.n.a.n.a@gmail.com
+2025-09-03 00:43:59 | INFO | reservation | login.py:713 | [login_user] OTP received: 4669
+2025-09-03 00:44:14 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-03 00:44:14 | INFO | reservation | login.py:476 | [make_reservation] Start for row 12 (passport=A41007285)
+2025-09-03 00:44:15 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-03 00:44:23 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-03 00:44:27 | INFO | reservation | login.py:358 | Selected 14/22 via child-center fallback.
+2025-09-03 00:44:38 | WARNING | reservation | login.py:554 | No timeslots available within timeout.
+2025-09-03 00:44:38 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 12
+2025-09-03 00:44:39 | INFO | reservation | login.py:784 | All planned rows processed.
+2025-09-03 00:44:39 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-03 00:44:44 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-03 00:44:44 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-03 00:44:44 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-03 00:44:44 | INFO | reservation | login.py:747 | Planned rows (need app): 1 of 21 total
+2025-09-03 00:44:44 | INFO | reservation | login.py:750 | ---- Processing row 1/1 (orig index=12) ----
+2025-09-03 00:44:51 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:44:51 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:44:51 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:44:51 | INFO | reservation | login.py:640 | [login_user] Row 12: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 00:44:51 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:44:51 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:44:59 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 00:45:06 | ERROR | reservation | login.py:702 | Too many login errors; marking CREATION='-1'
+2025-09-03 00:45:06 | INFO | reservation | login.py:96 | DF Update [row=12, col=CREATION]: '1' -> '-1'
+2025-09-03 00:45:06 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:45:07 | INFO | reservation | login.py:784 | All planned rows processed.
+2025-09-03 00:45:07 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-03 00:46:03 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-03 00:46:03 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-03 00:46:03 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-03 00:46:03 | INFO | reservation | login.py:747 | Planned rows (need app): 1 of 21 total
+2025-09-03 00:46:03 | INFO | reservation | login.py:750 | ---- Processing row 1/1 (orig index=11) ----
+2025-09-03 00:46:09 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-03 00:46:15 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv
+2025-09-03 00:46:15 | INFO | reservation | login.py:87 | CSV loaded. Rows: 21, Columns: 17
+2025-09-03 00:46:15 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-03 00:46:15 | INFO | reservation | login.py:747 | Planned rows (need app): 1 of 21 total
+2025-09-03 00:46:15 | INFO | reservation | login.py:750 | ---- Processing row 1/1 (orig index=12) ----
+2025-09-03 00:46:23 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 00:46:23 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:46:23 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:46:23 | INFO | reservation | login.py:640 | [login_user] Row 12: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 00:46:23 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 00:46:23 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 00:46:32 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 00:46:36 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.l.boyba.n.a.n.a@gmail.com
+2025-09-03 00:46:38 | INFO | reservation | login.py:713 | [login_user] OTP received: 3913
+2025-09-03 00:46:49 | INFO | reservation | login.py:387 | [privacy] Consent sheet not present.
+2025-09-03 00:46:49 | INFO | reservation | login.py:476 | [make_reservation] Start for row 12 (passport=A41007285)
+2025-09-03 00:46:50 | INFO | reservation | login.py:486 | [make_reservation] Gender normalized: Unknown
+2025-09-03 00:46:58 | INFO | reservation | login.py:306 | Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-03 00:47:02 | INFO | reservation | login.py:358 | Selected 14/22 via child-center fallback.
+2025-09-03 00:47:05 | INFO | reservation | login.py:552 | Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-03 00:47:05 | INFO | reservation | login.py:465 | Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-03 00:47:07 | INFO | reservation | login.py:96 | DF Update [row=12, col=CREATION]: '1' -> '1'
+2025-09-03 00:47:07 | INFO | reservation | login.py:96 | DF Update [row=12, col=RESERVATION]: '0' -> '1'
+2025-09-03 00:47:07 | INFO | reservation | login.py:96 | DF Update [row=12, col=heure]: nan -> '10:00 AM'
+2025-09-03 00:47:07 | INFO | reservation | login.py:96 | DF Update [row=12, col=date_reservation]: nan -> '14/09/2025'
+2025-09-03 00:47:07 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 00:47:07 | INFO | reservation | login.py:736 | [login_user] Reservation step finished for row 12
+2025-09-03 00:47:08 | INFO | reservation | login.py:784 | All planned rows processed.
+2025-09-03 00:47:08 | INFO | reservation | login.py:794 | === Session end ===
+2025-09-03 13:12:40 | INFO | reservation | login.py:85 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_23_14_09\informations.csv
+2025-09-03 13:12:40 | INFO | reservation | login.py:87 | CSV loaded. Rows: 23, Columns: 17
+2025-09-03 13:12:40 | INFO | reservation | login.py:741 | === Session start ===
+2025-09-03 13:12:40 | INFO | reservation | login.py:747 | Planned rows (need app): 3 of 23 total
+2025-09-03 13:12:40 | INFO | reservation | login.py:750 | ---- Processing row 1/3 (orig index=3) ----
+2025-09-03 13:12:49 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 13:12:49 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 13:12:49 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 13:12:49 | INFO | reservation | login.py:640 | [login_user] Row 3: ALI ABDULLAH | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 13:12:49 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 13:12:49 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 13:12:51 | WARNING | reservation | login.py:154 | [safe_click] retry 1 for tvNationality due to StaleElementReferenceException
+2025-09-03 13:12:55 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 13:13:04 | ERROR | reservation | login.py:702 | Too many login errors; marking CREATION='-1'
+2025-09-03 13:13:04 | INFO | reservation | login.py:96 | DF Update [row=3, col=CREATION]: '1' -> '-1'
+2025-09-03 13:13:04 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 13:13:05 | INFO | reservation | login.py:750 | ---- Processing row 2/3 (orig index=7) ----
+2025-09-03 13:13:13 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 13:13:13 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 13:13:13 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 13:13:13 | INFO | reservation | login.py:640 | [login_user] Row 7: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 13:13:13 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 13:13:14 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 13:13:21 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 13:13:27 | INFO | reservation | login.py:708 | [login_user] Fetching OTP for email: m.a.i.lb.oy.b.ana.na@gmail.com
+2025-09-03 13:13:29 | INFO | reservation | login.py:713 | [login_user] OTP received: 6367
+2025-09-03 13:13:33 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-03 13:13:33 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-03 13:13:35 | INFO | reservation | login.py:629 | Dismissed OTP error dialog (OK).
+2025-09-03 13:13:35 | WARNING | reservation | login.py:719 | [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-03 13:13:42 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-03 13:13:42 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-03 13:13:46 | WARNING | reservation | login.py:180 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-03 13:13:46 | ERROR | reservation | login.py:181 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-03 13:14:06 | ERROR | reservation | login.py:730 | [login_user] Post-OTP state not successful: UNKNOWN
+2025-09-03 13:14:07 | INFO | reservation | login.py:750 | ---- Processing row 3/3 (orig index=10) ----
+2025-09-03 13:14:15 | INFO | reservation | login.py:114 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-03 13:14:15 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 13:14:15 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 13:14:15 | INFO | reservation | login.py:640 | [login_user] Row 10: FARHAN LAYTH | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-03 13:14:15 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-03 13:14:15 | INFO | reservation | login.py:195 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-03 13:14:22 | INFO | reservation | login.py:677 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-03 13:14:30 | ERROR | reservation | login.py:702 | Too many login errors; marking CREATION='-1'
+2025-09-03 13:14:30 | INFO | reservation | login.py:96 | DF Update [row=10, col=CREATION]: '1' -> '-1'
+2025-09-03 13:14:30 | INFO | reservation | login.py:91 | DataFrame flushed to disk.
+2025-09-03 13:14:31 | INFO | reservation | login.py:784 | All planned rows processed.
+2025-09-03 13:14:31 | INFO | reservation | login.py:794 | === Session end ===

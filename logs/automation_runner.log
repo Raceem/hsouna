@@ -2487,3 +2487,767 @@ subprocess.CalledProcessError: Command '['C:\\Python312\\python.exe', '-X', 'utf
 2025-09-02 11:34:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 11:34:08] INFO DF Update [row=2, col=heure]: nan -> '10:00 AM'
 2025-09-02 11:34:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 11:34:08] INFO DF Update [row=2, col=date_reservation]: nan -> '14/09/2025'
 2025-09-02 11:34:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 11:34:08] INFO DataFrame flushed to disk.
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:235 | Pipeline start
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:236 | Inputs: pdf='C:\\Users\\SBS\\AppData\\Local\\Temp\\reservation_uploads\\SAFA_Report3.pdf', folder='iraq_28_14_09', target_date='14/09', hijri_day='22', country='iraq'
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:249 | Resolved params -> folder='iraq_28_14_09', target_date='14/09', hijri_day='22', pays='iraq'
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:256 | Run folder: C:\Users\SBS\Desktop\Hsouna\iraq_28_14_09
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:267 | Copied PDF to C:\Users\SBS\Desktop\Hsouna\iraq_28_14_09\SAFA_Report3.pdf (11344.8 KB)
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:141 | Updating config.py at C:\Users\SBS\Downloads\agence\config.py
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:159 | config.py current FOLDER_NAME = "iraq_25_14_09"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:159 | config.py current TARGET_DATE = "14/09"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:159 | config.py current HIJRI_DAY = "22"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:159 | config.py current PAYS = "iraq"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:159 | config.py current PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "SAFA_Report_2.pdf")
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:170 | config.py set FOLDER_NAME -> "iraq_28_14_09"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:170 | config.py set TARGET_DATE -> "14/09"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:170 | config.py set HIJRI_DAY -> "22"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:170 | config.py set PAYS -> "iraq"
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:170 | config.py set PDF_FILE -> os.path.join(BASE_DIR, FOLDER_NAME, "SAFA_Report3.pdf")
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:173 | config.py updated successfully.
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:275 | config after update: FOLDER_NAME='iraq_28_14_09' TARGET_DATE='14/09' HIJRI_DAY='22' PAYS='iraq' PDF_FILE='C:/Users/SBS/Desktop/Hsouna\\iraq_28_14_09\\SAFA_Report3.pdf'
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:219 | === Preparing CSV and merging PDFs ===
+2025-09-02 12:46:55 | INFO | automation_runner | automation.py:185 | Launching: C:\Python312\python.exe -X utf8 utils.py
+2025-09-02 12:46:57 | INFO | automation_runner | automation.py:203 | [utils.py          ] Fichier CSV 'C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv' créé avec la colonne 'creation'.
+2025-09-02 12:46:57 | INFO | automation_runner | automation.py:203 | [utils.py          ] Aucun fichier PDF trouvé dans le dossier.
+2025-09-02 12:46:57 | INFO | automation_runner | automation.py:210 | Step 'utils.py' finished OK (1.62s)
+2025-09-02 12:46:57 | INFO | automation_runner | automation.py:219 | === Extracting data from PDF ===
+2025-09-02 12:46:57 | INFO | automation_runner | automation.py:185 | Launching: C:\Python312\python.exe -X utf8 pdf.py
+2025-09-02 12:46:58 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] == Démarrage ==
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 28 page(s) chargée(s).
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 1 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/03/1974
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113984
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B29977032
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ban.ana@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003908
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 2 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 17/02/1975
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113954
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A22117115
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ban.an.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003909
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 3 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/07/1970
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113963
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A15264409
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ban.a.na@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003910
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 4 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 15/01/1968
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113970
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B23199229
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ban.a.n.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003911
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 5 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 24/11/2016
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113979
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B28297465
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.nana@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003912
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 6 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 24/01/1972
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113985
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B02350678
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.nan.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003913
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 7 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 25/05/1987
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113962
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A15328375
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.na.na@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003914
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 8 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 11/07/2020
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113977
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A20388831
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.na.n.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003915
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 9 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 05/01/1973
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113972
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B34204642
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.n.ana@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003916
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 10 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 03/07/1986
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113965
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B08769713
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.n.an.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003917
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 11 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 09/03/2013
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113980
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B28297436
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.n.a.na@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003918
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 12 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 14/07/2011
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113964
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B28296451
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.ba.n.a.n.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003919
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 13 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/07/1973
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113966
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B34204710
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.anana@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003920
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 14 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 13/07/1985
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113971
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B34204639
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.anan.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003921
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 15 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/07/1971
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113961
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B01510491
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.ana.na@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003922
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 16 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 14/07/2011
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113981
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B30404613
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.ana.n.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003923
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 17 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 05/03/1984
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113976
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A14884972
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.an.ana@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003924
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 18 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 09/03/1977
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113983
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B34204626
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.an.an.a@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003925
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 19 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 24/05/2010
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113960
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B19701436
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.an.a.na@gmail.com
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003926
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 20 :
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/01/1988
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113978
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A17416040
+2025-09-02 12:47:11 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.an.a.n.a@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003927
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 21 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 05/08/1974
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113967
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A14104722
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.nana@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003928
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 22 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/07/1960
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113975
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B34213039
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.nan.a@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003929
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 23 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 15/05/1961
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113959
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B23193809
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.na.na@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003930
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 24 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 08/04/1969
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113982
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A22196954
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.na.n.a@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003931
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 25 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 05/09/1974
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113969
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B17208753
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.n.ana@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003932
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 26 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/05/1970
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113968
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. B23816234
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.n.an.a@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003933
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 27 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 03/04/1968
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113973
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A19532319
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.n.a.na@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003934
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 28 :
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 20/12/1977
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6148113974
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A20309134
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.lb.o.y.b.a.n.a.n.a@gmail.com
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003935
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:210 | Step 'pdf.py' finished OK (15.37s)
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:219 | === Creating accounts and making reservations ===
+2025-09-02 12:47:12 | INFO | automation_runner | automation.py:185 | Launching: C:\Python312\python.exe -X utf8 CreationReservation.py
+2025-09-02 12:47:17 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:47:17] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\iraq_28_14_09\informations.csv
+2025-09-02 12:47:17 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:47:17] INFO CSV loaded. Rows: 28, Columns: 17
+2025-09-02 12:48:26 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:26] INFO {'id': '1', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '01/03/1974', 'numero_visa': '6148113984', 'email': 'm.a.i.lb.o.y.ban.ana@gmail.com', 'numero_tlf': '590003908', 'numero_passport': 'B29977032', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 12:48:27 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:27] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 12:48:28 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:28] INFO [privacy] Consent accepted.
+2025-09-02 12:48:28 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:28] INFO [make_reservation] Start for row 0 (passport=B29977032)
+2025-09-02 12:48:37 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:37] WARNING [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 12:48:40 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:40] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 12:48:47 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:47] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 12:48:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:51] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 12:48:53 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:53] INFO Selected 14/22 via bounds tap.
+2025-09-02 12:48:56 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:56] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 12:48:57 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:48:57] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 12:49:01 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:49:01] ERROR Reservation success element not found or does not contain 'Neutre'.
+2025-09-02 12:50:11 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:11] INFO {'id': '2', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '17/02/1975', 'numero_visa': '6148113954', 'email': 'm.a.i.lb.o.y.ban.an.a@gmail.com', 'numero_tlf': '590003909', 'numero_passport': 'A22117115', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 12:50:11 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:11] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 12:50:12 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:12] INFO [privacy] Consent accepted.
+2025-09-02 12:50:12 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:12] INFO [make_reservation] Start for row 1 (passport=A22117115)
+2025-09-02 12:50:21 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:21] WARNING [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 12:50:32 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:32] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 12:50:41 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:41] WARNING [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:45] WARNING [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:45] ERROR [safe_click] failed to click permit_woman_tv after 2 attempts: Message:
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] Stacktrace:
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] NoSuchElementError: An element could not be located on the page using the given search parameters.
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+2025-09-02 12:50:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 12:50:48 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:48] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 12:50:52 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:52] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 12:50:54 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:54] INFO Selected 14/22 via bounds tap.
+2025-09-02 12:50:58 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:58] INFO Timeslots found: ['02:00 AM', '02:20 AM', '02:40 AM']
+2025-09-02 12:50:59 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:50:59] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 12:51:02 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:51:02] INFO DF Update [row=1, col=CREATION]: '0' -> '1'
+2025-09-02 12:51:02 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:51:02] INFO DF Update [row=1, col=RESERVATION]: '0' -> '1'
+2025-09-02 12:51:02 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:51:02] INFO DF Update [row=1, col=heure]: nan -> '10:00 AM'
+2025-09-02 12:51:02 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:51:02] INFO DF Update [row=1, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 12:51:02 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:51:02] INFO DataFrame flushed to disk.
+2025-09-02 12:53:06 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:06] INFO {'id': '4', 'nom': 'HASABALLAH', 'prenom': 'SARAH', 'date_de_naissance': '15/01/1968', 'numero_visa': '6148113970', 'email': 'm.a.i.lb.o.y.ban.a.n.a@gmail.com', 'numero_tlf': '590003911', 'numero_passport': 'B23199229', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 12:53:06 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:06] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 12:53:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:08] INFO [privacy] Consent accepted.
+2025-09-02 12:53:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:08] INFO [make_reservation] Start for row 3 (passport=B23199229)
+2025-09-02 12:53:20 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:20] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 12:53:26 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:26] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 12:53:30 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:30] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 12:53:32 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:32] INFO Selected 14/22 via bounds tap.
+2025-09-02 12:53:35 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:35] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 12:53:36 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:36] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 12:53:39 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:39] INFO DF Update [row=3, col=CREATION]: '0' -> '1'
+2025-09-02 12:53:39 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:39] INFO DF Update [row=3, col=RESERVATION]: '0' -> '1'
+2025-09-02 12:53:39 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:39] INFO DF Update [row=3, col=heure]: nan -> '10:00 AM'
+2025-09-02 12:53:39 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:39] INFO DF Update [row=3, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 12:53:39 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:53:39] INFO DataFrame flushed to disk.
+2025-09-02 12:54:49 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:54:49] INFO {'id': '5', 'nom': 'ALOUDAH', 'prenom': 'TAKTUM', 'date_de_naissance': '24/11/2016', 'numero_visa': '6148113979', 'email': 'm.a.i.lb.o.y.ba.nana@gmail.com', 'numero_tlf': '590003912', 'numero_passport': 'B28297465', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 12:54:49 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:54:49] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 12:54:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:54:50] INFO [privacy] Consent accepted.
+2025-09-02 12:54:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:54:50] INFO [make_reservation] Start for row 4 (passport=B28297465)
+2025-09-02 12:54:59 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:54:59] WARNING [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 12:55:01 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:01] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 12:55:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:08] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 12:55:12 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:12] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 12:55:14 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:14] INFO Selected 14/22 via bounds tap.
+2025-09-02 12:55:17 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:17] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 12:55:18 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:18] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 12:55:21 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:21] INFO DF Update [row=4, col=CREATION]: '0' -> '1'
+2025-09-02 12:55:21 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:21] INFO DF Update [row=4, col=RESERVATION]: '0' -> '1'
+2025-09-02 12:55:21 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:21] INFO DF Update [row=4, col=heure]: nan -> '10:00 AM'
+2025-09-02 12:55:21 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:21] INFO DF Update [row=4, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 12:55:21 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:55:21] INFO DataFrame flushed to disk.
+2025-09-02 12:56:30 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:30] INFO {'id': '6', 'nom': 'ATABI', 'prenom': 'NAJAT', 'date_de_naissance': '24/01/1972', 'numero_visa': '6148113985', 'email': 'm.a.i.lb.o.y.ba.nan.a@gmail.com', 'numero_tlf': '590003913', 'numero_passport': 'B02350678', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 12:56:30 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:30] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 12:56:31 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:31] INFO [privacy] Consent accepted.
+2025-09-02 12:56:31 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:31] INFO [make_reservation] Start for row 5 (passport=B02350678)
+2025-09-02 12:56:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:45] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 12:56:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:51] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 12:56:54 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:54] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 12:56:56 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:56:56] INFO Selected 14/22 via bounds tap.
+2025-09-02 12:57:00 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:00] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 12:57:01 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:01] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 12:57:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:08] INFO DF Update [row=5, col=CREATION]: '0' -> '1'
+2025-09-02 12:57:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:08] INFO DF Update [row=5, col=RESERVATION]: '0' -> '1'
+2025-09-02 12:57:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:08] INFO DF Update [row=5, col=heure]: nan -> '10:00 AM'
+2025-09-02 12:57:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:08] INFO DF Update [row=5, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 12:57:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:57:08] INFO DataFrame flushed to disk.
+2025-09-02 12:58:22 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:22] INFO {'id': '7', 'nom': 'ALOUDAH', 'prenom': 'AHMED', 'date_de_naissance': '25/05/1987', 'numero_visa': '6148113962', 'email': 'm.a.i.lb.o.y.ba.na.na@gmail.com', 'numero_tlf': '590003914', 'numero_passport': 'A15328375', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 12:58:22 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:22] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 12:58:24 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:24] INFO [privacy] Consent accepted.
+2025-09-02 12:58:24 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:24] INFO [make_reservation] Start for row 6 (passport=A15328375)
+2025-09-02 12:58:33 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:33] WARNING [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 12:58:38 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:38] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 12:58:47 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:47] WARNING [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:51] WARNING [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:51] ERROR [safe_click] failed to click permit_woman_tv after 2 attempts: Message:
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] Stacktrace:
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] NoSuchElementError: An element could not be located on the page using the given search parameters.
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+2025-09-02 12:58:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py]     at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-02 12:58:53 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:53] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 12:58:56 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:56] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 12:58:59 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:58:59] INFO Selected 14/22 via bounds tap.
+2025-09-02 12:59:04 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:04] INFO Timeslots found: ['02:00 AM', '02:20 AM', '02:40 AM']
+2025-09-02 12:59:05 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:05] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 12:59:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:08] INFO DF Update [row=6, col=CREATION]: '0' -> '1'
+2025-09-02 12:59:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:08] INFO DF Update [row=6, col=RESERVATION]: '0' -> '1'
+2025-09-02 12:59:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:08] INFO DF Update [row=6, col=heure]: nan -> '10:00 AM'
+2025-09-02 12:59:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:08] INFO DF Update [row=6, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 12:59:08 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 12:59:08] INFO DataFrame flushed to disk.
+2025-09-02 13:00:20 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:20] INFO {'id': '8', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '11/07/2020', 'numero_visa': '6148113977', 'email': 'm.a.i.lb.o.y.ba.na.n.a@gmail.com', 'numero_tlf': '590003915', 'numero_passport': 'A20388831', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 13:00:20 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:20] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 13:00:22 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:22] INFO [privacy] Consent accepted.
+2025-09-02 13:00:22 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:22] INFO [make_reservation] Start for row 7 (passport=A20388831)
+2025-09-02 13:00:39 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:39] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 13:00:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:45] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 13:00:49 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:49] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 13:00:51 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:51] INFO Selected 14/22 via bounds tap.
+2025-09-02 13:00:54 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:54] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 13:00:55 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:55] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 13:00:58 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:58] INFO DF Update [row=7, col=CREATION]: '0' -> '1'
+2025-09-02 13:00:58 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:58] INFO DF Update [row=7, col=RESERVATION]: '0' -> '1'
+2025-09-02 13:00:58 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:58] INFO DF Update [row=7, col=heure]: nan -> '10:00 AM'
+2025-09-02 13:00:58 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:58] INFO DF Update [row=7, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 13:00:58 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:00:58] INFO DataFrame flushed to disk.
+2025-09-02 13:02:15 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:15] INFO {'id': '9', 'nom': 'nom', 'prenom': 'prenom', 'date_de_naissance': '05/01/1973', 'numero_visa': '6148113972', 'email': 'm.a.i.lb.o.y.ba.n.ana@gmail.com', 'numero_tlf': '590003916', 'numero_passport': 'B34204642', 'type_voyage': 'Groupe', 'date_entree_madinah': '22_07_2025', 'duree_jours': '1', 'have_a_compte': '0', 'CREATION': '1', 'RESERVATION': '0', 'CONFIRMATION': '0', 'date_reservation': nan, 'heure': nan}
+2025-09-02 13:02:15 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:15] INFO [privacy] Consent sheet detected; accepting…
+2025-09-02 13:02:16 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:16] INFO [privacy] Consent accepted.
+2025-09-02 13:02:16 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:16] INFO [make_reservation] Start for row 8 (passport=B34204642)
+2025-09-02 13:02:25 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:25] WARNING [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-02 13:02:30 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:30] INFO [make_reservation] Gender normalized: Unknown
+2025-09-02 13:02:36 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:36] INFO Looking for calendar cell with XPath: //android.view.View[.//android.widget.TextView[@text='14'] and .//android.widget.TextView[@text='22']]
+2025-09-02 13:02:40 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:40] INFO Chosen cell for 14/22: bounds={'x1': 81, 'y1': 1258, 'x2': 228, 'y2': 1441, 'w': 147, 'h': 183, 'cx': 154, 'cy': 1349, 'area': 26901} area=26901 (of 3 candidates)
+2025-09-02 13:02:42 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:42] INFO Selected 14/22 via bounds tap.
+2025-09-02 13:02:45 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:45] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-02 13:02:46 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:46] INFO Pre-book check: label='dimanche, 14 septembre' | expect day in ['14'] and month='septembre' -> True/True
+2025-09-02 13:02:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:50] INFO DF Update [row=8, col=CREATION]: '0' -> '1'
+2025-09-02 13:02:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:50] INFO DF Update [row=8, col=RESERVATION]: '0' -> '1'
+2025-09-02 13:02:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:50] INFO DF Update [row=8, col=heure]: nan -> '10:00 AM'
+2025-09-02 13:02:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:50] INFO DF Update [row=8, col=date_reservation]: nan -> '14/09/2025'
+2025-09-02 13:02:50 | INFO | automation_runner | automation.py:203 | [CreationReservation.py] [2025-09-02 13:02:50] INFO DataFrame flushed to disk.
+2025-09-02 13:03:15 | WARNING | automation_runner | automation.py:109 | Cancelling current step: CreationReservation.py
+2025-09-02 13:03:15 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-02 13:03:15 | ERROR | automation_runner | automation.py:291 | Pipeline step failed.
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\automation.py", line 285, in run_pipeline
+    run_step("CreationReservation.py", "Creating accounts and making reservations")
+  File "C:\Users\SBS\Downloads\agence\automation.py", line 220, in run_step
+    _run_child(cmd, script)
+  File "C:\Users\SBS\Downloads\agence\automation.py", line 209, in _run_child
+    raise subprocess.CalledProcessError(ret, cmd, output=f"{log_prefix} failed ({dur:.2f}s)")
+subprocess.CalledProcessError: Command '['C:\\Python312\\python.exe', '-X', 'utf8', 'CreationReservation.py']' returned non-zero exit status 1.
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:235 | Pipeline start
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:236 | Inputs: pdf='C:\\Users\\SBS\\AppData\\Local\\Temp\\reservation_uploads\\SAFA_Report_4.pdf', folder='iraq_21_14_09', target_date='14/09', hijri_day='22', country='iraq'
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:249 | Resolved params -> folder='iraq_21_14_09', target_date='14/09', hijri_day='22', pays='iraq'
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:256 | Run folder: C:\Users\SBS\Desktop\Hsouna\iraq_21_14_09
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:267 | Copied PDF to C:\Users\SBS\Desktop\Hsouna\iraq_21_14_09\SAFA_Report_4.pdf (6568.7 KB)
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:141 | Updating config.py at C:\Users\SBS\Downloads\agence\config.py
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:159 | config.py current FOLDER_NAME = "iraq_28_14_09"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:159 | config.py current TARGET_DATE = "14/09"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:159 | config.py current HIJRI_DAY = "22"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:159 | config.py current PAYS = "iraq"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:159 | config.py current PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "SAFA_Report3.pdf")
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:170 | config.py set FOLDER_NAME -> "iraq_21_14_09"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:170 | config.py set TARGET_DATE -> "14/09"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:170 | config.py set HIJRI_DAY -> "22"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:170 | config.py set PAYS -> "iraq"
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:170 | config.py set PDF_FILE -> os.path.join(BASE_DIR, FOLDER_NAME, "SAFA_Report_4.pdf")
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:173 | config.py updated successfully.
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:275 | config after update: FOLDER_NAME='iraq_21_14_09' TARGET_DATE='14/09' HIJRI_DAY='22' PAYS='iraq' PDF_FILE='C:/Users/SBS/Desktop/Hsouna\\iraq_21_14_09\\SAFA_Report_4.pdf'
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:219 | === Preparing CSV and merging PDFs ===
+2025-09-02 21:15:52 | INFO | automation_runner | automation.py:185 | Launching: C:\Python312\python.exe -X utf8 utils.py
+2025-09-02 21:15:53 | INFO | automation_runner | automation.py:203 | [utils.py          ] Fichier CSV 'C:/Users/SBS/Desktop/Hsouna\iraq_21_14_09\informations.csv' créé avec la colonne 'creation'.
+2025-09-02 21:15:53 | INFO | automation_runner | automation.py:203 | [utils.py          ] Aucun fichier PDF trouvé dans le dossier.
+2025-09-02 21:15:53 | INFO | automation_runner | automation.py:210 | Step 'utils.py' finished OK (1.16s)
+2025-09-02 21:15:53 | INFO | automation_runner | automation.py:219 | === Extracting data from PDF ===
+2025-09-02 21:15:53 | INFO | automation_runner | automation.py:185 | Launching: C:\Python312\python.exe -X utf8 pdf.py
+2025-09-02 21:15:54 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Could get FontBBox from font descriptor because None cannot be parsed as 4 floats
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] == Démarrage ==
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 21 page(s) chargée(s).
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 1 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 05/11/1953
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147324254
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A31116765
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boybana.n.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003942
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 2 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 04/09/1959
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147324259
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A39307574
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyban.ana@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003943
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 3 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/02/1966
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147311298
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A04275982
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyban.an.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003944
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 4 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 20/05/1999
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147479401
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A42461581
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyban.a.na@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003945
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 5 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 06/10/1976
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147479403
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A30908764
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyban.a.n.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003946
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 6 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/10/1994
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147326553
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A27336082
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.nana@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003947
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 7 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 31/10/1989
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147252309
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A41127956
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.nan.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003948
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 8 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 08/12/1996
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147252312
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A34788325
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.na.na@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003949
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 9 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 23/05/1994
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147252323
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A39210976
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.na.n.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003950
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 10 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 06/08/2002
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147252315
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A42357879
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.n.ana@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003951
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 11 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 27/05/1966
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147252333
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A39210961
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.n.an.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003952
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 12 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/02/1976
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147252332
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A42455493
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.n.a.na@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003953
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 13 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 17/02/2000
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147372206
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A41007285
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyba.n.a.n.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003954
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 14 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 01/10/1982
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147323929
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A42317460
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.anana@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003955
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 15 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 12/06/2017
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147257974
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A41893748
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.anan.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003956
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 16 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 27/12/2024
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147324262
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A41893744
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.ana.na@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003957
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 17 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 24/01/1991
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147324261
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A30318496
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.ana.n.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003958
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 18 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 15/09/1996
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147311294
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A42514259
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.an.ana@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003959
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 19 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 08/02/1979
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147323928
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A42369470
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.an.an.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003960
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 20 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 19/02/1977
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147479418
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A32796229
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.an.a.na@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003961
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] 📄 Page 21 :
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] ==================================================
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Birth Date 13/08/2004
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Visa No. 6147479419
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Passport No. A40391368
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : m.a.i.l.boyb.an.a.n.a@gmail.com
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Élément récupéré : 590003962
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-02 21:16:00 | INFO | automation_runner | automation.py:203 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-02 21:16:01 | INFO | automation_runner | automation.py:210 | Step 'pdf.py' finished OK (7.80s)
+2025-09-02 21:16:01 | INFO | automation_runner | automation.py:219 | === Creating accounts and making reservations ===
+2025-09-02 21:16:01 | INFO | automation_runner | automation.py:185 | Launching: C:\Python312\python.exe -X utf8 CreationReservation.py
+2025-09-02 21:16:02 | WARNING | automation_runner | automation.py:109 | Cancelling current step: CreationReservation.py
+2025-09-02 21:16:02 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-02 21:16:02 | ERROR | automation_runner | automation.py:291 | Pipeline step failed.
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\automation.py", line 285, in run_pipeline
+    run_step("CreationReservation.py", "Creating accounts and making reservations")
+  File "C:\Users\SBS\Downloads\agence\automation.py", line 220, in run_step
+    _run_child(cmd, script)
+  File "C:\Users\SBS\Downloads\agence\automation.py", line 209, in _run_child
+    raise subprocess.CalledProcessError(ret, cmd, output=f"{log_prefix} failed ({dur:.2f}s)")
+subprocess.CalledProcessError: Command '['C:\\Python312\\python.exe', '-X', 'utf8', 'CreationReservation.py']' returned non-zero exit status 1.
