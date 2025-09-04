@@ -20,6 +20,8 @@ import pdfplumber
 from PyPDF2 import PdfMerger
 import automation
 import config
+import pandas as pd
+
 
 app = Flask(__name__)
 app.secret_key = "changeme"
@@ -76,6 +78,28 @@ def get_runs(sort_by: str = "date"):
         csv_rel = _urlpath(folder, csv_name)  # normalized for URLs
         csv_abs = os.path.join(base_dir, folder, csv_name)
         csv_path = csv_rel if os.path.exists(csv_abs) else None
+        reserved_men = 0
+        reserved_women = 0
+
+        if os.path.exists(csv_abs):
+            try:
+                # avoid NaNs turning into floats
+                df = pd.read_csv(csv_abs, dtype=str, keep_default_na=False)
+
+                def read_counter(df, col) -> int:
+                    if col in df.columns and len(df) > 0:
+                        val = pd.to_numeric(df[col].iloc[0], errors="coerce")
+                        return int(val) if pd.notna(val) else 0
+                    return 0
+
+                reserved_men = read_counter(df, "reserved_men")
+                reserved_women = read_counter(df, "reserved_women")
+
+            except Exception as e:
+                # don't silently swallow errors—log them at least
+                print(f"Failed to read counters: {e}")
+
+
 
         # Rawdha images (optional)
         rawdha_images = []
@@ -90,6 +114,8 @@ def get_runs(sort_by: str = "date"):
             "pdfs": pdf_entries,
             "csv": csv_path,
             "rawdha_images": rawdha_images,
+            "reserved_men": reserved_men,
+            "reserved_women": reserved_women,
             "mtime": os.path.getmtime(folder_path),
         })
 

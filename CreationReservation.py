@@ -131,7 +131,13 @@ def handle_possible_error_after_mobile_or_pre_email(driver, wait, index, email_h
 
 # ====== Load CSV once ======
 df = pd.read_csv(csv_file, dtype=str)
-
+if "gender" not in df.columns:
+    df["gender"] = ""
+if "reserved_men" not in df.columns:
+    df["reserved_men"] = "0"
+if "reserved_women" not in df.columns:
+    df["reserved_women"] = "0"
+df.to_csv(csv_file, index=False, encoding="utf-8")
 # ====== Core flow ======
 def process_user(driver, index, row):
     dict_row = row.to_dict()

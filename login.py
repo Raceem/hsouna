@@ -14,6 +14,7 @@ Highlights:
 
 from __future__ import annotations
 
+import math
 import os
 import re
 import time
@@ -86,6 +87,24 @@ logger.info("Loading CSV: %s", csv_file)
 df = pd.read_csv(csv_file, dtype=str)
 logger.info("CSV loaded. Rows: %d, Columns: %d", len(df), len(df.columns))
 
+# Ensure gender and reservation counters exist
+def _ensure_counter_columns():
+    modified = False
+    if "gender" not in df.columns:
+        df["gender"] = ""
+        modified = True
+    if "reserved_men" not in df.columns:
+        df["reserved_men"] = "0"
+        modified = True
+    if "reserved_women" not in df.columns:
+        df["reserved_women"] = "0"
+        modified = True
+    if modified:
+        df.to_csv(csv_file, index=False, encoding="utf-8")
+        logger.info("Added missing gender/reserved columns and flushed to disk.")
+
+_ensure_counter_columns()
+
 def _flush_df():
     df.to_csv(csv_file, index=False, encoding="utf-8")
     logger.info("DataFrame flushed to disk.")
@@ -97,6 +116,15 @@ def _set_df(index: int, col: str, value: str, flush: bool = False):
     if flush:
         _flush_df()
 
+
+def _increment_reserved(gender_code: str) -> None:
+    """Increment reserved counters in dataframe (no flush)."""
+    col = "reserved_men" if gender_code == "H" else "reserved_women"
+    try:
+        current = int(df[col].iloc[0])
+    except Exception:
+        current = 0
+    df[col] = str(current + 1)
 # -----------------------------------------------------------------------------
 # Helpers
 def row_requires_app(row: pd.Series) -> bool:
@@ -115,8 +143,17 @@ def update_fast_settings(driver):
     except Exception as e:
         logger.info("Could not update driver settings: %s", e)
 
-def normalize_gender(raw: str | None) -> str:
-    s = (raw or "").strip().lower()
+def normalize_gender(raw) -> str:
+    # Treat None/NaN/blank uniformly
+    if raw is None or (isinstance(raw, float) and math.isnan(raw)):
+        return "Unknown"
+    try:
+        s = str(raw).strip().lower()
+    except Exception:
+        return "Unknown"
+
+    if s in {"", "nan", "none"}:
+        return "Unknown"
     if s in {"f", "female", "femme", "woman", "w", "femelle"}:
         return "F"
     if s in {"h", "homme", "m", "male", "man", "mâle"}:
@@ -284,86 +321,36 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
     logger.error("[%s] All tap methods failed at (%s,%s): %s", label, x, y, last_err)
     return False
 
-def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, timeout=8) -> bool:
-    """
-    Click the smallest android.view.View whose descendants include BOTH text labels:
-    TextView[@text=greg_day] AND TextView[@text=hijri_day].
-    If parent cell has bad/missing bounds, fall back to tapping the midpoint
-    between the two child labels. Verifies selection by checking 'Confirmer'.
-    """
-    g = (greg_day or "").lstrip("0") or "0"
+def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, timeout=15) -> bool:
     h = (hijri_day or "").lstrip("0") or "0"
-
-    # Nudge sheet and allow layout to settle
-    #screen_size = driver.get_window_size()
-    #start_x = screen_size["width"] // 2
-    #start_y = int(screen_size["height"] * 0.7)
-    #end_y = int(screen_size["height"] * 0.3)
-    #time.sleep(0.5)
-    #driver.swipe(start_x, start_y, start_x, end_y, 500)
-    #time.sleep(1.5)
-    xp = f"//android.view.View[.//android.widget.TextView[@text='{g}'] and .//android.widget.TextView[@text='{h}']]"
-    logger.info("Looking for calendar cell with XPath: %s", xp)
-
     end = time.time() + timeout
+
     while time.time() < end:
         try:
-            parents = driver.find_elements(AppiumBy.XPATH, xp)
-        except Exception:
-            parents = []
+            logging.info(f"Trying to find element with text '{h}'")
+            lbl_g = driver.find_element(AppiumBy.XPATH, f"//android.widget.TextView[@text='{h}']")
+            bounds = _parse_bounds(lbl_g.get_attribute("bounds"))
+            logging.info(f"Element '{h}' bounds: {bounds}")
 
-        scored = []
-        for el in parents:
-            try:
-                b = _parse_bounds(el.get_attribute("bounds"))
-                if b and b["area"] > 0:
-                    scored.append((b["area"], b, el))
-            except Exception:
-                continue
-
-        if scored:
-            scored.sort(key=lambda t: t[0])  # smallest cell first
-            area, bounds, elem = scored[0]
-            logger.info("Chosen cell for %s/%s: bounds=%s area=%s (of %d candidates)", g, h, bounds, area, len(scored))
-
-            # Prefer a bounds tap; it's fast and avoids interception
-            if tap_xy(driver, bounds["cx"], bounds["cy"], label=f"pair_{g}_{h}", retries=1):
-                time.sleep(0.12)
-                if _confirmer_is_interactable(driver):
-                    logger.info("Selected %s/%s via bounds tap.", g, h)
-                    return True
-
-            # Last resort direct click
-            try:
-                elem.click()
-                time.sleep(0.12)
-                if _confirmer_is_interactable(driver):
-                    logger.info("Selected %s/%s via element.click().", g, h)
-                    return True
-            except Exception as e:
-                logger.debug("Direct click fallback failed on chosen cell: %s", e)
-
-        # Fallback: compute and tap the midpoint between the two labels
-        try:
-            lbl_g = driver.find_element(AppiumBy.XPATH, f"//android.widget.TextView[@text='{g}']")
-            lbl_h = driver.find_element(AppiumBy.XPATH, f"//android.widget.TextView[@text='{h}']")
-            bg = _parse_bounds(lbl_g.get_attribute("bounds"))
-            bh = _parse_bounds(lbl_h.get_attribute("bounds"))
-            if bg and bh:
-                cx = (bg["cx"] + bh["cx"]) // 2
-                cy = (bg["cy"] + bh["cy"]) // 2
-                if tap_xy(driver, cx, cy, label=f"pair_{g}_{h}_childfallback", retries=1):
+            if bounds:
+                cx, cy = bounds["cx"], bounds["cy"]
+                logging.info(f"Tapping '{h}' at ({cx}, {cy})")
+                if tap_xy(driver, cx, cy, label=f"{h}_tap", retries=1):
                     time.sleep(0.15)
                     if _confirmer_is_interactable(driver):
-                        logger.info("Selected %s/%s via child-center fallback.", g, h)
+                        logging.info(f"Successfully selected '{h}'")
                         return True
+                else:
+                    logging.warning(f"Tap on '{h}' failed.")
+            else:
+                logging.warning(f"No valid bounds for element '{h}'")
         except Exception:
             pass
 
-        time.sleep(0.2)  # let Compose settle and retry
+        time.sleep(0.2)
 
-    logger.info("No parent cell with valid bounds for %s/%s after wait.", g, h)
     return False
+
 def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
     """
     If the post-OTP 'policy/privacy' sheet appears, tick the checkbox
@@ -372,7 +359,7 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
     box_id = "com.moh.nusukapp:id/check_message"
     confirm_id = "com.moh.nusukapp:id/btn_confirm"
     ignore_id = "com.moh.nusukapp:id/btn_ignore"  # unused; we accept
-    
+
     try:
         # Quick probe: is the sheet present?
         sheet_present = False
@@ -482,47 +469,83 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         return
 
     # Gender
-    gender = normalize_gender(dict_row.get("gender", "Unknown"))
-    logger.info("[make_reservation] Gender normalized: %s", gender)
+    gender_hint = normalize_gender(dict_row.get("gender", "Unknown"))
+    logger.info("[make_reservation] Gender normalized: %s", gender_hint)
+    clicked_gender = None
+
     # Existing booking?
     if has_existing_booking(driver):
-        logger.info("Existing booking detected; marking RESERVATION=1.")
-        _set_df(index, "CREATION", "1",flush=True)     
-        _set_df(index, "RESERVATION", "1", flush=True)
+        logger.info("Existing booking detected; marking RESERVATION=1 and updating date/time/counters.")
+        _set_df(index, "CREATION", "1")
+        _set_df(index, "RESERVATION", "1")
+
+        # date_reservation uses TARGET_DATE with the year from START_DATE (like success path)
+        year = datetime.strptime(start_date, "%d_%m_%Y").year
+        _set_df(index, "date_reservation", f"{target_date}/{year}")
+
+        # force 10 AM as requested
+        _set_df(index, "heure", "10:00 AM")
+
+        # bump counters by sex if known
+        if gender_hint == "H":
+            _increment_reserved("H")
+        elif gender_hint == "F":
+            _increment_reserved("F")
+
+        # one flush after all updates
+        _flush_df()
         return
-    if gender == "F":
+    if gender_hint == "F":
         try:
-            if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
-                            name="permit_woman_tv", timeout=5):
-                # fallback if first fails
+            if safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+                           name="permit_woman_tv", timeout=1):
+                clicked_gender = "F"
+            else:
                 safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
-                        name="permit_men_tv", timeout=3)
+                           name="permit_men_tv", timeout=1)
+                clicked_gender = "H"
         except Exception as e:
             logger.warning("permit_woman_tv failed, trying men: %s", e)
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
-                    name="permit_men_tv", timeout=3)
+                       name="permit_men_tv", timeout=1)
+            clicked_gender = "H"
 
-    elif gender == "H":
+    elif gender_hint == "H":
         try:
-            if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
-                            name="permit_men_tv", timeout=5):
+            if safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
+                           name="permit_men_tv", timeout=1):
+                clicked_gender = "H"
+            else:
                 safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
-                        name="permit_woman_tv", timeout=3)
+                           name="permit_woman_tv", timeout=1)
+                clicked_gender = "F"
         except Exception as e:
             logger.warning("permit_men_tv failed, trying woman: %s", e)
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
-                    name="permit_woman_tv", timeout=3)
+                       name="permit_woman_tv", timeout=1)
+            clicked_gender = "F"
 
     else:
         try:
-            if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
-                            name="permit_woman_tv", timeout=3):
+            if safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
+                           name="permit_woman_tv", timeout=1):
+                clicked_gender = "F"
+            else:
                 safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
-                        name="permit_men_tv", timeout=3)
+                           name="permit_men_tv", timeout=1)
+                clicked_gender = "H"
         except Exception as e:
             logger.warning("permit_woman_tv failed, trying men: %s", e)
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_men_tv"),
-                    name="permit_men_tv", timeout=3)
+                       name="permit_men_tv", timeout=1)
+            clicked_gender = "H"
+
+    actual_gender = clicked_gender or gender_hint
+    if actual_gender in {"F", "H"}:
+         # write immediately to the CSV as F/H
+        _set_df(index, "gender", actual_gender, flush=True)
+        # keep the in-memory row consistent for later logic
+        dict_row["gender"] = actual_gender
 
 
 
@@ -554,7 +577,7 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         logger.warning("No timeslots available within timeout.")
         return "NO_SLOTS"
 
-    preferred = "06:00 PM" if normalize_gender(dict_row.get("gender")) == "H" else "10:00 AM"
+    preferred = "06:00 PM" if actual_gender == "H" else "10:00 AM"
     picked = False
     for el in slots:
         if el.text == preferred:
@@ -584,16 +607,22 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         return
 
     # Success check
-    elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
+    
     if elements and "Neutre" in (elements[0].text or ""):
         year = datetime.strptime(start_date, "%d_%m_%Y").year
-        _set_df(index, "CREATION", "1")     
+        _set_df(index, "CREATION", "1")
         _set_df(index, "RESERVATION", "1")
         _set_df(index, "heure", preferred)
+        if actual_gender == "H":
+            _set_df(index, "gender", "Homme")
+            _increment_reserved("H")
+        elif actual_gender == "F":
+            _set_df(index, "gender", "Femme")
+            _increment_reserved("F")
         _set_df(index, "date_reservation", f"{target_date}/{year}", flush=True)
     else:
         logger.error("Reservation success element not found or does not contain 'Neutre'.")
-    
+    elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
 
 # -----------------------------------------------------------------------------
 # Login Flow

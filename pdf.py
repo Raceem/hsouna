@@ -1,5 +1,16 @@
 # -*- coding: utf-8 -*-
-from pdfminer.high_level import extract_text  # still available if you need it later
+"""
+PDF → CSV extractor for KSA eVisa pages.
+
+Adds:
+- Nationality extraction (from 'Nationality / الجنسية' line) with MRZ fallback.
+- Safer CSV header management to include 'nationalite'.
+
+Dependencies:
+- pdfplumber, pandas
+"""
+
+from pdfminer.high_level import extract_text  # kept if you need it elsewhere
 import re
 import pandas as pd
 import json
@@ -77,7 +88,6 @@ def extract_birth_date(text: str) -> str:
     2) Fallback: scan all date tokens; keep plausible years for DoB
     Returns normalized DD/MM/YYYY or "Non trouvé"
     """
-    # Try labeled (English/Arabic), optional ":" or "-" and optional spaces
     m_bd = re.search(
         r'(?:Birth\s*Date|تاريخ\s*الميلاد)\s*[:\-]?\s*(\d{2}[\/\-]\d{2}[\/\-]\d{4}|\d{4}[\/\-]\d{2}[\/\-]\d{2})',
         text,
@@ -89,7 +99,6 @@ def extract_birth_date(text: str) -> str:
         except Exception:
             pass  # fall back if something weird
 
-    # Fallback: collect all date-like tokens and filter by likely birth years
     tokens = re.findall(DATE_TOKEN, text)
     candidates = []
     for tok in tokens:
@@ -114,32 +123,33 @@ def extract_birth_date(text: str) -> str:
     return "Non trouvé"
 
 # ---------------------------
-# Passport & Visa extraction
+# Passport, Visa, Nationality
 # ---------------------------
 def extract_visa_number(text: str) -> str:
-    # Some PDFs may have "Visa No." then number on next line; make it tolerant
+    # English
     m = re.search(r'(?:Visa\s*No\.?\s*:?\s*)(\d{9,10})', text, flags=re.IGNORECASE)
     if m:
         return m.group(1)
-
-    # Fallback: standalone 9-10 digit number near the "Visa No." label in text
-    # Very loose fallback; you can tighten if needed
+    # Arabic variant (more permissive)
+    m_ar = re.search(r'رقم\s*التأشيرة.*?(\d{9,10})', text)
+    if m_ar:
+        return m_ar.group(1)
+    # Fallback: 9-10 digits near 'Visa No.'
     m2 = re.search(r'Visa\s*No\.[^\d]*(\d{9,10})', text, flags=re.IGNORECASE)
     return m2.group(1) if m2 else "Non trouvé"
 
 def extract_passport_and_name(text: str):
     """
-    Your original patterns were MRZ-like fragments.
-    We'll keep the same approach + country detection.
+    Try MRZ-like fragments to get passport and country code.
     Returns (numero_passport, nom, prenom, detected_country_code)
     """
     patterns = {
-        "IRQ": r'([A-Z]\d{8})\d?IRQ',     # Iraq
-        "IDN": r'([A-Z][0-9]{7})<\d?IDN', # Indonesia
-        "IND": r'([A-Z][0-9]{7})<\d?IND', # India
-        "MAR": r'([A-Z][0-9]{7})<\d?MAR', # Morocco
-        "GEN": r'([A-Z]\d{8})',           # Generic
-        "EGY": r'([A-Z]{1}[0-9]{8})\d?EGY', # Egypt
+        "IRQ": r'([A-Z]\d{8})\d?IRQ',       # Iraq
+        "IDN": r'([A-Z][0-9]{7})<\d?IDN',   # Indonesia
+        "IND": r'([A-Z][0-9]{7})<\d?IND',   # India
+        "MAR": r'([A-Z][0-9]{7})<\d?MAR',   # Morocco
+        "EGY": r'([A-Z][0-9]{8})\d?EGY',    # Egypt
+        "GEN": r'([A-Z]\d{8})',             # Generic fallback
     }
 
     country_code = None
@@ -149,7 +159,7 @@ def extract_passport_and_name(text: str):
         m = re.search(pat, text)
         if m:
             numero_passport = m.group(1)
-            country_code = code
+            country_code = code if code != "GEN" else None
             break
 
     # Try to extract name from MRZ-like pattern: COUNTRYCODESURNAME<<GIVENNAME
@@ -160,6 +170,37 @@ def extract_passport_and_name(text: str):
             nom, prenom = mname.group(1), mname.group(2)
 
     return numero_passport, nom, prenom, country_code or "GEN"
+
+COUNTRY_CODE_TO_NAT = {
+    "IDN": "Indonesia",
+    "EGY": "Egypt",
+    "IND": "India",
+    "IRQ": "Iraq",
+    "MAR": "Morocco",
+    # extend as needed…
+}
+
+def extract_nationality(text: str, fallback_code: str | None = None) -> str:
+    """
+    Prefer the value on the line after 'Nationality' or 'الجنسية'.
+    Example line: 'Indonesia - إندونيسيا' → keep 'Indonesia'.
+    Fallback to MRZ country code mapping if label not found.
+    """
+    # Label-based (EN / AR)
+    m = re.search(r'(?:Nationality|الجنسية)\s*[:\-]?\s*([^\r\n]+)', text, flags=re.IGNORECASE)
+    if m:
+        line = m.group(1).strip()
+        # Keep the first Latin chunk (before Arabic or symbols)
+        latin_chunks = re.findall(r"[A-Za-z][A-Za-z '\-()]*", line)
+        if latin_chunks:
+            nat = latin_chunks[0].strip(" -").title()
+            return nat
+
+    # MRZ fallback
+    if fallback_code and fallback_code in COUNTRY_CODE_TO_NAT:
+        return COUNTRY_CODE_TO_NAT[fallback_code]
+
+    return "Non trouvé"
 
 # ---------------------------
 # Main
@@ -176,24 +217,32 @@ if __name__ == "__main__":
         duree_jours = False
     else:
         type_voyage = "Groupe"
-        # If you want to parse from filename, you can keep your logic here:
-        # date = re.findall(r'(\d{2}_\d{2}_\d{4})', PDF_FILE)
+        # Put your filename parsing here if needed
         date_entree_madinah = "22_07_2025"
         duree_jours = 1
 
-    # Ensure CSV exists with headers
-    if not os.path.exists(CSV_FILE):
-        pd.DataFrame(columns=FIELDNAMES).to_csv(CSV_FILE, index=False, encoding="utf-8")
+    # Ensure CSV exists with headers, including 'nationalite'
+    header_fields = list(FIELDNAMES)
+    if "nationalite" not in header_fields:
+        header_fields.append("nationalite")
 
-    # Collect birth dates for the Excel one-column export
+    if not os.path.exists(CSV_FILE):
+        pd.DataFrame(columns=header_fields).to_csv(CSV_FILE, index=False, encoding="utf-8")
+    else:
+        # If CSV exists but lacks 'nationalite', add it
+        _df_existing = pd.read_csv(CSV_FILE, dtype=str, keep_default_na=False, encoding="utf-8")
+        if "nationalite" not in _df_existing.columns:
+            _df_existing["nationalite"] = ""
+            _df_existing.to_csv(CSV_FILE, index=False, encoding="utf-8")
+
+    # Collect birth dates for optional Excel one-column export (if you need it later)
     all_birth_dates = []
 
     # Process page by page
     for i, texte in enumerate(pages, start=1):
         print(f"\n📄 Page {i} :")
         print("=" * 50)
-        # Useful debug trace (optional; can be noisy)
-        # print(texte)
+        # print(texte)  # uncomment for debugging
 
         # --- Birth Date ---
         date_de_naissance = extract_birth_date(texte)
@@ -207,22 +256,22 @@ if __name__ == "__main__":
         numero_visa = extract_visa_number(texte)
         print(f"Visa No. {numero_visa}")
 
-        # --- Passport + Name ---
+        # --- Passport + Name + Country code ---
         numero_passport, nom, prenom, country_code = extract_passport_and_name(texte)
         print(f"Passport No. {numero_passport}")
-        # If no name found via MRZ, keep defaults but you can try other heuristics here
+
+        # --- Nationality ---
+        nationalite = extract_nationality(texte, fallback_code=country_code)
+        print(f"Nationality {nationalite}")
 
         # --- Email / Number from JSON variant pools ---
-        email = pop_first_variant(EMAIL_JSON_FILE)
-        numero_tlf = pop_first_variant(NUMBER_JSON_FILE)
-        if not email:
-            email = ""
-        if not numero_tlf:
-            numero_tlf = ""
+        email = pop_first_variant(EMAIL_JSON_FILE) or ""
+        numero_tlf = pop_first_variant(NUMBER_JSON_FILE) or ""
 
         # --- Append to CSV if not duplicate passport ---
-        df = pd.read_csv(CSV_FILE, encoding="utf-8")
-        if numero_passport in df.get("numero_passport", pd.Series(dtype=str)).astype(str).values:
+        df = pd.read_csv(CSV_FILE, dtype=str, keep_default_na=False, encoding="utf-8")
+        existing_passports = df.get("numero_passport", pd.Series(dtype=str)).astype(str).values
+        if str(numero_passport) in existing_passports:
             print(f"Le numéro de passport {numero_passport} existe déjà dans le CSV.")
         else:
             new_muatamer = {
@@ -243,8 +292,8 @@ if __name__ == "__main__":
                 "CONFIRMATION": 0,
                 "date_reservation": "",
                 "heure": "",
+                "nationalite": nationalite,   # <-- new field
             }
-            df_new = pd.DataFrame([new_muatamer])
+            df_new = pd.DataFrame([new_muatamer], columns=header_fields)
             df_new.to_csv(CSV_FILE, mode="a", index=False, header=False, encoding="utf-8")
             print("Ligne ajoutée au CSV.")
-

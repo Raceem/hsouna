@@ -3,7 +3,7 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 
 # Base paths
-FOLDER_NAME = "iraq_23_14_09"
+FOLDER_NAME = "egypt_25_14"
 BASE_DIR = "C:/Users/SBS/Desktop/Hsouna"
 CSV_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "informations.csv")
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
@@ -19,7 +19,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "egypt"
 PAYS_UPPER = PAYS.lower()
-TARGET_DATE = "14/09"
+TARGET_DATE = "14"
 HIJRI_DAY = "22"
 START_DATE = "02_08_2025"
 DURATION_DAYS = 31
@@ -43,20 +43,18 @@ FIELDNAMES = [
     "CONFIRMATION",
     "date_reservation",
     "heure",
+    "nationalite",
 ]
 
 # Default PDF path
-PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "SAFA_Report_4.pdf")
+PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "test.pdf")
 # Directory where confirmation screenshots will be stored
 RAWDHA_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "rawdha")
 RESERVATION_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "reservations")
 
 def setup_driver():
     """Create and return a configured Appium driver."""
-    autoGrantPermissions: true
-    dontStopAppOnReset: true
-    ignoreUnimportantViews: true
-    waitForIdleTimeout: 0
+   
     options = UiAutomator2Options()
     options.platform_name = "Android"
     options.platform_version = PLATFORM_VERSION
