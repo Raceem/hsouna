@@ -15,8 +15,6 @@ from flask import (
     send_from_directory,
     url_for,
 )
-from werkzeug.utils import secure_filename
-import pdfplumber
 from PyPDF2 import PdfMerger
 import automation
 import config
@@ -26,9 +24,7 @@ import pandas as pd
 app = Flask(__name__)
 app.secret_key = "changeme"
 
-# Use cross-platform temp upload dir
-UPLOAD_DIR = os.path.join(tempfile.gettempdir(), "reservation_uploads")
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+
 
 
 def _extract_date(name: str) -> datetime:
@@ -127,57 +123,49 @@ def get_runs(sort_by: str = "date"):
     return runs
 
 
+def get_csv_stats():
+    """Collect basic statistics about configured CSV files."""
+    csv_files = {
+        "all": ("ALL", config.ALL_CSV_PATH),
+        "hommes": ("HOMMES", config.HOMMES_CSV_PATH),
+        "femmes": ("FEMMES", config.FEMMES_CSV_PATH),
+    }
+
+    stats = {}
+    for key, (label, path) in csv_files.items():
+        total = 0
+        with_account = 0
+        if os.path.exists(path):
+            try:
+                df = pd.read_csv(path)
+                total = len(df)
+                if key != "all" and "CREATION" in df.columns:
+                    creation_col = pd.to_numeric(df["CREATION"], errors="coerce").fillna(0)
+                    with_account = int((creation_col == 1).sum())
+            except Exception as e:
+                print(f"Failed to read {path}: {e}")
+
+        stats[key] = {"label": label, "total": total}
+        if key != "all":
+            stats[key]["with_account"] = with_account
+
+    return stats
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        if automation.get_status()["running"]:
-            flash("A pipeline is already running.")
-            return redirect(url_for("index"))
-
-        pdf = request.files.get("pdf")
-        target_date = request.form.get("target_date")
-        # REMOVED:
-        # hijri_day = request.form.get("hijri_day")
-        # country = request.form.get("country")
-
-        if not pdf or pdf.filename == "":
-            flash("No file selected.")
-            return redirect(request.url)
-
-        # Safe cross-platform temp file path
-        fname = secure_filename(pdf.filename) or "upload.pdf"
-        tmp_path = os.path.join(UPLOAD_DIR, fname)
-        pdf.save(tmp_path)
-
-        # Determine folder name: pages_targetdate (no country)
-        try:
-            with pdfplumber.open(tmp_path) as pdf_file:
-                page_count = len(pdf_file.pages)
-        except Exception:
-            page_count = 0
-
-        safe_date = (target_date or "").replace("/", "_").replace("-", "_")
-        folder_name = secure_filename(f"{page_count}_{safe_date}")  # <- country removed
-
-        try:
-            # Start in background so the UI returns immediately
-            automation.run_pipeline_async(
-                pdf=tmp_path,
-                folder=folder_name,
-                target_date=target_date,
-
-            )
-            flash("Pipeline started.")
-        except Exception as exc:
-            flash(str(exc))
-        # Do NOT delete tmp_path here — the child process needs it.
-
+        # The run action no longer triggers the automation pipeline.
+        flash("Run action is disabled.")
         return redirect(url_for("index"))
 
     sort_by = request.args.get("sort", "date")
     runs = get_runs(sort_by=sort_by)
     status = automation.get_status()
-    return render_template("index.html", runs=runs, sort=sort_by, status=status)
+    csv_stats = get_csv_stats()
+    return render_template(
+        "index.html", runs=runs, sort=sort_by, status=status, csv_stats=csv_stats
+    )
 
 @app.route("/status")
 def status():
@@ -203,6 +191,7 @@ def merge_pdfs():
     merged.seek(0)
 
     return send_file(
+
         merged,
         as_attachment=True,
         download_name="merged.pdf",

@@ -29,13 +29,17 @@
     <form method="post" enctype="multipart/form-data" class="row g-3 mb-5">
       <div class="col-md-3">
         <label for="pdf" class="form-label">PDF File</label>
-        <input class="form-control" type="file" id="pdf" name="pdf" accept="application/pdf" required>
+        <input class="form-control" type="file" id="pdf" name="pdf" accept="application/pdf">
       </div>
       <div class="col-md-3">
-        <label for="target_date" class="form-label">Target date (DD/MM)</label>
-        <input class="form-control" type="text" id="target_date" name="target_date" required>
+        <label for="gender" class="form-label">Gender</label>
+        <select class="form-select" id="gender" name="gender">
+          <option value="">None</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
       </div>
-      
+
       <div class="col-12">
         <button type="submit" class="btn btn-primary">Run</button>
       </div>
@@ -50,6 +54,12 @@
         <button type="submit" class="btn btn-secondary">Merge and Download</button>
       </div>
     </form>
+    <h2 class="mb-3">CSV Information</h2>
+    <ul class="list-group mb-5">
+      <li class="list-group-item">ALL: {{ csv_stats['all'].total }} rows</li>
+      <li class="list-group-item">HOMMES: {{ csv_stats['hommes'].total }} rows — with account: {{ csv_stats['hommes'].with_account }}</li>
+      <li class="list-group-item">FEMMES: {{ csv_stats['femmes'].total }} rows — with account: {{ csv_stats['femmes'].with_account }}</li>
+    </ul>
     <form method="get" class="mb-4">
       <div class="row g-3 align-items-center">
         <div class="col-auto">

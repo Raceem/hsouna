@@ -8573,3 +8573,460 @@ subprocess.CalledProcessError: Command '['C:\\Python312\\python.exe', '-X', 'utf
 2025-09-04 23:06:11 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .base import clone  # noqa: E402
 2025-09-04 23:06:11 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     ^^^^^^^^^^^^^^^^^^^^^^^
 2025-09-04 23:06:11 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\sklearn\base.py", line 19, in <module>
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:232 | Pipeline start
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:233 | Inputs: pdf='C:\\Users\\SBS\\AppData\\Local\\Temp\\reservation_uploads\\WOMAN_900342500_07-09-20251.pdf', folder='31_07_09', target_date='07/09'
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:243 | Resolved params -> folder='31_07_09', target_date='07/09'
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:249 | Run folder: C:\Users\SBS\Desktop\Hsouna\31_07_09
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:260 | Copied PDF to C:\Users\SBS\Desktop\Hsouna\31_07_09\WOMAN_900342500_07-09-20251.pdf (5325.3 KB)
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:141 | Updating config.py at C:\Users\SBS\Downloads\agence\config.py
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:157 | config.py current FOLDER_NAME = "193_15_09"
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:157 | config.py current TARGET_DATE = "17/09"
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:157 | config.py current PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "merged_3.pdf")
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:168 | config.py set FOLDER_NAME -> "31_07_09"
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:168 | config.py set TARGET_DATE -> "07/09"
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:168 | config.py set PDF_FILE -> os.path.join(BASE_DIR, FOLDER_NAME, "WOMAN_900342500_07-09-20251.pdf")
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:171 | config.py updated successfully.
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:268 | config after update: FOLDER_NAME='31_07_09' TARGET_DATE='07/09' PDF_FILE='C:/Users/SBS/Desktop/Hsouna\\31_07_09\\WOMAN_900342500_07-09-20251.pdf'
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:217 | === Preparing CSV and merging PDFs ===
+2025-09-05 12:48:05 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 utils.py
+2025-09-05 12:48:10 | INFO | automation_runner | automation.py:201 | [utils.py          ] Fichier CSV 'C:/Users/SBS/Desktop/Hsouna\31_07_09\informations.csv' créé avec la colonne 'creation'.
+2025-09-05 12:48:10 | INFO | automation_runner | automation.py:201 | [utils.py          ] Aucun fichier PDF trouvé dans le dossier.
+2025-09-05 12:48:10 | INFO | automation_runner | automation.py:208 | Step 'utils.py' finished OK (5.18s)
+2025-09-05 12:48:10 | INFO | automation_runner | automation.py:217 | === Extracting data from PDF ===
+2025-09-05 12:48:10 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 pdf.py
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] == Démarrage ==
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 31 page(s) chargée(s).
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 1 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 15/09/1991
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135443
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E6548217
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004443
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 2 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 30/12/1997
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135444
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E3431305
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004444
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 3 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 11/02/1984
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135445
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5250226
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004445
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 4 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 05/03/1998
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135467
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E7607579
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d.045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004446
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 5 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 06/04/1968
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135466
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X4097300
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d.04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004447
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 6 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 22/06/1990
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135460
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E4186693
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d.0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004448
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 7 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 20/06/1965
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135471
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6210696
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.cke.d.0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004449
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 8 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 28/05/1985
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135463
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5586394
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004450
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 9 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 23/09/1994
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135454
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E3431308
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004451
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 10 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 20/07/1992
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135469
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5580967
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004452
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 11 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 01/07/1958
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135441
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6211867
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004453
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 12 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 03/09/1996
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135447
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X4547797
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed.045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004454
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 13 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 04/11/1964
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135448
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6401312
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed.04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004455
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 14 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 30/11/1987
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135459
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6403314
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed.0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004456
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 15 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 10/11/1985
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135458
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5250692
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.ed.0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004457
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 16 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 09/04/1986
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135462
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6210231
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004458
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 17 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 04/06/1963
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135457
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5896023
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004459
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 18 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 24/11/2012
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135446
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5250727
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004460
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 19 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 15/07/1999
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135442
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E8146836
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004461
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 20 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 15/07/1999
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135472
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. E8578642
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d.045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004462
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 21 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 11/11/2002
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135464
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5582461
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d.04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004463
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 22 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 15/05/2002
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135465
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X4097301
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d.0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004464
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 23 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 09/02/1944
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135439
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X4738772
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.ck.e.d.0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004465
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 24 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 10/06/1966
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135452
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5586587
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004466
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 25 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 18/07/1970
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135453
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6215189
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004467
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 26 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 21/05/1976
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135455
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X6212416
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004468
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 27 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 16/10/1964
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135470
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X3099123
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004469
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 28 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 22/08/1974
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135449
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5582454
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked.045@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004470
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 29 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 26/11/1968
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135451
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5586873
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked.04.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004471
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 30 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 27/07/1973
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135450
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5883369
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked.0.45@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004472
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] 📄 Page 31 :
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] ==================================================
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Birth Date 04/11/1981
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Visa No. 6148135468
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Passport No. X5902415
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Nationality Indonesia
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : geth.a.c.ked.0.4.5@gmail.com
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\email_variants.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Élément récupéré : 590004473
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Le fichier C:/Users/SBS/Desktop/Hsouna\saudi_numbers.json a été mis à jour.
+2025-09-05 12:48:15 | INFO | automation_runner | automation.py:201 | [pdf.py            ] Ligne ajoutée au CSV.
+2025-09-05 12:48:16 | INFO | automation_runner | automation.py:208 | Step 'pdf.py' finished OK (5.30s)
+2025-09-05 12:48:16 | INFO | automation_runner | automation.py:217 | === Creating accounts and making reservations ===
+2025-09-05 12:48:16 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 CreationReservation.py
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py] Traceback (most recent call last):
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Users\SBS\Downloads\agence\CreationReservation.py", line 7, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from paddleocr import logger
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddleocr\__init__.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ._models import (
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddleocr\_models\__init__.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .doc_img_orientation_classification import DocImgOrientationClassification
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddleocr\_models\doc_img_orientation_classification.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ._image_classification import (
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddleocr\_models\_image_classification.py", line 22, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .base import PaddleXPredictorWrapper, PredictorCLISubcommandExecutor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddleocr\_models\base.py", line 17, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from paddlex import create_predictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\__init__.py", line 25, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .inference import create_pipeline, create_predictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\__init__.py", line 16, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .models import create_predictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\__init__.py", line 26, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .anomaly_detection import UadPredictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\anomaly_detection\__init__.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .predictor import UadPredictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\anomaly_detection\predictor.py", line 23, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ..base import BasePredictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\base\__init__.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .predictor import BasePredictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\base\predictor\__init__.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .base_predictor import BasePredictor
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\base\predictor\base_predictor.py", line 37, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ...common import HPInfer, PaddleInfer
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\common\__init__.py", line 17, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .ts import BuildTSDataset, TimeFeature, TSCutOff, TSNormalize, TStoArray, TStoBatch
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\common\ts\__init__.py", line 15, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .processors import *
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\common\ts\processors.py", line 22, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .funcs import load_from_dataframe, time_feature
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\paddlex\inference\models\common\ts\funcs.py", line 29, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from sklearn.preprocessing import StandardScaler
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\sklearn\__init__.py", line 73, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .base import clone  # noqa: E402
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     ^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\sklearn\base.py", line 19, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\sklearn\utils\__init__.py", line 9, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ._chunking import gen_batches, gen_even_slices
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\sklearn\utils\_chunking.py", line 11, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ._param_validation import Interval, validate_params
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\sklearn\utils\_param_validation.py", line 14, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from scipy.sparse import csr_matrix, issparse
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\scipy\sparse\__init__.py", line 305, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ._csr import *
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "C:\Python312\Lib\site-packages\scipy\sparse\_csr.py", line 11, in <module>
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]     from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap>", line 921, in _load_unlocked
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap>", line 813, in module_from_spec
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap_external>", line 1295, in create_module
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap>", line 491, in _verbose_message
+2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py] KeyboardInterrupt

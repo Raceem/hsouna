@@ -21529,3 +21529,1555 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-09-05 00:34:36 | INFO | reservation | login.py:348 | Element '17' bounds: {'x1': 391, 'y1': 1127, 'x2': 429, 'y2': 1166, 'w': 38, 'h': 39, 'cx': 410, 'cy': 1146, 'area': 1482}
 2025-09-05 00:34:36 | INFO | reservation | login.py:352 | Tapping '17' at (410, 1146)
 2025-09-05 00:34:37 | INFO | reservation | login.py:356 | Successfully selected '17'
+2025-09-05 13:41:49 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 13:41:49 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 13:41:58 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:42:27 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 13:42:27 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 13:42:28 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 13:42:28 | INFO | reservation | login.py:478 | [make_reservation] Start for row 24 (passport=E9681554)
+2025-09-05 13:42:36 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:42:44 | INFO | reservation | login.py:130 | DF Update [row=24, col=CREATION]: '0' -> '1'
+2025-09-05 13:42:44 | INFO | reservation | login.py:130 | DF Update [row=24, col=gender]: nan -> 'F'
+2025-09-05 13:42:44 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:42:45 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:42:46 | INFO | reservation | login.py:348 | Element '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-05 13:42:46 | INFO | reservation | login.py:352 | Tapping '15' at (147, 1157)
+2025-09-05 13:42:48 | INFO | reservation | login.py:356 | Successfully selected '15'
+2025-09-05 13:42:59 | WARNING | reservation | login.py:593 | No timeslots available within timeout.
+2025-09-05 13:43:10 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:43:33 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 13:43:35 | INFO | reservation | login.py:389 | [privacy] Consent sheet not present.
+2025-09-05 13:43:35 | INFO | reservation | login.py:478 | [make_reservation] Start for row 25 (passport=X1599100)
+2025-09-05 13:43:43 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 13:43:50 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 13:43:50 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 13:43:50 | ERROR | reservation | login.py:483 | Could not open Noble Rawdah screen.
+2025-09-05 13:43:59 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:44:24 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 13:44:24 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 13:44:24 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 13:44:24 | INFO | reservation | login.py:478 | [make_reservation] Start for row 26 (passport=X6010104)
+2025-09-05 13:44:33 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:44:40 | INFO | reservation | login.py:130 | DF Update [row=26, col=CREATION]: '0' -> '1'
+2025-09-05 13:44:40 | INFO | reservation | login.py:130 | DF Update [row=26, col=gender]: nan -> 'F'
+2025-09-05 13:44:40 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:44:41 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:44:42 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:44:43 | INFO | reservation | login.py:348 | Element '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-05 13:44:43 | INFO | reservation | login.py:352 | Tapping '15' at (147, 1157)
+2025-09-05 13:44:44 | INFO | reservation | login.py:356 | Successfully selected '15'
+2025-09-05 13:44:55 | WARNING | reservation | login.py:593 | No timeslots available within timeout.
+2025-09-05 13:45:05 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:45:32 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 13:45:32 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 13:45:33 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 13:45:33 | INFO | reservation | login.py:478 | [make_reservation] Start for row 27 (passport=E9681556)
+2025-09-05 13:45:42 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:45:49 | INFO | reservation | login.py:130 | DF Update [row=27, col=CREATION]: '0' -> '1'
+2025-09-05 13:45:49 | INFO | reservation | login.py:130 | DF Update [row=27, col=gender]: nan -> 'F'
+2025-09-05 13:45:49 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:45:50 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:45:51 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:45:52 | INFO | reservation | login.py:348 | Element '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-05 13:45:52 | INFO | reservation | login.py:352 | Tapping '15' at (147, 1157)
+2025-09-05 13:45:53 | INFO | reservation | login.py:356 | Successfully selected '15'
+2025-09-05 13:46:04 | WARNING | reservation | login.py:593 | No timeslots available within timeout.
+2025-09-05 13:46:13 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:46:39 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 13:46:40 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 13:46:40 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 13:46:40 | INFO | reservation | login.py:478 | [make_reservation] Start for row 28 (passport=X3299469)
+2025-09-05 13:46:50 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 13:46:52 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:46:58 | INFO | reservation | login.py:130 | DF Update [row=28, col=CREATION]: '0' -> '1'
+2025-09-05 13:46:58 | INFO | reservation | login.py:130 | DF Update [row=28, col=gender]: nan -> 'F'
+2025-09-05 13:46:58 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:46:59 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:47:01 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:47:01 | INFO | reservation | login.py:348 | Element '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-05 13:47:01 | INFO | reservation | login.py:352 | Tapping '15' at (147, 1157)
+2025-09-05 13:47:03 | INFO | reservation | login.py:356 | Successfully selected '15'
+2025-09-05 13:47:13 | WARNING | reservation | login.py:593 | No timeslots available within timeout.
+2025-09-05 13:47:22 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:47:47 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:48:14 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 13:48:14 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 13:48:15 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 13:48:15 | INFO | reservation | login.py:478 | [make_reservation] Start for row 30 (passport=A41485862)
+2025-09-05 13:48:25 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 13:48:27 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:48:34 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 13:48:35 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 13:48:35 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 13:48:36 | INFO | reservation | login.py:130 | DF Update [row=30, col=CREATION]: '0' -> '1'
+2025-09-05 13:48:36 | INFO | reservation | login.py:130 | DF Update [row=30, col=gender]: nan -> 'H'
+2025-09-05 13:48:36 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:48:36 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:48:37 | INFO | reservation | login.py:345 | Trying to find element with text '15'
+2025-09-05 13:48:38 | INFO | reservation | login.py:348 | Element '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-05 13:48:38 | INFO | reservation | login.py:352 | Tapping '15' at (147, 1157)
+2025-09-05 13:48:39 | INFO | reservation | login.py:356 | Successfully selected '15'
+2025-09-05 13:48:51 | WARNING | reservation | login.py:593 | No timeslots available within timeout.
+2025-09-05 13:49:05 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 13:49:05 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 13:49:05 | INFO | reservation | login.py:825 | === Session start ===
+2025-09-05 13:49:05 | INFO | reservation | login.py:831 | Planned rows (need app): 17 of 191 total
+2025-09-05 13:49:05 | INFO | reservation | login.py:834 | ---- Processing row 1/17 (orig index=4) ----
+2025-09-05 13:49:12 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:49:12 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:49:12 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:49:12 | INFO | reservation | login.py:723 | [login_user] Row 4: ADJI KHRESNA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:49:12 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:49:13 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:49:20 | INFO | reservation | login.py:761 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-05 13:49:28 | ERROR | reservation | login.py:786 | Too many login errors; marking CREATION='-1'
+2025-09-05 13:49:28 | INFO | reservation | login.py:130 | DF Update [row=4, col=CREATION]: '1' -> '-1'
+2025-09-05 13:49:28 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:49:29 | INFO | reservation | login.py:834 | ---- Processing row 2/17 (orig index=5) ----
+2025-09-05 13:49:35 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:49:35 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:49:35 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:49:35 | INFO | reservation | login.py:723 | [login_user] Row 5: MANGUNDIMEJO MARJONO | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:49:35 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:49:35 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:49:46 | INFO | reservation | login.py:761 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-05 13:49:53 | INFO | reservation | login.py:878 | === Session end ===
+2025-09-05 13:50:03 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 13:50:03 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 13:50:03 | INFO | reservation | login.py:825 | === Session start ===
+2025-09-05 13:50:03 | INFO | reservation | login.py:831 | Planned rows (need app): 16 of 191 total
+2025-09-05 13:50:03 | INFO | reservation | login.py:834 | ---- Processing row 1/16 (orig index=5) ----
+2025-09-05 13:50:10 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:50:10 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:50:10 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:50:10 | INFO | reservation | login.py:723 | [login_user] Row 5: MANGUNDIMEJO MARJONO | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:50:10 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:50:10 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:50:19 | INFO | reservation | login.py:761 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-05 13:50:26 | ERROR | reservation | login.py:786 | Too many login errors; marking CREATION='-1'
+2025-09-05 13:50:26 | INFO | reservation | login.py:130 | DF Update [row=5, col=CREATION]: '1' -> '1'
+2025-09-05 13:50:26 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:50:27 | INFO | reservation | login.py:834 | ---- Processing row 2/16 (orig index=7) ----
+2025-09-05 13:50:34 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:50:34 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:50:34 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:50:34 | INFO | reservation | login.py:723 | [login_user] Row 7: SITOHANG TORANG | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:50:34 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:50:34 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:50:44 | WARNING | reservation | login.py:232 | [safe_send_keys] timeout waiting for edtSearch (attempt 1)
+2025-09-05 13:50:44 | ERROR | reservation | login.py:233 | [safe_send_keys] failed to type into edtSearch: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 13:50:45 | ERROR | reservation | login.py:769 | Nationality 'indonesia' not found in list.
+2025-09-05 13:50:46 | INFO | reservation | login.py:834 | ---- Processing row 3/16 (orig index=13) ----
+2025-09-05 13:50:54 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:50:54 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:50:54 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:50:54 | INFO | reservation | login.py:723 | [login_user] Row 13: AMALIA LOLA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:50:54 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:50:54 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:51:00 | INFO | reservation | login.py:761 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-05 13:51:05 | INFO | reservation | login.py:792 | [login_user] Fetching OTP for email: gethacke.d.04.5@gmail.com
+2025-09-05 13:51:07 | INFO | reservation | login.py:797 | [login_user] OTP received: 7737
+2025-09-05 13:51:19 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 13:51:19 | INFO | reservation | login.py:516 | [make_reservation] Start for row 13 (passport=X6100952)
+2025-09-05 13:51:19 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:51:26 | INFO | reservation | login.py:130 | DF Update [row=13, col=CREATION]: '1' -> '1'
+2025-09-05 13:51:26 | INFO | reservation | login.py:130 | DF Update [row=13, col=gender]: nan -> 'F'
+2025-09-05 13:51:26 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:51:27 | INFO | reservation | login.py:377 | Trying to find element with text '15'
+2025-09-05 13:51:43 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 13:51:43 | INFO | reservation | login.py:820 | [login_user] Reservation step finished for row 13
+2025-09-05 13:51:43 | INFO | reservation | login.py:834 | ---- Processing row 4/16 (orig index=15) ----
+2025-09-05 13:51:52 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:51:52 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:51:52 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:51:52 | INFO | reservation | login.py:723 | [login_user] Row 15: FITRIASARI NURLIYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:51:52 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:51:52 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:52:00 | INFO | reservation | login.py:761 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-05 13:52:05 | INFO | reservation | login.py:792 | [login_user] Fetching OTP for email: gethacke.d.0.4.5@gmail.com
+2025-09-05 13:52:07 | INFO | reservation | login.py:797 | [login_user] OTP received: 6854
+2025-09-05 13:52:22 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 13:52:22 | INFO | reservation | login.py:516 | [make_reservation] Start for row 15 (passport=X6100002)
+2025-09-05 13:52:23 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 13:52:32 | INFO | reservation | login.py:130 | DF Update [row=15, col=CREATION]: '1' -> '1'
+2025-09-05 13:52:32 | INFO | reservation | login.py:130 | DF Update [row=15, col=gender]: nan -> 'F'
+2025-09-05 13:52:32 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:52:33 | INFO | reservation | login.py:377 | Trying to find element with text '15'
+2025-09-05 13:52:48 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 13:52:48 | INFO | reservation | login.py:820 | [login_user] Reservation step finished for row 15
+2025-09-05 13:52:49 | INFO | reservation | login.py:834 | ---- Processing row 5/16 (orig index=16) ----
+2025-09-05 13:52:57 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 13:52:57 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:52:58 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:52:58 | INFO | reservation | login.py:723 | [login_user] Row 16: IMELDA NURMAYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-05 13:52:58 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-05 13:52:58 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-05 13:53:05 | INFO | reservation | login.py:761 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-05 13:53:10 | INFO | reservation | login.py:792 | [login_user] Fetching OTP for email: gethack.ed045@gmail.com
+2025-09-05 13:53:11 | INFO | reservation | login.py:797 | [login_user] OTP received: 6083
+2025-09-05 13:53:27 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 13:53:27 | INFO | reservation | login.py:516 | [make_reservation] Start for row 16 (passport=X6767604)
+2025-09-05 13:53:27 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: F
+2025-09-05 13:53:35 | INFO | reservation | login.py:130 | DF Update [row=16, col=CREATION]: '1' -> '1'
+2025-09-05 13:53:35 | INFO | reservation | login.py:130 | DF Update [row=16, col=gender]: 'F' -> 'F'
+2025-09-05 13:53:35 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 13:53:36 | INFO | reservation | login.py:377 | Trying to find element with text '15'
+2025-09-05 13:53:51 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 13:53:51 | INFO | reservation | login.py:820 | [login_user] Reservation step finished for row 16
+2025-09-05 13:53:52 | INFO | reservation | login.py:834 | ---- Processing row 6/16 (orig index=17) ----
+2025-09-05 13:54:00 | INFO | reservation | login.py:878 | === Session end ===
+2025-09-05 13:59:28 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\40_07_09\informations.csv
+2025-09-05 13:59:28 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 13:59:36 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:00:04 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:00:28 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:00:28 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:00:29 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:00:29 | INFO | reservation | login.py:516 | [make_reservation] Start for row 1 (passport=A23208811)
+2025-09-05 14:00:37 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:00:44 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:00:46 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:00:46 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:00:46 | INFO | reservation | login.py:130 | DF Update [row=1, col=CREATION]: '0' -> '1'
+2025-09-05 14:00:46 | INFO | reservation | login.py:130 | DF Update [row=1, col=gender]: nan -> 'H'
+2025-09-05 14:00:46 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:00:46 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:01:01 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:01:10 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:01:36 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:01:36 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:01:37 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:01:37 | INFO | reservation | login.py:516 | [make_reservation] Start for row 2 (passport=A22490304)
+2025-09-05 14:01:46 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:01:46 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:01:56 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:01:58 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:01:58 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:01:58 | INFO | reservation | login.py:130 | DF Update [row=2, col=CREATION]: '0' -> '1'
+2025-09-05 14:01:58 | INFO | reservation | login.py:130 | DF Update [row=2, col=gender]: nan -> 'H'
+2025-09-05 14:01:58 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:01:58 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:02:13 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:02:22 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:02:44 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:02:47 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 14:02:47 | INFO | reservation | login.py:516 | [make_reservation] Start for row 3 (passport=B18602031)
+2025-09-05 14:02:55 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:03:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 14:03:02 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:03:02 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 14:03:11 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:03:35 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:03:36 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:03:36 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:03:36 | INFO | reservation | login.py:516 | [make_reservation] Start for row 4 (passport=B32229308)
+2025-09-05 14:03:46 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:03:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:03:55 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:03:55 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:03:55 | INFO | reservation | login.py:130 | DF Update [row=4, col=CREATION]: '0' -> '1'
+2025-09-05 14:03:55 | INFO | reservation | login.py:130 | DF Update [row=4, col=gender]: nan -> 'H'
+2025-09-05 14:03:55 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:03:56 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:04:11 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:04:20 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:04:46 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:04:46 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:04:47 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:04:47 | INFO | reservation | login.py:516 | [make_reservation] Start for row 5 (passport=A17140243)
+2025-09-05 14:04:56 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:04:58 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:05:06 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:05:07 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:05:07 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:05:07 | INFO | reservation | login.py:130 | DF Update [row=5, col=CREATION]: '0' -> '1'
+2025-09-05 14:05:07 | INFO | reservation | login.py:130 | DF Update [row=5, col=gender]: nan -> 'H'
+2025-09-05 14:05:07 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:05:08 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:05:25 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:05:34 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:05:59 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:05:59 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:06:00 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:06:00 | INFO | reservation | login.py:516 | [make_reservation] Start for row 6 (passport=A14241413)
+2025-09-05 14:06:09 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:06:12 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:06:20 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:06:21 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:06:21 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:06:21 | INFO | reservation | login.py:130 | DF Update [row=6, col=CREATION]: '0' -> '1'
+2025-09-05 14:06:21 | INFO | reservation | login.py:130 | DF Update [row=6, col=gender]: nan -> 'H'
+2025-09-05 14:06:21 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:06:22 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:06:38 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:06:47 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:07:17 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:07:42 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:07:42 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:07:43 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:07:43 | INFO | reservation | login.py:516 | [make_reservation] Start for row 8 (passport=B35226434)
+2025-09-05 14:07:52 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:07:54 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:08:01 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:08:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:08:02 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:08:03 | INFO | reservation | login.py:130 | DF Update [row=8, col=CREATION]: '0' -> '1'
+2025-09-05 14:08:03 | INFO | reservation | login.py:130 | DF Update [row=8, col=gender]: nan -> 'H'
+2025-09-05 14:08:03 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:08:03 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:08:18 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:08:27 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:08:53 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:08:53 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:08:54 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:08:54 | INFO | reservation | login.py:516 | [make_reservation] Start for row 9 (passport=B32892870)
+2025-09-05 14:09:05 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:09:12 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:09:13 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:09:13 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:09:14 | INFO | reservation | login.py:130 | DF Update [row=9, col=CREATION]: '0' -> '1'
+2025-09-05 14:09:14 | INFO | reservation | login.py:130 | DF Update [row=9, col=gender]: nan -> 'H'
+2025-09-05 14:09:14 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:09:14 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:09:29 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:09:38 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:10:05 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:10:05 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:10:06 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:10:06 | INFO | reservation | login.py:516 | [make_reservation] Start for row 10 (passport=A22374717)
+2025-09-05 14:10:16 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:10:24 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:10:25 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:10:25 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:10:25 | INFO | reservation | login.py:130 | DF Update [row=10, col=CREATION]: '0' -> '1'
+2025-09-05 14:10:25 | INFO | reservation | login.py:130 | DF Update [row=10, col=gender]: nan -> 'H'
+2025-09-05 14:10:25 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:10:26 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:10:41 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:10:51 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:11:19 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:11:19 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:11:20 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:11:20 | INFO | reservation | login.py:516 | [make_reservation] Start for row 11 (passport=B02289815)
+2025-09-05 14:11:30 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:11:38 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:11:39 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:11:39 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:11:39 | INFO | reservation | login.py:130 | DF Update [row=11, col=CREATION]: '0' -> '1'
+2025-09-05 14:11:39 | INFO | reservation | login.py:130 | DF Update [row=11, col=gender]: nan -> 'H'
+2025-09-05 14:11:39 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:11:40 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:11:56 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:12:05 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:12:35 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:12:35 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:12:36 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:12:36 | INFO | reservation | login.py:516 | [make_reservation] Start for row 12 (passport=A18094991)
+2025-09-05 14:12:49 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:12:51 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:12:59 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:13:00 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:13:00 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:13:01 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_men_tv (attempt 1)
+2025-09-05 14:13:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_men_tv (attempt 2)
+2025-09-05 14:13:02 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_men_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:13:02 | INFO | reservation | login.py:130 | DF Update [row=12, col=CREATION]: '0' -> '1'
+2025-09-05 14:13:02 | INFO | reservation | login.py:130 | DF Update [row=12, col=gender]: nan -> 'H'
+2025-09-05 14:13:02 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:13:13 | ERROR | reservation | login.py:288 | Date field not visible; cannot proceed to date picker.
+2025-09-05 14:13:23 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:13:55 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:14:22 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:14:23 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:14:23 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:14:23 | INFO | reservation | login.py:516 | [make_reservation] Start for row 14 (passport=A42156139)
+2025-09-05 14:14:37 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:14:45 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:14:46 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:14:46 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:14:46 | INFO | reservation | login.py:130 | DF Update [row=14, col=CREATION]: '0' -> '1'
+2025-09-05 14:14:46 | INFO | reservation | login.py:130 | DF Update [row=14, col=gender]: nan -> 'H'
+2025-09-05 14:14:46 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:14:47 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:15:02 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:15:12 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:15:40 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:15:40 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:15:41 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:15:41 | INFO | reservation | login.py:516 | [make_reservation] Start for row 15 (passport=A30463398)
+2025-09-05 14:15:50 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:15:58 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:15:59 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:15:59 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:15:59 | INFO | reservation | login.py:130 | DF Update [row=15, col=CREATION]: '0' -> '1'
+2025-09-05 14:15:59 | INFO | reservation | login.py:130 | DF Update [row=15, col=gender]: nan -> 'H'
+2025-09-05 14:15:59 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:16:00 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:16:16 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:16:26 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:16:56 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:16:56 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:16:57 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:16:57 | INFO | reservation | login.py:516 | [make_reservation] Start for row 16 (passport=A41293184)
+2025-09-05 14:17:07 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:17:15 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:17:16 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:17:16 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:17:16 | INFO | reservation | login.py:130 | DF Update [row=16, col=CREATION]: '0' -> '1'
+2025-09-05 14:17:16 | INFO | reservation | login.py:130 | DF Update [row=16, col=gender]: nan -> 'H'
+2025-09-05 14:17:16 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:17:17 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:17:33 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:17:44 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:18:11 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:18:11 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:18:12 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:18:12 | INFO | reservation | login.py:516 | [make_reservation] Start for row 17 (passport=A41614333)
+2025-09-05 14:18:25 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:18:33 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:18:34 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:18:34 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:18:35 | INFO | reservation | login.py:130 | DF Update [row=17, col=CREATION]: '0' -> '1'
+2025-09-05 14:18:35 | INFO | reservation | login.py:130 | DF Update [row=17, col=gender]: nan -> 'H'
+2025-09-05 14:18:35 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:18:35 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:18:51 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:19:05 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:19:31 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:19:31 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:19:32 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:19:32 | INFO | reservation | login.py:516 | [make_reservation] Start for row 18 (passport=A42142106)
+2025-09-05 14:19:42 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:19:45 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:19:53 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:19:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:19:54 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:19:54 | INFO | reservation | login.py:130 | DF Update [row=18, col=CREATION]: '0' -> '1'
+2025-09-05 14:19:54 | INFO | reservation | login.py:130 | DF Update [row=18, col=gender]: nan -> 'H'
+2025-09-05 14:19:54 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:19:55 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:20:09 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:20:19 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:20:47 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:20:48 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:20:48 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:20:48 | INFO | reservation | login.py:516 | [make_reservation] Start for row 19 (passport=A34491018)
+2025-09-05 14:20:59 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:21:07 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:21:08 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:21:08 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:21:08 | INFO | reservation | login.py:130 | DF Update [row=19, col=CREATION]: '0' -> '1'
+2025-09-05 14:21:08 | INFO | reservation | login.py:130 | DF Update [row=19, col=gender]: nan -> 'H'
+2025-09-05 14:21:08 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:21:09 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:21:23 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:21:34 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:22:00 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:22:00 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:22:01 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:22:01 | INFO | reservation | login.py:516 | [make_reservation] Start for row 20 (passport=A42323425)
+2025-09-05 14:22:11 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:22:12 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:22:20 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:22:21 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:22:21 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:22:22 | INFO | reservation | login.py:130 | DF Update [row=20, col=CREATION]: '0' -> '1'
+2025-09-05 14:22:22 | INFO | reservation | login.py:130 | DF Update [row=20, col=gender]: nan -> 'H'
+2025-09-05 14:22:22 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:22:22 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:22:37 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:22:47 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:23:14 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:23:37 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-05 14:23:44 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Continue after DOB (attempt 2)
+2025-09-05 14:23:44 | ERROR | reservation | login.py:211 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:23:52 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for No mobile prompt (attempt 1)
+2025-09-05 14:24:00 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for No mobile prompt (attempt 2)
+2025-09-05 14:24:00 | ERROR | reservation | login.py:211 | [safe_click] failed to click No mobile prompt after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:24:03 | WARNING | reservation | login.py:232 | [safe_send_keys] timeout waiting for Password (attempt 1)
+2025-09-05 14:24:03 | ERROR | reservation | login.py:233 | [safe_send_keys] failed to type into Password: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:24:11 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for MuslimTerms (attempt 1)
+2025-09-05 14:24:19 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for MuslimTerms (attempt 2)
+2025-09-05 14:24:19 | ERROR | reservation | login.py:211 | [safe_click] failed to click MuslimTerms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:24:26 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Terms (attempt 1)
+2025-09-05 14:24:34 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Terms (attempt 2)
+2025-09-05 14:24:34 | ERROR | reservation | login.py:211 | [safe_click] failed to click Terms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:24:41 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount submit (attempt 1)
+2025-09-05 14:24:55 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\40_07_09\informations.csv
+2025-09-05 14:24:55 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 14:25:04 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:25:27 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:25:52 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:26:21 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:26:46 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:27:10 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:27:33 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:27:33 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:27:34 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:27:34 | INFO | reservation | login.py:516 | [make_reservation] Start for row 27 (passport=A42223965)
+2025-09-05 14:27:44 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:27:47 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:27:55 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:27:56 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:27:56 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:27:56 | INFO | reservation | login.py:130 | DF Update [row=27, col=CREATION]: '0' -> '1'
+2025-09-05 14:27:56 | INFO | reservation | login.py:130 | DF Update [row=27, col=gender]: nan -> 'H'
+2025-09-05 14:27:56 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:27:57 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:28:12 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:28:23 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:28:48 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:29:13 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:29:13 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:29:14 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:29:14 | INFO | reservation | login.py:516 | [make_reservation] Start for row 29 (passport=A42496021)
+2025-09-05 14:29:26 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:29:34 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:29:35 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:29:35 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:29:35 | INFO | reservation | login.py:130 | DF Update [row=29, col=CREATION]: '0' -> '1'
+2025-09-05 14:29:35 | INFO | reservation | login.py:130 | DF Update [row=29, col=gender]: nan -> 'H'
+2025-09-05 14:29:35 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:29:37 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:29:53 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:30:02 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:30:23 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:30:25 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 14:30:25 | INFO | reservation | login.py:516 | [make_reservation] Start for row 30 (passport=A42499429)
+2025-09-05 14:30:33 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:30:41 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 14:30:41 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:30:41 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 14:30:49 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:31:15 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:31:15 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:31:16 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:31:16 | INFO | reservation | login.py:516 | [make_reservation] Start for row 31 (passport=A35673577)
+2025-09-05 14:31:26 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:31:26 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:31:35 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:31:36 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:31:36 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:31:36 | INFO | reservation | login.py:130 | DF Update [row=31, col=CREATION]: '0' -> '1'
+2025-09-05 14:31:36 | INFO | reservation | login.py:130 | DF Update [row=31, col=gender]: nan -> 'H'
+2025-09-05 14:31:36 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:31:37 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:31:52 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:32:02 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:32:29 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:32:29 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:32:30 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:32:30 | INFO | reservation | login.py:516 | [make_reservation] Start for row 32 (passport=B15853012)
+2025-09-05 14:32:40 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:32:42 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:32:50 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:32:51 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:32:51 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:32:51 | INFO | reservation | login.py:130 | DF Update [row=32, col=CREATION]: '0' -> '1'
+2025-09-05 14:32:51 | INFO | reservation | login.py:130 | DF Update [row=32, col=gender]: nan -> 'H'
+2025-09-05 14:32:51 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:32:52 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:33:07 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:33:17 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:33:45 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:33:45 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:33:46 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:33:46 | INFO | reservation | login.py:516 | [make_reservation] Start for row 33 (passport=A21451690)
+2025-09-05 14:33:56 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:34:04 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:34:05 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:34:05 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:34:05 | INFO | reservation | login.py:130 | DF Update [row=33, col=CREATION]: '0' -> '1'
+2025-09-05 14:34:05 | INFO | reservation | login.py:130 | DF Update [row=33, col=gender]: nan -> 'H'
+2025-09-05 14:34:05 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:34:06 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:34:21 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:34:30 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:34:57 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:34:57 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:34:58 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:34:58 | INFO | reservation | login.py:516 | [make_reservation] Start for row 34 (passport=B29669593)
+2025-09-05 14:35:08 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:35:17 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:35:18 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:35:18 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:35:18 | INFO | reservation | login.py:130 | DF Update [row=34, col=CREATION]: '0' -> '1'
+2025-09-05 14:35:18 | INFO | reservation | login.py:130 | DF Update [row=34, col=gender]: nan -> 'H'
+2025-09-05 14:35:18 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:35:19 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:35:34 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:35:44 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:36:04 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 14:36:12 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 14:36:12 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:36:32 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:36:32 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:36:33 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:36:33 | INFO | reservation | login.py:516 | [make_reservation] Start for row 35 (passport=A21917087)
+2025-09-05 14:36:46 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:36:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:36:55 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:36:55 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:36:55 | INFO | reservation | login.py:130 | DF Update [row=35, col=CREATION]: '0' -> '1'
+2025-09-05 14:36:55 | INFO | reservation | login.py:130 | DF Update [row=35, col=gender]: nan -> 'H'
+2025-09-05 14:36:55 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:36:56 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:37:11 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:37:20 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:37:43 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 14:37:51 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 14:37:51 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:38:07 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:38:10 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 14:38:10 | INFO | reservation | login.py:516 | [make_reservation] Start for row 36 (passport=A22585262)
+2025-09-05 14:38:17 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:38:25 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 14:38:25 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:38:25 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 14:38:33 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:38:53 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 14:39:01 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 14:39:01 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:39:20 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:39:20 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:39:21 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:39:21 | INFO | reservation | login.py:516 | [make_reservation] Start for row 37 (passport=B24410794)
+2025-09-05 14:39:30 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:39:39 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:39:40 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:39:40 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:39:40 | INFO | reservation | login.py:130 | DF Update [row=37, col=CREATION]: '0' -> '1'
+2025-09-05 14:39:40 | INFO | reservation | login.py:130 | DF Update [row=37, col=gender]: nan -> 'H'
+2025-09-05 14:39:40 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:39:40 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:39:55 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:40:06 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:40:32 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:40:32 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:40:33 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:40:33 | INFO | reservation | login.py:516 | [make_reservation] Start for row 38 (passport=B29668880)
+2025-09-05 14:40:42 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:40:44 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:40:52 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:40:53 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:40:53 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:40:53 | INFO | reservation | login.py:130 | DF Update [row=38, col=CREATION]: '0' -> '1'
+2025-09-05 14:40:53 | INFO | reservation | login.py:130 | DF Update [row=38, col=gender]: nan -> 'H'
+2025-09-05 14:40:53 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:40:54 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:41:09 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:41:22 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:41:43 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 14:41:50 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 14:41:50 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:42:09 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 14:42:16 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 14:42:16 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:42:36 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:42:36 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:42:37 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:42:37 | INFO | reservation | login.py:516 | [make_reservation] Start for row 39 (passport=A22064040)
+2025-09-05 14:42:50 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:42:58 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:42:59 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:42:59 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:43:00 | INFO | reservation | login.py:130 | DF Update [row=39, col=CREATION]: '0' -> '1'
+2025-09-05 14:43:00 | INFO | reservation | login.py:130 | DF Update [row=39, col=gender]: nan -> 'H'
+2025-09-05 14:43:00 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:43:01 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:43:15 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:43:26 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:43:53 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:43:53 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:43:54 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:43:54 | INFO | reservation | login.py:516 | [make_reservation] Start for row 40 (passport=A17388719)
+2025-09-05 14:44:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:44:04 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:44:12 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:44:13 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:44:13 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:44:14 | INFO | reservation | login.py:130 | DF Update [row=40, col=CREATION]: '0' -> '1'
+2025-09-05 14:44:14 | INFO | reservation | login.py:130 | DF Update [row=40, col=gender]: nan -> 'H'
+2025-09-05 14:44:14 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:44:14 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:44:29 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:44:41 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:45:14 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:45:14 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:45:15 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:45:15 | INFO | reservation | login.py:516 | [make_reservation] Start for row 41 (passport=A21381020)
+2025-09-05 14:45:22 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:45:23 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:45:32 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:45:33 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:45:33 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:45:33 | INFO | reservation | login.py:130 | DF Update [row=41, col=CREATION]: '0' -> '1'
+2025-09-05 14:45:33 | INFO | reservation | login.py:130 | DF Update [row=41, col=gender]: nan -> 'H'
+2025-09-05 14:45:33 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:45:34 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:45:49 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:45:59 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:46:22 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:46:25 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 14:46:25 | INFO | reservation | login.py:516 | [make_reservation] Start for row 42 (passport=B15763885)
+2025-09-05 14:46:32 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:46:40 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 14:46:40 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:46:40 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 14:46:49 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:47:16 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:47:16 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:47:17 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:47:17 | INFO | reservation | login.py:516 | [make_reservation] Start for row 43 (passport=A18236945)
+2025-09-05 14:47:27 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:47:29 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:47:37 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:47:38 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:47:38 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:47:39 | INFO | reservation | login.py:130 | DF Update [row=43, col=CREATION]: '0' -> '1'
+2025-09-05 14:47:39 | INFO | reservation | login.py:130 | DF Update [row=43, col=gender]: nan -> 'H'
+2025-09-05 14:47:39 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:47:40 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:47:55 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:48:05 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:48:30 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:48:33 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 14:48:33 | INFO | reservation | login.py:516 | [make_reservation] Start for row 44 (passport=A22585420)
+2025-09-05 14:48:40 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:48:48 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 14:48:48 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:48:48 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 14:48:57 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:49:23 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:49:23 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:49:24 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:49:24 | INFO | reservation | login.py:516 | [make_reservation] Start for row 45 (passport=B29657226)
+2025-09-05 14:49:35 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:49:37 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:49:45 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:49:46 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:49:46 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:49:46 | INFO | reservation | login.py:130 | DF Update [row=45, col=CREATION]: '0' -> '1'
+2025-09-05 14:49:46 | INFO | reservation | login.py:130 | DF Update [row=45, col=gender]: nan -> 'H'
+2025-09-05 14:49:46 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:49:47 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:50:02 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:50:12 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:50:41 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:50:42 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:50:42 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:50:42 | INFO | reservation | login.py:516 | [make_reservation] Start for row 46 (passport=B29664983)
+2025-09-05 14:50:52 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:50:52 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:51:01 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:51:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:51:02 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:51:03 | INFO | reservation | login.py:130 | DF Update [row=46, col=CREATION]: '0' -> '1'
+2025-09-05 14:51:03 | INFO | reservation | login.py:130 | DF Update [row=46, col=gender]: nan -> 'H'
+2025-09-05 14:51:03 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:51:03 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:51:19 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:51:32 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:52:05 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:52:05 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:52:06 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:52:06 | INFO | reservation | login.py:516 | [make_reservation] Start for row 47 (passport=A15668490)
+2025-09-05 14:52:15 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:52:17 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:52:25 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:52:26 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:52:26 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:52:26 | INFO | reservation | login.py:130 | DF Update [row=47, col=CREATION]: '0' -> '1'
+2025-09-05 14:52:26 | INFO | reservation | login.py:130 | DF Update [row=47, col=gender]: nan -> 'H'
+2025-09-05 14:52:26 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:52:27 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:52:43 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:52:53 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:53:23 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:53:23 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:53:24 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:53:24 | INFO | reservation | login.py:516 | [make_reservation] Start for row 48 (passport=A23218524)
+2025-09-05 14:53:34 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:53:43 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:53:44 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:53:44 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:53:44 | INFO | reservation | login.py:130 | DF Update [row=48, col=CREATION]: '0' -> '1'
+2025-09-05 14:53:44 | INFO | reservation | login.py:130 | DF Update [row=48, col=gender]: nan -> 'H'
+2025-09-05 14:53:44 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:53:45 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:54:00 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:54:12 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:54:47 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 14:54:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 14:54:54 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:55:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 14:55:10 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 14:55:10 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:55:18 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 14:55:26 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 14:55:26 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:55:29 | WARNING | reservation | login.py:232 | [safe_send_keys] timeout waiting for Search nationality (attempt 1)
+2025-09-05 14:55:29 | ERROR | reservation | login.py:233 | [safe_send_keys] failed to type into Search nationality: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:55:40 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:56:05 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:56:05 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:56:06 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:56:06 | INFO | reservation | login.py:516 | [make_reservation] Start for row 50 (passport=A23219491)
+2025-09-05 14:56:15 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:56:23 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:56:24 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:56:24 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:56:24 | INFO | reservation | login.py:130 | DF Update [row=50, col=CREATION]: '0' -> '1'
+2025-09-05 14:56:24 | INFO | reservation | login.py:130 | DF Update [row=50, col=gender]: nan -> 'H'
+2025-09-05 14:56:24 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:56:25 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:56:40 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:56:52 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:57:18 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:57:18 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:57:19 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:57:19 | INFO | reservation | login.py:516 | [make_reservation] Start for row 51 (passport=A17460794)
+2025-09-05 14:57:28 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 14:57:30 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:57:38 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:57:40 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:57:40 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:57:40 | INFO | reservation | login.py:130 | DF Update [row=51, col=CREATION]: '0' -> '1'
+2025-09-05 14:57:40 | INFO | reservation | login.py:130 | DF Update [row=51, col=gender]: nan -> 'H'
+2025-09-05 14:57:40 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:57:40 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:57:57 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:58:06 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:58:33 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:58:33 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:58:34 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:58:34 | INFO | reservation | login.py:516 | [make_reservation] Start for row 52 (passport=A14476284)
+2025-09-05 14:58:46 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 14:58:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 14:58:55 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 14:58:55 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 14:58:56 | INFO | reservation | login.py:130 | DF Update [row=52, col=CREATION]: '0' -> '1'
+2025-09-05 14:58:56 | INFO | reservation | login.py:130 | DF Update [row=52, col=gender]: nan -> 'H'
+2025-09-05 14:58:56 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 14:58:57 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:58:59 | INFO | reservation | login.py:386 | Element '1' bounds: None
+2025-09-05 14:58:59 | WARNING | reservation | login.py:399 | No valid bounds for element '1'
+2025-09-05 14:58:59 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 14:59:13 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 14:59:25 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 14:59:52 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 14:59:52 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 14:59:53 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 14:59:53 | INFO | reservation | login.py:516 | [make_reservation] Start for row 53 (passport=B32933935)
+2025-09-05 15:00:03 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 15:00:11 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 15:00:12 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 15:00:12 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:00:12 | INFO | reservation | login.py:130 | DF Update [row=53, col=CREATION]: '0' -> '1'
+2025-09-05 15:00:12 | INFO | reservation | login.py:130 | DF Update [row=53, col=gender]: nan -> 'H'
+2025-09-05 15:00:12 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 15:00:13 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 15:00:28 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 15:00:37 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:01:00 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:01:03 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 15:01:03 | INFO | reservation | login.py:516 | [make_reservation] Start for row 54 (passport=X5849938)
+2025-09-05 15:01:10 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 15:01:18 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 15:01:18 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:01:18 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 15:01:27 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:01:48 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:01:51 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 15:01:51 | INFO | reservation | login.py:516 | [make_reservation] Start for row 55 (passport=X5752403)
+2025-09-05 15:01:59 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 15:02:06 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 15:02:06 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:02:06 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 15:02:15 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:02:38 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:02:40 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 15:02:40 | INFO | reservation | login.py:516 | [make_reservation] Start for row 56 (passport=X6617592)
+2025-09-05 15:02:48 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 15:02:55 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 15:02:55 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:02:55 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 15:03:04 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:03:30 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:03:52 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:03:54 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 15:03:54 | INFO | reservation | login.py:516 | [make_reservation] Start for row 58 (passport=X5916373)
+2025-09-05 15:04:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 15:04:10 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 15:04:10 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:04:10 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 15:04:19 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:04:45 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:04:45 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 15:04:46 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 15:04:46 | INFO | reservation | login.py:516 | [make_reservation] Start for row 59 (passport=E3530625)
+2025-09-05 15:04:56 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 15:04:58 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 15:05:06 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 15:05:07 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 15:05:07 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:05:07 | INFO | reservation | login.py:130 | DF Update [row=59, col=CREATION]: '0' -> '1'
+2025-09-05 15:05:07 | INFO | reservation | login.py:130 | DF Update [row=59, col=gender]: nan -> 'H'
+2025-09-05 15:05:07 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 15:05:08 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 15:05:23 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 15:05:33 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:05:58 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:05:58 | INFO | reservation | login.py:430 | [privacy] Consent sheet detected; accepting…
+2025-09-05 15:05:58 | INFO | reservation | login.py:460 | [privacy] Consent accepted.
+2025-09-05 15:05:58 | INFO | reservation | login.py:516 | [make_reservation] Start for row 60 (passport=X5752062)
+2025-09-05 15:06:11 | INFO | reservation | login.py:526 | [make_reservation] Gender normalized: Unknown
+2025-09-05 15:06:19 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-05 15:06:20 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-05 15:06:20 | ERROR | reservation | login.py:211 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:06:20 | INFO | reservation | login.py:130 | DF Update [row=60, col=CREATION]: '0' -> '1'
+2025-09-05 15:06:20 | INFO | reservation | login.py:130 | DF Update [row=60, col=gender]: nan -> 'H'
+2025-09-05 15:06:20 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 15:06:20 | INFO | reservation | login.py:377 | Trying to find element with text '1'
+2025-09-05 15:06:35 | WARNING | reservation | login.py:631 | No timeslots available within timeout.
+2025-09-05 15:06:45 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:07:07 | WARNING | reservation | login.py:464 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 15:07:09 | INFO | reservation | login.py:427 | [privacy] Consent sheet not present.
+2025-09-05 15:07:09 | INFO | reservation | login.py:516 | [make_reservation] Start for row 61 (passport=X7080087)
+2025-09-05 15:07:17 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 15:07:25 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-05 15:07:25 | ERROR | reservation | login.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:07:25 | ERROR | reservation | login.py:521 | Could not open Noble Rawdah screen.
+2025-09-05 15:07:35 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:07:49 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:07:57 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:07:57 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:08:04 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:08:12 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:08:12 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:08:21 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:08:29 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:08:29 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:08:36 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:08:44 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:08:44 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:08:51 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:08:59 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:08:59 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:09:08 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:09:15 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:09:15 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:09:23 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:09:30 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:09:30 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:09:38 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:09:46 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:09:46 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:09:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:10:02 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:10:02 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:10:10 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:10:17 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:10:17 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:10:32 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\40_07_09\informations.csv
+2025-09-05 15:10:32 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 15:10:43 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:10:58 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:11:05 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:11:05 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:11:13 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:11:21 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:11:21 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:11:29 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:11:37 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:11:37 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:11:45 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:11:52 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:11:52 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:12:00 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:12:08 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:12:08 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:12:16 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:12:24 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:12:24 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:12:32 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:12:39 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:12:39 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:12:47 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:12:54 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:12:54 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:13:03 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:13:11 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:13:11 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:13:18 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:13:26 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:13:26 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:13:33 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:13:41 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-05 15:13:41 | ERROR | reservation | login.py:211 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:13:50 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-05 15:13:57 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-05 15:13:57 | ERROR | reservation | login.py:211 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:14:05 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:14:13 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:14:13 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 15:14:20 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-05 15:14:32 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\40_07_09\informations.csv
+2025-09-05 15:14:32 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 15:14:40 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 15:14:53 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 15:15:01 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 15:15:01 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)

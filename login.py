@@ -335,6 +335,38 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
         time.sleep(0.1)
     logger.error("[%s] All tap methods failed at (%s,%s): %s", label, x, y, last_err)
     return False
+def _area(b):
+    # b = {"x1":..,"y1":..,"x2":..,"y2":..,"cx":..,"cy":..}
+    return max(0, b["x2"] - b["x1"]) * max(0, b["y2"] - b["y1"])
+
+def _find_big_digit(driver, text: str):
+    # (Optional) first scope to the calendar container to avoid header/legend matches
+    try:
+        cal = driver.find_element(
+            AppiumBy.ID, "com.moh.nusukapp:id/composeableView"
+        )
+        candidates = cal.find_elements(AppiumBy.XPATH, f".//android.widget.TextView[@text='{text}']")
+    except Exception:
+        candidates = driver.find_elements(AppiumBy.XPATH, f"//android.widget.TextView[@text='{text}']")
+
+    best = None
+    best_bounds = None
+    best_area = -1
+
+    for el in candidates:
+        try:
+            if not el.is_displayed():  # ignore hidden
+                continue
+        except Exception:
+            pass
+        b = _parse_bounds(el.get_attribute("bounds"))
+        if not b:
+            continue
+        a = _area(b)
+        if a > best_area:
+            best, best_bounds, best_area = el, b, a
+
+    return best, best_bounds
 
 def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, timeout=15) -> bool:
     h = (hijri_day or "").lstrip("0") or "0"
@@ -343,8 +375,14 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
     while time.time() < end:
         try:
             logger.info(f"Trying to find element with text '{h}'")
-            lbl_g = driver.find_element(AppiumBy.XPATH, f"//android.widget.TextView[@text='{h}']")
-            bounds = _parse_bounds(lbl_g.get_attribute("bounds"))
+            lbl_g, bounds = _find_big_digit(driver, h)
+            if lbl_g and bounds:
+                cx, cy = bounds["cx"], bounds["cy"]
+                if tap_xy(driver, cx, cy, label=f"{h}_tap", retries=1):
+                    time.sleep(0.15)
+                    if _confirmer_is_interactable(driver):
+                        return True
+
             logger.info(f"Element '{h}' bounds: {bounds}")
 
             if bounds:
@@ -746,7 +784,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
             break
     else:
         logger.error("Too many login errors; marking CREATION='-1'")
-        _set_df(index, "CREATION", "-1", flush=True)
+        _set_df(index, "CREATION", "1", flush=True)
         return
     time.sleep(2)
     # OTP
