@@ -22,6 +22,9 @@ def get_verification_code(email1):
     elif email1== "mailboybanana@gmail.com" :
         EMAIL = "mailboybanana@gmail.com"
         PASSWORD = "szim wisj vgns blrt"
+    elif email1== "gethacked045@gmail.com" :
+        EMAIL = "gethacked045@gmail.com"
+        PASSWORD = "ddhl vkcj nzqe ehkn"
     print(EMAIL)
     IMAP_SERVER = "imap.gmail.com"
     IMAP_PORT = 993

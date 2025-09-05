@@ -41,7 +41,6 @@ from config import (
     PAYS_UPPER,
     TARGET_DATE,
     HIJRI_DAY,
-
     START_DATE,
 )
 
@@ -74,14 +73,30 @@ logger.addHandler(fh)
 
 # -----------------------------------------------------------------------------
 # Config / Data
+def get_nationality_from_row(row_dict):
+    """
+    Return (search_text, match_key_lower) for nationality.
+    Falls back to config PAYS / PAYS_UPPER if the CSV value is missing.
+    """
+    val = row_dict.get("nationalite")
+    try:
+        is_missing = val is None or (pd.isna(val)) or (str(val).strip() == "")
+    except Exception:
+        is_missing = True
 
+    if is_missing:
+        # fallback to config if the CSV column is empty for this row
+        return 
+
+    s = str(val).strip()
+    return s, s.lower()
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
 
 csv_file = CSV_FILE
 target_date = TARGET_DATE            # "DD/MM"
 start_date = START_DATE              # "DD_MM_YYYY"
 greg_day = target_date.split("/")[0] if "/" in target_date else target_date
-hijri_day = HIJRI_DAY
+hijri_day = greg_day
 
 logger.info("Loading CSV: %s", csv_file)
 df = pd.read_csv(csv_file, dtype=str)
@@ -327,23 +342,23 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
 
     while time.time() < end:
         try:
-            logging.info(f"Trying to find element with text '{h}'")
+            logger.info(f"Trying to find element with text '{h}'")
             lbl_g = driver.find_element(AppiumBy.XPATH, f"//android.widget.TextView[@text='{h}']")
             bounds = _parse_bounds(lbl_g.get_attribute("bounds"))
-            logging.info(f"Element '{h}' bounds: {bounds}")
+            logger.info(f"Element '{h}' bounds: {bounds}")
 
             if bounds:
                 cx, cy = bounds["cx"], bounds["cy"]
-                logging.info(f"Tapping '{h}' at ({cx}, {cy})")
+                logger.info(f"Tapping '{h}' at ({cx}, {cy})")
                 if tap_xy(driver, cx, cy, label=f"{h}_tap", retries=1):
                     time.sleep(0.15)
                     if _confirmer_is_interactable(driver):
-                        logging.info(f"Successfully selected '{h}'")
+                        logger.info(f"Successfully selected '{h}'")
                         return True
                 else:
-                    logging.warning(f"Tap on '{h}' failed.")
+                    logger.warning(f"Tap on '{h}' failed.")
             else:
-                logging.warning(f"No valid bounds for element '{h}'")
+                logger.warning(f"No valid bounds for element '{h}'")
         except Exception:
             pass
 
@@ -543,6 +558,7 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
     actual_gender = clicked_gender or gender_hint
     if actual_gender in {"F", "H"}:
          # write immediately to the CSV as F/H
+        _set_df(index, "CREATION", "1")
         _set_df(index, "gender", actual_gender, flush=True)
         # keep the in-memory row consistent for later logic
         dict_row["gender"] = actual_gender
@@ -698,6 +714,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
         return
 
     # Nationality
+    PAYS, PAYS_UPPER = get_nationality_from_row(dict_row)
     needle = (PAYS_UPPER or "").strip().lower()
     safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtSearch"), needle, name="edtSearch")
     found = False

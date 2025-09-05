@@ -24,13 +24,12 @@ from config import (
     EMAIL_JSON_FILE,
     NUMBER_JSON_FILE,
     setup_driver,
-    PAYS,
-    PAYS_UPPER,
+
 )
 
 # ====== Constants / Config ======
-pays = PAYS
-paysUpper = PAYS_UPPER
+
+
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
 csv_file = CSV_FILE
 filename_email_json = EMAIL_JSON_FILE
@@ -41,6 +40,24 @@ ERROR_OK_ID   = "com.moh.nusukapp:id/tvYes"
 BACK_BTN_ID   = "com.moh.nusukapp:id/imgBack"
 
 # ====== Utilities ======
+def get_nationality_from_row(row_dict):
+    """
+    Return (search_text, match_key_lower) for nationality.
+    Falls back to config PAYS / PAYS_UPPER if the CSV value is missing.
+    """
+    val = row_dict.get("nationalite")
+    try:
+        is_missing = val is None or (pd.isna(val)) or (str(val).strip() == "")
+    except Exception:
+        is_missing = True
+
+    if is_missing:
+        # fallback to config if the CSV column is empty for this row
+        return 
+
+    s = str(val).strip()
+    return s, s.lower()
+
 def pregrant_location_permissions(driver, package: str = APP_PACKAGE):
     """Grant location permissions via adb shell so the popup never appears."""
     cmds = [
@@ -57,7 +74,7 @@ def pregrant_location_permissions(driver, package: str = APP_PACKAGE):
         except Exception as e:
             logger.info("ADB grant failed (ok to ignore): %s", e)
 
-def wait_for_error_text(driver, timeout=6, poll=0.2):
+def wait_for_error_text(driver, timeout=1, poll=0.2):
     """
     Poll quickly for the error dialog text. Returns the text or None.
     Fast but reliable for transient popups.
@@ -88,7 +105,7 @@ def handle_possible_error_after_mobile_or_pre_email(driver, wait, index, email_h
       - "have_account" if user should be marked as existing
       - "none" if no popup detected
     """
-    err = wait_for_error_text(driver, timeout=6)
+    err = wait_for_error_text(driver, timeout=4)
     if not err:
         return "none"
 
@@ -162,6 +179,8 @@ def process_user(driver, index, row):
             # --- Nationality selection ---
             wait.until(EC.invisibility_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/pbNationality")))
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvNationality"), "Nationality")
+            pays, paysUpper = get_nationality_from_row(dict_row)
+
             safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtSearch"), pays, "Search nationality")
 
             elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTitle")
@@ -232,7 +251,7 @@ def process_user(driver, index, row):
             # ========= RESTORED OLD BEHAVIOR: handle popups after Email → Continue =========
             email_current = email  # mutable local copy, will be used later (e.g., OTP)
             while True:
-                error_text = wait_for_error_text(driver, timeout=6)
+                error_text = wait_for_error_text(driver, timeout=2)
                 if not error_text:
                     break  # no popup → proceed
 
@@ -290,7 +309,7 @@ def process_user(driver, index, row):
                 print(f"✅ Code trouvé : {code}")
 
                 # quick check for OTP-related popups
-                otp_err = wait_for_error_text(driver, timeout=6)
+                otp_err = wait_for_error_text(driver, timeout=4)
                 if otp_err:
                     print(f"Erreur détectée : {otp_err}")
                     click_error_yes(wait)

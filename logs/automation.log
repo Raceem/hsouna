@@ -20906,3 +20906,626 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-09-04 00:46:47 | INFO | reservation | login.py:776 | Planned rows (need app): 0 of 225 total
 2025-09-04 00:46:47 | INFO | reservation | login.py:813 | All planned rows processed.
 2025-09-04 00:46:47 | INFO | reservation | login.py:823 | === Session end ===
+2025-09-04 23:10:13 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:10:13 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 18
+2025-09-04 23:10:13 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:10:13 | INFO | reservation | login.py:109 | Added missing gender/reserved columns.
+2025-09-04 23:10:24 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:10:56 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:11:24 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:11:48 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:12:19 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-04 23:12:27 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-04 23:12:27 | ERROR | reservation | login.py:208 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:12:35 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-04 23:12:42 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-04 23:12:42 | ERROR | reservation | login.py:208 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:12:51 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-04 23:12:58 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-04 23:12:58 | ERROR | reservation | login.py:208 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:13:02 | WARNING | reservation | login.py:229 | [safe_send_keys] timeout waiting for Search nationality (attempt 1)
+2025-09-04 23:13:02 | ERROR | reservation | login.py:230 | [safe_send_keys] failed to type into Search nationality: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:13:12 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:18:40 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:18:40 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:18:52 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:19:24 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-04 23:21:36 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:21:36 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:21:45 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:22:18 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-04 23:23:13 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:23:13 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:23:21 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:23:58 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:23:58 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:24:06 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:24:35 | WARNING | reservation | login.py:416 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:24:35 | INFO | reservation | login.py:386 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:24:36 | INFO | reservation | login.py:412 | [privacy] Consent accepted.
+2025-09-04 23:24:36 | INFO | reservation | login.py:466 | [make_reservation] Start for row 3 (passport=E9012741)
+2025-09-04 23:24:45 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-04 23:24:46 | INFO | reservation | login.py:476 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:24:54 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-04 23:24:55 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-04 23:24:55 | ERROR | reservation | login.py:208 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:24:56 | INFO | reservation | login.py:92 | DF Update [row=3, col=gender]: nan -> 'H'
+2025-09-04 23:24:56 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:24:57 | INFO | reservation | login.py:345 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:24:58 | INFO | reservation | login.py:345 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:24:59 | INFO | reservation | login.py:348 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-04 23:25:01 | INFO | reservation | login.py:355 | [calendar] Successfully selected Gregorian day '15'
+2025-09-04 23:25:10 | INFO | reservation | login.py:569 | Timeslots found: ['12:00 PM']
+2025-09-04 23:25:11 | INFO | reservation | login.py:456 | Pre-book check: label='lundi, 15 septembre' | expect day in ['15'] and month='septembre' -> True/True
+2025-09-04 23:25:13 | INFO | reservation | login.py:92 | DF Update [row=3, col=CREATION]: '0' -> '1'
+2025-09-04 23:25:13 | INFO | reservation | login.py:92 | DF Update [row=3, col=RESERVATION]: '0' -> '1'
+2025-09-04 23:25:13 | INFO | reservation | login.py:92 | DF Update [row=3, col=heure]: nan -> '06:00 PM'
+2025-09-04 23:25:13 | INFO | reservation | login.py:92 | DF Update [row=3, col=gender]: 'H' -> 'Homme'
+2025-09-04 23:25:13 | INFO | reservation | login.py:92 | DF Update [row=3, col=date_reservation]: nan -> '15/09/2025'
+2025-09-04 23:25:13 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:27:20 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:27:20 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:27:28 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:27:47 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-04 23:27:54 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Continue after DOB (attempt 2)
+2025-09-04 23:27:54 | ERROR | reservation | login.py:208 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:28:02 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for No mobile prompt (attempt 1)
+2025-09-04 23:28:10 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for No mobile prompt (attempt 2)
+2025-09-04 23:28:10 | ERROR | reservation | login.py:208 | [safe_click] failed to click No mobile prompt after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:28:13 | WARNING | reservation | login.py:229 | [safe_send_keys] timeout waiting for Password (attempt 1)
+2025-09-04 23:28:13 | ERROR | reservation | login.py:230 | [safe_send_keys] failed to type into Password: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:28:21 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for MuslimTerms (attempt 1)
+2025-09-04 23:28:29 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for MuslimTerms (attempt 2)
+2025-09-04 23:28:29 | ERROR | reservation | login.py:208 | [safe_click] failed to click MuslimTerms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:28:36 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Terms (attempt 1)
+2025-09-04 23:28:44 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Terms (attempt 2)
+2025-09-04 23:28:44 | ERROR | reservation | login.py:208 | [safe_click] failed to click Terms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:28:48 | WARNING | reservation | login.py:229 | [safe_send_keys] timeout waiting for Mobile number (attempt 1)
+2025-09-04 23:28:48 | ERROR | reservation | login.py:230 | [safe_send_keys] failed to type into Mobile number: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:28:55 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Continue after mobile (attempt 1)
+2025-09-04 23:29:04 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:29:04 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:29:11 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:29:30 | WARNING | reservation | login.py:416 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:29:32 | INFO | reservation | login.py:383 | [privacy] Consent sheet not present.
+2025-09-04 23:29:32 | INFO | reservation | login.py:466 | [make_reservation] Start for row 4 (passport=X6100003)
+2025-09-04 23:29:40 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-04 23:30:35 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:30:35 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:30:43 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:31:05 | WARNING | reservation | login.py:416 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:31:07 | INFO | reservation | login.py:383 | [privacy] Consent sheet not present.
+2025-09-04 23:31:07 | INFO | reservation | login.py:466 | [make_reservation] Start for row 5 (passport=E9012744)
+2025-09-04 23:31:32 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:31:32 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:31:40 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:32:02 | WARNING | reservation | login.py:416 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:32:02 | INFO | reservation | login.py:386 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:32:03 | INFO | reservation | login.py:412 | [privacy] Consent accepted.
+2025-09-04 23:32:03 | INFO | reservation | login.py:466 | [make_reservation] Start for row 6 (passport=X3523027)
+2025-09-04 23:32:11 | INFO | reservation | login.py:476 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:32:19 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-04 23:32:20 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-04 23:32:20 | ERROR | reservation | login.py:208 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:32:21 | INFO | reservation | login.py:92 | DF Update [row=6, col=gender]: nan -> 'H'
+2025-09-04 23:32:21 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:32:22 | INFO | reservation | login.py:345 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:32:23 | INFO | reservation | login.py:345 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:32:24 | INFO | reservation | login.py:348 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-04 23:32:25 | INFO | reservation | login.py:355 | [calendar] Successfully selected Gregorian day '15'
+2025-09-04 23:32:32 | INFO | reservation | login.py:569 | Timeslots found: ['12:00 PM']
+2025-09-04 23:32:32 | INFO | reservation | login.py:456 | Pre-book check: label='lundi, 15 septembre' | expect day in ['15'] and month='septembre' -> True/True
+2025-09-04 23:32:39 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for continue_button (attempt 1)
+2025-09-04 23:32:44 | INFO | reservation | login.py:92 | DF Update [row=6, col=CREATION]: '0' -> '1'
+2025-09-04 23:32:44 | INFO | reservation | login.py:92 | DF Update [row=6, col=RESERVATION]: '0' -> '1'
+2025-09-04 23:32:44 | INFO | reservation | login.py:92 | DF Update [row=6, col=heure]: nan -> '06:00 PM'
+2025-09-04 23:32:44 | INFO | reservation | login.py:92 | DF Update [row=6, col=gender]: 'H' -> 'Homme'
+2025-09-04 23:32:44 | INFO | reservation | login.py:92 | DF Update [row=6, col=date_reservation]: nan -> '15/09/2025'
+2025-09-04 23:32:44 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:34:38 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:34:38 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:34:45 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:35:05 | WARNING | reservation | login.py:415 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:35:08 | INFO | reservation | login.py:382 | [privacy] Consent sheet not present.
+2025-09-04 23:35:08 | INFO | reservation | login.py:465 | [make_reservation] Start for row 7 (passport=E0559242)
+2025-09-04 23:35:20 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:35:20 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:36:27 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:36:27 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:36:34 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:36:54 | WARNING | reservation | login.py:415 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:36:56 | INFO | reservation | login.py:382 | [privacy] Consent sheet not present.
+2025-09-04 23:36:56 | INFO | reservation | login.py:465 | [make_reservation] Start for row 7 (passport=E0559242)
+2025-09-04 23:37:51 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:37:51 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:37:58 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:38:24 | WARNING | reservation | login.py:415 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:38:24 | INFO | reservation | login.py:385 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:38:25 | INFO | reservation | login.py:411 | [privacy] Consent accepted.
+2025-09-04 23:38:25 | INFO | reservation | login.py:465 | [make_reservation] Start for row 8 (passport=X6911300)
+2025-09-04 23:38:33 | INFO | reservation | login.py:475 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:38:40 | INFO | reservation | login.py:92 | DF Update [row=8, col=gender]: nan -> 'F'
+2025-09-04 23:38:40 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:38:40 | INFO | reservation | login.py:344 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:38:42 | INFO | reservation | login.py:347 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-04 23:38:43 | INFO | reservation | login.py:354 | [calendar] Successfully selected Gregorian day '15'
+2025-09-04 23:38:54 | WARNING | reservation | login.py:570 | No timeslots available within timeout.
+2025-09-04 23:40:19 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:40:19 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:40:34 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:40:34 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:40:34 | INFO | reservation | login.py:764 | === Session start ===
+2025-09-04 23:40:34 | INFO | reservation | login.py:770 | Planned rows (need app): 3 of 191 total
+2025-09-04 23:40:34 | INFO | reservation | login.py:773 | ---- Processing row 1/3 (orig index=4) ----
+2025-09-04 23:40:42 | INFO | reservation | login.py:812 | === Session end ===
+2025-09-04 23:40:55 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:40:55 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:41:04 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:41:36 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:42:07 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:42:07 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:42:15 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:42:40 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:43:02 | WARNING | reservation | login.py:415 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:43:02 | INFO | reservation | login.py:385 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:43:03 | INFO | reservation | login.py:411 | [privacy] Consent accepted.
+2025-09-04 23:43:03 | INFO | reservation | login.py:465 | [make_reservation] Start for row 10 (passport=X5107254)
+2025-09-04 23:43:13 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-04 23:43:15 | INFO | reservation | login.py:475 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:43:22 | INFO | reservation | login.py:92 | DF Update [row=10, col=gender]: nan -> 'F'
+2025-09-04 23:43:22 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:43:23 | INFO | reservation | login.py:344 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:43:33 | INFO | reservation | login.py:347 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-04 23:44:52 | INFO | reservation | login.py:354 | [calendar] Successfully selected Gregorian day '15'
+2025-09-04 23:45:08 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:45:08 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:45:08 | INFO | reservation | login.py:757 | === Session start ===
+2025-09-04 23:45:08 | INFO | reservation | login.py:763 | Planned rows (need app): 3 of 191 total
+2025-09-04 23:45:08 | INFO | reservation | login.py:766 | ---- Processing row 1/3 (orig index=4) ----
+2025-09-04 23:45:17 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:45:17 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:45:17 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:45:17 | INFO | reservation | login.py:647 | [login_user] Row 4: ADJI KHRESNA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-04 23:45:17 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:45:18 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:45:25 | INFO | reservation | login.py:690 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-04 23:45:32 | INFO | reservation | login.py:724 | [login_user] Fetching OTP for email: gethacked.045@gmail.com
+2025-09-04 23:45:50 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:45:50 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:45:58 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:46:25 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:46:59 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:46:59 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:47:06 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:47:36 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:48:00 | WARNING | reservation | login.py:408 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:48:00 | INFO | reservation | login.py:378 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:48:01 | INFO | reservation | login.py:404 | [privacy] Consent accepted.
+2025-09-04 23:48:01 | INFO | reservation | login.py:458 | [make_reservation] Start for row 11 (passport=X5412763)
+2025-09-04 23:48:12 | INFO | reservation | login.py:468 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:48:19 | INFO | reservation | login.py:92 | DF Update [row=11, col=gender]: nan -> 'F'
+2025-09-04 23:48:19 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:48:20 | INFO | reservation | login.py:337 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:48:21 | INFO | reservation | login.py:337 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:48:24 | INFO | reservation | login.py:340 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-04 23:48:46 | INFO | reservation | login.py:347 | [calendar] Successfully selected Gregorian day '15'
+2025-09-04 23:48:57 | WARNING | reservation | login.py:563 | No timeslots available within timeout.
+2025-09-04 23:49:06 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:49:33 | WARNING | reservation | login.py:408 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:49:33 | INFO | reservation | login.py:378 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:49:34 | INFO | reservation | login.py:404 | [privacy] Consent accepted.
+2025-09-04 23:49:34 | INFO | reservation | login.py:458 | [make_reservation] Start for row 12 (passport=E9681897)
+2025-09-04 23:49:43 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-04 23:49:45 | INFO | reservation | login.py:468 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:49:52 | INFO | reservation | login.py:92 | DF Update [row=12, col=gender]: nan -> 'F'
+2025-09-04 23:49:52 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-04 23:49:53 | INFO | reservation | login.py:337 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:49:55 | INFO | reservation | login.py:337 | [calendar] Looking for Gregorian day '15'
+2025-09-04 23:49:55 | INFO | reservation | login.py:340 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-04 23:50:23 | INFO | reservation | login.py:347 | [calendar] Successfully selected Gregorian day '15'
+2025-09-04 23:50:47 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:50:47 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:50:47 | INFO | reservation | login.py:758 | === Session start ===
+2025-09-04 23:50:47 | INFO | reservation | login.py:764 | Planned rows (need app): 3 of 191 total
+2025-09-04 23:50:47 | INFO | reservation | login.py:767 | ---- Processing row 1/3 (orig index=4) ----
+2025-09-04 23:50:56 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:50:56 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:50:56 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:50:56 | INFO | reservation | login.py:648 | [login_user] Row 4: ADJI KHRESNA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-04 23:50:56 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:50:56 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:51:05 | INFO | reservation | login.py:691 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-04 23:51:13 | INFO | reservation | login.py:725 | [login_user] Fetching OTP for email: gethacked.045@gmail.com
+2025-09-04 23:51:15 | INFO | reservation | login.py:730 | [login_user] OTP received: 5337
+2025-09-04 23:51:19 | WARNING | reservation | login.py:229 | [safe_send_keys] timeout waiting for login_otp_edit_text (attempt 1)
+2025-09-04 23:51:19 | ERROR | reservation | login.py:230 | [safe_send_keys] failed to type into login_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:51:27 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:51:27 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:51:27 | INFO | reservation | login.py:758 | === Session start ===
+2025-09-04 23:51:27 | INFO | reservation | login.py:764 | Planned rows (need app): 3 of 191 total
+2025-09-04 23:51:27 | INFO | reservation | login.py:767 | ---- Processing row 1/3 (orig index=4) ----
+2025-09-04 23:51:35 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:51:35 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:51:35 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:51:35 | INFO | reservation | login.py:648 | [login_user] Row 4: ADJI KHRESNA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-04 23:51:35 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:51:35 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:51:44 | INFO | reservation | login.py:691 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-04 23:51:59 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for tvSignIn_retry (attempt 1)
+2025-09-04 23:52:06 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for tvSignIn_retry (attempt 2)
+2025-09-04 23:52:06 | ERROR | reservation | login.py:208 | [safe_click] failed to click tvSignIn_retry after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:52:06 | ERROR | reservation | login.py:717 | Too many login errors; marking CREATION='-1'
+2025-09-04 23:52:06 | INFO | reservation | login.py:92 | DF Update [row=4, col=CREATION]: '1' -> '-1'
+2025-09-04 23:52:06 | ERROR | reservation | login.py:786 | ❌ Fatal error for row 1 (orig index=4): [Errno 13] Permission denied: 'C:/Users/SBS/Desktop/Hsouna\\193_15_09\\informations.csv'
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 783, in <module>
+    login_user(driver, index, row_series)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 718, in login_user
+    _set_df(index, "CREATION", "-1", flush=True)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 94, in _set_df
+    _flush_df()
+  File "C:\Users\SBS\Downloads\agence\login.py", line 86, in _flush_df
+    df.to_csv(csv_file, index=False, encoding="utf-8")
+  File "c:\Python312\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "c:\Python312\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:/Users/SBS/Desktop/Hsouna\\193_15_09\\informations.csv'
+2025-09-04 23:52:07 | INFO | reservation | login.py:767 | ---- Processing row 2/3 (orig index=5) ----
+2025-09-04 23:52:15 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:52:15 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:52:15 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:52:15 | INFO | reservation | login.py:648 | [login_user] Row 5: MANGUNDIMEJO MARJONO | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-04 23:52:15 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:52:15 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:52:22 | INFO | reservation | login.py:691 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-04 23:52:29 | ERROR | reservation | login.py:786 | ❌ Fatal error for row 2 (orig index=5): Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.click (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 783, in <module>
+    login_user(driver, index, row_series)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 713, in login_user
+    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvSignIn"), name="tvSignIn_retry")
+  File "C:\Users\SBS\Downloads\agence\login.py", line 198, in safe_click
+    el.click()
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 120, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.click (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)
+2025-09-04 23:52:29 | INFO | reservation | login.py:767 | ---- Processing row 3/3 (orig index=7) ----
+2025-09-04 23:52:36 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:52:36 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:52:36 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:52:36 | INFO | reservation | login.py:648 | [login_user] Row 7: SITOHANG TORANG | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-04 23:52:36 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-04 23:52:36 | INFO | reservation | login.py:243 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-04 23:52:43 | INFO | reservation | login.py:691 | [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-04 23:52:50 | ERROR | reservation | login.py:717 | Too many login errors; marking CREATION='-1'
+2025-09-04 23:52:50 | INFO | reservation | login.py:92 | DF Update [row=7, col=CREATION]: '1' -> '-1'
+2025-09-04 23:52:50 | ERROR | reservation | login.py:786 | ❌ Fatal error for row 3 (orig index=7): [Errno 13] Permission denied: 'C:/Users/SBS/Desktop/Hsouna\\193_15_09\\informations.csv'
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 783, in <module>
+    login_user(driver, index, row_series)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 718, in login_user
+    _set_df(index, "CREATION", "-1", flush=True)
+  File "C:\Users\SBS\Downloads\agence\login.py", line 94, in _set_df
+    _flush_df()
+  File "C:\Users\SBS\Downloads\agence\login.py", line 86, in _flush_df
+    df.to_csv(csv_file, index=False, encoding="utf-8")
+  File "c:\Python312\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "c:\Python312\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:/Users/SBS/Desktop/Hsouna\\193_15_09\\informations.csv'
+2025-09-04 23:52:51 | INFO | reservation | login.py:797 | All planned rows processed.
+2025-09-04 23:52:51 | INFO | reservation | login.py:806 | === Session end ===
+2025-09-04 23:53:21 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:53:21 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:53:27 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:53:55 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:54:36 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-04 23:54:44 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-04 23:54:44 | ERROR | reservation | login.py:208 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:54:52 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-04 23:54:59 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-04 23:54:59 | ERROR | reservation | login.py:208 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:55:19 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:55:19 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:55:27 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:55:52 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:56:11 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-04 23:56:32 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:56:32 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:56:42 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:57:12 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:57:46 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:57:46 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:57:53 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:58:20 | WARNING | reservation | login.py:409 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-04 23:58:20 | INFO | reservation | login.py:379 | [privacy] Consent sheet detected; accepting…
+2025-09-04 23:58:21 | INFO | reservation | login.py:405 | [privacy] Consent accepted.
+2025-09-04 23:58:21 | INFO | reservation | login.py:459 | [make_reservation] Start for row 13 (passport=X6100952)
+2025-09-04 23:58:31 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-04 23:58:33 | INFO | reservation | login.py:469 | [make_reservation] Gender normalized: Unknown
+2025-09-04 23:58:39 | WARNING | reservation | login.py:529 | permit_woman_tv failed, trying men: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-04 23:58:57 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-04 23:58:57 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-04 23:59:06 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-04 23:59:32 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:00:08 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:00:08 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:00:16 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:00:43 | WARNING | reservation | login.py:409 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:00:43 | INFO | reservation | login.py:379 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:00:43 | INFO | reservation | login.py:405 | [privacy] Consent accepted.
+2025-09-05 00:00:43 | INFO | reservation | login.py:459 | [make_reservation] Start for row 15 (passport=X6100002)
+2025-09-05 00:00:53 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 00:00:55 | INFO | reservation | login.py:469 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:01:01 | WARNING | reservation | login.py:529 | permit_woman_tv failed, trying men: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 00:01:31 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:01:31 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:01:39 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:02:06 | WARNING | reservation | login.py:409 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:02:06 | INFO | reservation | login.py:379 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:02:07 | INFO | reservation | login.py:405 | [privacy] Consent accepted.
+2025-09-05 00:02:07 | INFO | reservation | login.py:459 | [make_reservation] Start for row 16 (passport=X6767604)
+2025-09-05 00:02:16 | WARNING | reservation | login.py:207 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 00:02:16 | INFO | reservation | login.py:469 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:02:23 | INFO | reservation | login.py:92 | DF Update [row=16, col=gender]: nan -> 'F'
+2025-09-05 00:02:23 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-05 00:02:24 | INFO | reservation | login.py:338 | [calendar] Looking for Gregorian day '15'
+2025-09-05 00:02:26 | INFO | reservation | login.py:341 | [calendar] Day '15' bounds: {'x1': 128, 'y1': 1138, 'x2': 166, 'y2': 1177, 'w': 38, 'h': 39, 'cx': 147, 'cy': 1157, 'area': 1482}
+2025-09-05 00:02:27 | INFO | reservation | login.py:348 | [calendar] Successfully selected Gregorian day '15'
+2025-09-05 00:02:38 | WARNING | reservation | login.py:564 | No timeslots available within timeout.
+2025-09-05 00:06:49 | INFO | reservation | login.py:78 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:06:49 | INFO | reservation | login.py:80 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:06:57 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:07:25 | INFO | reservation | login.py:146 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:07:49 | WARNING | reservation | login.py:412 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:07:50 | INFO | reservation | login.py:382 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:07:50 | INFO | reservation | login.py:408 | [privacy] Consent accepted.
+2025-09-05 00:07:50 | INFO | reservation | login.py:462 | [make_reservation] Start for row 17 (passport=X2681036)
+2025-09-05 00:07:58 | INFO | reservation | login.py:472 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:08:06 | INFO | reservation | login.py:92 | DF Update [row=17, col=gender]: nan -> 'F'
+2025-09-05 00:08:06 | INFO | reservation | login.py:87 | DataFrame flushed to disk.
+2025-09-05 00:08:09 | INFO | reservation | login.py:340 | [calendar] Selected day '15' via label click.
+2025-09-05 00:08:20 | WARNING | reservation | login.py:567 | No timeslots available within timeout.
+2025-09-05 00:10:23 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:10:23 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:10:31 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:11:02 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:11:28 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:11:57 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:11:57 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:11:58 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 00:11:58 | INFO | reservation | login.py:478 | [make_reservation] Start for row 18 (passport=E0792294)
+2025-09-05 00:12:06 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 00:12:07 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:12:14 | INFO | reservation | login.py:130 | DF Update [row=18, col=gender]: nan -> 'F'
+2025-09-05 00:12:14 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 00:12:29 | WARNING | reservation | login.py:592 | No timeslots available within timeout.
+2025-09-05 00:12:38 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:13:03 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-05 00:13:11 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-05 00:13:11 | ERROR | reservation | login.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-05 00:25:35 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:25:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:25:43 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:26:06 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:26:33 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:26:33 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:26:34 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 00:26:34 | INFO | reservation | login.py:478 | [make_reservation] Start for row 20 (passport=E3120878)
+2025-09-05 00:26:45 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:26:52 | INFO | reservation | login.py:130 | DF Update [row=20, col=gender]: nan -> 'F'
+2025-09-05 00:26:52 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 00:27:02 | ERROR | reservation | login.py:288 | Date field not visible; cannot proceed to date picker.
+2025-09-05 00:27:11 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:27:45 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:28:09 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:28:09 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:28:10 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 00:28:10 | INFO | reservation | login.py:478 | [make_reservation] Start for row 22 (passport=E9012743)
+2025-09-05 00:28:19 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 00:28:19 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:28:29 | INFO | reservation | login.py:130 | DF Update [row=22, col=gender]: nan -> 'F'
+2025-09-05 00:28:29 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 00:28:45 | WARNING | reservation | login.py:592 | No timeslots available within timeout.
+2025-09-05 00:29:26 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:29:26 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:29:33 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:29:57 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:30:14 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:30:14 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:30:22 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:30:47 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:30:47 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:30:48 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 00:30:48 | INFO | reservation | login.py:478 | [make_reservation] Start for row 21 (passport=E0560296)
+2025-09-05 00:30:58 | WARNING | reservation | login.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-05 00:30:59 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:31:07 | INFO | reservation | login.py:130 | DF Update [row=21, col=CREATION]: '0' -> '1'
+2025-09-05 00:31:07 | INFO | reservation | login.py:130 | DF Update [row=21, col=gender]: nan -> 'F'
+2025-09-05 00:31:07 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 00:31:12 | INFO | reservation | login.py:591 | Timeslots found: ['12:20 AM', '12:40 AM', '01:00 AM']
+2025-09-05 00:31:12 | INFO | reservation | login.py:467 | Pre-book check: label='mercredi, 17 septembre' | expect day in ['25'] and month='septembre' -> False/True
+2025-09-05 00:31:12 | ERROR | reservation | login.py:614 | Date label mismatch; aborting booking.
+2025-09-05 00:31:23 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:33:41 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna\193_15_09\informations.csv
+2025-09-05 00:33:41 | INFO | reservation | login.py:103 | CSV loaded. Rows: 191, Columns: 21
+2025-09-05 00:33:49 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-05 00:34:15 | WARNING | reservation | login.py:426 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-05 00:34:15 | INFO | reservation | login.py:392 | [privacy] Consent sheet detected; accepting…
+2025-09-05 00:34:15 | INFO | reservation | login.py:422 | [privacy] Consent accepted.
+2025-09-05 00:34:15 | INFO | reservation | login.py:478 | [make_reservation] Start for row 23 (passport=E3607507)
+2025-09-05 00:34:26 | INFO | reservation | login.py:488 | [make_reservation] Gender normalized: Unknown
+2025-09-05 00:34:33 | INFO | reservation | login.py:130 | DF Update [row=23, col=CREATION]: '0' -> '1'
+2025-09-05 00:34:33 | INFO | reservation | login.py:130 | DF Update [row=23, col=gender]: nan -> 'F'
+2025-09-05 00:34:33 | INFO | reservation | login.py:125 | DataFrame flushed to disk.
+2025-09-05 00:34:34 | INFO | reservation | login.py:345 | Trying to find element with text '17'
+2025-09-05 00:34:36 | INFO | reservation | login.py:348 | Element '17' bounds: {'x1': 391, 'y1': 1127, 'x2': 429, 'y2': 1166, 'w': 38, 'h': 39, 'cx': 410, 'cy': 1146, 'area': 1482}
+2025-09-05 00:34:36 | INFO | reservation | login.py:352 | Tapping '17' at (410, 1146)
+2025-09-05 00:34:37 | INFO | reservation | login.py:356 | Successfully selected '17'

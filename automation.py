@@ -133,10 +133,10 @@ def _write_text(p: Path, content: str) -> None:
     with p.open("w", encoding="utf-8") as f:
         f.write(content)
 
-def update_config(folder_name: str, target_date: str, hijri_day: str, pays: str, pdf_filename: str):
+def update_config(folder_name: str, target_date: str, pdf_filename: str):
     """
     Update selected variables in config.py (inline).
-    Logs the old->new values. Makes a single-file in-place replacement.
+    (HIJRI_DAY / PAYS no longer managed here.)
     """
     logger.info("Updating config.py at %s", CONFIG_PATH)
     if not CONFIG_PATH.exists():
@@ -147,8 +147,6 @@ def update_config(folder_name: str, target_date: str, hijri_day: str, pays: str,
     replacements: Dict[str, str] = {
         "FOLDER_NAME": f'"{folder_name}"',
         "TARGET_DATE": f'"{target_date}"',
-        "HIJRI_DAY": f'"{hijri_day}"',
-        "PAYS": f'"{pays}"',
         "PDF_FILE": f'os.path.join(BASE_DIR, FOLDER_NAME, "{pdf_filename}")',
     }
 
@@ -221,8 +219,7 @@ def run_step(script: str, description: str):
 
 # ===== Pipeline (sync) & async wrapper ========================================
 
-def run_pipeline(pdf: str, folder: str | None = None, target_date: str | None = None,
-                 hijri_day: str | None = None, country: str | None = None):
+def run_pipeline(pdf: str, folder: str | None = None, target_date: str | None = None):
     """
     Run the full reservation pipeline (synchronous).
     UI should call run_pipeline_async so it doesn't block the request thread.
@@ -233,8 +230,7 @@ def run_pipeline(pdf: str, folder: str | None = None, target_date: str | None = 
 
     try:
         logger.info("Pipeline start")
-        logger.info("Inputs: pdf=%r, folder=%r, target_date=%r, hijri_day=%r, country=%r",
-                    pdf, folder, target_date, hijri_day, country)
+        logger.info("Inputs: pdf=%r, folder=%r, target_date=%r", pdf, folder, target_date)
 
         # Late import so the just-edited config.py is always the one used by children
         import importlib
@@ -243,11 +239,8 @@ def run_pipeline(pdf: str, folder: str | None = None, target_date: str | None = 
         # Resolve parameters with config fallbacks
         folder = folder or getattr(config, "FOLDER_NAME", "run_default")
         target_date = target_date or getattr(config, "TARGET_DATE", "01/01")
-        hijri_day = hijri_day or getattr(config, "HIJRI_DAY", "1")
-        pays = country or getattr(config, "PAYS", "france")
 
-        logger.info("Resolved params -> folder=%r, target_date=%r, hijri_day=%r, pays=%r",
-                    folder, target_date, hijri_day, pays)
+        logger.info("Resolved params -> folder=%r, target_date=%r", folder, target_date)
 
         # Prepare destination
         base_dir = Path(getattr(config, "BASE_DIR"))
@@ -267,16 +260,14 @@ def run_pipeline(pdf: str, folder: str | None = None, target_date: str | None = 
         logger.info("Copied PDF to %s (%.1f KB)", destination_pdf, size_kb)
 
         # Update config.py so that children read the fresh run context
-        update_config(folder, target_date, hijri_day, pays, pdf_filename)
+        update_config(folder, target_date, pdf_filename)
 
         # Force-reload config in THIS process so the log below shows the new values too
         importlib.invalidate_caches()
         config = importlib.reload(config)  # type: ignore
-        logger.info("config after update: FOLDER_NAME=%r TARGET_DATE=%r HIJRI_DAY=%r PAYS=%r PDF_FILE=%r",
+        logger.info("config after update: FOLDER_NAME=%r TARGET_DATE=%r PDF_FILE=%r",
                     getattr(config, "FOLDER_NAME", None),
                     getattr(config, "TARGET_DATE", None),
-                    getattr(config, "HIJRI_DAY", None),
-                    getattr(config, "PAYS", None),
                     getattr(config, "PDF_FILE", None))
 
         # Execute the 4 pipeline steps
@@ -297,8 +288,7 @@ def run_pipeline(pdf: str, folder: str | None = None, target_date: str | None = 
     finally:
         _STATE.set_running(False)
 
-def run_pipeline_async(*, pdf: str, folder: str | None, target_date: str | None,
-                       hijri_day: str | None, country: str | None) -> threading.Thread:
+def run_pipeline_async(*, pdf: str, folder: str | None, target_date: str | None) -> threading.Thread:
     """
     Fire-and-forget runner for Flask UI. Returns the background thread.
     """
@@ -307,7 +297,7 @@ def run_pipeline_async(*, pdf: str, folder: str | None, target_date: str | None,
 
     t = threading.Thread(
         target=run_pipeline,
-        kwargs=dict(pdf=pdf, folder=folder, target_date=target_date, hijri_day=hijri_day, country=country),
+        kwargs=dict(pdf=pdf, folder=folder, target_date=target_date),
         daemon=True,
         name="pipeline-thread",
     )
@@ -321,8 +311,7 @@ def main():
     parser.add_argument("pdf", help="Path to the PDF file to process.")
     parser.add_argument("--folder", default=None, help="Folder name under BASE_DIR to use.")
     parser.add_argument("--target-date", default=None, help="Target reservation date (DD/MM).")
-    parser.add_argument("--hijri-day", default=None, help="Hijri day value.")
-    parser.add_argument("--country", default=None, help="Country name.")
+    # Removed: --hijri-day, --country
     args = parser.parse_args()
 
     logger.info("CLI args: %s", vars(args))
@@ -331,8 +320,6 @@ def main():
             pdf=args.pdf,
             folder=args.folder,
             target_date=args.target_date,
-            hijri_day=args.hijri_day,
-            country=args.country,
         )
     except Exception:
         # already logged

@@ -3,7 +3,7 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 
 # Base paths
-FOLDER_NAME = "egypt_25_14"
+FOLDER_NAME = "193_15_09"
 BASE_DIR = "C:/Users/SBS/Desktop/Hsouna"
 CSV_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "informations.csv")
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
@@ -19,7 +19,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "egypt"
 PAYS_UPPER = PAYS.lower()
-TARGET_DATE = "14"
+TARGET_DATE = "17/09"
 HIJRI_DAY = "22"
 START_DATE = "02_08_2025"
 DURATION_DAYS = 31
@@ -47,7 +47,7 @@ FIELDNAMES = [
 ]
 
 # Default PDF path
-PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "test.pdf")
+PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "merged_3.pdf")
 # Directory where confirmation screenshots will be stored
 RAWDHA_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "rawdha")
 RESERVATION_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "reservations")

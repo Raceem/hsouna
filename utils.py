@@ -37,7 +37,7 @@ def save_saudi_numbers_to_json(filename_json, count=10028):
         json.dump(numbers, f, ensure_ascii=False, indent=4)
     print(f"{len(numbers)} numéros enregistrés dans {filename_json}")
 
-def generate_dot_variants_mails(email, max_variants=10000):
+def generate_dot_variants_mails(email, max_variants=20000):
     local_part, domain = email.split("@")
     n = len(local_part) - 1
     variants = []
@@ -147,7 +147,6 @@ from config import (
 )
 
 if __name__ == "__main__":
-    
     csv_file = CSV_FILE
 
     create_csv(csv_file, FIELDNAMES)
@@ -157,12 +156,13 @@ if __name__ == "__main__":
     merge_pdfs_in_folder(dossier, fichier_sortie)
 
 
+   
     """
     # Exemple de génération de numéros et d'e-mails
     save_saudi_numbers_to_json(NUMBER_JSON_FILE, count=10280)
-    email_base = "mailboybanana@gmail.com"
+
+    email_base = "gethacked045@gmail.com"
     save_variants_to_json(email_base, EMAIL_JSON_FILE)
-    
 
     
         df = pd.read_csv(csv_file, dtype=str)

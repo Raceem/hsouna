@@ -136,8 +136,9 @@ def index():
 
         pdf = request.files.get("pdf")
         target_date = request.form.get("target_date")
-        hijri_day = request.form.get("hijri_day")
-        country = request.form.get("country")
+        # REMOVED:
+        # hijri_day = request.form.get("hijri_day")
+        # country = request.form.get("country")
 
         if not pdf or pdf.filename == "":
             flash("No file selected.")
@@ -148,7 +149,7 @@ def index():
         tmp_path = os.path.join(UPLOAD_DIR, fname)
         pdf.save(tmp_path)
 
-       # Determine folder name nationality_pages_targetdate
+        # Determine folder name: pages_targetdate (no country)
         try:
             with pdfplumber.open(tmp_path) as pdf_file:
                 page_count = len(pdf_file.pages)
@@ -156,7 +157,7 @@ def index():
             page_count = 0
 
         safe_date = (target_date or "").replace("/", "_").replace("-", "_")
-        folder_name = secure_filename(f"{country}_{page_count}_{safe_date}")
+        folder_name = secure_filename(f"{page_count}_{safe_date}")  # <- country removed
 
         try:
             # Start in background so the UI returns immediately
@@ -164,8 +165,7 @@ def index():
                 pdf=tmp_path,
                 folder=folder_name,
                 target_date=target_date,
-                hijri_day=hijri_day,
-                country=country,
+
             )
             flash("Pipeline started.")
         except Exception as exc:
@@ -178,7 +178,6 @@ def index():
     runs = get_runs(sort_by=sort_by)
     status = automation.get_status()
     return render_template("index.html", runs=runs, sort=sort_by, status=status)
-
 
 @app.route("/status")
 def status():
