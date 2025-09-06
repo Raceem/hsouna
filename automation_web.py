@@ -333,7 +333,8 @@ def _handle_plus_action(big_csv_path: str, dest_folder: str, dest_file: str, lab
 # Background drainers (skip failures)
 # =========================
 
-def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file: str, label_for_flash: str,   max_success: Optional[int] = None, 
+def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file: str, label_for_flash: str,   max_success: Optional[int] = None,
+                              prioritize_creation: bool = False,
 ):
     """
     Background loop: take the first row from big_csv_path, run scripts using the
@@ -359,7 +360,16 @@ def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file:
         folder_root = os.path.join(config.BASE_DIR, dest_folder)
         os.makedirs(folder_root, exist_ok=True)
         _ensure_csv(os.path.join(folder_root, dest_file), _safe_headers())
-
+        if prioritize_creation and os.path.exists(big_csv_path):
+            try:
+                df_pri = pd.read_csv(big_csv_path, dtype=str, keep_default_na=False)
+                if "CREATION" in df_pri.columns:
+                    df_pri["__creation_int__"] = pd.to_numeric(df_pri["CREATION"], errors="coerce").fillna(0).astype(int)
+                    df_pri.sort_values("__creation_int__", ascending=False, inplace=True)
+                    df_pri.drop(columns="__creation_int__", inplace=True)
+                    df_pri.to_csv(big_csv_path, index=False, encoding="utf-8")
+            except Exception as e:
+                print(f"[drain] Could not prioritize CREATION rows: {e}")
         # A place to log skipped rows (audit)
         processed = 0
         skipped = 0
@@ -584,6 +594,40 @@ def all_sort():
         flash(f"Sort failed: {e}", "danger")
 
     return redirect(url_for("index"))
+@app.route("/creation/hommes", methods=["POST"])
+def run_creation_hommes():
+    if automation.get_status().get("running"):
+        flash("Another automation is already running. Please Pause/Stop first.", "warning")
+        return redirect(url_for("index"))
+    try:
+        csv_posix = Path(config.HOMMES_CSV_PATH).as_posix()
+        os.environ["CSV_FILE_OVERRIDE"] = csv_posix
+        try:
+            automation.run_step("Creation.py", "Run Creation.py on HOMMES")
+            flash("Started Creation.py for HOMMES.", "success")
+        finally:
+            os.environ.pop("CSV_FILE_OVERRIDE", None)
+    except Exception as e:
+        flash(f"Creation failed: {e}", "danger")
+    return redirect(url_for("index"))
+
+
+@app.route("/creation/femmes", methods=["POST"])
+def run_creation_femmes():
+    if automation.get_status().get("running"):
+        flash("Another automation is already running. Please Pause/Stop first.", "warning")
+        return redirect(url_for("index"))
+    try:
+        csv_posix = Path(config.FEMMES_CSV_PATH).as_posix()
+        os.environ["CSV_FILE_OVERRIDE"] = csv_posix
+        try:
+            automation.run_step("Creation.py", "Run Creation.py on FEMMES")
+            flash("Started Creation.py for FEMMES.", "success")
+        finally:
+            os.environ.pop("CSV_FILE_OVERRIDE", None)
+    except Exception as e:
+        flash(f"Creation failed: {e}", "danger")
+    return redirect(url_for("index"))
 @app.route("/add_daily_folder", methods=["POST"])
 def add_daily_folder():
     """
@@ -684,6 +728,8 @@ def start_men(folder):
     except Exception:
         pass
 
+    prioritize = (request.form.get("prioritize_creation") or "0") == "1"
+
     t = threading.Thread(
         target=_drain_big_csv_for_folder,
         kwargs=dict(
@@ -692,6 +738,7 @@ def start_men(folder):
             dest_file="hommes.csv",
             label_for_flash=f"{folder} (+Men)",
             max_success=max_success,                      # <— pass it through
+            prioritize_creation=prioritize,
         ),
         daemon=True,
         name=f"drain-men-{folder}",
@@ -719,6 +766,8 @@ def start_women(folder):
     except Exception:
         pass
 
+    prioritize = (request.form.get("prioritize_creation") or "0") == "1"
+
     t = threading.Thread(
         target=_drain_big_csv_for_folder,
         kwargs=dict(
@@ -727,6 +776,7 @@ def start_women(folder):
             dest_file="femmes.csv",
             label_for_flash=f"{folder} (+Women)",
             max_success=max_success,                      # <— pass it through
+            prioritize_creation=prioritize,
         ),
         daemon=True,
         name=f"drain-women-{folder}",
@@ -736,8 +786,6 @@ def start_women(folder):
     target_msg = f", target={max_success}" if max_success is not None else ""
     flash(f"Started: draining FEMMES into {folder}/femmes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}{target_msg}).")
     return redirect(url_for("index"))
-
-
 @app.route("/merge_pdfs", methods=["POST"])
 def merge_pdfs():
     """Merge uploaded PDF files into a single document for download."""

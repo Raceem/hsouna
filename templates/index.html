@@ -86,6 +86,9 @@
               <h5 class="card-title mb-2">HOMMES</h5>
               <p class="mb-1">Rows: <span class="fs-5">{{ csv_stats['hommes'].total }}</span></p>
               <p class="mb-0 text-muted">With account: {{ csv_stats['hommes'].with_account }}</p>
+                            <form method="post" action="{{ url_for('run_creation_hommes') }}" class="mt-2">
+                <button class="btn btn-sm btn-outline-primary" type="submit">Run Creation.py</button>
+              </form>
             </div>
           </div>
         </div>
@@ -95,6 +98,9 @@
               <h5 class="card-title mb-2">FEMMES</h5>
               <p class="mb-1">Rows: <span class="fs-5">{{ csv_stats['femmes'].total }}</span></p>
               <p class="mb-0 text-muted">With account: {{ csv_stats['femmes'].with_account }}</p>
+               <form method="post" action="{{ url_for('run_creation_femmes') }}" class="mt-2">
+                <button class="btn btn-sm btn-outline-primary" type="submit">Run Creation.py</button>
+              </form>
             </div>
           </div>
         </div>
@@ -136,7 +142,8 @@
         <div class="list-group">
           {% for item in daily_folders %}
             <div class="list-group-item">
-              <div class="d-flex align-items-center">
+               <div class="d-flex align-items-center folder-row">
+                <input type="checkbox" class="form-check-input me-2 prioritize-checkbox" title="Prioritize rows with existing accounts">
                 <!-- Folder toggle -->
                 <button class="btn btn-link text-decoration-none p-0 me-3"
                         type="button"
@@ -152,8 +159,10 @@
 
                 <!-- Action buttons (start automation for one row) -->
               <form method="post" action="{{ url_for('start_men', folder=item.folder) }}" class="ms-auto me-2 d-flex align-items-center gap-2">
+                <input type="hidden" name="prioritize_creation" value="0" class="prioritize-input">
                 <input type="number" name="count" min="1" class="form-control form-control-sm" style="width: 90px"
                       placeholder="count" title="Target successful reservations (optional)">
+                      <input type="hidden" name="prioritize_creation" value="0" class="prioritize-input">
                 <button type="submit" class="btn btn-outline-primary btn-sm">+ Men</button>
               </form>
 
@@ -189,6 +198,15 @@
   </div>
 
   <script>
+        document.querySelectorAll('.folder-row').forEach(row => {
+      const checkbox = row.querySelector('.prioritize-checkbox');
+      row.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', () => {
+          const hidden = form.querySelector('.prioritize-input');
+          if (hidden) hidden.value = checkbox.checked ? '1' : '0';
+        });
+      });
+    });
     async function refreshStatus() {
       try {
         const r = await fetch("{{ url_for('status') }}", {cache:'no-store'});
