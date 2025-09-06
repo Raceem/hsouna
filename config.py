@@ -23,7 +23,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "egypt"
 PAYS_UPPER = PAYS.lower()
-TARGET_DATE = "19/09"
+TARGET_DATE = "18/09"
 HIJRI_DAY = "22"
 START_DATE = "02_08_2025"
 DURATION_DAYS = 31

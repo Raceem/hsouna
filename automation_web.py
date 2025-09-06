@@ -652,13 +652,15 @@ def import_pdf():
         csv_posix = Path(csv_target).as_posix()
         pdf_posix = Path(save_path).as_posix()
 
-        # Point pdf.py at the chosen CSV and uploaded PDF
-        _set_config_var("CSV_FILE", repr(csv_posix))
-        _set_config_var("PDF_FILE", repr(pdf_posix))
-
-        # Run pdf.py (it should append rows into CSV_FILE)
-        automation.run_step("pdf.py", f"Import PDF into {target} via pdf.py")
-        flash(f"Imported {file.filename} into {target}.", "success")
+               # Run pdf.py with environment overrides instead of editing config.py
+        os.environ["CSV_FILE_OVERRIDE"] = csv_posix
+        os.environ["PDF_FILE_OVERRIDE"] = pdf_posix
+        try:
+            automation.run_step("pdf.py", f"Import PDF into {target} via pdf.py")
+            flash(f"Imported {file.filename} into {target}.", "success")
+        finally:
+            os.environ.pop("CSV_FILE_OVERRIDE", None)
+            os.environ.pop("PDF_FILE_OVERRIDE", None)
 
     except Exception as e:
         flash(f"Import failed: {e}", "danger")

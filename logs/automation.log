@@ -24575,3 +24575,43 @@ urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723
 2025-09-06 12:37:49 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
 2025-09-06 12:37:49 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
 2025-09-06 12:39:55 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:08:38 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:08:38 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:09:12 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:09:12 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:09:23 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:09:23 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:09:35 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:09:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:09:47 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:09:47 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:09:59 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:09:59 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:10:11 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:10:11 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:10:23 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:10:23 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:10:35 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:10:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:10:47 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:10:47 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:10:59 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:10:59 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:11:11 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:11:11 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:11:23 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:11:23 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:11:35 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:11:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:11:46 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:11:46 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:11:58 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:11:58 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:12:10 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:12:10 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:12:22 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:12:22 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:12:34 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:12:34 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 13:12:46 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
+2025-09-06 13:12:46 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24

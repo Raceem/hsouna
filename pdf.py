@@ -25,6 +25,9 @@ from config import (
     FIELDNAMES,
     PDF_FILE,
 )
+# Allow overrides via environment variables without editing config.py
+CSV_FILE = os.environ.get("CSV_FILE_OVERRIDE", CSV_FILE)
+PDF_FILE = os.environ.get("PDF_FILE_OVERRIDE", PDF_FILE)
 
 # ---------------------------
 # Helpers: pop first variant
