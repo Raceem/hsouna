@@ -578,22 +578,31 @@ def all_sort():
         return redirect(url_for("index"))
 
     try:
-        # Ensure sort.py reads from ALL.csv (use forward slashes)
-        all_posix = Path(config.ALL_CSV_PATH).as_posix()
-        _set_config_var("CSV_FILE", repr(all_posix))
+        # Use ONLY env overrides (no edits to config.py)
+        all_csv    = Path(config.ALL_CSV_PATH).as_posix()
+        hommes_csv = Path(config.HOMMES_CSV_PATH).as_posix()
+        femmes_csv = Path(config.FEMMES_CSV_PATH).as_posix()
 
-        # If your sort.py expects explicit output paths in config, you can also enforce:
-        # _set_config_var("HOMMES_CSV_PATH", repr(Path(config.HOMMES_CSV_PATH).as_posix()))
-        # _set_config_var("FEMMES_CSV_PATH", repr(Path(config.FEMMES_CSV_PATH).as_posix()))
+        os.environ["CSV_FILE_OVERRIDE"]       = all_csv          # input
+        os.environ["HOMMES_CSV_OVERRIDE"]     = hommes_csv       # output
+        os.environ["FEMMES_CSV_OVERRIDE"]     = femmes_csv       # output
+        # (Optional) if your sorter also needs BASE_DIR at runtime:
+        os.environ["BASE_DIR_OVERRIDE"]       = Path(config.BASE_DIR).as_posix()
 
-        # Run sort.py (it should mutate ALL/HOMMES/FEMMES as per your script)
-        automation.run_step("sort.py", "Sort ALL into HOMMES/FEMMES via sort.py")
-        flash("Sorting completed (ALL → HOMMES/FEMMES).", "success")
+        try:
+            # Run your sorter; it should read env overrides if present
+            automation.run_step("sort.py", "Sort ALL into HOMMES/FEMMES via sort.py")
+            flash("Sorting completed (ALL → HOMMES/FEMMES).", "success")
+        finally:
+            # Always clean up the environment
+            for k in ("CSV_FILE_OVERRIDE", "HOMMES_CSV_OVERRIDE", "FEMMES_CSV_OVERRIDE", "BASE_DIR_OVERRIDE"):
+                os.environ.pop(k, None)
 
     except Exception as e:
         flash(f"Sort failed: {e}", "danger")
 
     return redirect(url_for("index"))
+
 @app.route("/creation/hommes", methods=["POST"])
 def run_creation_hommes():
     if automation.get_status().get("running"):

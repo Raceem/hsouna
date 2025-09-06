@@ -24615,3 +24615,125 @@ urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723
 2025-09-06 13:12:34 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
 2025-09-06 13:12:46 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv
 2025-09-06 13:12:46 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 15:17:09 | INFO | reservation | sort.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 15:17:09 | INFO | reservation | sort.py:723 | Ligne 1: KUMALA SUITA
+2025-09-06 21:41:35 | INFO | reservation | sort.py:159 | Could not update driver settings: Message: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:332:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\mailb\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-06 21:41:35 | INFO | reservation | sort.py:723 | Ligne 1: KUMALA SUITA
+2025-09-06 21:42:36 | INFO | reservation | sort.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 21:42:36 | INFO | reservation | sort.py:723 | Ligne 1: KUMALA SUITA
+2025-09-06 21:42:50 | WARNING | reservation | sort.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-06 21:42:58 | WARNING | reservation | sort.py:210 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-06 21:42:58 | ERROR | reservation | sort.py:211 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 21:44:11 | INFO | reservation | sort.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 21:44:11 | INFO | reservation | sort.py:723 | Ligne 1: KUMALA SUITA
+2025-09-06 21:45:53 | INFO | reservation | sort.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 21:45:53 | INFO | reservation | sort.py:723 | Ligne 1: KUMALA SUITA
+2025-09-06 21:46:15 | WARNING | reservation | sort.py:465 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 21:46:17 | INFO | reservation | sort.py:428 | [privacy] Consent sheet not present.
+2025-09-06 21:46:17 | INFO | reservation | sort.py:517 | [make_reservation] Start for row 0 (passport=X1599100)
+2025-09-06 21:46:25 | WARNING | reservation | sort.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 21:48:21 | INFO | reservation | sort.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 21:48:21 | INFO | reservation | sort.py:723 | Ligne 1: KUMALA SUITA
+2025-09-06 21:48:51 | WARNING | reservation | sort.py:465 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 21:48:51 | INFO | reservation | sort.py:431 | [privacy] Consent sheet detected; accepting…
+2025-09-06 21:48:52 | INFO | reservation | sort.py:461 | [privacy] Consent accepted.
+2025-09-06 21:48:52 | INFO | reservation | sort.py:517 | [make_reservation] Start for row 0 (passport=X1599100)
+2025-09-06 21:49:05 | INFO | reservation | sort.py:527 | [make_reservation] Gender normalized: Unknown
+2025-09-06 21:49:12 | INFO | reservation | sort.py:130 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 21:49:12 | INFO | reservation | sort.py:130 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-06 21:49:12 | INFO | reservation | sort.py:125 | DataFrame flushed to disk.
+2025-09-06 21:49:36 | INFO | reservation | sort.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 21:49:36 | INFO | reservation | sort.py:723 | Ligne 2: ABOELHAMD AHMED
+2025-09-06 21:49:57 | INFO | reservation | sort.py:428 | [privacy] Consent sheet not present.
+2025-09-06 21:49:57 | INFO | reservation | sort.py:517 | [make_reservation] Start for row 1 (passport=A42123094)
+2025-09-06 21:50:05 | WARNING | reservation | sort.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 21:50:13 | WARNING | reservation | sort.py:210 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 21:50:13 | ERROR | reservation | sort.py:211 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 21:50:13 | ERROR | reservation | sort.py:522 | Could not open Noble Rawdah screen.
+2025-09-06 22:30:41 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:30:41 | INFO | reservation | sort.py:725 | Ligne 3: ABDELAZIZ ABDELRHMAN
+2025-09-06 22:31:05 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:31:05 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 2 (passport=A41505895)
+2025-09-06 22:31:13 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:31:20 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:31:20 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:31:20 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:31:47 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:31:47 | INFO | reservation | sort.py:725 | Ligne 4: MOHAMED MOHAMED
+2025-09-06 22:32:10 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:32:10 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 3 (passport=A35494456)
+2025-09-06 22:32:17 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:32:25 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:32:25 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:32:25 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:32:52 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:32:52 | INFO | reservation | sort.py:725 | Ligne 5: GOMAA SOHAIB
+2025-09-06 22:33:19 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:33:19 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 4 (passport=A32206125)
+2025-09-06 22:33:27 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:33:35 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:33:35 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:33:35 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:34:01 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:34:01 | INFO | reservation | sort.py:725 | Ligne 6: AHMED FAHD
+2025-09-06 22:34:25 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 22:34:27 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:34:27 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 5 (passport=A41645935)
+2025-09-06 22:34:35 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:35:37 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:35:37 | INFO | reservation | sort.py:725 | Ligne 6: AHMED FAHD
+2025-09-06 22:36:06 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 22:36:06 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-06 22:36:07 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-06 22:36:07 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 5 (passport=A41645935)
+2025-09-06 22:36:20 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:36:22 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-06 22:36:30 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for permit_woman_tv (attempt 1)
+2025-09-06 22:36:31 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for permit_woman_tv (attempt 2)
+2025-09-06 22:36:31 | ERROR | reservation | sort.py:213 | [safe_click] failed to click permit_woman_tv after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:36:31 | INFO | reservation | sort.py:132 | DF Update [row=5, col=CREATION]: '1' -> '1'
+2025-09-06 22:36:31 | INFO | reservation | sort.py:132 | DF Update [row=5, col=gender]: nan -> 'H'
+2025-09-06 22:36:31 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-06 22:36:57 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:36:57 | INFO | reservation | sort.py:725 | Ligne 7: ELMAGHRABY MAHMOUD
