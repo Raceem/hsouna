@@ -5,7 +5,7 @@ from appium.options.android import UiAutomator2Options
 # Base paths
 FOLDER_NAME = "09_25__2025"
 BASE_DIR = "C:/Users/SBS/Desktop/Hsouna"
-CSV_FILE = os.path.join(BASE_DIR, "DO_NOT_TOUCH.csv")
+CSV_FILE = 'C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv'
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
 NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
 # CSV files used by the web UI for statistics
@@ -23,7 +23,7 @@ APP_ACTIVITY = "com.app.nusuk.LoginRegistrationActivity"
 # Additional configuration
 PAYS = "egypt"
 PAYS_UPPER = PAYS.lower()
-TARGET_DATE = "18/09"
+TARGET_DATE = "19/09"
 HIJRI_DAY = "22"
 START_DATE = "02_08_2025"
 DURATION_DAYS = 31
@@ -51,7 +51,7 @@ FIELDNAMES = [
 ]
 
 # Default PDF path
-PDF_FILE = os.path.join(BASE_DIR, FOLDER_NAME, "ayedi.pdf")
+PDF_FILE = 'C:/Users/SBS/Desktop/Hsouna/_inbox/merged (4).pdf'
 # Directory where confirmation screenshots will be stored
 RAWDHA_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "rawdha")
 RESERVATION_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "reservations")
@@ -67,3 +67,4 @@ def setup_driver():
     options.app_activity = APP_ACTIVITY
     options.automation_name = "uiautomator2"
     return webdriver.Remote(APPIUM_SERVER, options=options)
+ALL_IMPORT_CSV = r"C:/Users/SBS/Desktop/Hsouna\_inbox\latest_import.csv"

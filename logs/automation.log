@@ -23716,3 +23716,862 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-09-06 01:12:29 | INFO | reservation | login.py:831 | [login_user] Reservation step finished for row 0
 2025-09-06 01:12:29 | INFO | reservation | login.py:879 | All planned rows processed.
 2025-09-06 01:12:29 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:30:49 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/HOMMES.csv
+2025-09-06 12:30:49 | INFO | reservation | login.py:103 | CSV loaded. Rows: 33, Columns: 18
+2025-09-06 12:30:49 | INFO | reservation | login.py:119 | Added missing gender/reserved columns and flushed to disk.
+2025-09-06 12:30:49 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:30:49 | INFO | reservation | login.py:842 | Planned rows (need app): 3 of 33 total
+2025-09-06 12:30:49 | INFO | reservation | login.py:845 | ---- Processing row 1/3 (orig index=3) ----
+2025-09-06 12:30:58 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=3): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002438A74FDA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002438A74FDA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002438A74FDA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:30:58 | INFO | reservation | login.py:845 | ---- Processing row 2/3 (orig index=7) ----
+2025-09-06 12:31:06 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 2 (orig index=7): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002438A7A5100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002438A7A5100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002438A7A5100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:31:06 | INFO | reservation | login.py:845 | ---- Processing row 3/3 (orig index=10) ----
+2025-09-06 12:32:31 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:31 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:31 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:31 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:32:31 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:32:31 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:32:43 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:43 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:45 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:45 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:45 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:45 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:32:45 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:32:45 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:32:46 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:46 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:46 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:46 | INFO | reservation | login.py:842 | Planned rows (need app): 1 of 1 total
+2025-09-06 12:32:46 | INFO | reservation | login.py:845 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 12:32:54 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EFA813B050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EFA813B050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EFA813B050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:32:54 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:32:54 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:32:55 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:55 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:55 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:55 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:32:55 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:32:55 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:32:56 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:56 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:56 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:56 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:32:56 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:32:56 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:32:57 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:57 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:57 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:57 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:32:57 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:32:57 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:32:58 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:32:58 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:32:58 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:32:58 | INFO | reservation | login.py:842 | Planned rows (need app): 1 of 1 total
+2025-09-06 12:32:58 | INFO | reservation | login.py:845 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 12:33:06 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019B7AB3EF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000019B7AB3EF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019B7AB3EF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:33:06 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:06 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:10 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:10 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:11 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:11 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:11 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:11 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:11 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:11 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:12 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:12 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:12 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:12 | INFO | reservation | login.py:842 | Planned rows (need app): 1 of 1 total
+2025-09-06 12:33:12 | INFO | reservation | login.py:845 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 12:33:20 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF5F81A480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001AF5F81A480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AF5F81A480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:33:20 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:20 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:24 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:24 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:25 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:25 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:25 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:25 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:25 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:25 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:26 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:26 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:26 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:26 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:26 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:26 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:30 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:30 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:34 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:34 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:35 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:35 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:35 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:35 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:35 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:36 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:36 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:36 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:36 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:36 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:36 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:37 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:37 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:37 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:37 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:37 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:37 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:38 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:38 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:38 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:38 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:38 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:38 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:39 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:39 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:39 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:39 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:39 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:39 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:40 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:40 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:40 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:40 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:40 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:40 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:42 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:42 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:42 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:33:42 | INFO | reservation | login.py:842 | Planned rows (need app): 0 of 1 total
+2025-09-06 12:33:42 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:33:42 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:33:45 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:45 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:33:57 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:33:57 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:34:09 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:34:09 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:34:21 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:34:21 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:34:33 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:34:33 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:34:45 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:34:45 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:34:57 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:34:57 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:35:09 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:35:09 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:35:51 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:35:51 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:03 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:03 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:15 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:15 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:27 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:27 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:28 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:28 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:28 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:36:28 | INFO | reservation | login.py:842 | Planned rows (need app): 1 of 1 total
+2025-09-06 12:36:28 | INFO | reservation | login.py:845 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 12:36:37 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022D80B6AE70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000022D80B6AE70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022D80B6AE70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:36:37 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:36:37 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:36:38 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:38 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:38 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:36:38 | INFO | reservation | login.py:842 | Planned rows (need app): 1 of 1 total
+2025-09-06 12:36:38 | INFO | reservation | login.py:845 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 12:36:46 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002DFD0E6A1B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002DFD0E6A1B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002DFD0E6A1B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:36:46 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:36:46 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:36:50 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:50 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:51 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:36:51 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:36:51 | INFO | reservation | login.py:836 | === Session start ===
+2025-09-06 12:36:51 | INFO | reservation | login.py:842 | Planned rows (need app): 1 of 1 total
+2025-09-06 12:36:51 | INFO | reservation | login.py:845 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 12:36:59 | ERROR | reservation | login.py:867 | ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029B1E99E0C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000029B1E99E0C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login.py", line 857, in <module>
+    driver = setup_driver()
+             ^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+    return webdriver.Remote(APPIUM_SERVER, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+  File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029B1E99E0C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 12:36:59 | INFO | reservation | login.py:879 | All planned rows processed.
+2025-09-06 12:36:59 | INFO | reservation | login.py:889 | === Session end ===
+2025-09-06 12:37:03 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:37:03 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:37:07 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:37:07 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:37:11 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:37:11 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:37:16 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:37:16 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:37:49 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/ALL.csv
+2025-09-06 12:37:49 | INFO | reservation | login.py:103 | CSV loaded. Rows: 1, Columns: 24
+2025-09-06 12:39:55 | INFO | reservation | login.py:101 | Loading CSV: C:/Users/SBS/Desktop/Hsouna/DO_NOT_TOUCH.csv

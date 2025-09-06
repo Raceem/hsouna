@@ -5,6 +5,7 @@ import threading
 from typing import List, Tuple, Dict, Optional
 from datetime import datetime
 from io import BytesIO
+from pathlib import Path
 
 import pandas as pd
 from flask import (
@@ -332,7 +333,8 @@ def _handle_plus_action(big_csv_path: str, dest_folder: str, dest_file: str, lab
 # Background drainers (skip failures)
 # =========================
 
-def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file: str, label_for_flash: str):
+def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file: str, label_for_flash: str,   max_success: Optional[int] = None, 
+):
     """
     Background loop: take the first row from big_csv_path, run scripts using the
     folder's date, on success move it into BASE_DIR/<dest_folder>/<dest_file>,
@@ -363,6 +365,9 @@ def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file:
         skipped = 0
 
         while True:
+            if max_success is not None and processed >= max_success:
+                print(f"[drain] Hit success target: {processed}/{max_success}")
+                break
             # If user pressed Pause/Stop, the child process is killed; we stop after current loop
             snap = automation.get_status()
             # If some other process toggled running to False, stop gracefully
@@ -392,8 +397,7 @@ def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file:
                 except Exception:
                     pass
             else:
-                # Failure policy: KEEP the row in the big CSV for retry, but move it to the bottom
-                # so we can continue with the rest.
+
                 try:
                     # Remove first row
                     df_rest = df_big.drop(df_big.index[0]).reset_index(drop=True)
@@ -556,7 +560,30 @@ def index():
         daily_folders=daily_folders
     )
 
+@app.route("/all/sort", methods=["POST"])
+def all_sort():
+    # block if something else is running
+    if automation.get_status().get("running"):
+        flash("Another automation is already running. Please Pause/Stop first.", "warning")
+        return redirect(url_for("index"))
 
+    try:
+        # Ensure sort.py reads from ALL.csv (use forward slashes)
+        all_posix = Path(config.ALL_CSV_PATH).as_posix()
+        _set_config_var("CSV_FILE", repr(all_posix))
+
+        # If your sort.py expects explicit output paths in config, you can also enforce:
+        # _set_config_var("HOMMES_CSV_PATH", repr(Path(config.HOMMES_CSV_PATH).as_posix()))
+        # _set_config_var("FEMMES_CSV_PATH", repr(Path(config.FEMMES_CSV_PATH).as_posix()))
+
+        # Run sort.py (it should mutate ALL/HOMMES/FEMMES as per your script)
+        automation.run_step("sort.py", "Sort ALL into HOMMES/FEMMES via sort.py")
+        flash("Sorting completed (ALL → HOMMES/FEMMES).", "success")
+
+    except Exception as e:
+        flash(f"Sort failed: {e}", "danger")
+
+    return redirect(url_for("index"))
 @app.route("/add_daily_folder", methods=["POST"])
 def add_daily_folder():
     """
@@ -589,18 +616,71 @@ def add_daily_folder():
     return redirect(url_for("index"))
 
 
-@app.route("/start_men/<folder>", methods=["POST"])
-def start_men(folder):
-    """
-    Start draining HOMMES_CSV_PATH in background:
-      - each row uses date parsed from <folder>
-      - success -> append to <folder>/hommes.csv
-      - failure -> row is skipped (dropped) and recorded to <folder>/skipped_hommes.csv
-    """
-    # Prevent concurrent run if already running
+@app.route("/import_pdf", methods=["POST"])
+def import_pdf():
+    # block if something else is running
     if automation.get_status().get("running"):
         flash("Another automation is already running. Please Pause/Stop first.", "warning")
         return redirect(url_for("index"))
+
+    # read selection
+    target = (request.form.get("target") or "ALL").upper()
+    target_map = {
+        "ALL":     getattr(config, "ALL_CSV_PATH", None),
+        "HOMMES":  getattr(config, "HOMMES_CSV_PATH", None),
+        "FEMMES":  getattr(config, "FEMMES_CSV_PATH", None),
+    }
+    csv_target = target_map.get(target)
+    if not csv_target:
+        flash("Invalid target selection.", "danger")
+        return redirect(url_for("index"))
+
+    # read file
+    file = request.files.get("pdf")
+    if not file or not file.filename.lower().endswith(".pdf"):
+        flash("Please select a PDF file.", "danger")
+        return redirect(url_for("index"))
+
+    try:
+        # Save PDF into BASE_DIR/_inbox/<filename>
+        inbox_dir = os.path.join(config.BASE_DIR, "_inbox")
+        os.makedirs(inbox_dir, exist_ok=True)
+        save_path = os.path.join(inbox_dir, file.filename)
+        file.save(save_path)
+
+        # Use POSIX (forward slashes) to avoid \a issues on Windows
+        csv_posix = Path(csv_target).as_posix()
+        pdf_posix = Path(save_path).as_posix()
+
+        # Point pdf.py at the chosen CSV and uploaded PDF
+        _set_config_var("CSV_FILE", repr(csv_posix))
+        _set_config_var("PDF_FILE", repr(pdf_posix))
+
+        # Run pdf.py (it should append rows into CSV_FILE)
+        automation.run_step("pdf.py", f"Import PDF into {target} via pdf.py")
+        flash(f"Imported {file.filename} into {target}.", "success")
+
+    except Exception as e:
+        flash(f"Import failed: {e}", "danger")
+
+    return redirect(url_for("index"))
+
+@app.route("/start_men/<folder>", methods=["POST"])
+def start_men(folder):
+    if automation.get_status().get("running"):
+        flash("Another automation is already running. Please Pause/Stop first.", "warning")
+        return redirect(url_for("index"))
+
+    # Read optional count (success target) from form or query string
+    count_str = request.form.get("count") or request.args.get("count")
+    max_success = None
+    try:
+        if count_str is not None:
+            v = int(count_str)
+            if v > 0:
+                max_success = v
+    except Exception:
+        pass
 
     t = threading.Thread(
         target=_drain_big_csv_for_folder,
@@ -609,27 +689,33 @@ def start_men(folder):
             dest_folder=folder,
             dest_file="hommes.csv",
             label_for_flash=f"{folder} (+Men)",
+            max_success=max_success,                      # <— pass it through
         ),
         daemon=True,
         name=f"drain-men-{folder}",
     )
     t.start()
-    flash(f"Started: draining HOMMES into {folder}/hommes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}).")
-    return redirect(url_for("index"))
 
+    target_msg = f", target={max_success}" if max_success is not None else ""
+    flash(f"Started: draining HOMMES into {folder}/hommes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}{target_msg}).")
+    return redirect(url_for("index"))
 
 @app.route("/start_women/<folder>", methods=["POST"])
 def start_women(folder):
-    """
-    Start draining FEMMES_CSV_PATH in background:
-      - each row uses date parsed from <folder>
-      - success -> append to <folder>/femmes.csv
-      - failure -> row is skipped (dropped) and recorded to <folder>/skipped_femmes.csv
-    """
-    # Prevent concurrent run if already running
     if automation.get_status().get("running"):
         flash("Another automation is already running. Please Pause/Stop first.", "warning")
         return redirect(url_for("index"))
+
+    # Read optional count (success target) from form or query string
+    count_str = request.form.get("count") or request.args.get("count")
+    max_success = None
+    try:
+        if count_str is not None:
+            v = int(count_str)
+            if v > 0:
+                max_success = v
+    except Exception:
+        pass
 
     t = threading.Thread(
         target=_drain_big_csv_for_folder,
@@ -638,12 +724,15 @@ def start_women(folder):
             dest_folder=folder,
             dest_file="femmes.csv",
             label_for_flash=f"{folder} (+Women)",
+            max_success=max_success,                      # <— pass it through
         ),
         daemon=True,
         name=f"drain-women-{folder}",
     )
     t.start()
-    flash(f"Started: draining FEMMES into {folder}/femmes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}).")
+
+    target_msg = f", target={max_success}" if max_success is not None else ""
+    flash(f"Started: draining FEMMES into {folder}/femmes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}{target_msg}).")
     return redirect(url_for("index"))
 
 

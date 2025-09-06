@@ -39,6 +39,26 @@
         <div class="alert alert-info">{{ message }}</div>
       {% endfor %}
     {% endwith %}
+    <!-- Standalone Import PDF -->
+<section class="mb-4">
+  <form method="post" action="{{ url_for('import_pdf') }}" enctype="multipart/form-data" class="row g-2 align-items-end">
+    <div class="col-auto">
+      <label class="form-label mb-1">Target CSV</label>
+      <select name="target" class="form-select">
+        <option value="ALL">ALL</option>
+        <option value="HOMMES">HOMMES</option>
+        <option value="FEMMES">FEMMES</option>
+      </select>
+    </div>
+    <div class="col-auto">
+      <label class="form-label mb-1">PDF file</label>
+      <input type="file" name="pdf" accept="application/pdf" class="form-control" required>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Import PDF</button>
+    </div>
+  </form>
+</section>
 
     <!-- CSV Information -->
     <section>
@@ -48,7 +68,15 @@
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h5 class="card-title mb-2">ALL</h5>
-              <p class="card-text fs-4 mb-0">{{ csv_stats['all'].total }}</p>
+              <p class="card-text fs-4 mb-3">{{ csv_stats['all'].total }}</p>
+              
+
+  <!-- Sort ALL into HOMMES/FEMMES via sort.py -->
+  <form method="post" action="{{ url_for('all_sort') }}">
+    <button class="btn btn-sm btn-outline-secondary" type="submit">
+      Sort ALL → HOMMES / FEMMES
+    </button>
+  </form>
             </div>
           </div>
         </div>
@@ -123,12 +151,17 @@
                 <span class="badge bg-secondary me-3">{{ item.men_count }} men</span>
 
                 <!-- Action buttons (start automation for one row) -->
-                <form method="post" action="{{ url_for('start_men', folder=item.folder) }}" class="ms-auto me-2">
-                  <button type="submit" class="btn btn-outline-primary btn-sm">+ Men</button>
-                </form>
-                <form method="post" action="{{ url_for('start_women', folder=item.folder) }}">
-                  <button type="submit" class="btn btn-outline-danger btn-sm">+ Women</button>
-                </form>
+              <form method="post" action="{{ url_for('start_men', folder=item.folder) }}" class="ms-auto me-2 d-flex align-items-center gap-2">
+                <input type="number" name="count" min="1" class="form-control form-control-sm" style="width: 90px"
+                      placeholder="count" title="Target successful reservations (optional)">
+                <button type="submit" class="btn btn-outline-primary btn-sm">+ Men</button>
+              </form>
+
+              <form method="post" action="{{ url_for('start_women', folder=item.folder) }}" class="d-flex align-items-center gap-2">
+                <input type="number" name="count" min="1" class="form-control form-control-sm" style="width: 90px"
+                      placeholder="count" title="Target successful reservations (optional)">
+                <button type="submit" class="btn btn-outline-danger btn-sm">+ Women</button>
+              </form>
               </div>
 
               <!-- Collapse content -->
