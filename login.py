@@ -660,23 +660,34 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         logger.error("Failed to click btn_approve_continue.")
         return
 
-    # Success check
-    
-    if elements and "Neutre" in (elements[0].text or ""):
+    # --- Success check (robust) ---
+    # Give UI a moment (or keep your spinner wait here)
+    time.sleep(0.3)  # optional; you can keep your wait_until_idle() if you added it
+
+    # Try up to ~20 * 250ms = 5s for the success label to appear and contain "Neutre"
+    elements = []  # <-- define before using it so it's always bound
+    deadline = time.time() + 5.0
+    while time.time() < deadline:
+        try:
+            elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
+            if elements:
+                txt = (elements[0].text or "").strip()
+                if "Neutre" in txt:
+                    break
+        except Exception:
+            pass
+        time.sleep(0.25)
+
+    if elements and "Neutre" in ((elements[0].text or "").strip()):
         year = datetime.strptime(start_date, "%d_%m_%Y").year
         _set_df(index, "CREATION", "1")
         _set_df(index, "RESERVATION", "1")
         _set_df(index, "heure", preferred)
-        if actual_gender == "H":
-            _set_df(index, "gender", "Homme")
-            _increment_reserved("H")
-        elif actual_gender == "F":
-            _set_df(index, "gender", "Femme")
-            _increment_reserved("F")
         _set_df(index, "date_reservation", f"{target_date}/{year}", flush=True)
     else:
-        logger.error("Reservation success element not found or does not contain 'Neutre'.")
-    elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
+        sample = ((elements[0].text or "").strip()) if elements else "<none>"
+        logger.error("Reservation success not confirmed. rating_3 text=%r", sample)
+
 
 # -----------------------------------------------------------------------------
 # Login Flow

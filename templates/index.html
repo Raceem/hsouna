@@ -3,76 +3,36 @@
 <head>
   <meta charset="utf-8">
   <title>Reservation Automation</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
 </head>
 <body class="bg-light">
   <div class="container my-4">
     <h1 class="mb-4">Reservation Automation</h1>
-    <div class="alert alert-secondary d-flex justify-content-between align-items-center" id="status-bar">
-    <div>
-      <strong>Status:</strong>
-      <span id="status-text">
-        {% if status.running %}
-          Running — step: <code>{{ status.current_step }}</code>
-        {% else %}
-          Idle
-        {% endif %}
-      </span>
-    </div>
-    <form method="post" action="{{ url_for('pause') }}">
-      <button class="btn btn-warning" id="pause-btn" {% if not status.running %}disabled{% endif %}>
-        Pause / Stop
-      </button>
-    </form>
-  </div>
-    <form method="post" enctype="multipart/form-data" class="row g-3 mb-5">
-      <div class="col-md-3">
-        <label for="pdf" class="form-label">PDF File</label>
-        <input class="form-control" type="file" id="pdf" name="pdf" accept="application/pdf">
-      </div>
-      <div class="col-md-3">
-        <label for="gender" class="form-label">Gender</label>
-        <select class="form-select" id="gender" name="gender">
-          <option value="">None</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-      </div>
 
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Run</button>
+    <!-- Status Bar -->
+    <div class="alert alert-secondary d-flex justify-content-between align-items-center" id="status-bar">
+      <div>
+        <strong>Status:</strong>
+        <span id="status-text">
+          {% if status.running %}
+            Running — step: <code>{{ status.current_step }}</code>
+          {% else %}
+            Idle
+          {% endif %}
+        </span>
       </div>
-    </form>
-    <h2 class="mb-3">Merge PDFs</h2>
-    <form method="post" action="{{ url_for('merge_pdfs') }}" enctype="multipart/form-data" class="row g-3 mb-5">
-      <div class="col-md-6">
-        <label for="merge_pdfs_input" class="form-label">Select PDF files</label>
-        <input class="form-control" type="file" id="merge_pdfs_input" name="pdfs" accept="application/pdf" multiple required>
-      </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-secondary">Merge and Download</button>
-      </div>
-    </form>
-    <h2 class="mb-3">CSV Information</h2>
-    <ul class="list-group mb-5">
-      <li class="list-group-item">ALL: {{ csv_stats['all'].total }} rows</li>
-      <li class="list-group-item">HOMMES: {{ csv_stats['hommes'].total }} rows — with account: {{ csv_stats['hommes'].with_account }}</li>
-      <li class="list-group-item">FEMMES: {{ csv_stats['femmes'].total }} rows — with account: {{ csv_stats['femmes'].with_account }}</li>
-    </ul>
-    <form method="get" class="mb-4">
-      <div class="row g-3 align-items-center">
-        <div class="col-auto">
-          <label for="sort" class="col-form-label">Sort by</label>
-        </div>
-        <div class="col-auto">
-          <select id="sort" name="sort" class="form-select" onchange="this.form.submit()">
-            <option value="date" {% if sort == 'date' %}selected{% endif %}>Date in name</option>
-            <option value="mtime" {% if sort == 'mtime' %}selected{% endif %}>Modification date</option>
-          </select>
-        </div>
-      </div>
-    </form>
+      <form method="post" action="{{ url_for('pause') }}">
+        <button class="btn btn-warning" id="pause-btn" {% if not status.running %}disabled{% endif %}>
+          Pause / Stop
+        </button>
+      </form>
+    </div>
 
     {% with messages = get_flashed_messages() %}
       {% for message in messages %}
@@ -80,99 +40,140 @@
       {% endfor %}
     {% endwith %}
 
-    <h2 class="mb-3">Previous Imports</h2>
-    {% if runs %}
-      <div class="accordion" id="runs">
-        {% for run in runs %}
-          <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading{{ loop.index }}">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse{{ loop.index }}"
-                      aria-expanded="false" aria-controls="collapse{{ loop.index }}">
-                Homme: {{ run.reserved_men }} | Femme: {{ run.reserved_women }} — {{ run.folder }}
-              </button>
-            </h2>
-            <div id="collapse{{ loop.index }}" class="accordion-collapse collapse"
-                 aria-labelledby="heading{{ loop.index }}" data-bs-parent="#runs">
-              <div class="accordion-body">
-                {% if run.pdfs %}
-                  <h5>PDFs</h5>
-                  <ul class="list-group mb-3">
-                    {% for pdf in run.pdfs %}
-                      <li class="list-group-item">
-                        <a href="{{ url_for('serve_file', filename=pdf.path) }}">{{ pdf.name }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-                {% if run.csv %}
-                  <p><strong>CSV:</strong> <a href="{{ url_for('serve_file', filename=run.csv) }}">informations.csv</a></p>
-                {% endif %}
-               {% if run.rawdha_images %}
-  <div class="mb-3">
-    <!-- Subfolder header styled like PDFs/CSV -->
-    <div class="d-flex align-items-center">
-      <h5 class="mb-0">Rawdah <span class="badge bg-secondary ms-2">subfolder</span></h5>
-
-      <!-- actions on the right -->
-      <a class="btn btn-sm btn-outline-secondary ms-auto"
-         href="{{ url_for('download_rawdha', folder=run.folder) }}">
-        Download all
-      </a>
-      <button class="btn btn-sm btn-link ms-2"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#rawdhaCollapse{{ loop.index }}"
-              aria-expanded="false"
-              aria-controls="rawdhaCollapse{{ loop.index }}">
-        Show / hide
-      </button>
-    </div>
-
-    <div id="rawdhaCollapse{{ loop.index }}" class="collapse mt-2">
-      <div class="row g-2">
-        {% for img in run.rawdha_images %}
-          <div class="col-auto">
-            <a href="{{ url_for('serve_file', filename=img) }}" download>
-              <img src="{{ url_for('serve_file', filename=img) }}"
-                   class="img-thumbnail" style="max-width: 200px;">
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-{% endif %}
-              </div>
+    <!-- CSV Information -->
+    <section>
+      <h2 class="mb-3">CSV Information</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">ALL</h5>
+              <p class="card-text fs-4 mb-0">{{ csv_stats['all'].total }}</p>
             </div>
           </div>
-        {% endfor %}
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">HOMMES</h5>
+              <p class="mb-1">Rows: <span class="fs-5">{{ csv_stats['hommes'].total }}</span></p>
+              <p class="mb-0 text-muted">With account: {{ csv_stats['hommes'].with_account }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">FEMMES</h5>
+              <p class="mb-1">Rows: <span class="fs-5">{{ csv_stats['femmes'].total }}</span></p>
+              <p class="mb-0 text-muted">With account: {{ csv_stats['femmes'].with_account }}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    {% else %}
-      <p>No previous imports found.</p>
-    {% endif %}
-  </div>
-</body>
-<script>
-async function refreshStatus() {
-  try {
-    const r = await fetch("{{ url_for('status') }}", {cache:'no-store'});
-    const s = await r.json();
-    const text = document.getElementById('status-text');
-    const btn  = document.getElementById('pause-btn');
-    if (s.running) {
-      text.textContent = `Running — step: ${s.current_step}`;
-      btn.removeAttribute('disabled');
-    } else {
-      text.textContent = 'Idle';
-      btn.setAttribute('disabled', 'disabled');
-    }
-  } catch (e) {
-    // noop
-  }
-}
-setInterval(refreshStatus, 1000);
-</script>
+    </section>
 
+    <!-- Merge PDFs -->
+    <section class="mt-5">
+      <h2 class="mb-3">Merge PDFs</h2>
+      <form method="post" action="{{ url_for('merge_pdfs') }}" enctype="multipart/form-data" class="row g-3 mb-5">
+        <div class="col-md-6">
+          <label for="merge_pdfs_input" class="form-label">Select PDF files</label>
+          <input class="form-control" type="file" id="merge_pdfs_input" name="pdfs" accept="application/pdf" multiple required>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-secondary">Merge and Download</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Daily Folders -->
+    <section class="mt-5">
+      <div class="d-flex align-items-center mb-3">
+        <h2 class="mb-0">Daily Folders</h2>
+        <form method="post" action="{{ url_for('add_daily_folder') }}" class="ms-auto row g-2 align-items-center">
+          <div class="col-auto">
+            <label class="form-label mb-0" for="target_date">Date</label>
+          </div>
+          <div class="col-auto">
+            <input type="date" id="target_date" name="target_date" class="form-control" required>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+
+      {% if daily_folders %}
+        <div class="list-group">
+          {% for item in daily_folders %}
+            <div class="list-group-item">
+              <div class="d-flex align-items-center">
+                <!-- Folder toggle -->
+                <button class="btn btn-link text-decoration-none p-0 me-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#folder-{{ loop.index }}"
+                        aria-expanded="false"
+                        aria-controls="folder-{{ loop.index }}">
+                  <span class="fw-semibold">{{ item.folder }}</span>
+                </button>
+
+                <span class="badge bg-secondary me-2">{{ item.women_count }} women</span>
+                <span class="badge bg-secondary me-3">{{ item.men_count }} men</span>
+
+                <!-- Action buttons (start automation for one row) -->
+                <form method="post" action="{{ url_for('start_men', folder=item.folder) }}" class="ms-auto me-2">
+                  <button type="submit" class="btn btn-outline-primary btn-sm">+ Men</button>
+                </form>
+                <form method="post" action="{{ url_for('start_women', folder=item.folder) }}">
+                  <button type="submit" class="btn btn-outline-danger btn-sm">+ Women</button>
+                </form>
+              </div>
+
+              <!-- Collapse content -->
+              <div id="folder-{{ loop.index }}" class="collapse mt-3">
+                <div class="row g-3">
+                  {% for sf in item.subfolders %}
+                    <div class="col-auto">
+                      <div class="card shadow-sm">
+                        <div class="card-body py-2 px-3">
+                          <span class="me-2">📁</span>
+                          <a href="{{ url_for('serve_file', filename=sf.path) }}">{{ sf.name }}</a>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="text-muted">No daily folders yet. Pick a date and click <strong>Add</strong>.</p>
+      {% endif %}
+    </section>
+  </div>
+
+  <script>
+    async function refreshStatus() {
+      try {
+        const r = await fetch("{{ url_for('status') }}", {cache:'no-store'});
+        const s = await r.json();
+        const text = document.getElementById('status-text');
+        const btn  = document.getElementById('pause-btn');
+        if (s.running) {
+          text.textContent = `Running — step: ${s.current_step}`;
+          btn.removeAttribute('disabled');
+        } else {
+          text.textContent = 'Idle';
+          btn.setAttribute('disabled', 'disabled');
+        }
+      } catch (e) {
+        // noop
+      }
+    }
+    setInterval(refreshStatus, 1000);
+  </script>
+</body>
 </html>

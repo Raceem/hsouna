@@ -9030,3 +9030,704 @@ subprocess.CalledProcessError: Command '['C:\\Python312\\python.exe', '-X', 'utf
 2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap_external>", line 1295, in create_module
 2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py]   File "<frozen importlib._bootstrap>", line 491, in _verbose_message
 2025-09-05 12:48:20 | INFO | automation_runner | automation.py:201 | [CreationReservation.py] KeyboardInterrupt
+2025-09-06 00:26:55 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:26:55 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:26:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:26:56] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:26:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:26:56] INFO CSV loaded. Rows: 1, Columns: 10
+2025-09-06 00:26:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:26:56] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:26:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:26:56] INFO === Session start ===
+2025-09-06 00:26:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:26:56] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:26:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:26:56] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:04] ERROR ❌ Fatal error for row 1 (orig index=0): HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000180D1BBEF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     sock = connection.create_connection(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     raise err
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     sock.connect(sa)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] The above exception was the direct cause of the following exception:
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     response = self._make_request(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]                ^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     conn.request(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 494, in request
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.endheaders()
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\http\client.py", line 1331, in endheaders
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     self._send_output(message_body, encode_chunked=encode_chunked)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\http\client.py", line 1091, in _send_output
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.send(msg)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\http\client.py", line 1035, in send
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.connect()
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 325, in connect
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.sock = self._new_conn()
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]                 ^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     raise NewConnectionError(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000180D1BBEF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] The above exception was the direct cause of the following exception:
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 846, in <module>
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     driver = setup_driver()
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]              ^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return webdriver.Remote(APPIUM_SERVER, options=options)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     super().__init__(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.start_session(capabilities)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 451, in execute
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 404, in execute
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self._request(command_info[0], url, body=data)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 428, in _request
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 143, in request
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self.request_encode_body(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\_request_methods.py", line 278, in request_encode_body
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self.urlopen(method, url, **extra_kw)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     response = conn.urlopen(method, u.request_uri, **kw)
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self.urlopen(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self.urlopen(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self.urlopen(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     retries = retries.increment(
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]               ^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000180D1BBEF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:05] INFO All planned rows processed.
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:05] INFO === Session end ===
+2025-09-06 00:27:05 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (9.52s)
+2025-09-06 00:27:35 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:27:35 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:27:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:36] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:27:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:36] INFO CSV loaded. Rows: 1, Columns: 10
+2025-09-06 00:27:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:36] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:27:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:36] INFO === Session start ===
+2025-09-06 00:27:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:36] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:27:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:36] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:27:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:47] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:27:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:47] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:27:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:47] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:27:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:47] INFO [login_user] Row 0: None None | type_voyage=None | CREATION=1 | RESERVATION=0
+2025-09-06 00:27:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:47] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:27:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:47] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:54] ERROR ❌ Fatal error for row 1 (orig index=0): cannot unpack non-iterable NoneType object
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 755, in login_user
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     PAYS, PAYS_UPPER = get_nationality_from_row(dict_row)
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     ^^^^^^^^^^^^^^^^
+2025-09-06 00:27:54 | INFO | automation_runner | automation.py:201 | [login.py          ] TypeError: cannot unpack non-iterable NoneType object
+2025-09-06 00:27:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:55] INFO All planned rows processed.
+2025-09-06 00:27:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:27:55] INFO === Session end ===
+2025-09-06 00:27:56 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (20.48s)
+2025-09-06 00:29:44 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:29:44 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:29:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:45] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:29:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:45] INFO CSV loaded. Rows: 1, Columns: 10
+2025-09-06 00:29:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:45] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:29:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:45] INFO === Session start ===
+2025-09-06 00:29:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:45] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:29:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:45] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:29:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:54] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:29:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:54] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:29:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:54] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:29:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:54] INFO [login_user] Row 0: None None | type_voyage=None | CREATION=1 | RESERVATION=0
+2025-09-06 00:29:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:54] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:29:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:29:54] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:30:01] ERROR ❌ Fatal error for row 1 (orig index=0): cannot unpack non-iterable NoneType object
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 755, in login_user
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ]     PAYS, PAYS_UPPER = get_nationality_from_row(dict_row)
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ]     ^^^^^^^^^^^^^^^^
+2025-09-06 00:30:01 | INFO | automation_runner | automation.py:201 | [login.py          ] TypeError: cannot unpack non-iterable NoneType object
+2025-09-06 00:30:02 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:30:02] INFO All planned rows processed.
+2025-09-06 00:30:02 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:30:02] INFO === Session end ===
+2025-09-06 00:30:02 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (17.98s)
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:33:55] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:33:55] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:33:55] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:33:55] INFO === Session start ===
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:33:55] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:33:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:33:55] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:34:03 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:03] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:34:03 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:03] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:34:03 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:03] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:34:04 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:04] INFO [login_user] Row 0: HARTANTI YOSEPHA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:34:04 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:04] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:34:04 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:04] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:34:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:11] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:34:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:16] INFO [login_user] Fetching OTP for email: gethack.e.d.045@gmail.com
+2025-09-06 00:34:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:18] INFO [login_user] OTP received: 8339
+2025-09-06 00:34:29 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:29] INFO [privacy] Consent sheet not present.
+2025-09-06 00:34:29 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:29] INFO [make_reservation] Start for row 0 (passport=X3299469)
+2025-09-06 00:34:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:30] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:34:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:37] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:34:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:37] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:34:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:37] INFO DataFrame flushed to disk.
+2025-09-06 00:34:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:38] INFO Trying to find element with text '15'
+2025-09-06 00:34:53 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:53] WARNING No timeslots available within timeout.
+2025-09-06 00:34:53 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:53] INFO [login_user] Reservation step finished for row 0
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:54] INFO All planned rows processed.
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:34:54] INFO === Session end ===
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 8339
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 8339
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:34:54 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (59.77s)
+2025-09-06 00:35:15 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:35:15 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:35:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:16] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:35:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:16] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:35:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:16] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:35:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:16] INFO === Session start ===
+2025-09-06 00:35:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:16] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:35:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:16] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:35:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:25] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:35:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:25] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:35:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:26] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:35:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:26] INFO [login_user] Row 0: HARTANTI YOSEPHA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:35:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:26] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:35:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:26] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:35:34 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:34] WARNING [safe_click] timeout waiting for tvNationality (attempt 1)
+2025-09-06 00:35:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:36] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:35:49 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:49] INFO [login_user] Fetching OTP for email: gethack.e.d.045@gmail.com
+2025-09-06 00:35:51 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:35:51] INFO [login_user] OTP received: 4040
+2025-09-06 00:36:06 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:06] INFO [privacy] Consent sheet not present.
+2025-09-06 00:36:06 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:06] INFO [make_reservation] Start for row 0 (passport=X3299469)
+2025-09-06 00:36:06 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:06] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:36:13 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:13] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:36:13 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:13] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:36:13 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:13] INFO DataFrame flushed to disk.
+2025-09-06 00:36:14 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:14] INFO Trying to find element with text '18'
+2025-09-06 00:36:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:20] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-06 00:36:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:20] INFO Pre-book check: label='jeudi, 18 septembre' | expect day in ['18'] and month='septembre' -> True/True
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:21] ERROR ❌ Fatal error for row 1 (orig index=0): cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 819, in login_user
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]     make_reservation(driver, index, dict_row)
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 665, in make_reservation
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]     if elements and "Neutre" in (elements[0].text or ""):
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ]        ^^^^^^^^
+2025-09-06 00:36:21 | INFO | automation_runner | automation.py:201 | [login.py          ] UnboundLocalError: cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:22] INFO All planned rows processed.
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:36:22] INFO === Session end ===
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 4040
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 4040
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:36:22 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (66.75s)
+2025-09-06 00:40:10 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:40:10 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:40:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:11] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:40:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:11] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:40:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:11] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:40:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:11] INFO === Session start ===
+2025-09-06 00:40:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:11] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:40:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:11] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:40:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:20] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:40:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:20] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:40:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:20] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:40:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:20] INFO [login_user] Row 0: AMALIA LOLA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:40:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:20] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:40:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:20] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:40:27 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:27] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:40:31 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:31] INFO [login_user] Fetching OTP for email: gethacke.d.04.5@gmail.com
+2025-09-06 00:40:33 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:33] INFO [login_user] OTP received: 9733
+2025-09-06 00:40:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:46] INFO [privacy] Consent sheet not present.
+2025-09-06 00:40:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:46] INFO [make_reservation] Start for row 0 (passport=X6100952)
+2025-09-06 00:40:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:46] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:40:53 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:53] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:40:53 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:53] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:40:53 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:53] INFO DataFrame flushed to disk.
+2025-09-06 00:40:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:40:54] INFO Trying to find element with text '18'
+2025-09-06 00:41:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:41:00] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-06 00:41:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:41:00] INFO Pre-book check: label='jeudi, 18 septembre' | expect day in ['18'] and month='septembre' -> True/True
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:41:01] ERROR ❌ Fatal error for row 1 (orig index=0): cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 819, in login_user
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]     make_reservation(driver, index, dict_row)
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 665, in make_reservation
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]     if elements and "Neutre" in (elements[0].text or ""):
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ]        ^^^^^^^^
+2025-09-06 00:41:01 | INFO | automation_runner | automation.py:201 | [login.py          ] UnboundLocalError: cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:41:02] INFO All planned rows processed.
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:41:02] INFO === Session end ===
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 9733
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 9733
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:41:02 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (52.22s)
+2025-09-06 00:43:09 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:43:09 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:43:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:10] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:43:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:10] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:43:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:10] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:43:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:10] INFO === Session start ===
+2025-09-06 00:43:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:10] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:43:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:10] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:43:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:18] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:43:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:18] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:43:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:18] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:43:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:18] INFO [login_user] Row 0: IMELDA NURMAYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:43:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:18] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:43:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:18] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:43:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:25] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:43:29 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:29] INFO [login_user] Fetching OTP for email: gethack.ed045@gmail.com
+2025-09-06 00:43:32 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:32] INFO [login_user] OTP received: 1345
+2025-09-06 00:43:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:44] INFO [privacy] Consent sheet not present.
+2025-09-06 00:43:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:44] INFO [make_reservation] Start for row 0 (passport=X6767604)
+2025-09-06 00:43:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:44] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:43:51 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:51] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:43:51 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:51] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:43:51 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:51] INFO DataFrame flushed to disk.
+2025-09-06 00:43:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:52] INFO Trying to find element with text '18'
+2025-09-06 00:43:58 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:58] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:59] INFO Pre-book check: label='jeudi, 18 septembre' | expect day in ['18'] and month='septembre' -> True/True
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:43:59] ERROR ❌ Fatal error for row 1 (orig index=0): cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 819, in login_user
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]     make_reservation(driver, index, dict_row)
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 665, in make_reservation
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]     if elements and "Neutre" in (elements[0].text or ""):
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ]        ^^^^^^^^
+2025-09-06 00:43:59 | INFO | automation_runner | automation.py:201 | [login.py          ] UnboundLocalError: cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:01] INFO All planned rows processed.
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:01] INFO === Session end ===
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 1345
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 1345
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:44:01 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (52.13s)
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:09] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:09] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:09] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:09] INFO === Session start ===
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:09] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:44:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:09] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:44:17 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:17] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:44:17 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:17] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:44:17 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:17] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:44:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:18] INFO [login_user] Row 0: IMELDA NURMAYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:44:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:18] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:44:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:18] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:44:24 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:24] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:44:34 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:34] ERROR Too many login errors; marking CREATION='-1'
+2025-09-06 00:44:34 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:34] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:44:34 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:34] INFO DataFrame flushed to disk.
+2025-09-06 00:44:35 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:35] INFO All planned rows processed.
+2025-09-06 00:44:35 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:35] INFO === Session end ===
+2025-09-06 00:44:35 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (26.57s)
+2025-09-06 00:44:35 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:44:35 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:36] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:36] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:36] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:36] INFO === Session start ===
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:36] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:44:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:36] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:44:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:37] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:44:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:37] INFO CSV loaded. Rows: 1, Columns: 21
+2025-09-06 00:44:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:37] INFO === Session start ===
+2025-09-06 00:44:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:37] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:44:37 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:37] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:44:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:52] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:44:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:52] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:44:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:52] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:44:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:52] INFO [login_user] Row 0: IMELDA NURMAYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:44:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:52] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:44:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:52] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:53] ERROR ❌ Fatal error for row 1 (orig index=0): Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] Stacktrace:
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     at AndroidUiautomator2Driver.click (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 749, in login_user
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvVisitor"), name="tvVisitor"):
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 201, in safe_click
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     el.click()
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 120, in click
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     self._execute(Command.CLICK_ELEMENT)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     return self._parent.execute(command, params)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.error_handler.check_response(response)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] Stacktrace:
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ] UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-09-06 00:44:53 | INFO | automation_runner | automation.py:201 | [login.py          ]     at AndroidUiautomator2Driver.click (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:54] ERROR ❌ Fatal error for row 1 (orig index=0): Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] Stacktrace:
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     at getResponseForW3CError (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 846, in <module>
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     driver = setup_driver()
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]              ^^^^^^^^^^^^^^
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\config.py", line 69, in setup_driver
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     return webdriver.Remote(APPIUM_SERVER, options=options)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     super().__init__(
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.start_session(capabilities)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     self.error_handler.check_response(response)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     raise exception_class(message, screen, stacktrace)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] Stacktrace:
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     at getResponseForW3CError (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ]     at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:54] INFO All planned rows processed.
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:54] INFO === Session end ===
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:54] INFO All planned rows processed.
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:44:54] INFO === Session end ===
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (17.58s)
+2025-09-06 00:44:54 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (18.40s)
+2025-09-06 00:44:59 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:44:59 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:45:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:00] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:45:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:00] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:45:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:00] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:45:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:00] INFO === Session start ===
+2025-09-06 00:45:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:00] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:45:00 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:00] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:45:06 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:06] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:45:06 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:06] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:45:06 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:06] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:45:07 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:07] INFO [login_user] Row 0: IMELDA NURMAYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:45:07 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:07] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:45:07 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:07] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:45:14 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:14] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:45:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:18] INFO [login_user] Fetching OTP for email: gethack.ed045@gmail.com
+2025-09-06 00:45:29 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:29] INFO [login_user] OTP received: 6254
+2025-09-06 00:45:43 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:43] INFO [privacy] Consent sheet not present.
+2025-09-06 00:45:43 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:43] INFO [make_reservation] Start for row 0 (passport=X6767604)
+2025-09-06 00:45:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:44] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO Existing booking detected; marking RESERVATION=1 and updating date/time/counters.
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO DF Update [row=0, col=date_reservation]: nan -> '18/09/2025'
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO DF Update [row=0, col=heure]: nan -> '10:00 AM'
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO DataFrame flushed to disk.
+2025-09-06 00:45:46 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:46] INFO [login_user] Reservation step finished for row 0
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:47] INFO All planned rows processed.
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:45:47] INFO === Session end ===
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 6254
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 6254
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:45:47 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (48.06s)
+2025-09-06 00:48:28 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:48:28 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:48:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:30] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:48:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:30] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:48:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:30] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:48:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:30] INFO === Session start ===
+2025-09-06 00:48:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:30] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:48:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:30] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:48:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:38] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:48:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:38] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:48:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:38] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:48:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:38] INFO [login_user] Row 0: FITRIASARI NURLIYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:48:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:38] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:48:38 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:38] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:48:45 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:45] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:48:50 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:50] INFO [login_user] Fetching OTP for email: gethacke.d.0.4.5@gmail.com
+2025-09-06 00:48:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:48:52] INFO [login_user] OTP received: 5858
+2025-09-06 00:49:08 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:08] INFO [privacy] Consent sheet not present.
+2025-09-06 00:49:08 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:08] INFO [make_reservation] Start for row 0 (passport=X6100002)
+2025-09-06 00:49:09 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:09] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:49:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:16] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:49:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:16] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:49:16 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:16] INFO DataFrame flushed to disk.
+2025-09-06 00:49:18 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:18] INFO Trying to find element with text '18'
+2025-09-06 00:49:24 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:24] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-06 00:49:24 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:24] INFO Pre-book check: label='jeudi, 18 septembre' | expect day in ['18'] and month='septembre' -> True/True
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:25] ERROR ❌ Fatal error for row 1 (orig index=0): cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 819, in login_user
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]     make_reservation(driver, index, dict_row)
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 665, in make_reservation
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]     if elements and "Neutre" in (elements[0].text or ""):
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ]        ^^^^^^^^
+2025-09-06 00:49:25 | INFO | automation_runner | automation.py:201 | [login.py          ] UnboundLocalError: cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:26] INFO All planned rows processed.
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:26] INFO === Session end ===
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 5858
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 5858
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:49:26 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (58.00s)
+2025-09-06 00:49:35 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:49:35 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:49:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:36] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:49:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:36] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:49:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:36] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:49:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:36] INFO === Session start ===
+2025-09-06 00:49:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:36] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:49:36 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:36] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:49:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:44] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:49:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:44] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:49:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:44] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:49:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:44] INFO [login_user] Row 0: FITRIASARI NURLIYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:49:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:44] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:49:44 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:44] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:49:50 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:50] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:49:58 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:58] ERROR Too many login errors; marking CREATION='-1'
+2025-09-06 00:49:58 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:58] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:49:58 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:58] INFO DataFrame flushed to disk.
+2025-09-06 00:49:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:59] INFO All planned rows processed.
+2025-09-06 00:49:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:49:59] INFO === Session end ===
+2025-09-06 00:49:59 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (23.95s)
+2025-09-06 00:50:51 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:50:51 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:50:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:52] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:50:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:52] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:50:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:52] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:50:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:52] INFO === Session start ===
+2025-09-06 00:50:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:52] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:50:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:52] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:50:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:59] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:50:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:59] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:50:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:59] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:50:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:59] INFO [login_user] Row 0: FITRIASARI NURLIYA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:50:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:59] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:50:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:50:59] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:51:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:05] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:51:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:10] INFO [login_user] Fetching OTP for email: gethacke.d.0.4.5@gmail.com
+2025-09-06 00:51:11 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:11] INFO [login_user] OTP received: 6399
+2025-09-06 00:51:23 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:23] INFO [privacy] Consent sheet not present.
+2025-09-06 00:51:23 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:23] INFO [make_reservation] Start for row 0 (passport=X6100002)
+2025-09-06 00:51:23 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:23] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO Existing booking detected; marking RESERVATION=1 and updating date/time/counters.
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO DF Update [row=0, col=date_reservation]: nan -> '18/09/2025'
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO DF Update [row=0, col=heure]: nan -> '10:00 AM'
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO DataFrame flushed to disk.
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO [login_user] Reservation step finished for row 0
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO All planned rows processed.
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:51:25] INFO === Session end ===
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 6399
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 6399
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:51:25 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:51:26 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (34.81s)
+2025-09-06 00:53:39 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:53:39 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:53:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:40] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:53:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:40] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:53:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:40] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:53:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:40] INFO === Session start ===
+2025-09-06 00:53:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:40] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:53:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:40] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:53:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:48] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:53:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:48] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:53:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:48] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:53:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:48] INFO [login_user] Row 0: SUKIAN SUHADA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:53:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:48] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:53:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:48] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:53:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:55] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:53:59 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:53:59] INFO [login_user] Fetching OTP for email: gethack.e.d045@gmail.com
+2025-09-06 00:54:01 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:01] INFO [login_user] OTP received: 6010
+2025-09-06 00:54:12 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:12] INFO [privacy] Consent sheet not present.
+2025-09-06 00:54:12 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:12] INFO [make_reservation] Start for row 0 (passport=E9681554)
+2025-09-06 00:54:12 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:12] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:54:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:19] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:54:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:19] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:54:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:19] INFO DataFrame flushed to disk.
+2025-09-06 00:54:20 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:20] INFO Trying to find element with text '18'
+2025-09-06 00:54:25 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:25] INFO Timeslots found: ['12:00 AM', '12:20 AM', '12:40 AM']
+2025-09-06 00:54:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:26] INFO Pre-book check: label='jeudi, 18 septembre' | expect day in ['18'] and month='septembre' -> True/True
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:30] ERROR ❌ Fatal error for row 1 (orig index=0): cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] Traceback (most recent call last):
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 853, in <module>
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]     login_user(driver, index, row_series)
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 819, in login_user
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]     make_reservation(driver, index, dict_row)
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]   File "C:\Users\SBS\Downloads\agence\login.py", line 665, in make_reservation
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]     if elements and "Neutre" in (elements[0].text or ""):
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ]        ^^^^^^^^
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] UnboundLocalError: cannot access local variable 'elements' where it is not associated with a value
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:30] INFO All planned rows processed.
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:54:30] INFO === Session end ===
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 6010
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 6010
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:54:30 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:54:31 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (51.72s)
+2025-09-06 00:59:04 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 00:59:04 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 00:59:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:05] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 00:59:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:05] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 00:59:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:05] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 00:59:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:05] INFO === Session start ===
+2025-09-06 00:59:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:05] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 00:59:05 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:05] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 00:59:13 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:13] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 00:59:13 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:13] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:59:14 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:14] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:59:14 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:14] INFO [login_user] Row 0: SUKIAN SUHADA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 00:59:14 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:14] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 00:59:14 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:14] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 00:59:22 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:22] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 00:59:26 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:26] INFO [login_user] Fetching OTP for email: gethack.e.d045@gmail.com
+2025-09-06 00:59:28 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:28] INFO [login_user] OTP received: 6646
+2025-09-06 00:59:39 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:39] INFO [privacy] Consent sheet not present.
+2025-09-06 00:59:39 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:39] INFO [make_reservation] Start for row 0 (passport=E9681554)
+2025-09-06 00:59:40 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:40] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 00:59:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:47] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 00:59:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:47] INFO DF Update [row=0, col=gender]: '' -> 'F'
+2025-09-06 00:59:47 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:47] INFO DataFrame flushed to disk.
+2025-09-06 00:59:48 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:48] WARNING [safe_click] retry 1 for ed_selected_date due to StaleElementReferenceException
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:55] WARNING [safe_click] timeout waiting for ed_selected_date (attempt 2)
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:55] ERROR [safe_click] failed to click ed_selected_date after 2 attempts: Message:
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ] Stacktrace:
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ] NoSuchElementError: An element could not be located on the page using the given search parameters.
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ]     at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ]     at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ]     at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 00:59:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:55] INFO [login_user] Reservation step finished for row 0
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:56] INFO All planned rows processed.
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 00:59:56] INFO === Session end ===
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 6646
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 6646
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 00:59:56 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (52.20s)
+2025-09-06 01:01:09 | INFO | automation_runner | automation.py:217 | === Login & reservation (single row) ===
+2025-09-06 01:01:09 | INFO | automation_runner | automation.py:183 | Launching: C:\Python312\python.exe -X utf8 login.py
+2025-09-06 01:01:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:10] INFO Loading CSV: C:/Users/SBS/Desktop/Hsouna\DO_NOT_TOUCH.csv
+2025-09-06 01:01:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:10] INFO CSV loaded. Rows: 1, Columns: 18
+2025-09-06 01:01:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:10] INFO Added missing gender/reserved columns and flushed to disk.
+2025-09-06 01:01:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:10] INFO === Session start ===
+2025-09-06 01:01:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:10] INFO Planned rows (need app): 1 of 1 total
+2025-09-06 01:01:10 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:10] INFO ---- Processing row 1/1 (orig index=0) ----
+2025-09-06 01:01:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:19] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 01:01:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:19] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 01:01:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:19] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 01:01:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:19] INFO [login_user] Row 0: SUKIAN SUHADA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-06 01:01:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:19] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-06 01:01:19 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:19] INFO ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-06 01:01:27 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:27] INFO [login_user] Target nationality matched; clicking: 'Indonesia'
+2025-09-06 01:01:31 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:31] INFO [login_user] Fetching OTP for email: gethack.e.d045@gmail.com
+2025-09-06 01:01:32 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:32] INFO [login_user] OTP received: 6646
+2025-09-06 01:01:35 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:35] INFO Dismissed OTP error dialog (OK).
+2025-09-06 01:01:35 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:35] WARNING [login_user] OTP invalid/expired; retrying once with a fresh code...
+2025-09-06 01:01:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:52] INFO [privacy] Consent sheet not present.
+2025-09-06 01:01:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:52] INFO [make_reservation] Start for row 0 (passport=E9681554)
+2025-09-06 01:01:52 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:52] INFO [make_reservation] Gender normalized: Unknown
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO Existing booking detected; marking RESERVATION=1 and updating date/time/counters.
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO DF Update [row=0, col=date_reservation]: nan -> '18/09/2025'
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO DF Update [row=0, col=heure]: nan -> '10:00 AM'
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO DataFrame flushed to disk.
+2025-09-06 01:01:54 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:54] INFO [login_user] Reservation step finished for row 0
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:55] INFO All planned rows processed.
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] [2025-09-06 01:01:55] INFO === Session end ===
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 6646
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 6646
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] gethacked045@gmail.com
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 📧 Objet du mail :  NUSUK-Verification Code
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 📝 Corps du mail :  رمز التحقق الخاص بك هو: 6923
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] The One Time Password Code: 6923
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:201 | [login.py          ] 
+2025-09-06 01:01:55 | INFO | automation_runner | automation.py:208 | Step 'login.py' finished OK (45.25s)
