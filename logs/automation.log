@@ -24737,3 +24737,1417 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-09-06 22:36:31 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
 2025-09-06 22:36:57 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
 2025-09-06 22:36:57 | INFO | reservation | sort.py:725 | Ligne 7: ELMAGHRABY MAHMOUD
+2025-09-06 22:52:08 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:52:08 | INFO | reservation | sort.py:725 | Ligne 1: ELMAGHRABY MAHMOUD
+2025-09-06 22:52:29 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-06 22:52:39 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:52:39 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A31877958)
+2025-09-06 22:52:46 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:52:54 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:52:54 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:52:54 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:53:20 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:53:20 | INFO | reservation | sort.py:725 | Ligne 1: AHMED AHMED
+2025-09-06 22:53:42 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:53:42 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A41645934)
+2025-09-06 22:53:49 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:53:57 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:53:57 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:53:57 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:54:23 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:54:23 | INFO | reservation | sort.py:725 | Ligne 1: WAHMAN ABDELKADER
+2025-09-06 22:54:48 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:54:48 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A36048908)
+2025-09-06 22:54:56 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:55:03 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:55:03 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:55:03 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:55:31 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:55:31 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-06 22:55:55 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-06 22:55:55 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A25610460)
+2025-09-06 22:56:03 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:56:11 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:56:11 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:56:11 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:56:42 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:56:42 | INFO | reservation | sort.py:725 | Ligne 1: MOHAMED ZAKI
+2025-09-06 22:57:03 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-06 22:57:05 | WARNING | reservation | sort.py:208 | [safe_click] retry 1 for No mobile prompt due to StaleElementReferenceException
+2025-09-06 22:57:27 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 22:57:27 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-06 22:57:28 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-06 22:57:28 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A24471432)
+2025-09-06 22:57:39 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:57:47 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-06 22:57:47 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-06 22:57:47 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-06 22:58:13 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:58:14 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-06 22:58:38 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-06 22:59:02 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 22:59:02 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-06 22:59:03 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-06 22:59:03 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29669030)
+2025-09-06 22:59:13 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 22:59:14 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-06 22:59:22 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 22:59:22 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-06 22:59:22 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-06 22:59:50 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 22:59:50 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-06 23:00:22 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 23:00:22 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-06 23:00:22 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-06 23:00:22 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A22064038)
+2025-09-06 23:00:38 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-06 23:00:46 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 23:00:46 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-06 23:00:46 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-06 23:01:12 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 23:01:12 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-06 23:01:40 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 23:01:41 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-06 23:01:41 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-06 23:01:41 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A21919904)
+2025-09-06 23:01:50 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 23:01:52 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-06 23:02:00 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 23:02:00 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-06 23:02:00 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-06 23:02:29 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 23:02:29 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-06 23:02:50 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-06 23:03:05 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-06 23:03:05 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-06 23:03:06 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-06 23:03:06 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29668851)
+2025-09-06 23:03:18 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-06 23:03:20 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-06 23:03:27 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-06 23:03:27 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-06 23:03:27 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-06 23:03:56 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-06 23:03:56 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:02:44 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:05:28 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:05:28 | INFO | reservation | sort.py:919 | [hard_reset_app] pm clear failed (continuing): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 10:05:29 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:05:29 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:05:29 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at processImmediate (node:internal/timers:453:9)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 10:05:29 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:05:29 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 10:05:29 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:05:58 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 10:05:58 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 10:05:59 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 10:05:59 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29657666)
+2025-09-07 10:06:10 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 10:06:17 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 10:06:17 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 10:06:17 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 10:06:47 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:06:47 | INFO | reservation | sort.py:919 | [hard_reset_app] pm clear failed (continuing): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 10:06:48 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:06:48 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:06:48 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 10:06:48 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:06:48 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 10:06:48 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:09:40 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:09:41 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:09:41 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:09:41 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:09:41 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:10:16 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 10:10:16 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 10:10:17 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 10:10:17 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A19305226)
+2025-09-07 10:10:27 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 10:10:29 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 10:10:36 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 10:10:36 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 10:10:36 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 10:11:06 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:11:07 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:11:07 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:11:07 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:11:07 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:11:32 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-07 10:11:40 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 2)
+2025-09-07 10:11:40 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:11:53 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Mobile retry (attempt 1)
+2025-09-07 10:11:53 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Mobile retry: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:22:59 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:23:00 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:23:00 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:23:00 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:23:01 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:23:24 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-07 10:23:43 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 10:23:43 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 10:23:44 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 10:23:44 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A19304357)
+2025-09-07 10:23:54 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 10:24:01 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 10:24:01 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 10:24:01 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 10:24:46 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:24:47 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:24:47 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:24:47 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:24:47 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:25:19 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 10:25:19 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 10:25:19 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 10:25:19 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29653060)
+2025-09-07 10:25:29 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 10:25:36 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 10:25:36 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 10:25:36 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 10:26:07 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:26:09 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:26:09 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:26:09 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:26:09 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:26:35 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-07 10:26:42 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 2)
+2025-09-07 10:26:42 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:26:50 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for No mobile prompt (attempt 1)
+2025-09-07 10:26:58 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for No mobile prompt (attempt 2)
+2025-09-07 10:26:58 | ERROR | reservation | sort.py:213 | [safe_click] failed to click No mobile prompt after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:27:01 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Password (attempt 1)
+2025-09-07 10:27:01 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Password: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:27:09 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for MuslimTerms (attempt 1)
+2025-09-07 10:27:17 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for MuslimTerms (attempt 2)
+2025-09-07 10:27:17 | ERROR | reservation | sort.py:213 | [safe_click] failed to click MuslimTerms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:27:24 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Terms (attempt 1)
+2025-09-07 10:27:32 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Terms (attempt 2)
+2025-09-07 10:27:32 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Terms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:27:39 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount submit (attempt 1)
+2025-09-07 10:27:47 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount submit (attempt 2)
+2025-09-07 10:27:47 | ERROR | reservation | sort.py:213 | [safe_click] failed to click CreateAccount submit after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:27:51 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Mobile number (attempt 1)
+2025-09-07 10:27:51 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Mobile number: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:27:58 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after mobile (attempt 1)
+2025-09-07 10:28:06 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after mobile (attempt 2)
+2025-09-07 10:28:06 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after mobile after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:28:10 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Email (attempt 1)
+2025-09-07 10:28:10 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Email: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:28:17 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after email (attempt 1)
+2025-09-07 10:28:25 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after email (attempt 2)
+2025-09-07 10:28:25 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after email after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:28:46 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-07 10:28:54 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-07 10:28:54 | ERROR | reservation | sort.py:213 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:29:01 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-07 10:29:09 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-07 10:29:09 | ERROR | reservation | sort.py:213 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:29:18 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-07 10:29:25 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-07 10:29:25 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:29:29 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Search nationality (attempt 1)
+2025-09-07 10:29:29 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Search nationality: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:29:32 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-07 10:29:32 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29657213)
+2025-09-07 10:29:40 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 10:29:48 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-07 10:29:48 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:29:48 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-07 10:30:17 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:30:18 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 10:30:18 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 10:30:18 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 10:30:18 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 10:30:43 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-07 10:30:51 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 2)
+2025-09-07 10:30:51 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:30:58 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for No mobile prompt (attempt 1)
+2025-09-07 10:31:06 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for No mobile prompt (attempt 2)
+2025-09-07 10:31:06 | ERROR | reservation | sort.py:213 | [safe_click] failed to click No mobile prompt after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:31:10 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Password (attempt 1)
+2025-09-07 10:31:10 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Password: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:31:17 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for MuslimTerms (attempt 1)
+2025-09-07 10:31:25 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for MuslimTerms (attempt 2)
+2025-09-07 10:31:25 | ERROR | reservation | sort.py:213 | [safe_click] failed to click MuslimTerms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:31:33 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Terms (attempt 1)
+2025-09-07 10:31:40 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Terms (attempt 2)
+2025-09-07 10:31:40 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Terms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:31:48 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount submit (attempt 1)
+2025-09-07 10:31:56 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount submit (attempt 2)
+2025-09-07 10:31:56 | ERROR | reservation | sort.py:213 | [safe_click] failed to click CreateAccount submit after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:31:59 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Mobile number (attempt 1)
+2025-09-07 10:31:59 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Mobile number: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:32:07 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after mobile (attempt 1)
+2025-09-07 10:32:14 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after mobile (attempt 2)
+2025-09-07 10:32:14 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after mobile after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:32:18 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Email (attempt 1)
+2025-09-07 10:32:18 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Email: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:32:26 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after email (attempt 1)
+2025-09-07 10:32:33 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after email (attempt 2)
+2025-09-07 10:32:33 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after email after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:32:54 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-07 10:33:02 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-07 10:33:02 | ERROR | reservation | sort.py:213 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:33:09 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-07 10:33:17 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-07 10:33:17 | ERROR | reservation | sort.py:213 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:33:26 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-07 10:33:33 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-07 10:33:33 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:33:37 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Search nationality (attempt 1)
+2025-09-07 10:33:37 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Search nationality: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:33:40 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-07 10:33:40 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A22895312)
+2025-09-07 10:33:48 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 10:33:56 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-07 10:33:56 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 10:33:56 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-07 11:12:12 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:12:13 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:12:13 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:12:14 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:12:14 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:12:40 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 1)
+2025-09-07 11:12:47 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after DOB (attempt 2)
+2025-09-07 11:12:47 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:12:55 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for No mobile prompt (attempt 1)
+2025-09-07 11:13:03 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for No mobile prompt (attempt 2)
+2025-09-07 11:13:03 | ERROR | reservation | sort.py:213 | [safe_click] failed to click No mobile prompt after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:13:06 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Password (attempt 1)
+2025-09-07 11:13:06 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Password: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:13:14 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for MuslimTerms (attempt 1)
+2025-09-07 11:13:22 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for MuslimTerms (attempt 2)
+2025-09-07 11:13:22 | ERROR | reservation | sort.py:213 | [safe_click] failed to click MuslimTerms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:13:29 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Terms (attempt 1)
+2025-09-07 11:13:37 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Terms (attempt 2)
+2025-09-07 11:13:37 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Terms after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:13:45 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount submit (attempt 1)
+2025-09-07 11:13:52 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount submit (attempt 2)
+2025-09-07 11:13:52 | ERROR | reservation | sort.py:213 | [safe_click] failed to click CreateAccount submit after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:13:56 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Mobile number (attempt 1)
+2025-09-07 11:13:56 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Mobile number: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:14:04 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after mobile (attempt 1)
+2025-09-07 11:14:11 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after mobile (attempt 2)
+2025-09-07 11:14:11 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after mobile after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:14:15 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Email (attempt 1)
+2025-09-07 11:14:15 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Email: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:14:23 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after email (attempt 1)
+2025-09-07 11:14:30 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Continue after email (attempt 2)
+2025-09-07 11:14:30 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Continue after email after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:14:52 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount (attempt 1)
+2025-09-07 11:14:59 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for CreateAccount (attempt 2)
+2025-09-07 11:14:59 | ERROR | reservation | sort.py:213 | [safe_click] failed to click CreateAccount after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:15:07 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for VisitorType (attempt 1)
+2025-09-07 11:15:15 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for VisitorType (attempt 2)
+2025-09-07 11:15:15 | ERROR | reservation | sort.py:213 | [safe_click] failed to click VisitorType after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:15:23 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Nationality (attempt 1)
+2025-09-07 11:15:31 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for Nationality (attempt 2)
+2025-09-07 11:15:31 | ERROR | reservation | sort.py:213 | [safe_click] failed to click Nationality after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:15:35 | WARNING | reservation | sort.py:234 | [safe_send_keys] timeout waiting for Search nationality (attempt 1)
+2025-09-07 11:15:35 | ERROR | reservation | sort.py:235 | [safe_send_keys] failed to type into Search nationality: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:15:38 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-07 11:15:38 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B15838309)
+2025-09-07 11:15:48 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 11:15:55 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-07 11:15:55 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:15:55 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-07 11:22:16 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:22:36 | INFO | reservation | sort.py:916 | [hard_reset_app] pm clear failed (continuing): Message: Cannot execute the 'pm' shell command. Original error: Command ''C:\Android\platform-tools\adb.exe' -P 5037 -s DEF4C19312001213 shell pm clear com.moh.nusukapp' timed out after 20000ms. StdOut: . StdErr: 
+Stacktrace:
+UnknownError: Cannot execute the 'pm' shell command. Original error: Command ''C:\Android\platform-tools\adb.exe' -P 5037 -s DEF4C19312001213 shell pm clear com.moh.nusukapp' timed out after 20000ms. StdOut: . StdErr: 
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Cannot execute the 'pm' shell command. Original error: Command ''C:\Android\platform-tools\adb.exe' -P 5037 -s DEF4C19312001213 shell pm clear com.moh.nusukapp' timed out after 20000ms. StdOut: . StdErr: 
+    at Object.errorWithException (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\support\lib\logging.js:41:45)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:34:20)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:12)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:12)
+2025-09-07 11:22:38 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:22:38 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:22:38 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:22:38 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:23:27 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 11:23:27 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 11:23:31 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 11:23:31 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A21381506)
+2025-09-07 11:23:40 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 11:23:49 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-07 11:23:49 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:23:49 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-07 11:29:38 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:30:25 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:30:25 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:30:25 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:30:25 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:30:25 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at processImmediate (node:internal/timers:453:9)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:30:26 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:30:55 | INFO | reservation | sort.py:430 | [privacy] Consent sheet not present.
+2025-09-07 11:30:55 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29663021)
+2025-09-07 11:31:03 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 11:31:11 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 2)
+2025-09-07 11:31:11 | ERROR | reservation | sort.py:213 | [safe_click] failed to click nobleRawdahLL after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-09-07 11:31:11 | ERROR | reservation | sort.py:524 | Could not open Noble Rawdah screen.
+2025-09-07 11:36:36 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:36:36 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:36:36 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:36:36 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:36:36 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:36:36 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:40:45 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:40:45 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:40:45 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:40:45 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:40:45 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:41:00 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:41:28 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 11:41:28 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 11:41:29 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 11:41:29 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B23237420)
+2025-09-07 11:41:38 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 11:41:40 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 11:41:47 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 11:41:47 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 11:41:47 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 11:45:00 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:45:00 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:45:00 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:45:00 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:45:00 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:45:00 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:45:30 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 11:45:30 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 11:45:31 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 11:45:31 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=A19652580)
+2025-09-07 11:45:40 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 11:45:41 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 11:45:48 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 11:45:48 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 11:45:48 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 11:46:31 | INFO | reservation | sort.py:159 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 11:46:31 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-07 11:46:31 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:46:31 | INFO | reservation | sort.py:249 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-07 11:46:31 | INFO | reservation | sort.py:255 | ADB grant failed (ok to ignore): Message: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+Stacktrace:
+UnknownError: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at getResponseForW3CError (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Potentially insecure feature 'adb_shell' has not been enabled. If you want to enable this feature and accept the security ramifications, please do so by following the documented instructions at http://appium.io/docs/en/latest/guides/security/
+    at AndroidUiautomator2Driver.assertFeatureEnabled (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\core.ts:306:13)
+    at AndroidUiautomator2Driver.mobileShell (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\shell.ts:13:8)
+    at AndroidUiautomator2Driver.executeMethod (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\execute.ts:61:26)
+    at AndroidUiautomator2Driver.execute (C:\Users\mailb\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\execute.js:17:23)
+    at runCommandPromise (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:116:20)
+    at C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:171:12
+    at AsyncLock._promiseTry (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:306:31)
+    at exec (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:170:9)
+    at AsyncLock.acquire (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\async-lock\lib\index.js:189:3)
+    at AndroidUiautomator2Driver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\driver.ts:160:39)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at defaultBehavior (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:730:14)
+    at AppiumDriver.executeWrappedCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:843:16)
+    at AppiumDriver.executeCommand (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\lib\appium.js:742:17)
+    at asyncHandler (C:\Users\mailb\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:409:19)
+2025-09-07 11:46:31 | INFO | reservation | sort.py:725 | Ligne 1: nom prenom
+2025-09-07 11:46:58 | WARNING | reservation | sort.py:467 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 11:46:58 | INFO | reservation | sort.py:433 | [privacy] Consent sheet detected; accepting…
+2025-09-07 11:46:59 | INFO | reservation | sort.py:463 | [privacy] Consent accepted.
+2025-09-07 11:46:59 | INFO | reservation | sort.py:519 | [make_reservation] Start for row 0 (passport=B29663018)
+2025-09-07 11:47:09 | WARNING | reservation | sort.py:212 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 11:47:11 | INFO | reservation | sort.py:529 | [make_reservation] Gender normalized: Unknown
+2025-09-07 11:47:18 | INFO | reservation | sort.py:132 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 11:47:18 | INFO | reservation | sort.py:132 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 11:47:18 | INFO | reservation | sort.py:127 | DataFrame flushed to disk.
+2025-09-07 12:02:34 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:02:34 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:02:36 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:02:36 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:02:36 | INFO | reservation | sort.py:750 | Ligne 1: nom prenom
+2025-09-07 12:03:10 | WARNING | reservation | sort.py:492 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 12:03:11 | INFO | reservation | sort.py:458 | [privacy] Consent sheet detected; accepting…
+2025-09-07 12:03:11 | INFO | reservation | sort.py:488 | [privacy] Consent accepted.
+2025-09-07 12:03:11 | INFO | reservation | sort.py:544 | [make_reservation] Start for row 0 (passport=A19659519)
+2025-09-07 12:03:19 | WARNING | reservation | sort.py:237 | [safe_click] timeout waiting for nobleRawdahLL (attempt 1)
+2025-09-07 12:03:25 | INFO | reservation | sort.py:554 | [make_reservation] Gender normalized: Unknown
+2025-09-07 12:03:33 | INFO | reservation | sort.py:157 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 12:03:33 | INFO | reservation | sort.py:157 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 12:03:33 | INFO | reservation | sort.py:152 | DataFrame flushed to disk.
+2025-09-07 12:03:33 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:33 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:33 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:35 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:35 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:35 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:35 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:35 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:36 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:36 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:36 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:36 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:36 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:37 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:37 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:37 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:38 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:38 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:38 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:39 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:39 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:39 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:39 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:40 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:40 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:40 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:40 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:40 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:41 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:41 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:41 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:41 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:41 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:43 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:43 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:43 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:43 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:43 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:44 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:44 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:44 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:44 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:44 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:45 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:45 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:45 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:46 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:46 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:47 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:47 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:47 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:47 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:47 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:48 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:48 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:48 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:48 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:48 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:49 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:49 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:49 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:49 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:49 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:50 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:50 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:50 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:50 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:50 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:51 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:51 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:51 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:51 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:51 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:52 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:52 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:52 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:53 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:53 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:53 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:53 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:53 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:54 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:54 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:55 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:55 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:55 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:55 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:55 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:56 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:56 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:56 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:56 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:56 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:57 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:57 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:57 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:57 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:57 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:58 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:58 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:58 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:58 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:58 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:03:59 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:59 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:03:59 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:03:59 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:03:59 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:00 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:00 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:00 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:01 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:01 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:02 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:02 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:02 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:02 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:02 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:03 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:03 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:03 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:03 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:03 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:04 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:04 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:04 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:04 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:04 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:05 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:05 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:05 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:05 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:06 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:06 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:06 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:06 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:07 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:07 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:07 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:07 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:07 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:08 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:08 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:09 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:09 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:09 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:09 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:09 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:10 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:10 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:10 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:10 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:10 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:11 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:11 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:11 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:11 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:11 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:12 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:12 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:12 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:12 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:12 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:13 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:13 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:13 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:14 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:14 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:14 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:14 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:14 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:15 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:15 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:16 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:16 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:16 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:16 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:16 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:17 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:17 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:17 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:17 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:17 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:18 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:18 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:18 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:18 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:18 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:19 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:19 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:19 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:19 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:19 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:20 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:20 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:20 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:21 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:21 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:21 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:21 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:21 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:22 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:22 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:23 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:23 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:23 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:23 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:23 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:24 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:24 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:24 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:24 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:24 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:25 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:25 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:25 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:25 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:25 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:26 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:26 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:26 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:27 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:27 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:27 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:27 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:27 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:28 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:28 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:29 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:29 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:29 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:29 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:29 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:04:30 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:30 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:04:30 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:04:30 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:04:30 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:35 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:35 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:36 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:36 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:36 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:36 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:36 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:37 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:37 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:37 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:37 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:37 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:42 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:42 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:42 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:42 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:42 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:43 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:43 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:43 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:43 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:43 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:44 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:44 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:44 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:44 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:44 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:45 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:45 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:45 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:46 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:46 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:46 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:46 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:46 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:47 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:47 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:48 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:48 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:48 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:10:48 | INFO | reservation | sort.py:1074 | Row kept and moved to bottom for later retry.
+2025-09-07 12:10:48 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:10:49 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:49 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:10:49 | INFO | reservation | sort.py:1053 | CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-07 12:13:26 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:13:26 | INFO | reservation | sort.py:977 | No more rows in C:/Users/mailb/OneDrive/Desktop/Hsouna/DO_NOT_TOUCH.csv.
+2025-09-07 12:13:26 | INFO | reservation | sort.py:1078 | All done. Exiting sort loop.
+2025-09-07 12:14:15 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:14:15 | INFO | reservation | sort.py:994 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:14:16 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:14:16 | INFO | reservation | sort.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:17:25 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:17:25 | INFO | reservation | sort.py:996 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:17:26 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:17:27 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:17:38 | INFO | reservation | sort.py:1052 | Moved to FEMMES and removed from ALL.csv
+2025-09-07 12:22:33 | INFO | reservation | sort.py:979 | No more rows in C:/Users/mailb/OneDrive/Desktop/Hsouna/_tmp/sort_one.csv.
+2025-09-07 12:22:33 | INFO | reservation | sort.py:1080 | All done. Exiting sort loop.
+2025-09-07 12:23:04 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:23:04 | INFO | reservation | sort.py:996 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:23:05 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:23:05 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:23:05 | INFO | reservation | sort.py:752 | Ligne 1: nom prenom
+2025-09-07 12:23:39 | WARNING | reservation | sort.py:494 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 12:23:39 | INFO | reservation | sort.py:460 | [privacy] Consent sheet detected; accepting…
+2025-09-07 12:23:40 | INFO | reservation | sort.py:490 | [privacy] Consent accepted.
+2025-09-07 12:23:40 | INFO | reservation | sort.py:546 | [make_reservation] Start for row 0 (passport=A19287673)
+2025-09-07 12:23:49 | INFO | reservation | sort.py:556 | [make_reservation] Gender normalized: Unknown
+2025-09-07 12:23:56 | INFO | reservation | sort.py:159 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 12:23:56 | INFO | reservation | sort.py:159 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 12:23:56 | INFO | reservation | sort.py:154 | DataFrame flushed to disk.
+2025-09-07 12:24:10 | INFO | reservation | sort.py:1052 | Moved to FEMMES and removed from ALL.csv
+2025-09-07 12:24:10 | INFO | reservation | sort.py:979 | No more rows in C:/Users/mailb/OneDrive/Desktop/Hsouna/_tmp/sort_one.csv.
+2025-09-07 12:24:10 | INFO | reservation | sort.py:1080 | All done. Exiting sort loop.
+2025-09-07 12:24:42 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:24:42 | INFO | reservation | sort.py:996 | ---- Processing row (index=0): nom prenom ----
+2025-09-07 12:24:43 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:24:43 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:24:43 | INFO | reservation | sort.py:752 | Ligne 1: nom prenom
+2025-09-07 12:25:21 | WARNING | reservation | sort.py:494 | [privacy] Could not handle consent sheet: unsupported operand type(s) for +: 'float' and 'WebDriverWait'
+2025-09-07 12:25:21 | INFO | reservation | sort.py:460 | [privacy] Consent sheet detected; accepting…
+2025-09-07 12:25:22 | INFO | reservation | sort.py:490 | [privacy] Consent accepted.
+2025-09-07 12:25:22 | INFO | reservation | sort.py:546 | [make_reservation] Start for row 0 (passport=A23223332)
+2025-09-07 12:25:29 | INFO | reservation | sort.py:556 | [make_reservation] Gender normalized: Unknown
+2025-09-07 12:25:36 | INFO | reservation | sort.py:159 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-09-07 12:25:36 | INFO | reservation | sort.py:159 | DF Update [row=0, col=gender]: nan -> 'F'
+2025-09-07 12:25:36 | INFO | reservation | sort.py:154 | DataFrame flushed to disk.
+2025-09-07 12:25:37 | INFO | reservation | sort.py:1052 | Moved to FEMMES and removed from ALL.csv
+2025-09-07 12:25:37 | INFO | reservation | sort.py:979 | No more rows in C:/Users/mailb/OneDrive/Desktop/Hsouna/_tmp/sort_one.csv.
+2025-09-07 12:25:37 | INFO | reservation | sort.py:1080 | All done. Exiting sort loop.
+2025-09-07 12:26:11 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-07 12:26:11 | INFO | reservation | sort.py:996 | ---- Processing row (index=0): nom prenom ----

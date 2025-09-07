@@ -32,6 +32,8 @@ from mail import get_verification_code
 from config import (
     CSV_FILE,
     EMAIL_JSON_FILE,
+    FEMMES_CSV_PATH,
+    HOMMES_CSV_PATH,
     NUMBER_JSON_FILE,
     setup_driver,
     PAYS_UPPER,
@@ -68,9 +70,18 @@ fh.setFormatter(logging.Formatter(
 
 #####
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
-csv_file = CSV_FILE
+
+# Accept overrides from the web app so we don't edit config.py
+csv_file = os.getenv("CSV_FILE_OVERRIDE", CSV_FILE)
+hommes_csv = HOMMES_CSV_PATH
+femmes_csv = FEMMES_CSV_PATH
+base_dir_override = os.getenv("BASE_DIR_OVERRIDE")  # optional
+
 filename_email_json = EMAIL_JSON_FILE
 filename_number_json = NUMBER_JSON_FILE
+
+df = pd.read_csv(csv_file, dtype=str, keep_default_na=False)
+
 
 ERROR_DESC_ID = "com.moh.nusukapp:id/tv_error_desc"
 ERROR_OK_ID   = "com.moh.nusukapp:id/tvYes"
@@ -84,6 +95,22 @@ logger.addHandler(ch)
 logger.addHandler(fh)
 
 # -----------------------------------------------------------------------------
+def _append_row_to_csv(dest_csv: str, row_dict: dict):
+    os.makedirs(os.path.dirname(dest_csv), exist_ok=True)
+    if not os.path.exists(dest_csv):
+        pd.DataFrame([row_dict]).to_csv(dest_csv, index=False, encoding="utf-8")
+        return
+    # align columns and append
+    existing = pd.read_csv(dest_csv, dtype=str, keep_default_na=False)
+    # add missing cols both sides
+    for c in row_dict.keys():
+        if c not in existing.columns:
+            existing[c] = ""
+    for c in existing.columns:
+        row_dict.setdefault(c, "")
+    existing = pd.concat([existing, pd.DataFrame([row_dict])[existing.columns]], ignore_index=True)
+    existing.to_csv(dest_csv, index=False, encoding="utf-8")
+
 # Config / Data
 def get_nationality_from_row(row_dict):
     """
@@ -781,10 +808,7 @@ def process_user(driver, index, row):
             jours = date_de_naissance[0:2]
             mois = mois_en_lettres(date_de_naissance[3:5])
             annee = date_de_naissance[6:]
-
-            date_pickers[0].click(); date_pickers[0].clear(); date_pickers[0].send_keys(jours)
-            date_pickers[1].click(); date_pickers[1].clear(); date_pickers[1].send_keys(mois)
-            date_pickers[2].click(); date_pickers[2].clear(); date_pickers[2].send_keys(annee)
+            date_pickers[2].click(); date_pickers[2].clear();time.sleep(0.1); date_pickers[2].send_keys("2000");time.sleep(0.1)
             date_pickers[0].click(); driver.hide_keyboard()
 
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvAdd"), "Add DOB")
@@ -899,45 +923,169 @@ def process_user(driver, index, row):
             traceback.print_exc()
             # Let the while loop retry (within same row/session) if applicable
 
-# ====== MAIN: cold restart per row ======
-for index, row in df.iterrows():
-    driver = None
-    dict_row = row.to_dict()
-    print(f"Ligne {index+1}: {dict_row.get('nom')} {dict_row.get('prenom')}")
-    if dict_row.get('CREATION') in ["1", "-1"]:
-        print("Cet utilisateur a déjà un compte")
-        continue
+def hard_reset_app(driver, package: str):
+    """
+    Equivalent to 'reset app': clears data, kills, and relaunches.
+    Works even if WebDriver has no .reset() method.
+    """
+    # 1) Clear app data (same as adb shell 'pm clear <package>')
     try:
-        print(f"\n---- Processing row (orig index={index}) ----")
+        driver.execute_script(
+            "mobile: shell",
+            {
+                "command": "pm",
+                "args": ["clear", package],
+                "includeStderr": True,
+                "timeout": 20000,
+            },
+        )
+    except Exception as e:
+        logger.info(f"[hard_reset_app] pm clear failed (continuing): {e}")
+
+    # 2) Terminate the app (ignore if not running)
+    try:
+        driver.terminate_app(package)
+    except Exception:
+        pass
+
+    # 3) Relaunch
+    driver.activate_app(package)
+
+    # Optional: your speed tweaks
+    try:
+        driver.implicitly_wait(1)
+        update_fast_settings(driver)
+    except Exception:
+        pass
+
+# ====== MAIN: cold restart per row ======
+def main():
+    # Create driver ONCE
+    driver = None
+    try:
         driver = setup_driver()
         update_fast_settings(driver)
 
-        try:
-            driver.implicitly_wait(1)  # keep tiny for speed; rely on explicit waits
-        except Exception:
-            pass
+        # We will iterate while ALL.csv still has candidates
+        while True:
+            # Always reload df to reflect prior saves/moves
+            try:
+                df_current = pd.read_csv(csv_file, dtype=str, keep_default_na=False)
+            except Exception as e:
+                logger.error("Cannot read %s: %s", csv_file, e)
+                break
 
-        # Pre-grant right after fresh session
-        #pregrant_location_permissions(driver, APP_PACKAGE)
+            if df_current.empty:
+                logger.info("No more rows in %s.", csv_file)
+                break
 
-        # Do the work for this row
-        process_user(driver, index, row)
-        determine_gender(driver, index, dict_row)
-    except Exception as e:
-        print(f"❌ Erreur fatale (row {index}): {e}")
-        traceback.print_exc()
+            # Find the first actionable row:
+            #  - if CREATION in ["1", "-1"] we will still allow moving/deleting logic below
+            #  - but we prefer to find any row that still needs creation
+            picked_idx = None
+            for i, row in df_current.iterrows():
+                picked_idx = i
+                break
+
+            if picked_idx is None:
+                logger.info("No rows found.")
+                break
+
+            row = df_current.iloc[picked_idx]
+            dict_row = row.to_dict()
+            logger.info("---- Processing row (index=%s): %s %s ----",
+                        picked_idx, dict_row.get('nom'), dict_row.get('prenom'))
+
+            # Start from a clean-ish app state between people
+            try:
+                hard_reset_app(driver, APP_PACKAGE)
+                update_fast_settings(driver)
+            except Exception as e:
+                logger.info("reset/fast settings failed (continuing): %s", e)
+
+            # If already tagged, we may just route/move
+            creation_flag = (str(dict_row.get('CREATION') or "").strip())
+            moved_or_deleted = False
+
+            try:
+                # Only try to create if not yet marked
+                if creation_flag not in {"1", "-1"}:
+                    process_user(driver, picked_idx, row)   # may set CREATION
+                    determine_gender(driver, picked_idx, dict_row)
+
+                # Reload *just this row* after process_user/determine_gender modified CSV
+                df_after = pd.read_csv(csv_file, dtype=str, keep_default_na=False)
+                if picked_idx >= len(df_after):
+                    # Row count may have changed; fallback: search by a stable key
+                    # (passport is usually stable)
+                    updated_row = None
+                    passport = (dict_row.get("numero_passport") or "").strip()
+                    if passport and "numero_passport" in df_after.columns:
+                        m = df_after[df_after["numero_passport"].astype(str).str.strip() == passport]
+                        if not m.empty:
+                            updated_row = m.iloc[0]
+                    if updated_row is None:
+                        logger.warning("Cannot locate updated row; skipping move.")
+                        continue
+                else:
+                    updated_row = df_after.iloc[picked_idx]
+
+                updated = {k: str(v) for k, v in updated_row.to_dict().items()}
+                creation_flag = (updated.get("CREATION") or "").strip()
+                gender = (updated.get("gender") or "").strip().upper()
+
+                if creation_flag == "-1":
+                    # Delete this row from ALL.csv
+                    df_after = df_after.drop(index=picked_idx).reset_index(drop=True)
+                    df_after.to_csv(csv_file, index=False, encoding="utf-8")
+                    logger.info("Marked as has account/invalid → removed from ALL.csv")
+                    moved_or_deleted = True
+
+                elif creation_flag == "1":
+                    # If we have gender, route to destination and remove from ALL
+                    if gender in {"H", "F"} and hommes_csv and femmes_csv:
+                        dest_csv = hommes_csv if gender == "H" else femmes_csv
+                        _append_row_to_csv(dest_csv, updated)
+                        # Remove from ALL
+                        df_after = df_after.drop(index=picked_idx).reset_index(drop=True)
+                        df_after.to_csv(csv_file, index=False, encoding="utf-8")
+                        logger.info("Moved to %s and removed from ALL.csv", "HOMMES" if gender == "H" else "FEMMES")
+                        moved_or_deleted = True
+                    else:
+                        logger.info("CREATION=1 but gender unknown; keeping row in ALL.csv")
+
+                else:
+                    logger.info("Row not completed yet; keeping it for retry later.")
+
+            except Exception as e:
+                logger.error("Fatal error while processing row %s: %s", picked_idx, e)
+                traceback.print_exc()
+
+            # Optional tiny pause between people (tune to your device)
+            time.sleep(0.3)
+
+            # If nothing was moved/deleted, push the row to bottom to avoid hard stuck
+            if not moved_or_deleted:
+                try:
+                    df_after = pd.read_csv(csv_file, dtype=str, keep_default_na=False)
+                    if 0 <= picked_idx < len(df_after):
+                        row_df = df_after.iloc[[picked_idx]].copy()
+                        df_rest = df_after.drop(index=picked_idx).reset_index(drop=True)
+                        df_new = pd.concat([df_rest, row_df], ignore_index=True)
+                        df_new.to_csv(csv_file, index=False, encoding="utf-8")
+                        logger.info("Row kept and moved to bottom for later retry.")
+                except Exception as e:
+                    logger.info("Could not rotate row to bottom: %s", e)
+
+        logger.info("All done. Exiting sort loop.")
 
     finally:
-        # Always end the row with a cold shutdown to guarantee a clean next start
         if driver is not None:
             try:
                 driver.quit()
             except Exception:
                 pass
-        driver = None
 
 
-
-
-
-
+if __name__ == "__main__":
+    main()

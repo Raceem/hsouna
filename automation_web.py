@@ -557,6 +557,180 @@ def get_daily_folders(sort_desc: bool = True):
 # =========================
 # Routes
 # =========================
+def _normalize_gender(g: str) -> str:
+    s = (g or "").strip().lower()
+    if s in {"h","homme","m","male","man","mâle"}: return "H"
+    if s in {"f","femme","w","woman","female","femelle"}: return "F"
+    return ""
+def _patch_first_row_in_csv(csv_path: str, updates: Dict[str, str]) -> None:
+    """Write key/value updates into the FIRST data row of csv_path, in place."""
+    try:
+        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
+        if len(df) == 0:
+            return
+        for k, v in updates.items():
+            if k not in df.columns:
+                df[k] = ""
+            df.at[0, k] = "" if v is None else str(v)
+        df.to_csv(csv_path, index=False, encoding="utf-8")
+    except Exception as e:
+        print(f"[patch_first_row] Failed to update {csv_path}: {e}")
+
+def _process_one_from_all(all_csv: str, hommes_csv: str, femmes_csv: str) -> str:
+    """
+    Processes exactly the FIRST row of ALL:
+      returns one of: 'moved_H', 'moved_F', 'dropped', 'rotated', 'empty', 'error'
+    """
+    row_series, df_all = _read_first_row(all_csv)
+    if row_series is None:
+        return "empty"
+
+    row_in = {k: ("" if v is None else str(v)) for k, v in row_series.to_dict().items()}
+
+    # temp CSV for single-row run
+    tmp_dir = os.path.join(config.BASE_DIR, "_tmp")
+    os.makedirs(tmp_dir, exist_ok=True)
+    tmp_csv = os.path.join(tmp_dir, "sort_one.csv")
+
+    required = {"CREATION","RESERVATION","gender","email","numero_tlf",
+                "numero_passport","numero_visa","NOM","PRENOM","PHONE"}
+    headers  = list(dict.fromkeys(list(row_in.keys()) + list(required)))
+    for k in required:
+        row_in.setdefault(k, "")
+
+    with open(tmp_csv, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=headers)
+        w.writeheader()
+        w.writerow({k: row_in.get(k, "") for k in headers})
+
+    # run sort.py ONLY on this temp file
+    os.environ["CSV_FILE_OVERRIDE"] = Path(tmp_csv).as_posix()
+    try:
+        automation.run_step("sort.py", "Sort one row from ALL (account creation/gender detect)")
+    except Exception:
+        return "error"
+    finally:
+        os.environ.pop("CSV_FILE_OVERRIDE", None)
+
+    # read back result
+    try:
+        df_after = pd.read_csv(tmp_csv, dtype=str, keep_default_na=False)
+        row_out = df_after.iloc[0].to_dict() if len(df_after) else {}
+    finally:
+        try:
+            os.remove(tmp_csv)
+        except Exception:
+            pass
+
+    # --- NEW: persist what sort.py discovered back into ALL.csv (first row) ---
+    creation_raw  = (row_out.get("CREATION") or "").strip()
+    gender_raw    = row_out.get("gender")
+    gender_norm   = _normalize_gender(gender_raw)
+
+    updates = {}
+    if creation_raw in {"1", "-1"}:
+        updates["CREATION"] = creation_raw
+    if gender_raw is not None:                         # keep exactly what sort.py wrote (even 'F'/'H')
+        updates["gender"] = gender_raw
+    if updates:
+        _patch_first_row_in_csv(all_csv, updates)
+
+    # act on the outcome
+    if creation_raw == "-1":
+        _drop_first_row_and_save(df_all, all_csv)
+        return "dropped"
+
+    if creation_raw == "1" and gender_norm in {"H", "F"}:
+        dest_csv = Path(hommes_csv).as_posix() if gender_norm == "H" else Path(femmes_csv).as_posix()
+        _ensure_csv(dest_csv, _safe_headers())
+        _append_row_dict(dest_csv, {k: ("" if v is None else str(v)) for k, v in row_out.items()})
+        _drop_first_row_and_save(df_all, all_csv)
+        return f"moved_{gender_norm}"
+
+    # neither success nor explicit fail → rotate first row to bottom
+    try:
+        df_rest = df_all.drop(df_all.index[0]).reset_index(drop=True)
+        row_df  = pd.DataFrame([row_in])
+
+        # align columns both ways
+        for col in df_rest.columns:
+            if col not in row_df.columns:
+                row_df[col] = ""
+        for col in row_df.columns:
+            if col not in df_rest.columns:
+                df_rest[col] = ""
+
+        row_df = row_df[df_rest.columns]
+        df_new = pd.concat([df_rest, row_df], ignore_index=True)
+        df_new.to_csv(all_csv, index=False, encoding="utf-8")
+    except Exception:
+        return "error"
+
+    return "rotated"
+
+def _drain_all_sort(max_success: Optional[int] = None):
+    """
+    Repeatedly process the first row of ALL.csv until empty or no progress.
+    """
+    try:
+        automation._STATE.set_running(True)
+        automation._STATE.set_step("Drain ALL → HOMMES/FEMMES", "sorting")
+    except Exception:
+        pass
+
+    all_csv    = Path(config.ALL_CSV_PATH).as_posix()
+    hommes_csv = Path(config.HOMMES_CSV_PATH).as_posix()
+    femmes_csv = Path(config.FEMMES_CSV_PATH).as_posix()
+
+    processed = 0
+    consecutive_rotations = 0
+
+    def _remaining() -> int:
+        try:
+            df = pd.read_csv(all_csv, dtype=str, keep_default_na=False)
+            return len(df)
+        except Exception:
+            return 0
+
+    while True:
+        # cancel support
+        snap = automation.get_status()
+        if not snap.get("running", True):
+            break
+
+        remaining_before = _remaining()
+        if remaining_before == 0:
+            break
+        if max_success is not None and processed >= max_success:
+            break
+
+        outcome = _process_one_from_all(all_csv, hommes_csv, femmes_csv)
+
+        if outcome in {"empty","error"}:
+            break
+        if outcome.startswith("moved") or outcome == "dropped":
+            processed += 1
+            consecutive_rotations = 0
+        elif outcome == "rotated":
+            consecutive_rotations += 1
+        # if we rotated as many times as the current size, no progress → stop
+        remaining_after = _remaining()
+        size_now = max(remaining_after, 1)
+        if consecutive_rotations >= size_now:
+            break
+
+        try:
+            automation._STATE.set_step(
+                f"sorted: {processed} | rotated_streak: {consecutive_rotations} | left: {remaining_after}",
+                outcome
+            )
+        except Exception:
+            pass
+
+    try:
+        automation._STATE.set_running(False)
+    except Exception:
+        pass
 
 @app.route("/", methods=["GET"])
 def index():
@@ -572,36 +746,33 @@ def index():
 
 @app.route("/all/sort", methods=["POST"])
 def all_sort():
-    # block if something else is running
     if automation.get_status().get("running"):
         flash("Another automation is already running. Please Pause/Stop first.", "warning")
         return redirect(url_for("index"))
 
+    # optional: let user cap how many successful moves to do this run
+    count_str = request.form.get("count") or request.args.get("count")
+    max_success = None
     try:
-        # Use ONLY env overrides (no edits to config.py)
-        all_csv    = Path(config.ALL_CSV_PATH).as_posix()
-        hommes_csv = Path(config.HOMMES_CSV_PATH).as_posix()
-        femmes_csv = Path(config.FEMMES_CSV_PATH).as_posix()
+        if count_str is not None:
+            v = int(count_str)
+            if v > 0:
+                max_success = v
+    except Exception:
+        pass
 
-        os.environ["CSV_FILE_OVERRIDE"]       = all_csv          # input
-        os.environ["HOMMES_CSV_OVERRIDE"]     = hommes_csv       # output
-        os.environ["FEMMES_CSV_OVERRIDE"]     = femmes_csv       # output
-        # (Optional) if your sorter also needs BASE_DIR at runtime:
-        os.environ["BASE_DIR_OVERRIDE"]       = Path(config.BASE_DIR).as_posix()
+    t = threading.Thread(
+        target=_drain_all_sort,
+        kwargs=dict(max_success=max_success),
+        daemon=True,
+        name="drain-all-sort",
+    )
+    t.start()
 
-        try:
-            # Run your sorter; it should read env overrides if present
-            automation.run_step("sort.py", "Sort ALL into HOMMES/FEMMES via sort.py")
-            flash("Sorting completed (ALL → HOMMES/FEMMES).", "success")
-        finally:
-            # Always clean up the environment
-            for k in ("CSV_FILE_OVERRIDE", "HOMMES_CSV_OVERRIDE", "FEMMES_CSV_OVERRIDE", "BASE_DIR_OVERRIDE"):
-                os.environ.pop(k, None)
-
-    except Exception as e:
-        flash(f"Sort failed: {e}", "danger")
-
+    msg = f" (target={max_success})" if max_success is not None else ""
+    flash(f"Started draining ALL → HOMMES/FEMMES{msg}. It will keep going until ALL.csv is empty or no further progress can be made.", "success")
     return redirect(url_for("index"))
+
 
 @app.route("/creation/hommes", methods=["POST"])
 def run_creation_hommes():
