@@ -378,23 +378,13 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
             lbl_g, bounds = _find_big_digit(driver, h)
             if lbl_g and bounds:
                 cx, cy = bounds["cx"], bounds["cy"]
-                if tap_xy(driver, cx, cy, label=f"{h}_tap", retries=1):
-                    time.sleep(0.15)
-                    if _confirmer_is_interactable(driver):
-                        return True
-
-            logger.info(f"Element '{h}' bounds: {bounds}")
-
-            if bounds:
-                cx, cy = bounds["cx"], bounds["cy"]
                 logger.info(f"Tapping '{h}' at ({cx}, {cy})")
                 if tap_xy(driver, cx, cy, label=f"{h}_tap", retries=1):
-                    time.sleep(0.15)
+                    time.sleep(1)
                     if _confirmer_is_interactable(driver):
                         logger.info(f"Successfully selected '{h}'")
                         return True
-                else:
-                    logger.warning(f"Tap on '{h}' failed.")
+
             else:
                 logger.warning(f"No valid bounds for element '{h}'")
         except Exception:
@@ -403,6 +393,7 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
         time.sleep(0.2)
 
     return False
+
 
 def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
     """
