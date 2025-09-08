@@ -831,41 +831,26 @@ if __name__ == "__main__":
         df_valid = df[df.apply(row_requires_app, axis=1)]
         total = len(df_valid)
         logger.info("Planned rows (need app): %s of %s total", total, len(df))
-
-        for i, (index, row_series) in enumerate(df_valid.iterrows(), start=1):
-            logger.info("---- Processing row %s/%s (orig index=%s) ----", i, total, index)
-
-            # Cold restart: quit any previous session, then create a fresh driver
-            if driver is not None:
-                try:
-                    driver.quit()
-                except Exception:
-                    pass
-                finally:
-                    driver = None
-
+        if total > 0:
             try:
                 driver = setup_driver()
                 driver.implicitly_wait(1)  # keep tiny
                 update_fast_settings(driver)
-                # Pre-grant per fresh session (fast; avoids permission UI)
                 pregrant_location_permissions(driver, APP_PACKAGE)
 
-                # Do the work
-                login_user(driver, index, row_series)
-
-            except Exception as e:
-                logger.exception("❌ Fatal error for row %s (orig index=%s): %s", i, index, e)
-
+                for i, (index, row_series) in enumerate(df_valid.iterrows(), start=1):
+                    logger.info("---- Processing row %s/%s (orig index=%s) ----", i, total, index)
+                    try:
+                        login_user(driver, index, row_series)
+                    except Exception as e:
+                        logger.exception("❌ Fatal error for row %s (orig index=%s): %s", i, index, e)
             finally:
-                # Always end this row with a cold shutdown to guarantee a clean next start
                 if driver is not None:
                     try:
                         driver.quit()
                     except Exception:
                         pass
-                    finally:
-                        driver = None
+                    driver = None
 
         logger.info("All planned rows processed.")
     except Exception as e:
