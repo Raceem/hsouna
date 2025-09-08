@@ -33465,3 +33465,1044 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-09-07 17:29:52 | INFO | reservation | login.py:802 | === Session start ===
 2025-09-07 17:29:52 | INFO | reservation | login.py:808 | Planned rows (need app): 1 of 1 total
 2025-09-07 17:29:52 | INFO | reservation | login.py:811 | ---- Processing row 1/1 (orig index=0) ----
+2025-09-08 11:48:39 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 11:48:39 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 11:49:03 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:03)
+2025-09-08 11:49:22 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:23 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:23 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:23 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:23)
+2025-09-08 11:49:24 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:24 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:24 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:24)
+2025-09-08 11:49:25 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:25 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:25 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:25)
+2025-09-08 11:49:26 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:26 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:26 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:26)
+2025-09-08 11:49:26 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:27 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:27 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:27)
+2025-09-08 11:49:28 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:28 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:28 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:28)
+2025-09-08 11:49:29 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:29 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:29 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:29)
+2025-09-08 11:49:30 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:30 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:30 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:30)
+2025-09-08 11:49:30 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:31 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:31 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:31)
+2025-09-08 11:49:31 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:31 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:31 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:31)
+2025-09-08 11:49:32 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:32 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:32 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:32)
+2025-09-08 11:49:33 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:33 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:33 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:33)
+2025-09-08 11:49:34 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:34 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:34 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:34)
+2025-09-08 11:49:35 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:35 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:35 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:35)
+2025-09-08 11:49:36 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:36 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:36 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:36)
+2025-09-08 11:49:37 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:37 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:37 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:37)
+2025-09-08 11:49:37 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:37 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:37 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:37)
+2025-09-08 11:49:38 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:38 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:38 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:38)
+2025-09-08 11:49:39 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:39 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:39 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:39)
+2025-09-08 11:49:40 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:40 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:40 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:40)
+2025-09-08 11:49:41 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:41 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:41 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:41)
+2025-09-08 11:49:41 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:41 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:41 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:41)
+2025-09-08 11:49:42 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:42 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:49:42 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:49:42)
+2025-09-08 11:52:39 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 11:52:39 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 11:52:42 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:52:42)
+2025-09-08 11:52:52 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:52:53 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:52:53 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:52:53 | INFO | reservation | login.py:725 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 11:52:53 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 11:52:53 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 11:53:05 | INFO | reservation | login.py:763 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 11:53:09 | INFO | reservation | login.py:794 | [login_user] Fetching OTP for email: getha.c.k.e.d045@gmail.com
+2025-09-08 11:53:11 | INFO | reservation | login.py:799 | [login_user] OTP received: 5508
+2025-09-08 11:53:27 | INFO | reservation | login.py:418 | [privacy] Consent sheet not present.
+2025-09-08 11:53:27 | INFO | reservation | login.py:507 | [make_reservation] Start for row 0 (passport=B37197114)
+2025-09-08 11:53:27 | INFO | reservation | login.py:517 | [make_reservation] Gender normalized: H
+2025-09-08 11:53:34 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:53:34)
+2025-09-08 11:53:35 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:53:35 | INFO | reservation | login.py:157 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 11:53:35 | INFO | reservation | login.py:725 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 11:53:35 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 11:53:35 | INFO | reservation | login.py:247 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 11:53:46 | INFO | reservation | login.py:763 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 11:53:50 | INFO | reservation | login.py:794 | [login_user] Fetching OTP for email: getha.c.k.e.d04.5@gmail.com
+2025-09-08 11:53:51 | INFO | reservation | login.py:799 | [login_user] OTP received: 9977
+2025-09-08 11:54:03 | INFO | reservation | login.py:418 | [privacy] Consent sheet not present.
+2025-09-08 11:54:03 | INFO | reservation | login.py:507 | [make_reservation] Start for row 0 (passport=B37582648)
+2025-09-08 11:54:03 | INFO | reservation | login.py:517 | [make_reservation] Gender normalized: H
+2025-09-08 11:54:10 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 11:54:10)
+2025-09-08 12:02:17 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:02:17 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:02:27 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:02:27)
+2025-09-08 12:02:37 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:02:38 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:02:38 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:02:38 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:02:38 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:02:38 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:02:49 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 12:02:53 | INFO | reservation | login.py:823 | [login_user] Fetching OTP for email: getha.c.k.e.d0.45@gmail.com
+2025-09-08 12:02:55 | INFO | reservation | login.py:828 | [login_user] OTP received: 3268
+2025-09-08 12:03:11 | INFO | reservation | login.py:447 | [privacy] Consent sheet not present.
+2025-09-08 12:03:11 | INFO | reservation | login.py:536 | [make_reservation] Start for row 0 (passport=B35051654)
+2025-09-08 12:03:12 | INFO | reservation | login.py:546 | [make_reservation] Gender normalized: H
+2025-09-08 12:03:19 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to CREATION
+2025-09-08 12:03:19 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to gender
+2025-09-08 12:03:20 | INFO | reservation | login.py:406 | Trying to find element with text '18'
+2025-09-08 12:03:24 | INFO | reservation | login.py:410 | Tapping '18' at (672, 1299)
+2025-09-08 12:07:35 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:07:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:11:36 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:11:36 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:11:44 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:44)
+2025-09-08 12:11:48 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:48)
+2025-09-08 12:11:55 | INFO | reservation | login.py:188 | Could not update driver settings: Message: The session identified by f374dcc8-4168-40ad-b613-3fc5780d8fa2 is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by f374dcc8-4168-40ad-b613-3fc5780d8fa2 is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:11:55 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:55 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:55 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:55 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:55 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:55 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:55 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:55)
+2025-09-08 12:11:56 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:56 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:56 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:56 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:56 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:56 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:56 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:56 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:56 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:56 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:56 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:56)
+2025-09-08 12:11:57 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:57)
+2025-09-08 12:11:57 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:57 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:57 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:57 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:57 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:57 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:57)
+2025-09-08 12:11:58 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:11:58 | INFO | reservation | login.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:11:58 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:58 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:58 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:58 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:58 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:58 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:58 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:58 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:58)
+2025-09-08 12:11:58 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:58 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:58)
+2025-09-08 12:11:59 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:11:59 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:59 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:11:59 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:59 | INFO | reservation | login.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:11:59 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:59 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:11:59 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:11:59 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:59 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:11:59 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:11:59)
+2025-09-08 12:12:00 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:12:00)
+2025-09-08 12:12:00 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:12:00 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:12:00 | INFO | reservation | login.py:754 | [login_user] Row 0: MAHAMMAD JEELAN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:12:00 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:12:00 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:12:00 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:12:00)
+2025-09-08 12:12:01 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:12:01 | INFO | reservation | login.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:12:01 | INFO | reservation | login.py:754 | [login_user] Row 0: AHAMED NAZEER | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:12:01 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:12:01 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:12:01 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:12:01)
+2025-09-08 12:12:01 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:12:01 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:12:01 | INFO | reservation | login.py:754 | [login_user] Row 0: BABUSAHEB SAYYAD | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:12:01 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:12:02 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:12:02 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:12:02)
+2025-09-08 12:12:02 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:12:02 | INFO | reservation | login.py:188 | Could not update driver settings: Message: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by 50ea5e8b-1872-49c2-b850-3ea13ae94a1d is not known
+	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
+	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
+	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
+	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:438)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:328)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:302)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:253)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:287)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1422)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:931)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:784)
+
+2025-09-08 12:12:02 | INFO | reservation | login.py:754 | [login_user] Row 0: MOMIN SHAHAABUDDEEN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:12:02 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:12:29 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:12:29 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:12:38 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:12:38)
+2025-09-08 12:12:48 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:12:48 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:12:49 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:12:49 | INFO | reservation | login.py:754 | [login_user] Row 0: MOMIN SHAHAABUDDEEN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:12:49 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:12:49 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:00 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'India'
+2025-09-08 12:13:04 | INFO | reservation | login.py:823 | [login_user] Fetching OTP for email: getha.ck.e.d.0.4.5@gmail.com
+2025-09-08 12:13:06 | INFO | reservation | login.py:828 | [login_user] OTP received: 2286
+2025-09-08 12:13:32 | ERROR | reservation | login.py:845 | [login_user] Post-OTP state not successful: UNKNOWN
+2025-09-08 12:13:32 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:32)
+2025-09-08 12:13:32 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:32 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:32 | INFO | reservation | login.py:754 | [login_user] Row 0: QUADRI SYEDDURWESH | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:32 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:32 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:32 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:32)
+2025-09-08 12:13:33 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:33 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:33 | INFO | reservation | login.py:754 | [login_user] Row 0: QUADRI SYEDUSMAN | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:33 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:33 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:33 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:33)
+2025-09-08 12:13:34 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:34 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:34 | INFO | reservation | login.py:754 | [login_user] Row 0: ELSAYED MALEK | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:34 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:34 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:34 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:34)
+2025-09-08 12:13:35 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:35 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:35 | INFO | reservation | login.py:754 | [login_user] Row 0: NAAMA ELSAYED | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:35 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:35 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:35 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:35)
+2025-09-08 12:13:36 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:36 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:36 | INFO | reservation | login.py:754 | [login_user] Row 0: ELAGHORY ABDELFATTAH | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:36 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:36 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:36 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:36)
+2025-09-08 12:13:36 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:36 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:36 | INFO | reservation | login.py:754 | [login_user] Row 0: HATAB AHMED | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:36 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:37 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:37 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:37)
+2025-09-08 12:13:37 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:37 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:37 | INFO | reservation | login.py:754 | [login_user] Row 0: AMER HAMDY | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:37 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:37 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:38 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:38)
+2025-09-08 12:13:38 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:38 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:38 | INFO | reservation | login.py:754 | [login_user] Row 0: YOUNES MOHAMED | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:38 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:38 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:38 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:38)
+2025-09-08 12:13:39 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:39 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:39 | INFO | reservation | login.py:754 | [login_user] Row 0: TAWFIK EZZAT | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:39 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:39 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:39 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:39)
+2025-09-08 12:13:40 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:40 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:13:40 | INFO | reservation | login.py:754 | [login_user] Row 0: ELAGHOURY SAMIR | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:40 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:40 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:13:40 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:40)
+2025-09-08 12:13:43 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:13:43)
+2025-09-08 12:13:54 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:13:55 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:13:55 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:13:55 | INFO | reservation | login.py:754 | [login_user] Row 0: ELAGHOURY REDA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:13:55 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:13:55 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:14:07 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-08 12:14:11 | INFO | reservation | login.py:823 | [login_user] Fetching OTP for email: getha.c.ke.d.0.45@gmail.com
+2025-09-08 12:14:13 | INFO | reservation | login.py:828 | [login_user] OTP received: 2003
+2025-09-08 12:14:24 | INFO | reservation | login.py:447 | [privacy] Consent sheet not present.
+2025-09-08 12:14:24 | INFO | reservation | login.py:536 | [make_reservation] Start for row 0 (passport=A36127826)
+2025-09-08 12:14:25 | INFO | reservation | login.py:546 | [make_reservation] Gender normalized: H
+2025-09-08 12:14:32 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to CREATION
+2025-09-08 12:14:32 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to gender
+2025-09-08 12:14:33 | INFO | reservation | login.py:406 | Trying to find element with text '18'
+2025-09-08 12:14:37 | INFO | reservation | login.py:410 | Tapping '18' at (672, 1299)
+2025-09-08 12:17:09 | INFO | reservation | login.py:99 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:17:09 | INFO | reservation | login.py:101 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:17:34 | INFO | reservation | login.py:99 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:17:34 | INFO | reservation | login.py:101 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:21:45 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:21:45)
+2025-09-08 12:22:00 | INFO | reservation | login.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:22:00 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:22:01 | INFO | reservation | login.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:22:01 | INFO | reservation | login.py:756 | [login_user] Row 0: ELAGHOURY REDA | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:22:01 | INFO | reservation | login.py:274 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:22:01 | INFO | reservation | login.py:274 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:22:10 | INFO | reservation | login.py:794 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-08 12:22:14 | INFO | reservation | login.py:825 | [login_user] Fetching OTP for email: getha.c.ke.d.0.45@gmail.com
+2025-09-08 12:22:16 | INFO | reservation | login.py:830 | [login_user] OTP received: 6248
+2025-09-08 12:22:27 | INFO | reservation | login.py:445 | [privacy] Consent sheet not present.
+2025-09-08 12:22:27 | INFO | reservation | login.py:534 | [make_reservation] Start for row 0 (passport=A36127826)
+2025-09-08 12:22:28 | INFO | reservation | login.py:544 | [make_reservation] Gender normalized: H
+2025-09-08 12:22:34 | WARNING | reservation | login.py:158 | _set_df: could not locate row for index_or_label=0; skipped update to CREATION
+2025-09-08 12:22:34 | WARNING | reservation | login.py:158 | _set_df: could not locate row for index_or_label=0; skipped update to gender
+2025-09-08 12:22:35 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:22:35)
+2025-09-08 12:22:36 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:22:36 | INFO | reservation | login.py:184 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:22:36 | INFO | reservation | login.py:756 | [login_user] Row 0: ABDELAAL ELSAYED | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:22:36 | INFO | reservation | login.py:274 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:22:36 | INFO | reservation | login.py:274 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:22:47 | INFO | reservation | login.py:794 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-08 12:22:51 | INFO | reservation | login.py:825 | [login_user] Fetching OTP for email: getha.c.ke.d.0.4.5@gmail.com
+2025-09-08 12:22:53 | INFO | reservation | login.py:830 | [login_user] OTP received: 6978
+2025-09-08 12:23:18 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:23:18 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:23:18 | INFO | reservation | login.py:856 | === Session start ===
+2025-09-08 12:23:18 | INFO | reservation | login.py:862 | Planned rows (need app): 0 of 0 total
+2025-09-08 12:23:18 | INFO | reservation | login.py:899 | All planned rows processed.
+2025-09-08 12:23:18 | INFO | reservation | login.py:909 | === Session end ===
+2025-09-08 12:23:36 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:23:36 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:23:45 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:23:45)
+2025-09-08 12:23:53 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:23:54 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:23:54 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:23:54 | INFO | reservation | login.py:754 | [login_user] Row 0: ABDELAAL ELSAYED | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:23:54 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:23:54 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:08 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'Egypt'
+2025-09-08 12:24:10 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:10)
+2025-09-08 12:24:10 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:10 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:10 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:10 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:10 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:10 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:10)
+2025-09-08 12:24:11 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:11 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:11 | INFO | reservation | login.py:754 | [login_user] Row 0: KHAMIS MAHMOUD | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:11 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:11 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:11 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:11)
+2025-09-08 12:24:12 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:12 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:12 | INFO | reservation | login.py:754 | [login_user] Row 0: SHEIR AHMED | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:12 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:12 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:12 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:12)
+2025-09-08 12:24:13 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:13 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:13 | INFO | reservation | login.py:754 | [login_user] Row 0: ESMAEIL YOUSEF | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:13 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:13 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:13 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:13)
+2025-09-08 12:24:14 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:14 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:14 | INFO | reservation | login.py:754 | [login_user] Row 0: SHEIR ESSAM | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:14 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:14 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:14 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:14)
+2025-09-08 12:24:15 | INFO | reservation | sort.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:15 | INFO | reservation | login.py:188 | Could not update driver settings: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /appium/settings' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.updateSettings (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:990:5)
+2025-09-08 12:24:15 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:15 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:15 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:15 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:15)
+2025-09-08 12:24:18 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:24:18)
+2025-09-08 12:24:27 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:24:28 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:24:28 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:24:28 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:24:28 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:24:28 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:24:38 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 12:24:42 | INFO | reservation | login.py:823 | [login_user] Fetching OTP for email: getha.c.k.e.d045@gmail.com
+2025-09-08 12:24:44 | INFO | reservation | login.py:828 | [login_user] OTP received: 9287
+2025-09-08 12:24:58 | INFO | reservation | login.py:447 | [privacy] Consent sheet not present.
+2025-09-08 12:24:58 | INFO | reservation | login.py:536 | [make_reservation] Start for row 0 (passport=B37197114)
+2025-09-08 12:24:58 | INFO | reservation | login.py:546 | [make_reservation] Gender normalized: H
+2025-09-08 12:25:05 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to CREATION
+2025-09-08 12:25:05 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to gender
+2025-09-08 12:25:06 | INFO | reservation | login.py:406 | Trying to find element with text '18'
+2025-09-08 12:25:09 | INFO | reservation | login.py:410 | Tapping '18' at (672, 1299)
+2025-09-08 12:25:12 | INFO | reservation | login.py:414 | Successfully selected '18'
+2025-09-08 12:25:14 | INFO | reservation | login.py:649 | Timeslots found: ['02:20 AM', '02:40 AM', '03:00 AM']
+2025-09-08 12:25:14 | INFO | reservation | login.py:525 | Pre-book check: label='jeudi, 18 septembre' | expect day in ['18'] and month='septembre' -> True/True
+2025-09-08 12:25:17 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to CREATION
+2025-09-08 12:25:17 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to RESERVATION
+2025-09-08 12:25:17 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to heure
+2025-09-08 12:25:17 | WARNING | reservation | login.py:160 | _set_df: could not locate row for index_or_label=0; skipped update to date_reservation
+2025-09-08 12:25:17 | INFO | reservation | login.py:851 | [login_user] Reservation step finished for row 0
+2025-09-08 12:25:17 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:25:17)
+2025-09-08 12:25:17 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:25:17 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:25:17 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:25:17 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:25:18 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:25:30 | WARNING | reservation | login.py:239 | [safe_click] timeout waiting for tvNationality (attempt 1)
+2025-09-08 12:25:37 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 12:25:41 | INFO | reservation | login.py:823 | [login_user] Fetching OTP for email: getha.c.k.e.d04.5@gmail.com
+2025-09-08 12:25:43 | INFO | reservation | login.py:828 | [login_user] OTP received: 9307
+2025-09-08 12:25:58 | INFO | reservation | login.py:447 | [privacy] Consent sheet not present.
+2025-09-08 12:25:58 | INFO | reservation | login.py:536 | [make_reservation] Start for row 0 (passport=B37582648)
+2025-09-08 12:25:59 | INFO | reservation | login.py:546 | [make_reservation] Gender normalized: H
+2025-09-08 12:27:36 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:27:36 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:30:03 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:30:03 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:30:52 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:30:52)
+2025-09-08 12:31:01 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:31:02 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:31:02 | INFO | reservation | login.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:31:02 | INFO | reservation | login.py:754 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:31:02 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:31:02 | INFO | reservation | login.py:276 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:31:14 | INFO | reservation | login.py:792 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 12:31:18 | INFO | reservation | login.py:823 | [login_user] Fetching OTP for email: getha.c.k.e.d04.5@gmail.com
+2025-09-08 12:31:20 | INFO | reservation | login.py:828 | [login_user] OTP received: 7203
+2025-09-08 12:31:31 | INFO | reservation | login.py:447 | [privacy] Consent sheet not present.
+2025-09-08 12:31:31 | INFO | reservation | login.py:536 | [make_reservation] Start for row 0 (passport=B37582648)
+2025-09-08 12:31:32 | INFO | reservation | login.py:546 | [make_reservation] Gender normalized: H
+2025-09-08 12:39:28 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:39:28 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:43:43 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:43:43 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:44:15 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:44:15)
+2025-09-08 12:44:24 | INFO | reservation | login.py:178 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:44:25 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:44:25 | INFO | reservation | login.py:178 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:44:25 | INFO | reservation | login.py:746 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:44:25 | INFO | reservation | login.py:268 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:44:25 | INFO | reservation | login.py:268 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:44:35 | INFO | reservation | login.py:784 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 12:44:39 | INFO | reservation | login.py:815 | [login_user] Fetching OTP for email: getha.c.k.e.d04.5@gmail.com
+2025-09-08 12:44:40 | INFO | reservation | login.py:820 | [login_user] OTP received: 6272
+2025-09-08 12:44:53 | INFO | reservation | login.py:439 | [privacy] Consent sheet not present.
+2025-09-08 12:44:53 | INFO | reservation | login.py:528 | [make_reservation] Start for row 0 (passport=B37582648)
+2025-09-08 12:44:54 | INFO | reservation | login.py:538 | [make_reservation] Gender normalized: H
+2025-09-08 12:54:35 | INFO | reservation | login.py:101 | Loading CSV: C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv
+2025-09-08 12:54:35 | INFO | reservation | login.py:103 | CSV loaded. Rows: 0, Columns: 24
+2025-09-08 12:54:42 | INFO | reservation | sort.py:102 | [SAVE] wrote → C:\Users\SBS\Desktop\Hsouna\HOMMES.csv (mtime=2025-09-08 12:54:42)
+2025-09-08 12:54:52 | INFO | reservation | login.py:178 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:54:53 | INFO | reservation | sort.py:186 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:54:53 | INFO | reservation | login.py:178 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-09-08 12:54:53 | INFO | reservation | login.py:746 | [login_user] Row 0: nom prenom | type_voyage=Groupe | CREATION=1 | RESERVATION=0
+2025-09-08 12:54:53 | INFO | reservation | login.py:268 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-09-08 12:54:53 | INFO | reservation | login.py:268 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-09-08 12:55:04 | INFO | reservation | login.py:784 | [login_user] Target nationality matched; clicking: 'Iraq'
+2025-09-08 12:55:08 | INFO | reservation | login.py:815 | [login_user] Fetching OTP for email: getha.c.k.e.d04.5@gmail.com
+2025-09-08 12:55:10 | INFO | reservation | login.py:820 | [login_user] OTP received: 7993

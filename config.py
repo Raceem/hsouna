@@ -4,8 +4,8 @@ from appium.options.android import UiAutomator2Options
 
 # Base paths
 FOLDER_NAME = "09_25__2025"
-BASE_DIR = r"C:\Users\mailb\OneDrive\Desktop\Hsouna"
-CSV_FILE = 'C:/Users/mailb/OneDrive/Desktop/Hsouna/DO_NOT_TOUCH.csv'
+BASE_DIR = r"C:\Users\SBS\Desktop\Hsouna"
+CSV_FILE = r'C:\Users\SBS\Desktop\Hsouna\DO_NOT_TOUCH.csv'
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
 NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
 # CSV files used by the web UI for statistics

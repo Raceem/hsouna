@@ -7107,3 +7107,10 @@
 2025-09-07 17:00:31 | INFO | automation_runner | automation.py:201 | [sort.py           ] [2025-09-07 17:00:31] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
 2025-09-07 17:00:31 | INFO | automation_runner | automation.py:201 | [sort.py           ] [2025-09-07 17:00:31] INFO Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
 2025-09-07 17:00:31 | INFO | automation_runner | automation.py:201 | [sort.py           ] [2025-09-07 17:00:31] INFO CREATION=1 but gender unknown; keeping row in ALL.csv
+2025-09-08 11:49:41 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-08 11:53:51 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-08 12:11:46 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-08 12:13:40 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-08 12:24:15 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-08 12:25:41 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
+2025-09-08 12:54:58 | INFO | automation_runner | automation.py:123 | Pipeline cancelled.
