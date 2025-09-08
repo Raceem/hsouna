@@ -2,7 +2,7 @@ import os
 import re
 import csv
 import threading
-from typing import List, Tuple, Dict, Optional
+from typing import List, Optional
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
@@ -78,72 +78,6 @@ def _count_rows(csv_path: str) -> int:
         return 0
 
 
-def _read_first_row(csv_path: str) -> Tuple[Optional[pd.Series], Optional[pd.DataFrame]]:
-    """
-    Return (first_row, full_df) where first_row is the first data row
-    (or None if no rows). Caller decides whether/when to drop it.
-    """
-    if not os.path.exists(csv_path):
-        return None, None
-    try:
-        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
-        if len(df) == 0:
-            return None, df
-        return df.iloc[0], df
-    except Exception as e:
-        print(f"Failed to read {csv_path}: {e}")
-        return None, None
-
-
-def _append_row_dict(dest_csv: str, row_dict: Dict[str, str]):
-    """
-    Append a row dict to dest_csv, creating file with headers if needed.
-    Preserve/extend headers if new columns appear.
-    """
-    base_headers = _safe_headers()
-    if not os.path.exists(dest_csv):
-        _ensure_csv(dest_csv, base_headers)
-
-    # Load existing headers from file
-    with open(dest_csv, "r", encoding="utf-8", newline="") as f:
-        reader = csv.reader(f)
-        try:
-            existing_headers = next(reader)
-        except StopIteration:
-            existing_headers = base_headers
-
-    # Ensure we include all keys from row_dict + existing headers
-    all_keys = list(existing_headers)
-    for k in row_dict.keys():
-        if k not in all_keys:
-            all_keys.append(k)
-
-    # If headers changed, rewrite file with new header order
-    if all_keys != existing_headers:
-        with open(dest_csv, "r", encoding="utf-8", newline="") as f:
-            rows = list(csv.DictReader(f))
-        with open(dest_csv, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=all_keys)
-            writer.writeheader()
-            for r in rows:
-                writer.writerow({k: r.get(k, "") for k in all_keys})
-
-    # Append the new row
-    with open(dest_csv, "a", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=all_keys)
-        writer.writerow({k: row_dict.get(k, "") for k in all_keys})
-
-
-def _drop_first_row_and_save(df: pd.DataFrame, src_csv: str):
-    """
-    Drop the first data row and save back (re-indexing so we never “skip”).
-    """
-    if len(df) == 0:
-        return
-    df = df.drop(df.index[0]).reset_index(drop=True)
-    df.to_csv(src_csv, index=False, encoding="utf-8")
-
-
 # =========================
 # Date parsing from folder
 # =========================
@@ -195,93 +129,6 @@ def _set_config_var(var: str, value_literal: str) -> None:
 
     with open(cfg_path, "w", encoding="utf-8") as f:
         f.write(content)
-
-
-# =========================
-# Run one row via your scripts
-# =========================
-
-def _run_one_row_via_scripts(row: Dict[str, str], target_ddmm: str) -> Tuple[bool, Dict[str, str]]:
-    """
-    Temporarily replace config.CSV_FILE with a one-row CSV, set TARGET_DATE,
-    run CreationReservation.py (if CREATION != '1') or login.py (if CREATION == '1'),
-    then read back the updated row to decide success (RESERVATION == '1').
-    """
-    # Ensure TARGET_DATE in config.py is set to DD/MM for this run
-    _set_config_var("TARGET_DATE", f'"{target_ddmm}"')
-
-    working_csv = getattr(config, "CSV_FILE")
-    print(f"Using working CSV: {working_csv}")
-
-    # ---- Build headers from the actual row keys (plus required/common ones) ----
-    required_cols = {"CREATION", "RESERVATION"}
-    common_cols = {
-        "nationalite", "email", "numero_tlf", "numero_passport",
-        "numero_visa", "gender", "date_reservation", "heure",
-        "NOM", "PRENOM", "PHONE"
-    }
-    headers = list(dict.fromkeys(list(row.keys()) + list(required_cols | common_cols)))  # ordered, de-duped
-
-    # Guarantee required/common fields exist in the row dict
-    for k in required_cols | common_cols:
-        row.setdefault(k, "")
-
-    # 1) Back up original working CSV if it exists
-    backup_path = None
-    if os.path.exists(working_csv):
-        backup_path = working_csv + ".bak"
-        try:
-            os.replace(working_csv, backup_path)
-        except Exception:
-            import shutil
-            shutil.copy2(working_csv, backup_path)
-            os.remove(working_csv)
-
-    # 2) Write the single-row working CSV (with full headers)
-    with open(working_csv, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=headers)
-        writer.writeheader()
-        writer.writerow({k: row.get(k, "") for k in headers})
-
-    # 3) Decide which script to run
-    creation_flag = (row.get("CREATION") or "").strip()
-    if creation_flag == "1":
-        script, desc = "login.py", "Login & reservation (single row)"
-    else:
-        script, desc = "CreationReservation.py", "Create account & reservation (single row)"
-
-    ok = False
-    out_row = dict(row)
-    try:
-        # 4) Run the script (synchronously)
-        automation.run_step(script, desc)
-
-        # 5) Read the updated working CSV
-        try:
-            df_after = pd.read_csv(working_csv, dtype=str, keep_default_na=False)
-            if len(df_after) > 0:
-                out_row = {k: ("" if pd.isna(v) else str(v)) for k, v in df_after.iloc[0].to_dict().items()}
-                ok = (out_row.get("RESERVATION") or "").strip() == "1"
-            else:
-                ok = False
-        except Exception as e:
-            print(f"Failed to read working CSV after script: {e}")
-            ok = False
-    finally:
-        # 6) Restore or remove working CSV to leave environment clean
-        try:
-            os.remove(working_csv)
-        except Exception:
-            pass
-        if backup_path and os.path.exists(backup_path):
-            try:
-                os.replace(backup_path, working_csv)
-            except Exception:
-                import shutil
-                shutil.copy2(backup_path, working_csv)
-                os.remove(backup_path)
-
-    return ok, out_row
 
 
 
@@ -460,6 +307,46 @@ def run_creation_femmes():
             os.environ.pop("CSV_FILE_OVERRIDE", None)
     except Exception as e:
         flash(f"Creation failed: {e}", "danger")
+    return redirect(url_for("index"))
+
+
+@app.route("/run_batch", methods=["POST"])
+def run_batch():
+    if automation.get_status().get("running"):
+        flash("Another automation is already running. Please Pause/Stop first.", "warning")
+        return redirect(url_for("index"))
+
+    folder = (request.form.get("folder") or "").strip()
+    gender = request.form.get("gender")
+    try:
+        count = max(int(request.form.get("count", "1")), 1)
+    except ValueError:
+        count = 1
+
+    target_ddmm = parse_target_date_from_folder(folder)
+    if not target_ddmm:
+        flash("Invalid folder name for target date.", "danger")
+        return redirect(url_for("index"))
+
+    if gender == "men":
+        src_csv = config.HOMMES_CSV_PATH
+        dest_csv = os.path.join(config.BASE_DIR, folder, "hommes.csv")
+    else:
+        src_csv = config.FEMMES_CSV_PATH
+        dest_csv = os.path.join(config.BASE_DIR, folder, "femmes.csv")
+
+    try:
+        processed, success = automation.run_gender_batch(src_csv, dest_csv, target_ddmm, count)
+        if processed == 0:
+            flash("No rows available to process.", "info")
+        else:
+            flash(
+                f"Processed {processed} rows from {'HOMMES' if gender == 'men' else 'FEMMES'}. Success: {success}",
+                "success",
+            )
+    except Exception as e:
+        flash(f"Batch failed: {e}", "danger")
+
     return redirect(url_for("index"))
 @app.route("/add_daily_folder", methods=["POST"])
 def add_daily_folder():

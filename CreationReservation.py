@@ -335,39 +335,33 @@ def process_user(driver, index, row):
             traceback.print_exc()
             # Let the while loop retry (within same row/session) if applicable
 
-# ====== MAIN: cold restart per row ======
-for index, row in df.iterrows():
-    driver = None
-    dict_row = row.to_dict()
-    print(f"Ligne {index+1}: {dict_row.get('nom')} {dict_row.get('prenom')} || {dict_row.get('type_voyage')} || {dict_row.get('date_entree_madinah')}")
-    if dict_row.get('CREATION') in ["1", "-1"]:
-        print("Cet utilisateur a déjà un compte")
-        continue
+# ====== MAIN: reuse a single driver for all rows ======
+driver = None
+try:
+    driver = setup_driver()
+    update_fast_settings(driver)
     try:
-        print(f"\n---- Processing row (orig index={index}) ----")
-        driver = setup_driver()
-        update_fast_settings(driver)
+        driver.implicitly_wait(1)  # keep tiny for speed; rely on explicit waits
+    except Exception:
+        pass
 
+    pregrant_location_permissions(driver, APP_PACKAGE)
+
+    for index, row in df.iterrows():
+        dict_row = row.to_dict()
+        print(f"Ligne {index+1}: {dict_row.get('nom')} {dict_row.get('prenom')} || {dict_row.get('type_voyage')} || {dict_row.get('date_entree_madinah')}")
+        if dict_row.get('CREATION') in ["1", "-1"]:
+            print("Cet utilisateur a déjà un compte")
+            continue
         try:
-            driver.implicitly_wait(1)  # keep tiny for speed; rely on explicit waits
+            print(f"\n---- Processing row (orig index={index}) ----")
+            process_user(driver, index, row)
+        except Exception as e:
+            print(f"❌ Erreur fatale (row {index}): {e}")
+            traceback.print_exc()
+finally:
+    if driver is not None:
+        try:
+            driver.quit()
         except Exception:
             pass
-
-        # Pre-grant right after fresh session
-        pregrant_location_permissions(driver, APP_PACKAGE)
-
-        # Do the work for this row
-        process_user(driver, index, row)
-
-    except Exception as e:
-        print(f"❌ Erreur fatale (row {index}): {e}")
-        traceback.print_exc()
-
-    finally:
-        # Always end the row with a cold shutdown to guarantee a clean next start
-        if driver is not None:
-            try:
-                driver.quit()
-            except Exception:
-                pass
-        driver = None

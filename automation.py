@@ -8,9 +8,13 @@ import subprocess
 import sys
 import time
 import threading
+import csv
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, List, Tuple
+
+import pandas as pd
+import config
 
 # ---------------------------------------------------------------------
 # Force our own stdout to utf-8 too (helps if piping)
@@ -170,6 +174,90 @@ def update_config(folder_name: str, target_date: str, pdf_filename: str):
     _write_text(CONFIG_PATH, content)
     logger.info("config.py updated successfully.")
 
+# ===== CSV helpers for batch processing ======================================
+
+def _safe_headers() -> List[str]:
+    headers = getattr(config, "FIELDNAMES", None)
+    if isinstance(headers, list) and headers:
+        return headers
+    return [
+        "NOM", "PRENOM", "PHONE",
+        "CREATION", "RESERVATION",
+        "gender", "email", "numero_tlf",
+        "numero_passport", "numero_visa",
+        "nationalite", "date_reservation", "heure",
+    ]
+
+
+def _ensure_csv(path: str, headers: List[str]):
+    folder = os.path.dirname(path)
+    if folder and not os.path.exists(folder):
+        os.makedirs(folder, exist_ok=True)
+    if not os.path.exists(path):
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(headers)
+
+
+def _append_row_dict(dest_csv: str, row_dict: Dict[str, str]):
+    base_headers = _safe_headers()
+    if not os.path.exists(dest_csv):
+        _ensure_csv(dest_csv, base_headers)
+
+    with open(dest_csv, "r", encoding="utf-8", newline="") as f:
+        reader = csv.reader(f)
+        try:
+            existing_headers = next(reader)
+        except StopIteration:
+            existing_headers = base_headers
+
+    all_keys = list(existing_headers)
+    for k in row_dict.keys():
+        if k not in all_keys:
+            all_keys.append(k)
+
+    if all_keys != existing_headers:
+        with open(dest_csv, "r", encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+        with open(dest_csv, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=all_keys)
+            writer.writeheader()
+            for r in rows:
+                writer.writerow({k: r.get(k, "") for k in all_keys})
+
+    with open(dest_csv, "a", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=all_keys)
+        writer.writerow({k: row_dict.get(k, "") for k in all_keys})
+
+
+def _read_first_row(csv_path: str) -> Tuple[Optional[pd.Series], pd.DataFrame]:
+    if not os.path.exists(csv_path):
+        return None, pd.DataFrame()
+    try:
+        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
+        if len(df) == 0:
+            return None, df
+        return df.iloc[0], df
+    except Exception as e:
+        logger.error("Failed to read %s: %s", csv_path, e)
+        return None, pd.DataFrame()
+
+
+def _set_config_var(var: str, value_literal: str) -> None:
+    try:
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            content = f.read()
+    except FileNotFoundError:
+        raise FileNotFoundError(f"config.py not found at {CONFIG_PATH}")
+
+    pattern = re.compile(rf"^{var}\s*=.*$", re.MULTILINE)
+    if pattern.search(content):
+        content = pattern.sub(f"{var} = {value_literal}", content)
+    else:
+        content += f"\n{var} = {value_literal}\n"
+    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
+        f.write(content)
+
 # ===== Subprocess runner =======================================================
 
 def _run_child(cmd: list[str], log_prefix: str):
@@ -216,6 +304,79 @@ def run_step(script: str, description: str):
     cmd = [sys.executable, "-X", "utf8", script]
     logger.info("=== %s ===", description)
     _run_child(cmd, script)
+
+
+def _run_rows_via_script(df_rows: pd.DataFrame, target_ddmm: str, script: str, desc: str) -> pd.DataFrame:
+    """Write df_rows to config.CSV_FILE, run script, return resulting DataFrame."""
+    _set_config_var("TARGET_DATE", f'"{target_ddmm}"')
+    working_csv = getattr(config, "CSV_FILE")
+
+    backup_path = None
+    if os.path.exists(working_csv):
+        backup_path = working_csv + ".bak"
+        try:
+            os.replace(working_csv, backup_path)
+        except Exception:
+            shutil.copy2(working_csv, backup_path)
+            os.remove(working_csv)
+
+    df_rows.to_csv(working_csv, index=False, encoding="utf-8")
+
+    try:
+        run_step(script, desc)
+        try:
+            df_after = pd.read_csv(working_csv, dtype=str, keep_default_na=False)
+        except Exception as e:
+            logger.error("Failed to read working CSV after %s: %s", script, e)
+            df_after = df_rows
+    finally:
+        try:
+            os.remove(working_csv)
+        except Exception:
+            pass
+        if backup_path and os.path.exists(backup_path):
+            try:
+                os.replace(backup_path, working_csv)
+            except Exception:
+                shutil.copy2(backup_path, working_csv)
+                os.remove(backup_path)
+
+    return df_after
+
+
+def run_gender_batch(src_csv: str, dest_csv: str, target_ddmm: str, target_successes: int) -> Tuple[int, int]:
+    """Process rows sequentially until target_successes reservations succeed."""
+    _STATE.set_running(True)
+    _STATE.set_error("")
+    processed = 0
+    success = 0
+    try:
+        while success < target_successes:
+            row, full_df = _read_first_row(src_csv)
+            if row is None or full_df.empty:
+                break
+
+            script = "login.py" if str(row.get("CREATION")) == "1" else "CreationReservation.py"
+            out_df = _run_rows_via_script(pd.DataFrame([row]), target_ddmm, script, f"Row {processed+1}")
+            out_row = out_df.iloc[0].to_dict()
+            reservation_ok = str(out_row.get("RESERVATION", "")) == "1"
+
+            full_df = full_df.drop(full_df.index[0]).reset_index(drop=True)
+            if reservation_ok:
+                _append_row_dict(dest_csv, out_row)
+                success += 1
+            else:
+                full_df = pd.concat([full_df, out_df], ignore_index=True)
+
+            full_df.to_csv(src_csv, index=False, encoding="utf-8")
+            processed += 1
+    except Exception as e:
+        _STATE.set_error(str(e))
+        raise
+    finally:
+        _STATE.set_running(False)
+
+    return processed, success
 
 # ===== Pipeline (sync) & async wrapper ========================================
 

@@ -156,15 +156,13 @@
                 <span class="badge bg-secondary me-2">{{ item.women_count }} women</span>
                 <span class="badge bg-secondary me-3">{{ item.men_count }} men</span>
 
-                <!-- Action buttons (start automation for one row) -->
-  <!-- Action buttons (static) -->
-              <div class="ms-auto me-2">
-                <button type="button" class="btn btn-outline-primary btn-sm">+ Men</button>
-              </div>
-
-              <div>
-                <button type="button" class="btn btn-outline-danger btn-sm">+ Women</button>
-              </div>
+                <!-- Action buttons -->
+                <form method="post" action="{{ url_for('run_batch') }}" class="d-flex align-items-center ms-auto">
+                  <input type="hidden" name="folder" value="{{ item.folder }}">
+                  <input type="number" name="count" value="1" min="1" class="form-control form-control-sm me-2" style="width:80px;">
+                  <button type="submit" name="gender" value="men" class="btn btn-outline-primary btn-sm me-2">+ Men</button>
+                  <button type="submit" name="gender" value="women" class="btn btn-outline-danger btn-sm">+ Women</button>
+                </form>
 
               </div>
 
