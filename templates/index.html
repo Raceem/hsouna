@@ -29,7 +29,7 @@
       </div>
       <form method="post" action="{{ url_for('pause') }}">
         <button class="btn btn-warning" id="pause-btn" {% if not status.running %}disabled{% endif %}>
-          Pause / Stop
+          ne marche pas, debranchi telifoun
         </button>
       </form>
     </div>
@@ -143,7 +143,6 @@
           {% for item in daily_folders %}
             <div class="list-group-item">
                <div class="d-flex align-items-center folder-row">
-                <input type="checkbox" class="form-check-input me-2 prioritize-checkbox" title="Prioritize rows with existing accounts">
                 <!-- Folder toggle -->
                 <button class="btn btn-link text-decoration-none p-0 me-3"
                         type="button"
@@ -157,20 +156,14 @@
                 <span class="badge bg-secondary me-2">{{ item.women_count }} women</span>
                 <span class="badge bg-secondary me-3">{{ item.men_count }} men</span>
 
-                <!-- Action buttons (start automation for one row) -->
-              <form method="post" action="{{ url_for('start_men', folder=item.folder) }}" class="ms-auto me-2 d-flex align-items-center gap-2">
-                <input type="hidden" name="prioritize_creation" value="0" class="prioritize-input">
-                <input type="number" name="count" min="1" class="form-control form-control-sm" style="width: 90px"
-                      placeholder="count" title="Target successful reservations (optional)">
-                      <input type="hidden" name="prioritize_creation" value="0" class="prioritize-input">
-                <button type="submit" class="btn btn-outline-primary btn-sm">+ Men</button>
-              </form>
+                <!-- Action buttons -->
+                <form method="post" action="{{ url_for('run_batch_multi') }}" class="d-flex align-items-center ms-auto">
+                  <input type="hidden" name="folder" value="{{ item.folder }}">
+                  <input type="number" name="count" value="1" min="1" class="form-control form-control-sm me-2" style="width:80px;">
+                  <button type="submit" name="gender" value="men" class="btn btn-outline-primary btn-sm me-2">+ Men</button>
+                  <button type="submit" name="gender" value="women" class="btn btn-outline-danger btn-sm">+ Women</button>
+                </form>
 
-              <form method="post" action="{{ url_for('start_women', folder=item.folder) }}" class="d-flex align-items-center gap-2">
-                <input type="number" name="count" min="1" class="form-control form-control-sm" style="width: 90px"
-                      placeholder="count" title="Target successful reservations (optional)">
-                <button type="submit" class="btn btn-outline-danger btn-sm">+ Women</button>
-              </form>
               </div>
 
               <!-- Collapse content -->
@@ -198,15 +191,6 @@
   </div>
 
   <script>
-        document.querySelectorAll('.folder-row').forEach(row => {
-      const checkbox = row.querySelector('.prioritize-checkbox');
-      row.querySelectorAll('form').forEach(form => {
-        form.addEventListener('submit', () => {
-          const hidden = form.querySelector('.prioritize-input');
-          if (hidden) hidden.value = checkbox.checked ? '1' : '0';
-        });
-      });
-    });
     async function refreshStatus() {
       try {
         const r = await fetch("{{ url_for('status') }}", {cache:'no-store'});

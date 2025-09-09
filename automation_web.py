@@ -1,8 +1,11 @@
+# automation_web.py
+from __future__ import annotations
+
 import os
 import re
 import csv
 import threading
-from typing import List, Tuple, Dict, Optional
+from typing import List, Optional
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
@@ -23,6 +26,7 @@ from PyPDF2 import PdfMerger
 
 import automation
 import config
+from workers import DeviceWorker  # NEW: multi-device workers
 
 
 app = Flask(__name__)
@@ -78,72 +82,6 @@ def _count_rows(csv_path: str) -> int:
         return 0
 
 
-def _read_first_row(csv_path: str) -> Tuple[Optional[pd.Series], Optional[pd.DataFrame]]:
-    """
-    Return (first_row, full_df) where first_row is the first data row
-    (or None if no rows). Caller decides whether/when to drop it.
-    """
-    if not os.path.exists(csv_path):
-        return None, None
-    try:
-        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
-        if len(df) == 0:
-            return None, df
-        return df.iloc[0], df
-    except Exception as e:
-        print(f"Failed to read {csv_path}: {e}")
-        return None, None
-
-
-def _append_row_dict(dest_csv: str, row_dict: Dict[str, str]):
-    """
-    Append a row dict to dest_csv, creating file with headers if needed.
-    Preserve/extend headers if new columns appear.
-    """
-    base_headers = _safe_headers()
-    if not os.path.exists(dest_csv):
-        _ensure_csv(dest_csv, base_headers)
-
-    # Load existing headers from file
-    with open(dest_csv, "r", encoding="utf-8", newline="") as f:
-        reader = csv.reader(f)
-        try:
-            existing_headers = next(reader)
-        except StopIteration:
-            existing_headers = base_headers
-
-    # Ensure we include all keys from row_dict + existing headers
-    all_keys = list(existing_headers)
-    for k in row_dict.keys():
-        if k not in all_keys:
-            all_keys.append(k)
-
-    # If headers changed, rewrite file with new header order
-    if all_keys != existing_headers:
-        with open(dest_csv, "r", encoding="utf-8", newline="") as f:
-            rows = list(csv.DictReader(f))
-        with open(dest_csv, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=all_keys)
-            writer.writeheader()
-            for r in rows:
-                writer.writerow({k: r.get(k, "") for k in all_keys})
-
-    # Append the new row
-    with open(dest_csv, "a", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=all_keys)
-        writer.writerow({k: row_dict.get(k, "") for k in all_keys})
-
-
-def _drop_first_row_and_save(df: pd.DataFrame, src_csv: str):
-    """
-    Drop the first data row and save back (re-indexing so we never “skip”).
-    """
-    if len(df) == 0:
-        return
-    df = df.drop(df.index[0]).reset_index(drop=True)
-    df.to_csv(src_csv, index=False, encoding="utf-8")
-
-
 # =========================
 # Date parsing from folder
 # =========================
@@ -197,262 +135,8 @@ def _set_config_var(var: str, value_literal: str) -> None:
         f.write(content)
 
 
-# =========================
-# Run one row via your scripts
-# =========================
-
-def _run_one_row_via_scripts(row: Dict[str, str], target_ddmm: str) -> Tuple[bool, Dict[str, str]]:
-    """
-    Temporarily replace config.CSV_FILE with a one-row CSV, set TARGET_DATE,
-    run CreationReservation.py (if CREATION != '1') or login.py (if CREATION == '1'),
-    then read back the updated row to decide success (RESERVATION == '1').
-    """
-    # Ensure TARGET_DATE in config.py is set to DD/MM for this run
-    _set_config_var("TARGET_DATE", f'"{target_ddmm}"')
-
-    working_csv = getattr(config, "CSV_FILE")
-    print(f"Using working CSV: {working_csv}")
-
-    # ---- Build headers from the actual row keys (plus required/common ones) ----
-    required_cols = {"CREATION", "RESERVATION"}
-    common_cols = {
-        "nationalite", "email", "numero_tlf", "numero_passport",
-        "numero_visa", "gender", "date_reservation", "heure",
-        "NOM", "PRENOM", "PHONE"
-    }
-    headers = list(dict.fromkeys(list(row.keys()) + list(required_cols | common_cols)))  # ordered, de-duped
-
-    # Guarantee required/common fields exist in the row dict
-    for k in required_cols | common_cols:
-        row.setdefault(k, "")
-
-    # 1) Back up original working CSV if it exists
-    backup_path = None
-    if os.path.exists(working_csv):
-        backup_path = working_csv + ".bak"
-        try:
-            os.replace(working_csv, backup_path)
-        except Exception:
-            import shutil
-            shutil.copy2(working_csv, backup_path)
-            os.remove(working_csv)
-
-    # 2) Write the single-row working CSV (with full headers)
-    with open(working_csv, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=headers)
-        writer.writeheader()
-        writer.writerow({k: row.get(k, "") for k in headers})
-
-    # 3) Decide which script to run
-    creation_flag = (row.get("CREATION") or "").strip()
-    if creation_flag == "1":
-        script, desc = "login.py", "Login & reservation (single row)"
-    else:
-        script, desc = "CreationReservation.py", "Create account & reservation (single row)"
-
-    ok = False
-    out_row = dict(row)
-    try:
-        # 4) Run the script (synchronously)
-        automation.run_step(script, desc)
-
-        # 5) Read the updated working CSV
-        try:
-            df_after = pd.read_csv(working_csv, dtype=str, keep_default_na=False)
-            if len(df_after) > 0:
-                out_row = {k: ("" if pd.isna(v) else str(v)) for k, v in df_after.iloc[0].to_dict().items()}
-                ok = (out_row.get("RESERVATION") or "").strip() == "1"
-            else:
-                ok = False
-        except Exception as e:
-            print(f"Failed to read working CSV after script: {e}")
-            ok = False
-    finally:
-        # 6) Restore or remove working CSV to leave environment clean
-        try:
-            os.remove(working_csv)
-        except Exception:
-            pass
-        if backup_path and os.path.exists(backup_path):
-            try:
-                os.replace(backup_path, working_csv)
-            except Exception:
-                import shutil
-                shutil.copy2(backup_path, working_csv)
-                os.remove(backup_path)
-
-    return ok, out_row
 
 
-def _handle_plus_action(big_csv_path: str, dest_folder: str, dest_file: str, label_for_flash: str):
-    """
-    Single-shot handler for + Men / + Women:
-      - parse date from folder name (MM_DD__YYYY or MM/DD/YYYY) -> DD/MM
-      - read the first row from the big CSV
-      - set TARGET_DATE to DD/MM and run correct script for that row
-      - on success: drop it from big CSV, append to destination folder CSV
-    """
-    # 0) Derive target date from folder name
-    target_ddmm = parse_target_date_from_folder(dest_folder)
-    if not target_ddmm:
-        flash(f"{label_for_flash}: cannot parse date from folder name '{dest_folder}'. Expected MM_DD__YYYY or MM/DD/YYYY.", "danger")
-        return
-
-    # 1) Read first data row from the big CSV
-    row_series, df_big = _read_first_row(big_csv_path)
-    if row_series is None:
-        flash(f"No rows available in {os.path.basename(big_csv_path)}.", "warning")
-        return
-    row = {k: ("" if v is None else str(v)) for k, v in row_series.to_dict().items()}
-
-    # 2) Run via your scripts with TARGET_DATE set to the folder's date (DD/MM)
-    ok, row_out = _run_one_row_via_scripts(row, target_ddmm)
-    if not ok:
-        flash(f"{label_for_flash}: automation did not complete successfully.", "danger")
-        return
-
-    # 3) On success → move row: remove from big CSV, append into the daily folder CSV
-    folder_root = os.path.join(config.BASE_DIR, dest_folder)
-    if not os.path.isdir(folder_root):
-        flash(f"Destination folder not found: {dest_folder}", "danger")
-        return
-
-    dest_csv = os.path.join(folder_root, dest_file)
-    _ensure_csv(dest_csv, _safe_headers())
-
-    # Remove first row from big CSV and reindex (so the next click picks the next person)
-    _drop_first_row_and_save(df_big, big_csv_path)
-
-    # Append the updated row to the selected folder CSV
-    _append_row_dict(dest_csv, row_out)
-
-    flash(f"{label_for_flash}: processed for {target_ddmm} and moved to {dest_file}.", "success")
-
-
-# =========================
-# Background drainers (skip failures)
-# =========================
-
-def _drain_big_csv_for_folder(*, big_csv_path: str, dest_folder: str, dest_file: str, label_for_flash: str,   max_success: Optional[int] = None,
-                              prioritize_creation: bool = False,
-):
-    """
-    Background loop: take the first row from big_csv_path, run scripts using the
-    folder's date, on success move it into BASE_DIR/<dest_folder>/<dest_file>,
-    on failure SKIP the row (drop it) and continue, until the big CSV is empty
-    or a user cancel occurs (Pause/Stop).
-    """
-    try:
-        # Mark as running for the duration of the draining session
-        automation._STATE.set_running(True)
-        automation._STATE.set_step(f"Drain {os.path.basename(big_csv_path)} → {dest_folder}", f"{label_for_flash} draining")
-    except Exception:
-        pass
-
-    try:
-        # Resolve once (same date for all rows in this run)
-        target_ddmm = parse_target_date_from_folder(dest_folder)
-        if not target_ddmm:
-            print(f"[drain] Cannot parse date from folder name: {dest_folder}")
-            return
-
-        # Ensure destination exists
-        folder_root = os.path.join(config.BASE_DIR, dest_folder)
-        os.makedirs(folder_root, exist_ok=True)
-        _ensure_csv(os.path.join(folder_root, dest_file), _safe_headers())
-        if prioritize_creation and os.path.exists(big_csv_path):
-            try:
-                df_pri = pd.read_csv(big_csv_path, dtype=str, keep_default_na=False)
-                if "CREATION" in df_pri.columns:
-                    df_pri["__creation_int__"] = pd.to_numeric(df_pri["CREATION"], errors="coerce").fillna(0).astype(int)
-                    df_pri.sort_values("__creation_int__", ascending=False, inplace=True)
-                    df_pri.drop(columns="__creation_int__", inplace=True)
-                    df_pri.to_csv(big_csv_path, index=False, encoding="utf-8")
-            except Exception as e:
-                print(f"[drain] Could not prioritize CREATION rows: {e}")
-        # A place to log skipped rows (audit)
-        processed = 0
-        skipped = 0
-
-        while True:
-            if max_success is not None and processed >= max_success:
-                print(f"[drain] Hit success target: {processed}/{max_success}")
-                break
-            # If user pressed Pause/Stop, the child process is killed; we stop after current loop
-            snap = automation.get_status()
-            # If some other process toggled running to False, stop gracefully
-            if not snap.get("running", False) and processed + skipped > 0:
-                print("[drain] Detected cancel; stopping after current iteration.")
-                break
-
-            # Pull first row
-            row_series, df_big = _read_first_row(big_csv_path)
-            if row_series is None:
-                print("[drain] No more rows.")
-                break
-
-            row = {k: ("" if v is None else str(v)) for k, v in row_series.to_dict().items()}
-
-            # Run one row
-            ok, row_out = _run_one_row_via_scripts(row, target_ddmm)
-
-            if ok:
-                # Remove from big CSV, append to folder CSV
-                _drop_first_row_and_save(df_big, big_csv_path)
-                dest_csv = os.path.join(folder_root, dest_file)
-                _append_row_dict(dest_csv, row_out)
-                processed += 1
-                try:
-                    automation._STATE.set_step(f"{label_for_flash}: processed={processed}, skipped={skipped}", f"last_ok={row_out.get('nom','')}")
-                except Exception:
-                    pass
-            else:
-
-                try:
-                    # Remove first row
-                    df_rest = df_big.drop(df_big.index[0]).reset_index(drop=True)
-
-                    # Build a one-row DF from the failed row
-                    row_df = pd.DataFrame([row])
-
-                    # Align columns both ways: add missing cols to each side
-                    for col in df_rest.columns:
-                        if col not in row_df.columns:
-                            row_df[col] = ""
-                    for col in row_df.columns:
-                        if col not in df_rest.columns:
-                            df_rest[col] = ""
-
-                    # Reorder row_df columns to match df_rest, then append it to the bottom
-                    row_df = row_df[df_rest.columns]
-                    df_new = pd.concat([df_rest, row_df], ignore_index=True)
-
-                    # Save back to the big CSV
-                    df_new.to_csv(big_csv_path, index=False, encoding="utf-8")
-
-                    skipped += 1
-                    print("[drain] Row failed; kept in CSV and moved to bottom for retry.")
-                    try:
-                        automation._STATE.set_step(
-                            f"{label_for_flash}: processed={processed}, kept_for_retry={skipped}",
-                            f"last_retry={row.get('nom','')}"
-                        )
-                    except Exception:
-                        pass
-                except Exception as e:
-                 print(f"[drain] Could not rotate failed row to bottom: {e}")
-
-        print(f"[drain] Done. Processed={processed}, Skipped={skipped}")
-
-    except Exception as e:
-        print(f"[drain] Fatal error: {e}")
-        automation._STATE.set_error(str(e))
-    finally:
-        # Mark idle
-        try:
-            automation._STATE.set_running(False)
-        except Exception:
-            pass
 
 
 # =========================
@@ -557,180 +241,6 @@ def get_daily_folders(sort_desc: bool = True):
 # =========================
 # Routes
 # =========================
-def _normalize_gender(g: str) -> str:
-    s = (g or "").strip().lower()
-    if s in {"h","homme","m","male","man","mâle"}: return "H"
-    if s in {"f","femme","w","woman","female","femelle"}: return "F"
-    return ""
-def _patch_first_row_in_csv(csv_path: str, updates: Dict[str, str]) -> None:
-    """Write key/value updates into the FIRST data row of csv_path, in place."""
-    try:
-        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
-        if len(df) == 0:
-            return
-        for k, v in updates.items():
-            if k not in df.columns:
-                df[k] = ""
-            df.at[0, k] = "" if v is None else str(v)
-        df.to_csv(csv_path, index=False, encoding="utf-8")
-    except Exception as e:
-        print(f"[patch_first_row] Failed to update {csv_path}: {e}")
-
-def _process_one_from_all(all_csv: str, hommes_csv: str, femmes_csv: str) -> str:
-    """
-    Processes exactly the FIRST row of ALL:
-      returns one of: 'moved_H', 'moved_F', 'dropped', 'rotated', 'empty', 'error'
-    """
-    row_series, df_all = _read_first_row(all_csv)
-    if row_series is None:
-        return "empty"
-
-    row_in = {k: ("" if v is None else str(v)) for k, v in row_series.to_dict().items()}
-
-    # temp CSV for single-row run
-    tmp_dir = os.path.join(config.BASE_DIR, "_tmp")
-    os.makedirs(tmp_dir, exist_ok=True)
-    tmp_csv = os.path.join(tmp_dir, "sort_one.csv")
-
-    required = {"CREATION","RESERVATION","gender","email","numero_tlf",
-                "numero_passport","numero_visa","NOM","PRENOM","PHONE"}
-    headers  = list(dict.fromkeys(list(row_in.keys()) + list(required)))
-    for k in required:
-        row_in.setdefault(k, "")
-
-    with open(tmp_csv, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=headers)
-        w.writeheader()
-        w.writerow({k: row_in.get(k, "") for k in headers})
-
-    # run sort.py ONLY on this temp file
-    os.environ["CSV_FILE_OVERRIDE"] = Path(tmp_csv).as_posix()
-    try:
-        automation.run_step("sort.py", "Sort one row from ALL (account creation/gender detect)")
-    except Exception:
-        return "error"
-    finally:
-        os.environ.pop("CSV_FILE_OVERRIDE", None)
-
-    # read back result
-    try:
-        df_after = pd.read_csv(tmp_csv, dtype=str, keep_default_na=False)
-        row_out = df_after.iloc[0].to_dict() if len(df_after) else {}
-    finally:
-        try:
-            os.remove(tmp_csv)
-        except Exception:
-            pass
-
-    # --- NEW: persist what sort.py discovered back into ALL.csv (first row) ---
-    creation_raw  = (row_out.get("CREATION") or "").strip()
-    gender_raw    = row_out.get("gender")
-    gender_norm   = _normalize_gender(gender_raw)
-
-    updates = {}
-    if creation_raw in {"1", "-1"}:
-        updates["CREATION"] = creation_raw
-    if gender_raw is not None:                         # keep exactly what sort.py wrote (even 'F'/'H')
-        updates["gender"] = gender_raw
-    if updates:
-        _patch_first_row_in_csv(all_csv, updates)
-
-    # act on the outcome
-    if creation_raw == "-1":
-        _drop_first_row_and_save(df_all, all_csv)
-        return "dropped"
-
-    if creation_raw == "1" and gender_norm in {"H", "F"}:
-        dest_csv = Path(hommes_csv).as_posix() if gender_norm == "H" else Path(femmes_csv).as_posix()
-        _ensure_csv(dest_csv, _safe_headers())
-        _append_row_dict(dest_csv, {k: ("" if v is None else str(v)) for k, v in row_out.items()})
-        _drop_first_row_and_save(df_all, all_csv)
-        return f"moved_{gender_norm}"
-
-    # neither success nor explicit fail → rotate first row to bottom
-    try:
-        df_rest = df_all.drop(df_all.index[0]).reset_index(drop=True)
-        row_df  = pd.DataFrame([row_in])
-
-        # align columns both ways
-        for col in df_rest.columns:
-            if col not in row_df.columns:
-                row_df[col] = ""
-        for col in row_df.columns:
-            if col not in df_rest.columns:
-                df_rest[col] = ""
-
-        row_df = row_df[df_rest.columns]
-        df_new = pd.concat([df_rest, row_df], ignore_index=True)
-        df_new.to_csv(all_csv, index=False, encoding="utf-8")
-    except Exception:
-        return "error"
-
-    return "rotated"
-
-def _drain_all_sort(max_success: Optional[int] = None):
-    """
-    Repeatedly process the first row of ALL.csv until empty or no progress.
-    """
-    try:
-        automation._STATE.set_running(True)
-        automation._STATE.set_step("Drain ALL → HOMMES/FEMMES", "sorting")
-    except Exception:
-        pass
-
-    all_csv    = Path(config.ALL_CSV_PATH).as_posix()
-    hommes_csv = Path(config.HOMMES_CSV_PATH).as_posix()
-    femmes_csv = Path(config.FEMMES_CSV_PATH).as_posix()
-
-    processed = 0
-    consecutive_rotations = 0
-
-    def _remaining() -> int:
-        try:
-            df = pd.read_csv(all_csv, dtype=str, keep_default_na=False)
-            return len(df)
-        except Exception:
-            return 0
-
-    while True:
-        # cancel support
-        snap = automation.get_status()
-        if not snap.get("running", True):
-            break
-
-        remaining_before = _remaining()
-        if remaining_before == 0:
-            break
-        if max_success is not None and processed >= max_success:
-            break
-
-        outcome = _process_one_from_all(all_csv, hommes_csv, femmes_csv)
-
-        if outcome in {"empty","error"}:
-            break
-        if outcome.startswith("moved") or outcome == "dropped":
-            processed += 1
-            consecutive_rotations = 0
-        elif outcome == "rotated":
-            consecutive_rotations += 1
-        # if we rotated as many times as the current size, no progress → stop
-        remaining_after = _remaining()
-        size_now = max(remaining_after, 1)
-        if consecutive_rotations >= size_now:
-            break
-
-        try:
-            automation._STATE.set_step(
-                f"sorted: {processed} | rotated_streak: {consecutive_rotations} | left: {remaining_after}",
-                outcome
-            )
-        except Exception:
-            pass
-
-    try:
-        automation._STATE.set_running(False)
-    except Exception:
-        pass
 
 @app.route("/", methods=["GET"])
 def index():
@@ -746,33 +256,28 @@ def index():
 
 @app.route("/all/sort", methods=["POST"])
 def all_sort():
+    # block if something else is running
     if automation.get_status().get("running"):
         flash("Another automation is already running. Please Pause/Stop first.", "warning")
         return redirect(url_for("index"))
 
-    # optional: let user cap how many successful moves to do this run
-    count_str = request.form.get("count") or request.args.get("count")
-    max_success = None
     try:
-        if count_str is not None:
-            v = int(count_str)
-            if v > 0:
-                max_success = v
-    except Exception:
-        pass
+        # Ensure sort.py reads from ALL.csv (use forward slashes)
+        all_posix = Path(config.ALL_CSV_PATH).as_posix()
+        _set_config_var("CSV_FILE", repr(all_posix))
 
-    t = threading.Thread(
-        target=_drain_all_sort,
-        kwargs=dict(max_success=max_success),
-        daemon=True,
-        name="drain-all-sort",
-    )
-    t.start()
+        # If your sort.py expects explicit output paths in config, you can also enforce:
+        # _set_config_var("HOMMES_CSV_PATH", repr(Path(config.HOMMES_CSV_PATH).as_posix()))
+        # _set_config_var("FEMMES_CSV_PATH", repr(Path(config.FEMMES_CSV_PATH).as_posix()))
 
-    msg = f" (target={max_success})" if max_success is not None else ""
-    flash(f"Started draining ALL → HOMMES/FEMMES{msg}. It will keep going until ALL.csv is empty or no further progress can be made.", "success")
+        # Run sort.py (it should mutate ALL/HOMMES/FEMMES as per your script)
+        automation.run_step("sort.py", "Sort ALL into HOMMES/FEMMES via sort.py")
+        flash("Sorting completed (ALL → HOMMES/FEMMES).", "success")
+
+    except Exception as e:
+        flash(f"Sort failed: {e}", "danger")
+
     return redirect(url_for("index"))
-
 
 @app.route("/creation/hommes", methods=["POST"])
 def run_creation_hommes():
@@ -791,7 +296,6 @@ def run_creation_hommes():
         flash(f"Creation failed: {e}", "danger")
     return redirect(url_for("index"))
 
-
 @app.route("/creation/femmes", methods=["POST"])
 def run_creation_femmes():
     if automation.get_status().get("running"):
@@ -808,6 +312,10 @@ def run_creation_femmes():
     except Exception as e:
         flash(f"Creation failed: {e}", "danger")
     return redirect(url_for("index"))
+
+# ===== REMOVED: old /run_batch men/women route =====
+
+
 @app.route("/add_daily_folder", methods=["POST"])
 def add_daily_folder():
     """
@@ -876,7 +384,7 @@ def import_pdf():
         csv_posix = Path(csv_target).as_posix()
         pdf_posix = Path(save_path).as_posix()
 
-               # Run pdf.py with environment overrides instead of editing config.py
+        # Run pdf.py with environment overrides instead of editing config.py
         os.environ["CSV_FILE_OVERRIDE"] = csv_posix
         os.environ["PDF_FILE_OVERRIDE"] = pdf_posix
         try:
@@ -891,81 +399,7 @@ def import_pdf():
 
     return redirect(url_for("index"))
 
-@app.route("/start_men/<folder>", methods=["POST"])
-def start_men(folder):
-    if automation.get_status().get("running"):
-        flash("Another automation is already running. Please Pause/Stop first.", "warning")
-        return redirect(url_for("index"))
 
-    # Read optional count (success target) from form or query string
-    count_str = request.form.get("count") or request.args.get("count")
-    max_success = None
-    try:
-        if count_str is not None:
-            v = int(count_str)
-            if v > 0:
-                max_success = v
-    except Exception:
-        pass
-
-    prioritize = (request.form.get("prioritize_creation") or "0") == "1"
-
-    t = threading.Thread(
-        target=_drain_big_csv_for_folder,
-        kwargs=dict(
-            big_csv_path=config.HOMMES_CSV_PATH,
-            dest_folder=folder,
-            dest_file="hommes.csv",
-            label_for_flash=f"{folder} (+Men)",
-            max_success=max_success,                      # <— pass it through
-            prioritize_creation=prioritize,
-        ),
-        daemon=True,
-        name=f"drain-men-{folder}",
-    )
-    t.start()
-
-    target_msg = f", target={max_success}" if max_success is not None else ""
-    flash(f"Started: draining HOMMES into {folder}/hommes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}{target_msg}).")
-    return redirect(url_for("index"))
-
-@app.route("/start_women/<folder>", methods=["POST"])
-def start_women(folder):
-    if automation.get_status().get("running"):
-        flash("Another automation is already running. Please Pause/Stop first.", "warning")
-        return redirect(url_for("index"))
-
-    # Read optional count (success target) from form or query string
-    count_str = request.form.get("count") or request.args.get("count")
-    max_success = None
-    try:
-        if count_str is not None:
-            v = int(count_str)
-            if v > 0:
-                max_success = v
-    except Exception:
-        pass
-
-    prioritize = (request.form.get("prioritize_creation") or "0") == "1"
-
-    t = threading.Thread(
-        target=_drain_big_csv_for_folder,
-        kwargs=dict(
-            big_csv_path=config.FEMMES_CSV_PATH,
-            dest_folder=folder,
-            dest_file="femmes.csv",
-            label_for_flash=f"{folder} (+Women)",
-            max_success=max_success,                      # <— pass it through
-            prioritize_creation=prioritize,
-        ),
-        daemon=True,
-        name=f"drain-women-{folder}",
-    )
-    t.start()
-
-    target_msg = f", target={max_success}" if max_success is not None else ""
-    flash(f"Started: draining FEMMES into {folder}/femmes.csv (date = {parse_target_date_from_folder(folder) or 'n/a'}{target_msg}).")
-    return redirect(url_for("index"))
 @app.route("/merge_pdfs", methods=["POST"])
 def merge_pdfs():
     """Merge uploaded PDF files into a single document for download."""
@@ -997,6 +431,105 @@ def status():
     return jsonify(automation.get_status())
 
 
+# ===== NEW: Multi-device batch control =====
+
+_active_batch = {"stop": None, "threads": []}
+
+@app.route("/run_batch_multi", methods=["POST"])
+def run_batch_multi():
+    if automation.get_status().get("running"):
+        flash("Another automation is already running. Please Pause/Stop first.", "warning")
+        return redirect(url_for("index"))
+
+    folder = (request.form.get("folder") or "").strip()
+    gender = (request.form.get("gender") or "").strip()  # "men" or "women"
+    try:
+        per_device_target = request.form.get("per_device_target", "").strip()
+        per_device_target = int(per_device_target) if per_device_target else None
+    except Exception:
+        per_device_target = None
+
+    target_ddmm = parse_target_date_from_folder(folder)
+    if not target_ddmm:
+        flash("Invalid folder name for target date.", "danger")
+        return redirect(url_for("index"))
+
+    if gender not in {"men", "women"}:
+        flash("Please select a valid gender: men or women.", "danger")
+        return redirect(url_for("index"))
+
+    src_csv = config.HOMMES_CSV_PATH if gender == "men" else config.FEMMES_CSV_PATH
+    dest_csv = os.path.join(config.BASE_DIR, folder, "hommes.csv" if gender == "men" else "femmes.csv")
+    _ensure_csv(dest_csv, _safe_headers())
+
+    devices = getattr(config, "DEVICES", [])
+    if not devices:
+        flash("No devices configured in config.DEVICES.", "danger")
+        return redirect(url_for("index"))
+
+    stop_event = threading.Event()
+    _active_batch["stop"] = stop_event
+    _active_batch["threads"] = []
+
+    # mark running for UI
+    try:
+        automation._STATE.set_running(True)
+        automation._STATE.set_step("multi-device batch", f"{len(devices)} device(s) → {folder} ({gender})")
+    except Exception:
+        pass
+
+    # spin a worker per device
+    for d in devices:
+        udid = d.get("udid")
+        name = d.get("name") or udid
+        t = DeviceWorker(
+            udid=udid,
+            src_csv=src_csv,
+            dest_csv=dest_csv,
+            target_ddmm=target_ddmm,
+            stop_event=stop_event,
+            success_target=per_device_target,
+            label=f"{name or udid}",
+        )
+        t.start()
+        _active_batch["threads"].append(t)
+
+    flash(f"Started multi-device batch on {len(devices)} device(s) → {folder} [{gender}].", "success")
+    return redirect(url_for("index"))
+
+@app.route("/stop_batch_multi", methods=["POST"])
+def stop_batch_multi():
+    # 1) Signal threads to stop
+    if _active_batch["stop"]:
+        _active_batch["stop"].set()
+        for t in _active_batch["threads"]:
+            try:
+                t.join(timeout=5)
+            except Exception:
+                pass
+        _active_batch["stop"] = None
+        _active_batch["threads"] = []
+
+    # 2) Ensure device-side & cached-driver cleanup (prevents zombie UIA2)
+    try:
+        devices = getattr(config, "DEVICES", [])
+        for d in devices:
+            udid = d.get("udid")
+            if udid:
+                cleanup_device(udid)
+    except Exception:
+        pass
+
+    # 3) Clear UI status
+    try:
+        automation._STATE.set_running(False)
+        automation._STATE.set_step("idle", "")
+    except Exception:
+        pass
+
+    flash("Multi-device batch stopped and devices cleaned.", "info")
+    return redirect(url_for("index"))
+# ===== existing pause (for old child-proc flows) kept as-is =====
 @app.route("/pause", methods=["POST"])
 def pause():
     ok = automation.cancel_current()
@@ -1008,6 +541,57 @@ def pause():
 def serve_file(filename):
     return send_from_directory(config.BASE_DIR, filename)
 
+import subprocess
+import atexit
+
+def _adb(udid: str, *cmd: str) -> None:
+    try:
+        subprocess.run(
+            ["adb", "-s", udid, *cmd],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+    except Exception:
+        pass
+
+def cleanup_device(udid: str):
+    """
+    Hard reset device-side automation state:
+      - close any Appium driver we have
+      - kill UIA2 server & test apks
+      - remove any forwarded ports
+      - stop AUT just in case
+    """
+    # 1) Drop cached driver (from config.py pool)
+    try:
+        if hasattr(config, "reset_driver"):
+            config.reset_driver(udid)
+    except Exception:
+        pass
+
+    # 2) Kill UiAutomator2 servers
+    _adb(udid, "shell", "am", "force-stop", "io.appium.uiautomator2.server")
+    _adb(udid, "shell", "am", "force-stop", "io.appium.uiautomator2.server.test")
+
+    # 3) Remove ALL forwards for this device (safer than removing a single port)
+    _adb(udid, "forward", "--remove-all")
+
+    # 4) Stop the AUT (optional but harmless)
+    _adb(udid, "shell", "am", "force-stop", getattr(config, "APP_PACKAGE", "com.moh.nusukapp"))
+
+def cleanup_all_devices():
+    devs = getattr(config, "DEVICES", [])
+    for d in devs:
+        udid = d.get("udid")
+        if udid:
+            cleanup_device(udid)
+@atexit.register
+def _on_exit_cleanup():
+    try:
+        cleanup_all_devices()
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     app.run(debug=False)

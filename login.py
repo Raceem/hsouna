@@ -21,6 +21,7 @@ import time
 import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
+from typing import Optional, Union
 
 import pandas as pd
 from appium.webdriver.common.appiumby import AppiumBy
@@ -35,14 +36,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 from mail import get_verification_code
-from config import (
-    CSV_FILE,
-    setup_driver,
-    PAYS_UPPER,
-    TARGET_DATE,
-    HIJRI_DAY,
-    START_DATE,
-)
+from config import START_DATE, hard_reset_app  # e.g. "DD_MM_YYYY"
 
 # -----------------------------------------------------------------------------
 # Logging
@@ -72,81 +66,64 @@ logger.addHandler(ch)
 logger.addHandler(fh)
 
 # -----------------------------------------------------------------------------
-# Config / Data
-def get_nationality_from_row(row_dict):
+# Config / Data helpers (runtime-scoped; NO module-level CSV/DATE)
+
+def _load_df(csv_path: str) -> pd.DataFrame:
+    df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
+    return df.reset_index(drop=True)
+
+def _save_df(df: pd.DataFrame, csv_path: str) -> None:
+    df.to_csv(csv_path, index=False, encoding="utf-8")
+
+def _ensure_counter_columns(df: pd.DataFrame) -> pd.DataFrame:
+    if "gender" not in df.columns:
+        df["gender"] = ""
+    if "reserved_men" not in df.columns:
+        df["reserved_men"] = "0"
+    if "reserved_women" not in df.columns:
+        df["reserved_women"] = "0"
+    return df
+
+def _set_df(df: pd.DataFrame, index: int, col: str, value: str) -> None:
+    if col not in df.columns:
+        df[col] = ""
+    prev = df.at[index, col] if 0 <= index < len(df) else None
+    df.at[index, col] = value
+    logger.info("DF Update [row=%s, col=%s]: %r -> %r", index, col, prev, value)
+
+def _increment_reserved(df: pd.DataFrame, gender_code: str) -> None:
+    col = "reserved_men" if gender_code == "H" else "reserved_women"
+    if col not in df.columns:
+        df[col] = "0"
+    try:
+        current = int(df[col].iloc[0])
+    except Exception:
+        current = 0
+    df[col] = str(current + 1)
+
+def get_nationality_from_row(row_dict: dict):
     """
     Return (search_text, match_key_lower) for nationality.
-    Falls back to config PAYS / PAYS_UPPER if the CSV value is missing.
     """
     val = row_dict.get("nationalite")
     try:
         is_missing = val is None or (pd.isna(val)) or (str(val).strip() == "")
     except Exception:
         is_missing = True
-
     if is_missing:
-        # fallback to config if the CSV column is empty for this row
-        return 
-
+        return None, None
     s = str(val).strip()
     return s, s.lower()
+
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
 
-csv_file = CSV_FILE
-target_date = TARGET_DATE            # "DD/MM"
-start_date = START_DATE              # "DD_MM_YYYY"
-greg_day = target_date.split("/")[0] if "/" in target_date else target_date
-hijri_day = greg_day
-
-logger.info("Loading CSV: %s", csv_file)
-df = pd.read_csv(csv_file, dtype=str)
-logger.info("CSV loaded. Rows: %d, Columns: %d", len(df), len(df.columns))
-
-# Ensure gender and reservation counters exist
-def _ensure_counter_columns():
-    modified = False
-    if "gender" not in df.columns:
-        df["gender"] = ""
-        modified = True
-    if "reserved_men" not in df.columns:
-        df["reserved_men"] = "0"
-        modified = True
-    if "reserved_women" not in df.columns:
-        df["reserved_women"] = "0"
-        modified = True
-    if modified:
-        df.to_csv(csv_file, index=False, encoding="utf-8")
-        logger.info("Added missing gender/reserved columns and flushed to disk.")
-
-_ensure_counter_columns()
-
-def _flush_df():
-    df.to_csv(csv_file, index=False, encoding="utf-8")
-    logger.info("DataFrame flushed to disk.")
-
-def _set_df(index: int, col: str, value: str, flush: bool = False):
-    prev = df.at[index, col] if col in df.columns else None
-    df.at[index, col] = value
-    logger.info("DF Update [row=%s, col=%s]: %r -> %r", index, col, prev, value)
-    if flush:
-        _flush_df()
-
-
-def _increment_reserved(gender_code: str) -> None:
-    """Increment reserved counters in dataframe (no flush)."""
-    col = "reserved_men" if gender_code == "H" else "reserved_women"
-    try:
-        current = int(df[col].iloc[0])
-    except Exception:
-        current = 0
-    df[col] = str(current + 1)
 # -----------------------------------------------------------------------------
 # Helpers
+
 def row_requires_app(row: pd.Series) -> bool:
     c = (row.get("CREATION") or "").strip()
     r = (row.get("RESERVATION") or "").strip()
-    # Needs the app only if account exists AND not already reserved
-    return c not in {"0","-1"} and r != "1"
+    return c not in {"0", "-1"} and r != "1"
 
 def update_fast_settings(driver):
     try:
@@ -159,7 +136,6 @@ def update_fast_settings(driver):
         logger.info("Could not update driver settings: %s", e)
 
 def normalize_gender(raw) -> str:
-    # Treat None/NaN/blank uniformly
     if raw is None or (isinstance(raw, float) and math.isnan(raw)):
         return "Unknown"
     try:
@@ -177,9 +153,9 @@ def normalize_gender(raw) -> str:
 
 def has_existing_booking(driver) -> bool:
     needles = [
-        "La confirmation de","existing booking", "have an active permit",
+        "La confirmation de", "existing booking", "have an active permit",
         "You already have an existing booking for", "Vous avez déjà une réservation",
-        'existing'
+        "existing"
     ]
     for t in needles:
         try:
@@ -233,8 +209,7 @@ def safe_send_keys(driver, locator, text, name="field", timeout=3, retries=1, po
     logger.error("[safe_send_keys] failed to type into %s: %s", name, last_err)
     return False
 
-
-# --- permissions (only the one you actually call) ----------------------------
+# --- permissions --------------------------------------------------------------
 
 def pregrant_location_permissions(driver, package: str = APP_PACKAGE):
     """Grant location permissions via adb shell so the popup never appears."""
@@ -335,16 +310,13 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
         time.sleep(0.1)
     logger.error("[%s] All tap methods failed at (%s,%s): %s", label, x, y, last_err)
     return False
+
 def _area(b):
-    # b = {"x1":..,"y1":..,"x2":..,"y2":..,"cx":..,"cy":..}
     return max(0, b["x2"] - b["x1"]) * max(0, b["y2"] - b["y1"])
 
 def _find_big_digit(driver, text: str):
-    # (Optional) first scope to the calendar container to avoid header/legend matches
     try:
-        cal = driver.find_element(
-            AppiumBy.ID, "com.moh.nusukapp:id/composeableView"
-        )
+        cal = driver.find_element(AppiumBy.ID, "com.moh.nusukapp:id/composeableView")
         candidates = cal.find_elements(AppiumBy.XPATH, f".//android.widget.TextView[@text='{text}']")
     except Exception:
         candidates = driver.find_elements(AppiumBy.XPATH, f"//android.widget.TextView[@text='{text}']")
@@ -355,7 +327,7 @@ def _find_big_digit(driver, text: str):
 
     for el in candidates:
         try:
-            if not el.is_displayed():  # ignore hidden
+            if not el.is_displayed():
                 continue
         except Exception:
             pass
@@ -384,28 +356,19 @@ def click_calendar_pair_cell_precise(driver, greg_day: str, hijri_day: str, time
                     if _confirmer_is_interactable(driver):
                         logger.info(f"Successfully selected '{h}'")
                         return True
-
             else:
                 logger.warning(f"No valid bounds for element '{h}'")
         except Exception:
             pass
-
         time.sleep(0.2)
 
     return False
 
-
 def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
-    """
-    If the post-OTP 'policy/privacy' sheet appears, tick the checkbox
-    and press 'Confirmer et continuer'. Returns True if handled or not present.
-    """
     box_id = "com.moh.nusukapp:id/check_message"
     confirm_id = "com.moh.nusukapp:id/btn_confirm"
-    ignore_id = "com.moh.nusukapp:id/btn_ignore"  # unused; we accept
 
     try:
-        # Quick probe: is the sheet present?
         sheet_present = False
         end = time.time() + timeout
         while time.time() < end:
@@ -420,7 +383,6 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
 
         logger.info("[privacy] Consent sheet detected; accepting…")
 
-        # Tick the checkbox if needed
         try:
             cb = WebDriverWait(driver, 4, 0.2).until(
                 EC.presence_of_element_located((AppiumBy.ID, box_id))
@@ -430,7 +392,6 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
                 try:
                     cb.click()
                 except Exception:
-                    # try tapping its bounds center as fallback
                     b = _parse_bounds(cb.get_attribute("bounds"))
                     if b:
                         tap_xy(driver, b["cx"], b["cy"], label="privacy_checkbox")
@@ -440,9 +401,7 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
         except Exception as e:
             logger.info("[privacy] Checkbox not found or not required: %s", e)
 
-        # Press confirm
         if not safe_click(driver, (AppiumBy.ID, confirm_id), name="privacy_confirm", timeout=5, retries=3):
-            # try by text as a fallback
             safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR,
                                 'new UiSelector().textContains("Confirmer")'),
                        name="privacy_confirm_text", timeout=3, retries=2)
@@ -454,7 +413,6 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
     except Exception as e:
         logger.warning("[privacy] Could not handle consent sheet: %s", e)
         return False
-
 
 # --- pre-book visible date verification --------------------------------------
 
@@ -470,10 +428,6 @@ def _strip_accents(s: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn")
 
 def verify_selected_date_label(driver, target_ddmm: str, timeout: int = 5) -> bool:
-    """
-    Ensure the date field shows the same Gregorian day+month we selected
-    (e.g., 'samedi, 06 septembre'). Accepts '06' or '6' for the day.
-    """
     try:
         dd, mm = target_ddmm.split("/")  # "06/09"
     except Exception:
@@ -498,10 +452,17 @@ def verify_selected_date_label(driver, target_ddmm: str, timeout: int = 5) -> bo
     return ok_month and ok_day
 
 # -----------------------------------------------------------------------------
-# Reservation Flow
+# Reservation Flow (runtime-scoped I/O)
 
-def make_reservation(driver, index: int, dict_row: dict) -> None:
-    # New UI: privacy/terms consent after OTP
+def make_reservation(
+    driver,
+    index: int,
+    dict_row: dict,
+    df: pd.DataFrame,
+    target_ddmm: str,
+    greg_day: str,
+    hijri_day: str,
+) -> None:
     accept_privacy_if_present(driver, timeout=1)
     driver.implicitly_wait(1)
     logger.info("[make_reservation] Start for row %s (passport=%s)", index, dict_row.get("numero_passport"))
@@ -520,25 +481,20 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
     # Existing booking?
     if has_existing_booking(driver):
         logger.info("Existing booking detected; marking RESERVATION=1 and updating date/time/counters.")
-        _set_df(index, "CREATION", "1")
-        _set_df(index, "RESERVATION", "1")
+        _set_df(df, index, "CREATION", "1")
+        _set_df(df, index, "RESERVATION", "1")
 
-        # date_reservation uses TARGET_DATE with the year from START_DATE (like success path)
-        year = datetime.strptime(start_date, "%d_%m_%Y").year
-        _set_df(index, "date_reservation", f"{target_date}/{year}")
+        year = datetime.strptime(START_DATE, "%d_%m_%Y").year
+        _set_df(df, index, "date_reservation", f"{target_ddmm}/{year}")
+        _set_df(df, index, "heure", "10:00 AM")
 
-        # force 10 AM as requested
-        _set_df(index, "heure", "10:00 AM")
-
-        # bump counters by sex if known
         if gender_hint == "H":
-            _increment_reserved("H")
+            _increment_reserved(df, "H")
         elif gender_hint == "F":
-            _increment_reserved("F")
-
-        # one flush after all updates
-        _flush_df()
+            _increment_reserved(df, "F")
         return
+
+    # Permit selection by gender
     if gender_hint == "F":
         try:
             if safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/permit_woman_tv"),
@@ -586,14 +542,9 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
 
     actual_gender = clicked_gender or gender_hint
     if actual_gender in {"F", "H"}:
-         # write immediately to the CSV as F/H
-        _set_df(index, "CREATION", "1")
-        _set_df(index, "gender", actual_gender, flush=True)
-        # keep the in-memory row consistent for later logic
+        _set_df(df, index, "CREATION", "1")
+        _set_df(df, index, "gender", actual_gender)
         dict_row["gender"] = actual_gender
-
-
-
 
     # Date field
     if not ensure_date_picker_visible(driver, wait):
@@ -606,12 +557,12 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
     # Date selection (native)
     if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
         logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)
-    # Confirm the day selection in the calendar sheet
+
     if not safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Confirmer")'), name="Confirmer"):
         logger.error("Could not click Confirmer.")
         return
 
-    # Timeslots (explicit wait for non-empty labels)
+    # Timeslots
     try:
         slots = WebDriverWait(driver, 10, 0.25).until(
             lambda d: [el for el in d.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tvTime")
@@ -638,8 +589,8 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         except Exception:
             logger.warning("Failed to click any timeslot.")
 
-    # Safety: ensure visible date matches TARGET_DATE before booking
-    if not verify_selected_date_label(driver, target_date):
+    # Safety: ensure visible date matches target
+    if not verify_selected_date_label(driver, target_ddmm):
         logger.error("Date label mismatch; aborting booking.")
         return
 
@@ -651,12 +602,9 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         logger.error("Failed to click btn_approve_continue.")
         return
 
-    # --- Success check (robust) ---
-    # Give UI a moment (or keep your spinner wait here)
-    time.sleep(0.3)  # optional; you can keep your wait_until_idle() if you added it
-
-    # Try up to ~20 * 250ms = 5s for the success label to appear and contain "Neutre"
-    elements = []  # <-- define before using it so it's always bound
+    # Success check
+    time.sleep(0.3)
+    elements = []
     deadline = time.time() + 5.0
     while time.time() < deadline:
         try:
@@ -670,27 +618,19 @@ def make_reservation(driver, index: int, dict_row: dict) -> None:
         time.sleep(0.25)
 
     if elements and "Neutre" in ((elements[0].text or "").strip()):
-        year = datetime.strptime(start_date, "%d_%m_%Y").year
-        _set_df(index, "CREATION", "1")
-        _set_df(index, "RESERVATION", "1")
-        _set_df(index, "heure", preferred)
-        _set_df(index, "date_reservation", f"{target_date}/{year}", flush=True)
+        year = datetime.strptime(START_DATE, "%d_%m_%Y").year
+        _set_df(df, index, "CREATION", "1")
+        _set_df(df, index, "RESERVATION", "1")
+        _set_df(df, index, "heure", preferred)
+        _set_df(df, index, "date_reservation", f"{target_ddmm}/{year}")
     else:
         sample = ((elements[0].text or "").strip()) if elements else "<none>"
         logger.error("Reservation success not confirmed. rating_3 text=%r", sample)
 
-
 # -----------------------------------------------------------------------------
-# Login Flow
+# Login Flow (runtime-scoped I/O)
 
 def _wait_for_post_otp_state(driver, timeout=25) -> str:
-    """
-    After typing OTP, wait for:
-      - SUCCESS: landing on home (Rawdah tile) or check/confirm modal
-      - OTP_ERROR: dialog text mentions invalid/incorrect/expired otp/code
-      - UNKNOWN: timeout
-    If OTP_ERROR, attempt to dismiss the dialog.
-    """
     start = time.time()
     while time.time() - start < timeout:
         try:
@@ -720,8 +660,16 @@ def _wait_for_post_otp_state(driver, timeout=25) -> str:
         time.sleep(0.2)
     return "UNKNOWN"
 
-def login_user(driver, index: int, row: pd.Series) -> None:
-    dict_row = row.to_dict()
+def login_user(
+    driver,
+    index: int,
+    row: Union[pd.Series, dict],
+    df: pd.DataFrame,
+    target_ddmm: str,
+    greg_day: str,
+    hijri_day: str,
+) -> None:
+    dict_row = row if isinstance(row, dict) else row.to_dict()
     logger.info(
         "[login_user] Row %s: %s %s | type_voyage=%s | CREATION=%s | RESERVATION=%s",
         index,
@@ -745,6 +693,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
     driver.implicitly_wait(1)
     wait = WebDriverWait(driver, 10)
     pregrant_location_permissions(driver, APP_PACKAGE)
+
     # Landing → Sign In
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvSignIn"), name="tvSignIn"):
         return
@@ -754,7 +703,7 @@ def login_user(driver, index: int, row: pd.Series) -> None:
         return
 
     # Nationality
-    PAYS, PAYS_UPPER = get_nationality_from_row(dict_row)
+    _, PAYS_UPPER = get_nationality_from_row(dict_row)
     needle = (PAYS_UPPER or "").strip().lower()
     safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtSearch"), needle, name="edtSearch")
     found = False
@@ -772,11 +721,12 @@ def login_user(driver, index: int, row: pd.Series) -> None:
         return
 
     # Credentials
-    safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtPassport"), dict_row["numero_passport"], name="edtPassport")
+    safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtPassport"), dict_row.get("numero_passport", ""), name="edtPassport")
     safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtPassword"), "Hssouna1105@", name="edtPassword")
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvSignIn"), name="tvSignIn_submit"):
         return
     time.sleep(0.5)
+
     # Possible login error popups
     for _ in range(5):
         if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_error_desc"):
@@ -786,11 +736,12 @@ def login_user(driver, index: int, row: pd.Series) -> None:
             break
     else:
         logger.error("Too many login errors; marking CREATION='-1'")
-        _set_df(index, "CREATION", "1", flush=True)
+        _set_df(df, index, "CREATION", "1")
         return
+
     time.sleep(2)
     # OTP
-    email = dict_row["email"]
+    email = dict_row.get("email", "")
     logger.info("[login_user] Fetching OTP for email: %s", email)
     code = get_verification_code(email)
     if not code:
@@ -816,65 +767,54 @@ def login_user(driver, index: int, row: pd.Series) -> None:
         logger.error("[login_user] Post-OTP state not successful: %s", state)
         return
 
-
     # Reservation
-    make_reservation(driver, index, dict_row)
+    make_reservation(driver, index, dict_row, df, target_ddmm, greg_day, hijri_day)
     logger.info("[login_user] Reservation step finished for row %s", index)
 
 # -----------------------------------------------------------------------------
-# Main
-if __name__ == "__main__":
-    logger.info("=== Session start ===")
-    driver = None
+# In-process entry point (what you asked for)
+
+def run_login_on_row(
+    driver,
+    row_index: int,
+    row_series: pd.Series,
+    csv_path: str,
+    target_ddmm: str,
+) -> pd.DataFrame:
+    """
+    Single-row login+reservation in-process.
+    - driver: persistent Appium driver (already started)
+    - row_index: index to write back into csv_path
+    - row_series: pd.Series with the row data at start
+    - csv_path: source CSV we update in place
+    - target_ddmm: 'DD/MM' string; DO NOT read config.TARGET_DATE
+    """
+    # 0) Always re-read CSV to ensure fresh view
+    df = _load_df(csv_path)
+    df = _ensure_counter_columns(df)
+
+    # 1) Inputs
+    data = row_series.to_dict()
+    # Day split for calendar
+    dd = target_ddmm.split("/")[0]
+    greg_day = dd
+    hijri_day = greg_day
+
+    # 2) Execute login+reservation (no driver quit here)
     try:
-        # Filter the dataframe so we iterate ONLY over rows that actually need work
-        df_valid = df[df.apply(row_requires_app, axis=1)]
-        total = len(df_valid)
-        logger.info("Planned rows (need app): %s of %s total", total, len(df))
-
-        for i, (index, row_series) in enumerate(df_valid.iterrows(), start=1):
-            logger.info("---- Processing row %s/%s (orig index=%s) ----", i, total, index)
-
-            # Cold restart: quit any previous session, then create a fresh driver
-            if driver is not None:
-                try:
-                    driver.quit()
-                except Exception:
-                    pass
-                finally:
-                    driver = None
-
-            try:
-                driver = setup_driver()
-                driver.implicitly_wait(1)  # keep tiny
-                update_fast_settings(driver)
-                # Pre-grant per fresh session (fast; avoids permission UI)
-                pregrant_location_permissions(driver, APP_PACKAGE)
-
-                # Do the work
-                login_user(driver, index, row_series)
-
-            except Exception as e:
-                logger.exception("❌ Fatal error for row %s (orig index=%s): %s", i, index, e)
-
-            finally:
-                # Always end this row with a cold shutdown to guarantee a clean next start
-                if driver is not None:
-                    try:
-                        driver.quit()
-                    except Exception:
-                        pass
-                    finally:
-                        driver = None
-
-        logger.info("All planned rows processed.")
+        login_user(
+            driver=driver,
+            index=row_index,
+            row=row_series,
+            df=df,
+            target_ddmm=target_ddmm,
+            greg_day=greg_day,
+            hijri_day=hijri_day,
+        )
     except Exception as e:
-        logger.exception("Top-level error: %s", e)
-    finally:
-        # Double safety
-        if driver is not None:
-            try:
-                driver.quit()
-            except Exception:
-                pass
-        logger.info("=== Session end ===")
+        logger.exception("run_login_on_row fatal: %s", e)
+
+    # 3) Flush once at the end
+    _save_df(df, csv_path)
+    hard_reset_app(driver, APP_PACKAGE)
+    return df
