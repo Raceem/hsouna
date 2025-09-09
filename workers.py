@@ -1,6 +1,7 @@
 # workers.py
 from __future__ import annotations
 
+import os
 import time
 import threading
 from typing import Optional
@@ -9,7 +10,13 @@ import pandas as pd
 
 import automation
 import config
-from rowstore import with_csv_lock, load_df, save_df, rotate_row_to_bottom, append_row_dict
+from rowstore import (
+    load_df,
+    save_df,
+    append_row_dict,
+    claim_next_row,
+    finalize_row,
+)
 from login import run_login_on_row
 from CreationReservation import run_creation_on_row
 
@@ -32,7 +39,8 @@ except Exception:
 class DeviceWorker(threading.Thread):
     """
     One worker per device (udid). Keeps a persistent Appium driver alive.
-    Processes the FIRST row repeatedly until:
+    Claims the next unassigned row (using the WORKER column) and processes it
+    repeatedly until:
       - success_target reached (if provided)
       - src CSV is empty
       - stop_event is set
@@ -86,64 +94,68 @@ class DeviceWorker(threading.Thread):
                     self._status("success target reached")
                     break
 
-                # ---- Peek first row (WITHOUT removing) ----
-                with with_csv_lock(self.src_csv):
-                    df = load_df(self.src_csv)
-                    if df.empty:
+                # ---- Claim a free row via WORKER column ----
+                row_series, has_rows = claim_next_row(self.src_csv, self.label)
+                if row_series is None:
+                    if has_rows:
+                        # all rows currently claimed by other workers
+                        self._status("waiting for row")
+                        time.sleep(0.5)
+                        continue
+                    else:
                         self._status("source empty")
                         break
-                    row_index = 0
-                    row_series = df.iloc[row_index]
 
-                # ---- Run creation or login in-process (keep driver alive) ----
+                # Work on a temporary single-row CSV so run_* functions can mutate it
+                tmp_path = f"{self.src_csv}.{self.udid}.tmp.csv"
                 try:
-                    creation_flag = str(row_series.get("CREATION", "")).strip()
-                    if creation_flag == "1":
-                        self._status("login", f"row0={row_series.get('nom','')}")
-                        run_login_on_row(drv, row_index, row_series, self.src_csv, self.target_ddmm)
-                    else:
-                        self._status("creation", f"row0={row_series.get('nom','')}")
-                        run_creation_on_row(drv, row_index, row_series, self.src_csv, self.target_ddmm)
-                except Exception as e:
-                    # soft reset app; keep session alive
-                    self._status("row error", str(e))
+                    save_df(pd.DataFrame([row_series]), tmp_path)
+
+                    # ---- Run creation or login (keep driver alive) ----
                     try:
-                        hard_reset_app(drv, config.APP_PACKAGE)
-                    except Exception:
-                        pass
-                    # continue to routing with whatever is in the CSV now
+                        creation_flag = str(row_series.get("CREATION", "")).strip()
+                        if creation_flag == "1":
+                            self._status("login", f"row0={row_series.get('nom','')}")
+                            run_login_on_row(drv, 0, row_series, tmp_path, self.target_ddmm)
+                        else:
+                            self._status("creation", f"row0={row_series.get('nom','')}")
+                            run_creation_on_row(drv, 0, row_series, tmp_path, self.target_ddmm)
+                    except Exception as e:
+                        # soft reset app; keep session alive
+                        self._status("row error", str(e))
+                        try:
+                            hard_reset_app(drv, config.APP_PACKAGE)
+                        except Exception:
+                            pass
 
-                # ---- Check outcome on row 0 & route ----
-                with with_csv_lock(self.src_csv):
-                    df_after = load_df(self.src_csv)
+                    # ---- Check outcome & route ----
+                    df_after = load_df(tmp_path)
                     if df_after.empty:
-                        self._status("source empty after run")
-                        break
-
-                    row_after = df_after.iloc[0].to_dict()
+                        row_after = {}
+                    else:
+                        row_after = df_after.iloc[0].to_dict()
                     created = str(row_after.get("CREATION", "")).strip() == "1"
                     reserved = str(row_after.get("RESERVATION", "")).strip() == "1"
 
                     if created and reserved:
-                        # drop first from src
-                        rest = df_after.drop(df_after.index[0]).reset_index(drop=True)
-                        save_df(rest, self.src_csv)
-                        # append to destination
+                        row_after.pop("WORKER", None)
                         append_row_dict(self.dest_csv, row_after)
+                        finalize_row(self.src_csv, self.label, row_after, requeue=False)
                         self.success += 1
                         self._status("moved → dest", f"ok={self.success}")
                     else:
-                        # explicit fail? drop
                         if str(row_after.get("CREATION", "")).strip() == "-1":
-                            rest = df_after.drop(df_after.index[0]).reset_index(drop=True)
-                            save_df(rest, self.src_csv)
+                            finalize_row(self.src_csv, self.label, row_after, requeue=False)
                             self._status("dropped (CREATION=-1)")
                         else:
-                            # rotate to bottom (keep columns aligned)
-                            rest = df_after.drop(df_after.index[0]).reset_index(drop=True)
-                            save_df(rest, self.src_csv)
-                            rotate_row_to_bottom(self.src_csv, row_after)
+                            finalize_row(self.src_csv, self.label, row_after, requeue=True)
                             self._status("rotated to bottom")
+
+                finally:
+                    try:
+                        os.remove(tmp_path)
+                    except Exception:
+                        pass
 
                 self.processed += 1
                 time.sleep(0.05)  # tiny breather

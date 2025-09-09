@@ -251,7 +251,8 @@ def index():
         "index.html",
         status=status,
         csv_stats=csv_stats,
-        daily_folders=daily_folders
+        daily_folders=daily_folders,
+        devices=getattr(config, "DEVICES", []),
     )
 
 @app.route("/all/sort", methods=["POST"])
@@ -462,9 +463,11 @@ def run_batch_multi():
     dest_csv = os.path.join(config.BASE_DIR, folder, "hommes.csv" if gender == "men" else "femmes.csv")
     _ensure_csv(dest_csv, _safe_headers())
 
-    devices = getattr(config, "DEVICES", [])
+    selected_udids = request.form.getlist("devices")
+    all_devices = getattr(config, "DEVICES", [])
+    devices = [d for d in all_devices if d.get("udid") in selected_udids]
     if not devices:
-        flash("No devices configured in config.DEVICES.", "danger")
+        flash("Please select at least one device.", "danger")
         return redirect(url_for("index"))
 
     stop_event = threading.Event()
@@ -474,7 +477,9 @@ def run_batch_multi():
     # mark running for UI
     try:
         automation._STATE.set_running(True)
-        automation._STATE.set_step("multi-device batch", f"{len(devices)} device(s) → {folder} ({gender})")
+        automation._STATE.set_step(
+            "multi-device batch", f"{len(devices)} device(s) → {folder} ({gender})"
+        )
     except Exception:
         pass
 

@@ -95,3 +95,72 @@ def append_row_dict(path: str, row_dict: Dict[str, str]):
         row_df = row_df[df.columns]
         new_df = pd.concat([df, row_df], ignore_index=True)
         save_df(new_df, path)
+
+
+def claim_next_row(path: str, worker_name: str) -> Tuple[Optional[pd.Series], bool]:
+    """
+    Find the first row whose WORKER column is empty and mark it with
+    ``worker_name`` so other workers ignore it.
+
+    Returns a tuple ``(row, has_rows)`` where ``row`` is the claimed row as
+    a Series (or ``None`` if none were available) and ``has_rows`` indicates
+    whether the source CSV had any rows at all.
+    """
+    with with_csv_lock(path):
+        df = load_df(path)
+        if df.empty:
+            return None, False
+
+        if "WORKER" not in df.columns:
+            df["WORKER"] = ""
+
+        mask = df["WORKER"].astype(str) == ""
+        if not mask.any():
+            # there are rows, but all claimed
+            return None, True
+
+        idx = df.index[mask][0]
+        df.at[idx, "WORKER"] = worker_name
+        save_df(df, path)
+        return df.loc[idx], True
+
+
+def finalize_row(
+    path: str,
+    worker_name: str,
+    row_dict: Dict[str, str],
+    *,
+    requeue: bool = False,
+):
+    """
+    Remove the row currently claimed by ``worker_name``. If ``requeue`` is
+    True, append ``row_dict`` back to the bottom (with WORKER cleared).
+    ``row_dict`` should contain the most up-to-date data for that row.
+    """
+    with with_csv_lock(path):
+        df = load_df(path)
+        if "WORKER" not in df.columns:
+            return
+
+        mask = df["WORKER"] == worker_name
+        if not mask.any():
+            return
+
+        idx = df.index[mask][0]
+        df = df.drop(idx).reset_index(drop=True)
+
+        if requeue:
+            # ensure WORKER column exists and is cleared
+            row_dict = dict(row_dict)
+            row_dict["WORKER"] = ""
+            row_df = pd.DataFrame([row_dict])
+            for c in df.columns:
+                if c not in row_df.columns:
+                    row_df[c] = ""
+            for c in row_df.columns:
+                if c not in df.columns:
+                    df[c] = ""
+            row_df = row_df[df.columns]
+            df = pd.concat([df, row_df], ignore_index=True)
+
+        save_df(df, path)
