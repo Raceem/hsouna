@@ -1,0 +1,171 @@
+*** Begin Patch
+*** Update File: sort.py
+@@
+-from __future__ import annotations
+-import os
+-import time
+-import logging
+-from pathlib import Path
+-import pandas as pd
+-from config import (
+-    ALL_CSV_PATH,
+-    HOMMES_CSV_PATH,
+-    FEMMES_CSV_PATH,
+-    APP_PACKAGE,
+-    setup_driver,
+-    hard_reset_app,
+-    TARGET_DATE,
+-)
+-from CreationReservation import run_creation_on_row
++from __future__ import annotations
++import os
++import logging
++from pathlib import Path
++from typing import List, Dict
++import subprocess
++import pandas as pd
++from config import (
++    ALL_CSV_PATH,
++    HOMMES_CSV_PATH,
++    FEMMES_CSV_PATH,
++    DEVICES,
++)
+@@
+-def process_one(driver, all_csv: str, row_index: int, target_ddmm: str) -> None:
+-    df_all = _load_df(all_csv)
+-    if df_all.empty or not (0 <= row_index < len(df_all)):
+-        return
+-    row = df_all.iloc[row_index]
+-    # Write the single-row tmp used by CreationReservation
+-    tmp_path = f"{all_csv}.tmp.{os.getpid()}.{row_index}.csv"
+-    try:
+-        _save_df(pd.DataFrame([row]), tmp_path)
+-        # Creation + Reservation (single pass, using the same helper as UI)
+-        run_creation_on_row(driver, 0, row, tmp_path, target_ddmm)
+-        # Examine outcome
+-        out_df = _load_df(tmp_path)
+-        out_row = out_df.iloc[0].to_dict() if not out_df.empty else {}
+-        created = (out_row.get("CREATION") or "").strip() == "1"
+-        reserved = (out_row.get("RESERVATION") or "").strip() == "1"
+-        if created and reserved:
+-            # Move to gender file and remove from ALL
+-            if _move_row_to_gender(all_csv, row_index, out_row):
+-                return
+-            # If gender missing, keep in ALL but do not rotate (let operator fix)
+-            LOG.info("CREATION+RESERVATION=1 but gender missing; keeping in ALL")
+-            return
+-        # If marked permanent (-1), drop from ALL
+-        if (out_row.get("CREATION") or "").strip() == "-1":
+-            df_all2 = _load_df(all_csv)
+-            if 0 <= row_index < len(df_all2):
+-                df_all2 = df_all2.drop(index=row_index).reset_index(drop=True)
+-                _save_df(df_all2, all_csv)
+-            LOG.info("CREATION=-1 -> removed from ALL")
+-            return
+-        # Otherwise rotate row to bottom for retry later
+-        df_all2 = _load_df(all_csv)
+-        if 0 <= row_index < len(df_all2):
+-            r = df_all2.iloc[[row_index]].copy()
+-            rest = df_all2.drop(index=row_index).reset_index(drop=True)
+-            new_df = pd.concat([rest, r], ignore_index=True)
+-            _save_df(new_df, all_csv)
+-        LOG.info("Row rotated to bottom for retry")
+-    finally:
+-        try:
+-            os.remove(tmp_path)
+-        except Exception:
+-            pass
+-        try:
+-            hard_reset_app(driver, APP_PACKAGE)
+-        except Exception:
+-            pass
++def _normalize_gender(value: str | None) -> str | None:
++    if value is None:
++        return None
++    s = str(value).strip().lower()
++    if not s:
++        return None
++    if s in {"h", "m", "homme", "male", "man", "masculin"}:
++        return "H"
++    if s in {"f", "femme", "female", "woman", "feminin"}:
++        return "F"
++    return None
++
++
++def select_devices_ui() -> List[str]:
++    # Minimal multi-select UI using configured devices only
++    udids = [d.get("udid") for d in (DEVICES or []) if d.get("udid")]
++    labels = [(d.get("name") or u) + f" ({u})" for d in (DEVICES or []) for u in [d.get("udid")] if u]
++    try:
++        import tkinter as tk
++        from tkinter import ttk
++        sel: List[str] = []
++        root = tk.Tk()
++        root.title("Select Phones")
++        lb = tk.Listbox(root, selectmode=tk.EXTENDED, width=60, height=10)
++        for it in labels:
++            lb.insert(tk.END, it)
++        lb.pack(padx=10, pady=10)
++        btns = ttk.Frame(root); btns.pack(padx=10, pady=(0,10), fill="x")
++        def ok():
++            for i in lb.curselection():
++                sel.append(udids[i])
++            root.destroy()
++        def all_():
++            lb.select_set(0, tk.END)
++        ttk.Button(btns, text="Select All", command=all_).pack(side="left")
++        ttk.Button(btns, text="Start", command=ok).pack(side="right")
++        root.mainloop()
++        LOG.info("Selected devices: %s", ", ".join(sel) if sel else "<none>")
++        return sel
++    except Exception as e:
++        LOG.info("UI not available (%s); continuing without selection.", e)
++        return udids
++
++
++def sort_all_by_gender(all_csv: str, hommes_csv: str, femmes_csv: str) -> dict:
++    df = _load_df(all_csv)
++    if df.empty:
++        return {"total": 0, "hommes": 0, "femmes": 0, "unknown": 0}
++    hommes = femmes = unknown = 0
++    keep_rows = []
++    for _, row in df.iterrows():
++        g = _normalize_gender(row.get("gender"))
++        if g == "H":
++            _append_row(hommes_csv, row.to_dict()); hommes += 1
++        elif g == "F":
++            _append_row(femmes_csv, row.to_dict()); femmes += 1
++        else:
++            keep_rows.append(row); unknown += 1
++    _save_df(pd.DataFrame(keep_rows), all_csv)
++    return {"total": int(len(df)), "hommes": hommes, "femmes": femmes, "unknown": unknown}
+@@
+-def main():
+-    all_csv = os.getenv("CSV_FILE_OVERRIDE", ALL_CSV_PATH)
+-    target_ddmm = os.getenv("TARGET_DATE_OVERRIDE", TARGET_DATE)
+-    if not target_ddmm:
+-        raise SystemExit("TARGET_DATE (DD/MM) must be set.")
+-    drv = None
+-    try:
+-        drv = setup_driver()
+-        while True:
+-            df = _load_df(all_csv)
+-            if df.empty:
+-                LOG.info("ALL.csv empty; nothing to process.")
+-                break
+-            # always process the first row
+-            process_one(drv, all_csv, 0, target_ddmm)
+-            time.sleep(0.2)
+-    finally:
+-        try:
+-            if drv:
+-                drv.quit()
+-        except Exception:
+-            pass
++def main():
++    all_csv = os.getenv("CSV_FILE_OVERRIDE", ALL_CSV_PATH)
++    # Let user pick phones (for future steps); sorting doesn't require them
++    _ = select_devices_ui()
++    stats = sort_all_by_gender(all_csv, HOMMES_CSV_PATH, FEMMES_CSV_PATH)
++    LOG.info("Sorted: total=%d, hommes=%d, femmes=%d, unknown/left=%d", stats["total"], stats["hommes"], stats["femmes"], stats["unknown"])
+*** End Patch

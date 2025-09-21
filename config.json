@@ -1,0 +1,6 @@
+{
+  "server": {
+    "port": 4725,
+    "allowInsecure": ["adb_shell"]
+}
+}
