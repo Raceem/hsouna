@@ -197,6 +197,8 @@
                     </div>
                   {% endfor %}
                   <input type="number" name="count" value="1" min="1" class="form-control form-control-sm ms-2 me-2" style="width:90px;" title="Combined target across selected devices">
+                  <input type="checkbox" class="btn-check" id="priority-{{ outer_index }}" name="prioritize_existing" value="1" autocomplete="off">
+                  <label class="btn btn-outline-secondary btn-sm me-2 text-nowrap" for="priority-{{ outer_index }}" title="Give preference to rows that already have an account">Fast priority</label>
                   <button type="submit" name="gender" value="men" class="btn btn-outline-primary btn-sm me-2">+ Men</button>
                   <button type="submit" name="gender" value="women" class="btn btn-outline-danger btn-sm">+ Women</button>
                   <button type="submit" name="gender" value="men" class="btn btn-outline-success btn-sm ms-2" formaction="{{ url_for('run_confirmation_multi') }}">Confirm Men</button>

@@ -746,7 +746,7 @@ def login_user(
             break
     else:
         logger.error("Too many login errors; marking CREATION='-1'")
-        _set_df(df, index, "CREATION", "0")
+        _set_df(df, index, "CREATION", "1")
         return
 
     time.sleep(2)

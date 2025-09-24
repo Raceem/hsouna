@@ -133,6 +133,16 @@ def parse_target_date_from_folder(folder_name: str) -> Optional[str]:
     return None
 
 
+def _parse_folder_date(folder_name: str) -> Optional[datetime]:
+    digits = re.sub(r"\D", "", folder_name)
+    if len(digits) != 8:
+        return None
+    try:
+        return datetime.strptime(digits, "%m%d%Y")
+    except ValueError:
+        return None
+
+
 # =========================
 # CSV stats (global files)
 # =========================
@@ -218,7 +228,13 @@ def get_daily_folders(sort_desc: bool = True):
             ]
         })
 
-    items.sort(key=lambda r: r["mtime"], reverse=sort_desc)
+    def _daily_sort_key(row: Dict[str, Any]) -> Tuple[datetime, float]:
+        primary = _parse_folder_date(row["folder"])
+        if primary is None:
+            primary = datetime.fromtimestamp(row["mtime"])
+        return primary, row["mtime"]
+
+    items.sort(key=_daily_sort_key, reverse=sort_desc)
     return items
 
 
@@ -236,6 +252,7 @@ class Batch:
     target_ddmm: str
     total_target: int
     devices: List[str]
+    prioritize_existing: bool = False
     screenshot_root: str = ""
     mode: str = "reservation"
     stop_event: threading.Event = field(default_factory=threading.Event)
@@ -267,6 +284,7 @@ class QueuedJob:
     target_ddmm: str
     total_target: int
     devices: List[str]
+    prioritize_existing: bool = False
     screenshot_root: str = ""
     mode: str = "reservation"
     queued_ts: float = field(default_factory=time.time)
@@ -306,7 +324,7 @@ def _devices_available(udids: List[str]) -> bool:
         return all(u not in _busy_devices for u in udids)
 
 
-def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_ddmm: str, total_target: int, udids: List[str], *, mode: str = "reservation", screenshot_root: str = "") -> int:
+def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_ddmm: str, total_target: int, udids: List[str], *, mode: str = "reservation", screenshot_root: str = "", prioritize_existing: bool = False) -> int:
     """Start a batch immediately (assumes devices are available). Returns batch id.
 
     mode: "reservation" -> DeviceWorker, "creation" -> CreationDeviceWorker
@@ -322,6 +340,7 @@ def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_d
         target_ddmm=target_ddmm,
         total_target=total_target,
         devices=udids,
+        prioritize_existing=prioritize_existing,
         screenshot_root=screenshot_root,
         mode=mode,
         combined=CombinedTarget(total_target),
@@ -341,6 +360,7 @@ def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_d
                 combined_target=batch.combined,
                 label=label,
                 batch_id=batch_id,
+                prioritize_existing=prioritize_existing,
             )
         elif mode == "confirmation":
             t = ConfirmationWorker(
@@ -431,6 +451,7 @@ def _dispatcher_loop():
                         udids=job_to_start.devices,
                         mode=getattr(job_to_start, 'mode', 'reservation'),
                         screenshot_root=getattr(job_to_start, 'screenshot_root', ""),
+                        prioritize_existing=getattr(job_to_start, 'prioritize_existing', False),
                     )
                 except Exception:
                     # Failed to launch; push back to queue tail for retry
@@ -795,6 +816,8 @@ def run_batch_multi():
     except Exception:
         total_target = 1
 
+    prioritize_existing = (request.form.get("prioritize_existing") or "").strip().lower() in {"1", "true", "on"}
+
     target_ddmm = parse_target_date_from_folder(folder)
     if not target_ddmm:
         flash("Invalid folder name for target date.", "danger")
@@ -830,6 +853,7 @@ def run_batch_multi():
                 dest_csv=dest_csv,
                 target_ddmm=target_ddmm,
                 total_target=total_target,
+                prioritize_existing=prioritize_existing,
                 devices=udids,
             ))
             pos = len(_job_queue)
@@ -847,6 +871,7 @@ def run_batch_multi():
         target_ddmm=target_ddmm,
         total_target=total_target,
         devices=udids,
+        prioritize_existing=prioritize_existing,
         combined=CombinedTarget(total_target),
     )
 
@@ -863,6 +888,7 @@ def run_batch_multi():
             combined_target=batch.combined,
             label=label,
             batch_id=batch_id,
+            prioritize_existing=prioritize_existing,
         )
         t.start()
         batch.threads.append(t)

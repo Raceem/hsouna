@@ -116,13 +116,16 @@ def _should_skip_confirmation(row: dict) -> Tuple[bool, str]:
         return True, reason
     return False, ""
 
-
 def _safe_filename(*parts: str) -> str:
     joined = "_".join(p for p in (str(part).strip() for part in parts if part) if p)
-    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", joined or "confirmation")
+
+    # Replace ":" with "_" so Windows accepts it
+    joined = joined.replace(":", "_")
+
+    # Keep spaces, dots, dashes, underscores
+    cleaned = re.sub(r"[^A-Za-z0-9 ._-]+", "_", joined or "confirmation")
+
     return cleaned[:80]
-
-
 def _resolve_screenshot_path(base_folder: str, row: dict, visit_time: str | None) -> str:
     gender_code = normalize_gender(row.get('gender'))
     if gender_code == 'H':
@@ -134,11 +137,12 @@ def _resolve_screenshot_path(base_folder: str, row: dict, visit_time: str | None
     target_dir = os.path.join(base_folder, sub)
     os.makedirs(target_dir, exist_ok=True)
 
-    time_component = (visit_time or '').strip()
+    
+    time_component = (visit_time or '').strip() or (_flag(row, 'heure') or '').strip()
     if not time_component:
         time_component = (_flag(row, 'heure') or '').strip()
     passport = (row.get('numero_passport') or '').strip() or 'unknown'
-    filename = _safe_filename(time_component or 'unknown', passport, 'RM') + '.png'
+    filename = _safe_filename(time_component or 'unknown', passport) + '.png'
     return os.path.join(target_dir, filename)
 def _capture_screenshot(driver, base_folder: str, row: dict, visit_time: str | None) -> str:
     try:

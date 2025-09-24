@@ -97,10 +97,13 @@ def append_row_dict(path: str, row_dict: Dict[str, str]):
         save_df(new_df, path)
 
 
-def claim_next_row(path: str, worker_name: str) -> Tuple[Optional[pd.Series], bool]:
+def claim_next_row(path: str, worker_name: str, *, prioritize_existing: bool = False) -> Tuple[Optional[pd.Series], bool]:
     """
     Find the first row whose WORKER is either this worker's name (resume)
     or empty (new), mark it with this worker's name, and return it.
+
+    When prioritize_existing is True, prefer unclaimed rows with CREATION == '1'
+    (and RESERVATION != '1' when that column is present) before other free rows.
 
     Returns (row, has_rows) where row is the claimed Series or None,
     and has_rows indicates whether the CSV had any rows at all.
@@ -123,7 +126,21 @@ def claim_next_row(path: str, worker_name: str) -> Tuple[Optional[pd.Series], bo
         if mask_own.any():
             idx = df.index[mask_own][0]
         elif mask_empty.any():
-            idx = df.index[mask_empty][0]
+            idx = None
+            if prioritize_existing:
+                creation_col = df.get("CREATION")
+                reservation_col = df.get("RESERVATION")
+                if creation_col is not None:
+                    creation_norm = creation_col.astype(str).str.strip()
+                    mask_existing = creation_norm == "1"
+                    if reservation_col is not None:
+                        reservation_norm = reservation_col.astype(str).str.strip()
+                        mask_existing &= reservation_norm != "1"
+                    candidate_idx = df.index[mask_empty & mask_existing]
+                    if len(candidate_idx) > 0:
+                        idx = candidate_idx[0]
+            if idx is None:
+                idx = df.index[mask_empty][0]
         else:
             # there are rows, but none are resumable or empty
             return None, True

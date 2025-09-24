@@ -252,6 +252,7 @@ class DeviceWorker(threading.Thread):
         combined_target: Optional[CombinedTarget] = None,
         label: Optional[str] = None,
         batch_id: Optional[int] = None,
+        prioritize_existing: bool = False,
     ):
         super().__init__(name=f"worker-{udid or 'default'}", daemon=True)
         self.udid = udid
@@ -264,6 +265,7 @@ class DeviceWorker(threading.Thread):
         self.combined_target = combined_target
         self.label = label or self.name
         self.batch_id = batch_id
+        self.prioritize_existing = prioritize_existing
 
         self.processed = 0
         self.success = 0
@@ -369,7 +371,7 @@ class DeviceWorker(threading.Thread):
                     break
 
                 # ---- Claim a free row via WORKER column ----
-                row_series, has_rows = claim_next_row(self.src_csv, self.label)
+                row_series, has_rows = claim_next_row(self.src_csv, self.label, prioritize_existing=self.prioritize_existing)
                 if row_series is None:
                     if has_rows:
                         # all rows currently claimed by other workers

@@ -8,8 +8,8 @@ from appium.options.android import UiAutomator2Options
 # Base paths & CSV settings
 # =========================
 FOLDER_NAME = "09_25__2025"
-BASE_DIR = r"C:\Users\sahno\Desktop\hsouna"
-CSV_FILE = 'C:/Users/sahno/Desktop/hsouna/ALL.csv'
+BASE_DIR = r"C:\Users\SBS\Desktop\Hsouna"
+CSV_FILE = 'C:/Users/SBS/Desktop/Hsouna/ALL.csv'
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
 NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
 
@@ -19,11 +19,11 @@ HOMMES_CSV_PATH = os.path.join(BASE_DIR, "HOMMES.csv")
 FEMMES_CSV_PATH = os.path.join(BASE_DIR, "FEMMES.csv")
 
 # Default PDF path
-PDF_FILE = r"C:/Users/sahno/Desktop/hsouna/_inbox/merged.pdf"
+PDF_FILE = r"C:/Users/SBS/Desktop/Hsouna/_inbox/merged (4).pdf"
 # Directories where confirmation screenshots will be stored
 RAWDHA_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "rawdha")
 RESERVATION_DIR = os.path.join(BASE_DIR, FOLDER_NAME, "reservations")
-ALL_IMPORT_CSV = r"C:/Users/sahno/Desktop/hsouna/_inbox/latest_import.csv"
+ALL_IMPORT_CSV = r"C:/Users/SBS/Desktop/Hsouna/_inbox/latest_import.csv"
 
 # =====================
 # Domain configuration
@@ -32,7 +32,7 @@ PAYS = "egypt"
 PAYS_UPPER = PAYS.lower()
 TARGET_DATE = "23/09"
 HIJRI_DAY = "22"
-START_DATE = "02_09_2025"
+START_DATE = "02_08_2025"
 DURATION_DAYS = 31
 
 # CSV headers
@@ -57,9 +57,9 @@ FIELDNAMES = [
 # ===================
 # Appium configuration
 # ===================
-APPIUM_SERVER = "http://127.0.0.1:4725"
+APPIUM_SERVER = "http://127.0.0.1:4723"
 PLATFORM_NAME = "Android"
-PLATFORM_VERSION = "14"
+PLATFORM_VERSION = "9"
 
 # App under test
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
@@ -70,30 +70,23 @@ APP_ACTIVITY = os.getenv("APP_ACTIVITY", "").strip()
 # Device identifiers
 # Use a human-readable label for deviceName, and the actual ADB serial for udid
 DEVICE_LABEL = "Android"
-UDID = "R8YY6181K5P"
+UDID = "DEF4C19312001213"
 
 # If you scale out to multiple devices, ensure unique systemPort per device
 DEVICES = [
             {
-        "name": "A06",
-        "udid": "R8YY6181K5P",
+        "name": "huawei",
+        "udid": "DEF4C19312001213",
         "platformVersion": PLATFORM_VERSION,
-        "systemPort": 4569,
-        "appiumServer": "http://127.0.0.1:4275",
+        "systemPort": 5618,
+        "appiumServer": "http://127.0.0.1:4725",
     },
         {
-        "name": "A15",
-        "udid": "RF8X10Y1TNW",
+        "name": "redmi",
+        "udid": "R8YY703MJKW",
         "platformVersion": "15",
-        "systemPort": 4512,
-        "appiumServer": "http://127.0.0.1:4274",
-    },
-    {
-        "name": "14t",
-        "udid": "WSLBBIOBINRGA6HQ",
-        "platformVersion": "15",
-        "systemPort": 4513,
-        "appiumServer": "http://127.0.0.1:4273",
+        "systemPort": 8965,
+        "appiumServer": "http://127.0.0.1:4723",
     },
 ]
 
