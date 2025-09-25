@@ -78,14 +78,14 @@ DEVICES = [
         "name": "huawei",
         "udid": "DEF4C19312001213",
         "platformVersion": PLATFORM_VERSION,
-        "systemPort": 5618,
-        "appiumServer": "http://127.0.0.1:4725",
+        "systemPort": 6546,
+        "appiumServer": "http://127.0.0.1:4726",
     },
         {
         "name": "redmi",
         "udid": "R8YY703MJKW",
         "platformVersion": "15",
-        "systemPort": 8965,
+        "systemPort": 8974,
         "appiumServer": "http://127.0.0.1:4723",
     },
 ]

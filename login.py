@@ -286,11 +286,11 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
     last_err = None
     for _ in range(retries):
         try:
-            driver.execute_script("mobile: clickGesture", {"x": x, "y": y})
+            TouchAction(driver).tap(x=x, y=y).perform()
             time.sleep(0.1)
             return True
-        except Exception as e0:
-            last_err = e0
+        except Exception as e2:
+            last_err = e2
         try:
             from appium.webdriver.common.actions.pointer_input import PointerInput
             from appium.webdriver.common.actions.action_builder import ActionBuilder
@@ -306,11 +306,19 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
         except Exception as e1:
             last_err = e1
         try:
-            TouchAction(driver).tap(x=x, y=y).perform()
+            driver.execute_script("mobile: clickGesture", {"x": x, "y": y})
             time.sleep(0.1)
+            driver.execute_script("mobile: clickGesture", {"x": x+10, "y": y})
+            driver.execute_script("mobile: clickGesture", {"x": x, "y": y+10})
+            driver.execute_script("mobile: clickGesture", {"x": x+10, "y": y+10})
+            driver.execute_script("mobile: clickGesture", {"x": x-10, "y": y-10})
+            driver.execute_script("mobile: clickGesture", {"x": x-10, "y":y })
+            driver.execute_script("mobile: clickGesture", {"x": x, "y": y+250})
             return True
-        except Exception as e2:
-            last_err = e2
+        except Exception as e0:
+            last_err = e0
+       
+       
         time.sleep(0.1)
     logger.error("[%s] All tap methods failed at (%s,%s): %s", label, x, y, last_err)
     return False
@@ -563,8 +571,9 @@ def make_reservation(
     screen_size = driver.get_window_size()
     start_x = screen_size['width'] // 2
     start_y = int(screen_size['height'] * 0.6)
-    end_y = int(screen_size['height'] * 0.5)
+    end_y = int(screen_size['height'] * 0.4)
     driver.swipe(start_x, start_y, start_x, end_y, 500)
+    time.sleep(1)
     # Date selection (native)
     if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
         logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)

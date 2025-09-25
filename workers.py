@@ -495,6 +495,7 @@ class ConfirmationWorker(threading.Thread):
         combined_target: Optional[CombinedTarget] = None,
         label: Optional[str] = None,
         batch_id: Optional[int] = None,
+        prioritize_existing: bool = False,
     ):
         super().__init__(name=f"confirmation-{udid or 'default'}", daemon=True)
         self.udid = udid
@@ -505,6 +506,7 @@ class ConfirmationWorker(threading.Thread):
         self.combined_target = combined_target
         self.label = label or self.name
         self.batch_id = batch_id
+        self.prioritize_existing = prioritize_existing
 
         self.processed = 0
         self.success = 0
@@ -662,6 +664,7 @@ class GenderSortWorker(threading.Thread):
         combined_target: Optional[CombinedTarget] = None,
         label: Optional[str] = None,
         batch_id: Optional[int] = None,
+        prioritize_existing: bool = False,
     ):
         super().__init__(name=f"gender-sort-{udid or 'default'}", daemon=True)
         self.udid = udid
@@ -674,6 +677,7 @@ class GenderSortWorker(threading.Thread):
         self.combined_target = combined_target
         self.label = label or self.name
         self.batch_id = batch_id
+        self.prioritize_existing = prioritize_existing
 
         self.processed = 0
         self.success = 0
@@ -876,6 +880,7 @@ class CreationDeviceWorker(threading.Thread):
         combined_target: Optional[CombinedTarget] = None,
         label: Optional[str] = None,
         batch_id: Optional[int] = None,
+        prioritize_existing: bool = False,
     ):
         super().__init__(name=f"creation-worker-{udid or 'default'}", daemon=True)
         self.udid = udid
@@ -886,6 +891,7 @@ class CreationDeviceWorker(threading.Thread):
         self.combined_target = combined_target
         self.label = label or self.name
         self.batch_id = batch_id
+        self.prioritize_existing = prioritize_existing
 
         self.processed = 0
         self.success = 0

@@ -18,11 +18,11 @@ def generate_all_saudi_numbers():
     Génère toutes les possibilités de numéros mobiles saoudiens commençant par '058'
     et suivis de 7 chiffres (de 0000000 à 9999999).
     """
-    prefix = "59"
+    prefix = "592"
     for i in range(10**7):
-        yield prefix + f"{i:07d}"
+        yield prefix + f"{i:06d}"
 
-def save_saudi_numbers_to_json(filename_json, count=10028):
+def save_saudi_numbers_to_json(filename_json, count=1000000000000):
     """
     Génère les 'count' premiers numéros mobiles saoudiens et les enregistre dans un fichier JSON.
     
@@ -147,10 +147,9 @@ from config import (
 )
 
 if __name__ == "__main__":
-    email_base = "bakloutimhamed01@gmail.com"
-    save_variants_to_json(email_base, EMAIL_JSON_FILE)
 
 
+    save_saudi_numbers_to_json(NUMBER_JSON_FILE, count=999999)
    
     """
     csv_file = CSV_FILE
@@ -161,7 +160,7 @@ if __name__ == "__main__":
 
     merge_pdfs_in_folder(dossier, fichier_sortie)
     # Exemple de génération de numéros et d'e-mails
-    save_saudi_numbers_to_json(NUMBER_JSON_FILE, count=10280)
+    
 
     email_base = "gethacked045@gmail.com"
     save_variants_to_json(email_base, EMAIL_JSON_FILE)
@@ -172,7 +171,8 @@ if __name__ == "__main__":
         df.at[i,"RESERVATION"]="1"
         df.at[i,"CONFIRMATION"]="1"
 
-
+    email_base = "bakloutimhamed01@gmail.com"
+    save_variants_to_json(email_base, EMAIL_JSON_FILE)
     df = pd.read_csv(csv_file, dtype=str)
     for i in range(0,70):
         df.at[i,"CREATION"]="1"

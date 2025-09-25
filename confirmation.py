@@ -3,6 +3,7 @@
 import os
 import re
 import time
+from io import BytesIO
 from datetime import datetime, timedelta
 from typing import Optional, Tuple
 
@@ -144,6 +145,7 @@ def _resolve_screenshot_path(base_folder: str, row: dict, visit_time: str | None
     passport = (row.get('numero_passport') or '').strip() or 'unknown'
     filename = _safe_filename(time_component or 'unknown', passport) + '.png'
     return os.path.join(target_dir, filename)
+
 def _capture_screenshot(driver, base_folder: str, row: dict, visit_time: str | None) -> str:
     try:
         size = driver.get_window_size()
@@ -168,7 +170,71 @@ def _capture_screenshot(driver, base_folder: str, row: dict, visit_time: str | N
         pass
 
     path = _resolve_screenshot_path(base_folder, row, visit_time)
-    driver.get_screenshot_as_file(path)
+
+    try:
+        screenshot_bytes = driver.get_screenshot_as_png()
+    except Exception as exc:
+        logger.warning("[confirmation] raw screenshot capture failed; fallback to file: %s", exc)
+        driver.get_screenshot_as_file(path)
+        return path
+
+    if not screenshot_bytes:
+        driver.get_screenshot_as_file(path)
+        return path
+
+    try:
+        from PIL import Image  # type: ignore
+    except ImportError:
+        logger.warning("[confirmation] pillow not available; saved full screenshot")
+        with open(path, "wb") as handle:
+            handle.write(screenshot_bytes)
+        return path
+
+    try:
+        base_image = Image.open(BytesIO(screenshot_bytes))
+    except Exception as exc:
+        logger.warning("[confirmation] unable to load screenshot for cropping: %s", exc)
+        with open(path, "wb") as handle:
+            handle.write(screenshot_bytes)
+        return path
+
+    # Crop screenshot to the reservation details block bounded by the divider and identity field.
+    try:
+        top_el = driver.find_element(AppiumBy.ID, "com.moh.nusukapp:id/tv_visit_date_title")
+        bottom_el = driver.find_element(AppiumBy.ID, "com.moh.nusukapp:id/tv_identity_number")
+    except Exception as exc:
+        logger.warning("[confirmation] cropping bounds missing; saved full screenshot: %s", exc)
+        base_image.save(path)
+        return path
+
+    top_rect = top_el.rect or {}
+    bottom_rect = bottom_el.rect or {}
+
+    top_y = max(int(top_rect.get("y", 0)), 0)
+    bottom_y = int(bottom_rect.get("y", 0) + bottom_rect.get("height", 0))
+
+    if bottom_y <= top_y:
+        logger.warning(
+            "[confirmation] invalid crop bounds (top=%s bottom=%s); saved full screenshot",
+            top_y,
+            bottom_y,
+        )
+        base_image.save(path)
+        return path
+
+    crop_box = (
+        0,
+        max(top_y, 0),
+        base_image.width,
+        min(bottom_y, base_image.height),
+    )
+
+    if crop_box[3] <= crop_box[1]:
+        base_image.save(path)
+        return path
+
+    cropped_image = base_image.crop(crop_box)
+    cropped_image.save(path)
     return path
 
 
