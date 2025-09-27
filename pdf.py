@@ -13,6 +13,7 @@ Dependencies:
 from pdfminer.high_level import extract_text  # kept if you need it elsewhere
 import re
 import pandas as pd
+import time
 import json
 from datetime import datetime
 import os
@@ -25,6 +26,7 @@ from config import (
     FIELDNAMES,
     PDF_FILE,
 )
+from rowstore import with_variant_lock
 # Allow overrides via environment variables without editing config.py
 CSV_FILE = os.environ.get("CSV_FILE_OVERRIDE", CSV_FILE)
 PDF_FILE = os.environ.get("PDF_FILE_OVERRIDE", PDF_FILE)
@@ -32,32 +34,56 @@ PDF_FILE = os.environ.get("PDF_FILE_OVERRIDE", PDF_FILE)
 # ---------------------------
 # Helpers: pop first variant
 # ---------------------------
-def pop_first_variant(filename_json):
-    # Ensure file exists and is a JSON list
-    if not os.path.exists(filename_json):
-        with open(filename_json, "w", encoding="utf-8") as f:
-            json.dump([], f)
 
-    with open(filename_json, "r", encoding="utf-8") as f:
-        try:
-            variants = json.load(f)
-            if not isinstance(variants, list):
-                variants = []
-        except json.JSONDecodeError:
-            variants = []
 
-    if variants:
-        first_variant = variants.pop(0)
-        print(f"Élément récupéré : {first_variant}")
-    else:
-        print("La liste est vide, rien à récupérer.")
-        first_variant = None
 
-    with open(filename_json, "w", encoding="utf-8") as f:
-        json.dump(variants, f, ensure_ascii=False, indent=4)
-    print(f"Le fichier {filename_json} a été mis à jour.")
-    return first_variant
 
+def pop_first_variant(filename_json: str) -> str | None:
+    """Safely pop the first value from a JSON list with file locking."""
+    retries = 3
+    delay = 0.05
+    last_error = False
+
+    for attempt in range(retries):
+        need_retry = False
+        with with_variant_lock(filename_json):
+            if not os.path.exists(filename_json):
+                with open(filename_json, 'w', encoding='utf-8') as f:
+                    json.dump([], f)
+
+            try:
+                with open(filename_json, 'r', encoding='utf-8') as f:
+                    variants = json.load(f)
+                if not isinstance(variants, list):
+                    variants = []
+            except json.JSONDecodeError:
+                need_retry = True
+                variants = None
+
+            if variants is None:
+                # File may be mid-write; retry after a short delay.
+                pass
+            else:
+                first_variant = variants.pop(0) if variants else None
+                if first_variant is not None:
+                    print(f"Element recupere : {first_variant}")
+                else:
+                    print("La liste est vide, rien a recuperer.")
+                with open(filename_json, 'w', encoding='utf-8') as f:
+                    json.dump(variants, f, ensure_ascii=False, indent=4)
+                print(f"Le fichier {filename_json} a ete mis a jour.")
+                return first_variant
+
+        if need_retry and attempt + 1 < retries:
+            time.sleep(delay * (attempt + 1))
+        else:
+            last_error = need_retry
+            break
+
+    if last_error:
+        print(f"Lecture interrompue, aucune donnee extraite de {filename_json}.")
+
+    return None
 # ---------------------------
 # PDF text extraction
 # ---------------------------

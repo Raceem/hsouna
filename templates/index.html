@@ -64,11 +64,6 @@
             <div class="card-body">
               <h5 class="card-title mb-2">ALL</h5>
               <p class="card-text fs-4 mb-3">{{ csv_stats['all'].total }}</p>
-              <form method="post" action="{{ url_for('all_sort') }}">
-                <button class="btn btn-sm btn-outline-secondary" type="submit">
-                  Sort ALL → HOMMES / FEMMES
-              </button>
-              </form>
               <form method="post" action="{{ url_for('sort_all_multi') }}" class="mt-2">
                 <div class="mb-2">
                   <div class="form-text">Select devices</div>

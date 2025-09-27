@@ -147,27 +147,48 @@ def _resolve_screenshot_path(base_folder: str, row: dict, visit_time: str | None
     return os.path.join(target_dir, filename)
 
 def _capture_screenshot(driver, base_folder: str, row: dict, visit_time: str | None) -> str:
+    # 0) Wait until the "date title" (top crop bound) is visible.
     try:
-        size = driver.get_window_size()
-        start_x = size.get("width", 0) // 2
-        start_y = int(size.get("height", 0) * 0.6)
-        end_y = int(size.get("height", 0) * 0.55)
-        if start_x and start_y and end_y:
-            try:
-                driver.swipe(start_x, start_y, start_x, end_y, 500)
-            except Exception:
-                driver.execute_script(
-                    "mobile: swipe",
-                    {
-                        "startX": start_x,
-                        "startY": start_y,
-                        "endX": start_x,
-                        "endY": end_y,
-                        "speed": 500,
-                    },
-                )
+        WebDriverWait(driver, 8, 0.2).until(
+            EC.visibility_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tv_visit_date_title"))
+        )
     except Exception:
+        # If it never becomes visible, we’ll proceed and let the later logic fall back to a full screenshot.
         pass
+
+    # 1) If both top & bottom elements are present, DO NOT scroll.
+    need_scroll = True
+    try:
+        _top_probe = driver.find_element(AppiumBy.ID, "com.moh.nusukapp:id/tv_visit_date_title")
+        _bot_probe = driver.find_element(AppiumBy.ID, "com.moh.nusukapp:id/tv_identity_number")
+        if _top_probe.is_displayed() and _bot_probe.is_displayed():
+            need_scroll = False
+    except Exception:
+        need_scroll = True
+
+    # 2) Only scroll if needed.
+    if need_scroll:
+        try:
+            size = driver.get_window_size()
+            start_x = size.get("width", 0) // 2
+            start_y = int(size.get("height", 0) * 0.6)
+            end_y = int(size.get("height", 0) * 0.55)
+            if start_x and start_y and end_y:
+                try:
+                    driver.swipe(start_x, start_y, start_x, end_y, 500)
+                except Exception:
+                    driver.execute_script(
+                        "mobile: swipe",
+                        {
+                            "startX": start_x,
+                            "startY": start_y,
+                            "endX": start_x,
+                            "endY": end_y,
+                            "speed": 500,
+                        },
+                    )
+        except Exception:
+            pass
 
     path = _resolve_screenshot_path(base_folder, row, visit_time)
 

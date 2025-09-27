@@ -142,7 +142,7 @@ def has_existing_booking(driver) -> bool:
             pass
     return False
 
-def safe_click(driver, locator, name="element", timeout=4, retries=2, poll=0.25, clickable=True):
+def safe_click(driver, locator, name="element", timeout=10, retries=2, poll=0.25, clickable=True):
     by, value = locator
     last_err = None
     for attempt in range(1, retries + 1):

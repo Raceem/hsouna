@@ -13,6 +13,19 @@ except Exception:  # very last resort – runs without locking
     portalocker = None
 
 
+
+
+@contextmanager
+def with_variant_lock(path: str, timeout: int = 30):
+    """File-based lock for JSON variant pools."""
+    lock_file = f"{path}.lock"
+    if portalocker is None:
+        yield
+        return
+    lock = portalocker.Lock(lock_file, timeout=timeout)
+    with lock:
+        yield
+
 @contextmanager
 def with_csv_lock(path: str, timeout: int = 30):
     """
