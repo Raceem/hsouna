@@ -1,0 +1,9 @@
+appium-python-client
+flask
+numpy
+opencv-python
+pandas
+pdfplumber
+portalocker
+PyPDF2
+selenium
