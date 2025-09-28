@@ -308,12 +308,6 @@ def tap_xy(driver, x: int, y: int, label: str = "tap_xy", retries: int = 2) -> b
         try:
             driver.execute_script("mobile: clickGesture", {"x": x, "y": y})
             time.sleep(0.1)
-            driver.execute_script("mobile: clickGesture", {"x": x+10, "y": y})
-            driver.execute_script("mobile: clickGesture", {"x": x, "y": y+10})
-            driver.execute_script("mobile: clickGesture", {"x": x+10, "y": y+10})
-            driver.execute_script("mobile: clickGesture", {"x": x-10, "y": y-10})
-            driver.execute_script("mobile: clickGesture", {"x": x-10, "y":y })
-            driver.execute_script("mobile: clickGesture", {"x": x, "y": y+250})
             return True
         except Exception as e0:
             last_err = e0
@@ -348,7 +342,7 @@ def _find_big_digit(driver, text: str):
         if not b:
             continue
         a = _area(b)
-        if a > best_area:
+        if a >= best_area:
             best, best_bounds, best_area = el, b, a
 
     return best, best_bounds
