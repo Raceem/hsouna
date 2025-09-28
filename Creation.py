@@ -241,14 +241,12 @@ def run_creation_on_row(
 
         try:
             pickers[2].click(); pickers[2].clear(); pickers[2].send_keys("1981")
-            pickers[0].click()
-            pickers[2].click(); pickers[2].clear(); pickers[2].send_keys("1985")
-            try: driver.hide_keyboard()
-            except Exception: pass
+            driver.press_keycode(66)
+            driver.press_keycode(66)
         except Exception:
             pass
 
-        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvAdd"), "Add DOB")
+       # safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvAdd"), "Add DOB")
         
         
         # Rare popup: "Veuillez sélectionner une date valide." -> dismiss and retry once

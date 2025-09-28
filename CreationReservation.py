@@ -229,17 +229,13 @@ def run_creation_on_row(
         # Expect "DD/MM/YYYY" in CSV
         dob = str(data.get("date_de_naissance", "01/01/1990"))
         dd, mm, yyyy = dob[:2], dob[3:5], dob[6:]
-
         try:
-            pickers[2].click(); pickers[2].clear(); pickers[2].send_keys("1985")
-            pickers[2].click(); pickers[2].clear(); pickers[2].send_keys("1985")
-            
-            try: driver.hide_keyboard()
-            except Exception: pass
+            pickers[2].click(); pickers[2].clear(); pickers[2].send_keys("1981")
+            driver.press_keycode(66)
+            driver.press_keycode(66)
         except Exception:
             pass
-
-        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvAdd"), "Add DOB")
+        #safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvAdd"), "Add DOB")
         
         
         # Rare popup: "Veuillez sélectionner une date valide." -> dismiss and retry once
