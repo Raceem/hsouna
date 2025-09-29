@@ -224,8 +224,7 @@ def run_creation_on_row(
 
         # Visa
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtVisaNo"), str(data.get("numero_visa", "")), "Visa number")
-        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvContinue"), "Continue after visa")
-
+        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/btn_continue"), "Continue after visa")
         # DOB
         if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvDOB"), "DOB field"):
             _save_df(df, csv_path); return df

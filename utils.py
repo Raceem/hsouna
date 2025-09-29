@@ -162,7 +162,7 @@ if __name__ == "__main__":
     # Exemple de génération de numéros et d'e-mails
     
 
-    email_base = "gethacked045@gmail.com"
+    email_base = "amineayedi21288@gmail.com"
     save_variants_to_json(email_base, EMAIL_JSON_FILE)
 
     
