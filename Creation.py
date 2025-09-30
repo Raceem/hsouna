@@ -224,7 +224,7 @@ def run_creation_on_row(
 
         # Visa
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtVisaNo"), str(data.get("numero_visa", "")), "Visa number")
-        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvContinue"), "Continue after visa")
+        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/btn_continue"), "Continue after visa")
 
         # DOB
         if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvDOB"), "DOB field"):
@@ -425,7 +425,7 @@ def run_creation_on_row(
         # Creation succeeded (we’ll still confirm downstream by reservation step)
         _set(df, row_index, "CREATION", "1")
         # Post-creation privacy sheet sometimes appears
-        #accept_privacy_if_present(driver, timeout=2)
+        accept_privacy_if_present(driver, timeout=2)
 
         # -----------------------------------------------------------------------------
         # Reservation intentionally disabled in Creation.py

@@ -92,6 +92,47 @@ def get_nationality_from_row(row_dict: dict):
     s = str(val).strip()
     return s, s.lower()
 
+TIME_SLOT_RE = re.compile(r"^(\d{1,2}):(\d{2})\s*(AM|PM)?$", re.IGNORECASE)
+
+def _normalize_slot_label(label: str) -> str:
+    s = (label or "").strip()
+    if not s:
+        return ""
+    match = TIME_SLOT_RE.match(s)
+    if not match:
+        return s
+    hour, minute, period = match.groups()
+    hour = f"{int(hour):02d}"
+    if period:
+        return f"{hour}:{minute} {period.upper()}"
+    return f"{hour}:{minute}"
+
+def _extract_visible_slot_text(driver) -> Optional[str]:
+    candidates = [
+        (AppiumBy.ID, "com.moh.nusukapp:id/tvTime"),
+        (AppiumBy.ID, "com.moh.nusukapp:id/tv_time"),
+        (AppiumBy.ID, "com.moh.nusukapp:id/tv_selected_time"),
+        (AppiumBy.ID, "com.moh.nusukapp:id/tvTimeValue"),
+    ]
+    for by, value in candidates:
+        try:
+            elements = driver.find_elements(by, value)
+        except Exception:
+            continue
+        for el in elements:
+            label = _normalize_slot_label(getattr(el, 'text', ''))
+            if label:
+                return label
+    try:
+        for el in driver.find_elements(AppiumBy.CLASS_NAME, "android.widget.TextView"):
+            raw = getattr(el, 'text', '')
+            label = _normalize_slot_label(raw)
+            if label and re.search(r"\d{1,2}:\d{2}", label):
+                return label
+    except Exception:
+        pass
+    return None
+
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
 
 # -----------------------------------------------------------------------------
@@ -492,8 +533,13 @@ def make_reservation(
         _set_df(df, index, "RESERVATION", "1")
 
         year = datetime.strptime(START_DATE, "%d_%m_%Y").year
+        slot_label = _extract_visible_slot_text(driver)
+        if not slot_label:
+            slot_label = _normalize_slot_label(dict_row.get("heure", ""))
+        if not slot_label:
+            slot_label = "10:00 AM"
         _set_df(df, index, "date_reservation", f"{target_ddmm}/{year}")
-        _set_df(df, index, "heure", "10:00 AM")
+        _set_df(df, index, "heure", slot_label)
 
         if gender_hint == "H":
             _increment_reserved(df, "H")
@@ -571,7 +617,7 @@ def make_reservation(
     # Date selection (native)
     if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
         logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)
-
+    time.sleep(0.1)
     if not safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Confirmer")'), name="Confirmer"):
         logger.error("Could not click Confirmer.")
         return
@@ -588,20 +634,35 @@ def make_reservation(
         return "NO_SLOTS"
 
     preferred = "06:00 PM" if actual_gender == "H" else "10:00 AM"
+    target_preferred = _normalize_slot_label(preferred)
+    selected_slot_label = None
     picked = False
     for el in slots:
-        if el.text == preferred:
+        label = _normalize_slot_label(getattr(el, "text", ""))
+        if not label:
+            continue
+        if label == target_preferred:
             try:
                 el.click()
+                selected_slot_label = label
                 picked = True
                 break
-            except Exception:
-                pass
-    if not picked and slots:
-        try:
-            slots[-1].click()
-        except Exception:
-            logger.warning("Failed to click any timeslot.")
+            except Exception as exc:
+                logger.warning("Failed to click preferred timeslot %r: %s", label, exc)
+    if not picked:
+        for el in slots:
+            label = _normalize_slot_label(getattr(el, "text", ""))
+            if not label or label == selected_slot_label:
+                continue
+            try:
+                el.click()
+                selected_slot_label = label
+                picked = True
+                break
+            except Exception as exc:
+                logger.warning("Failed to click fallback timeslot %r: %s", label, exc)
+    if not picked:
+        logger.warning("Failed to click any timeslot.")
 
     # Safety: ensure visible date matches target
     if not verify_selected_date_label(driver, target_ddmm):
@@ -633,9 +694,12 @@ def make_reservation(
 
     if elements and "Neutre" in ((elements[0].text or "").strip()):
         year = datetime.strptime(START_DATE, "%d_%m_%Y").year
+        slot_to_record = selected_slot_label or _extract_visible_slot_text(driver) or target_preferred
+        slot_to_record = _normalize_slot_label(slot_to_record)
+        logger.info("Recording timeslot %s for row %s", slot_to_record, index)
         _set_df(df, index, "CREATION", "1")
         _set_df(df, index, "RESERVATION", "1")
-        _set_df(df, index, "heure", preferred)
+        _set_df(df, index, "heure", slot_to_record)
         _set_df(df, index, "date_reservation", f"{target_ddmm}/{year}")
     else:
         sample = ((elements[0].text or "").strip()) if elements else "<none>"
