@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reservation Automation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <style>
+    .device-card .small-muted { font-size: .8rem; color: #6c757d; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .device-offline { opacity: 0.5; filter: grayscale(0.4); }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container my-4">
+    <h1 class="mb-4">Reservation Automation</h1>
+
+    <!-- Status Bar -->
+    <div class="alert alert-secondary d-flex justify-content-between align-items-center" id="status-bar">
+      <div>
+        <strong>Status:</strong>
+        <span id="status-text" class="mono">Loading…</span>
+      </div>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% for message in messages %}
+        <div class="alert alert-info">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+
+    <!-- Standalone Import PDF -->
+    <section class="mb-4">
+      <form method="post" action="{{ url_for('import_pdf') }}" enctype="multipart/form-data" class="row g-2 align-items-end">
+        <div class="col-auto">
+          <label class="form-label mb-1">Target CSV</label>
+          <select name="target" class="form-select">
+            <option value="ALL">ALL</option>
+            <option value="HOMMES">HOMMES</option>
+            <option value="FEMMES">FEMMES</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <label class="form-label mb-1">PDF file</label>
+          <input type="file" name="pdf" accept="application/pdf" class="form-control" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Import PDF</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- CSV Information -->
+    <section>
+      <h2 class="mb-3">CSV Information</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">ALL</h5>
+              <p class="card-text fs-4 mb-3">{{ csv_stats['all'].total }}</p>
+              <form method="post" action="{{ url_for('sort_all_multi') }}" class="mt-2">
+                <div class="mb-2">
+                  <div class="form-text">Select devices</div>
+                  <div class="d-flex flex-wrap gap-2">
+                    {% for d in devices %}
+                      <div class="form-check {{ 'device-offline' if not d.connected else '' }}">
+                        <input class="form-check-input" type="checkbox" name="udid" id="all_udid_{{ loop.index }}" value="{{ d.udid }}" {{ 'disabled' if not d.connected else '' }}>
+                        <label class="form-check-label small" for="all_udid_{{ loop.index }}">{{ d.name or d.udid }} {% if not d.connected %}<span class="badge bg-secondary ms-1">offline</span>{% endif %}</label>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <button class="btn btn-sm btn-outline-primary" type="submit">Run Sort on selected</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">HOMMES</h5>
+              <p class="mb-1">Rows: <span class="fs-5">{{ csv_stats['hommes'].total }}</span></p>
+              <p class="mb-0 text-muted">With account: {{ csv_stats['hommes'].with_account }}</p>
+              <form method="post" action="{{ url_for('run_creation_hommes') }}" class="mt-2">
+                <div class="mb-2">
+                  <div class="form-text">Select devices</div>
+                  <div class="d-flex flex-wrap gap-2">
+                    {% for d in devices %}
+                      <div class="form-check {{ 'device-offline' if not d.connected else '' }}">
+                        <input class="form-check-input" type="checkbox" name="udid" id="hommes_udid_{{ loop.index }}" value="{{ d.udid }}" {{ 'disabled' if not d.connected else '' }}>
+                        <label class="form-check-label small" for="hommes_udid_{{ loop.index }}">{{ d.name or d.udid }} {% if not d.connected %}<span class="badge bg-secondary ms-1">offline</span>{% endif %}</label>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <button class="btn btn-sm btn-outline-primary" type="submit">Run Creation.py</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">FEMMES</h5>
+              <p class="mb-1">Rows: <span class="fs-5">{{ csv_stats['femmes'].total }}</span></p>
+              <p class="mb-0 text-muted">With account: {{ csv_stats['femmes'].with_account }}</p>
+              <form method="post" action="{{ url_for('run_creation_femmes') }}" class="mt-2">
+                <div class="mb-2">
+                  <div class="form-text">Select devices</div>
+                  <div class="d-flex flex-wrap gap-2">
+                    {% for d in devices %}
+                      <div class="form-check {{ 'device-offline' if not d.connected else '' }}">
+                        <input class="form-check-input" type="checkbox" name="udid" id="femmes_udid_{{ loop.index }}" value="{{ d.udid }}" {{ 'disabled' if not d.connected else '' }}>
+                        <label class="form-check-label small" for="femmes_udid_{{ loop.index }}">{{ d.name or d.udid }} {% if not d.connected %}<span class="badge bg-secondary ms-1">offline</span>{% endif %}</label>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <button class="btn btn-sm btn-outline-primary" type="submit">Run Creation.py</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Merge PDFs -->
+    <section class="mt-5">
+      <h2 class="mb-3">Merge PDFs</h2>
+      <form method="post" action="{{ url_for('merge_pdfs') }}" enctype="multipart/form-data" class="row g-3 mb-5">
+        <div class="col-md-6">
+          <label for="merge_pdfs_input" class="form-label">Select PDF files</label>
+          <input class="form-control" type="file" id="merge_pdfs_input" name="pdfs" accept="application/pdf" multiple required>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-secondary">Merge and Download</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Daily Folders -->
+    <section class="mt-5">
+      <div class="d-flex align-items-center mb-3">
+        <h2 class="mb-0">Daily Folders</h2>
+        <form method="post" action="{{ url_for('add_daily_folder') }}" class="ms-auto row g-2 align-items-center">
+          <div class="col-auto">
+            <label class="form-label mb-0" for="target_date">Date</label>
+          </div>
+          <div class="col-auto">
+            <input type="date" id="target_date" name="target_date" class="form-control" required>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+
+      {% if daily_folders %}
+        <div class="list-group">
+          {% for item in daily_folders %}
+            <div class="list-group-item">
+              <div class="d-flex align-items-center folder-row">
+                <!-- Folder toggle -->
+                <button class="btn btn-link text-decoration-none p-0 me-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#folder-{{ loop.index }}"
+                        aria-expanded="false"
+                        aria-controls="folder-{{ loop.index }}">
+                  <span class="fw-semibold">{{ item.folder }}</span>
+                </button>
+
+                <span class="badge bg-secondary me-2">{{ item.women_count }} women</span>
+                <span class="badge bg-success me-3">{{ item.women_confirmed }} confirmed</span>
+                <span class="badge bg-secondary me-2">{{ item.men_count }} men</span>
+                <span class="badge bg-success me-3">{{ item.men_confirmed }} confirmed</span>
+
+                <!-- Action buttons -->
+                <form method="post" action="{{ url_for('run_batch_multi') }}" class="d-flex align-items-center ms-auto flex-wrap">
+                  <input type="hidden" name="folder" value="{{ item.folder }}">
+                  {% set outer_index = loop.index0 %}
+                  {% for dev in devices or [] %}
+                    <div class="form-check form-check-inline mb-1">
+                      <input class="form-check-input" type="checkbox" name="devices" value="{{ dev.udid }}" id="dev-{{ outer_index }}-{{ loop.index0 }}">
+                      <label class="form-check-label small" for="dev-{{ outer_index }}-{{ loop.index0 }}">{{ dev.name or dev.udid }}</label>
+                    </div>
+                  {% endfor %}
+                  <input type="number" name="count" value="1" min="1" class="form-control form-control-sm ms-2 me-2" style="width:90px;" title="Combined target across selected devices">
+                  <input type="checkbox" class="btn-check" id="priority-{{ outer_index }}" name="prioritize_existing" value="1" autocomplete="off">
+                  <label class="btn btn-outline-secondary btn-sm me-2 text-nowrap" for="priority-{{ outer_index }}" title="Give preference to rows that already have an account">Fast priority</label>
+                  <button type="submit" name="gender" value="men" class="btn btn-outline-primary btn-sm me-2">+ Men</button>
+                  <button type="submit" name="gender" value="women" class="btn btn-outline-danger btn-sm">+ Women</button>
+                  <button type="submit" name="gender" value="men" class="btn btn-outline-success btn-sm ms-2" formaction="{{ url_for('run_confirmation_multi') }}">Confirm Men</button>
+                  <button type="submit" name="gender" value="women" class="btn btn-outline-warning btn-sm ms-2" formaction="{{ url_for('run_confirmation_multi') }}">Confirm Women</button>
+                </form>
+
+              </div>
+
+              <!-- Collapse content -->
+              <div id="folder-{{ loop.index }}" class="collapse mt-3">
+                <div class="row g-3">
+                  {% for sf in item.subfolders %}
+                    <div class="col-auto">
+                      <div class="card shadow-sm">
+                        <div class="card-body py-2 px-3">
+                          <span class="me-2">📁</span>
+                          <a href="{{ url_for('serve_file', filename=sf.path) }}">{{ sf.name }}</a>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="text-muted">No daily folders yet. Pick a date and click <strong>Add</strong>.</p>
+      {% endif %}
+    </section>
+
+    <!-- Active Batches -->
+    <section class="mt-5">
+      <h2 class="mb-3">Active Batches</h2>
+      <div id="batches-list">
+        <p class="text-muted">No active batches.</p>
+      </div>
+    </section>
+
+    <!-- Queue -->
+    <section class="mt-4">
+      <h2 class="mb-3">Queued Jobs</h2>
+      <div id="queue-list">
+        <p class="text-muted">Queue empty.</p>
+      </div>
+    </section>
+
+    <!-- Devices (live per-device cards) -->
+    <section class="mt-5">
+      <h2 class="mb-3">Devices</h2>
+      <div id="devices-grid" class="row g-3">
+        <!-- cards filled by JS -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function fmtTs(ts) {
+      if (!ts) return '';
+      const d = new Date(ts * 1000);
+      return d.toLocaleTimeString();
+    }
+
+    function renderBatches(batches) {
+      const root = document.getElementById('batches-list');
+      root.innerHTML = '';
+      if (!batches || batches.length === 0) {
+        root.innerHTML = '<p class="text-muted">No active batches.</p>';
+        return;
+      }
+      const frag = document.createDocumentFragment();
+      batches.sort((a,b)=>a.id-b.id);
+      batches.forEach(b => {
+        const pct = Math.min(100, Math.round((b.done / Math.max(1,b.target)) * 100));
+        const div = document.createElement('div');
+        div.className = 'card shadow-sm mb-2';
+        div.innerHTML = `
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div class="me-auto">
+                <div class="fw-semibold">#${b.id} → ${b.folder} <span class="badge bg-outline-secondary text-secondary border ms-1">${b.gender}</span></div>
+                <div class="small text-muted">Target: ${b.done}/${b.target} | Devices: ${b.devices.join(', ')}</div>
+                <div class="progress mt-2" style="height:10px;">
+                  <div class="progress-bar" role="progressbar" style="width: ${pct}%;" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <form method="post" action="${b.running ? ('{{ url_for("stop_batch_multi", batch_id=0) }}'.replace('/0','/'+b.id)) : '#'}" class="ms-3">
+                <button class="btn btn-sm btn-outline-danger" ${b.running ? '' : 'disabled'}>Stop</button>
+              </form>
+            </div>
+          </div>`;
+        frag.appendChild(div);
+      });
+      root.appendChild(frag);
+    }
+
+    function renderQueue(queue) {
+      const root = document.getElementById('queue-list');
+      root.innerHTML = '';
+      if (!queue || queue.length === 0) {
+        root.innerHTML = '<p class="text-muted">Queue empty.</p>';
+        return;
+      }
+      const frag = document.createDocumentFragment();
+      queue.forEach((q, idx) => {
+        const div = document.createElement('div');
+        div.className = 'card shadow-sm mb-2';
+        div.innerHTML = `
+          <div class="card-body d-flex align-items-center">
+            <div class="me-auto">
+              <div><span class="badge bg-secondary me-2">#${idx+1}</span> ${q.folder} <span class="text-muted">[${q.gender}]</span></div>
+              <div class="small text-muted">Target: ${q.target} | Devices: ${q.devices.join(', ')}</div>
+              <div class="small text-muted">Queued: ${fmtTs(q.queued_ts)}</div>
+            </div>
+          </div>`;
+        frag.appendChild(div);
+      });
+      root.appendChild(frag);
+    }
+
+    function renderDevices(devs) {
+      const grid = document.getElementById('devices-grid');
+      grid.innerHTML = '';
+      const udids = Object.keys(devs || {}).sort();
+      if (udids.length === 0) {
+        grid.innerHTML = '<p class="text-muted">No device activity yet.</p>';
+        return;
+      }
+      const frag = document.createDocumentFragment();
+      udids.forEach(u => {
+        const d = devs[u];
+        const col = document.createElement('div');
+        col.className = 'col-12 col-md-6 col-lg-4';
+        col.innerHTML = `
+          <div class="card shadow-sm device-card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div class="me-auto">
+                  <div class="fw-semibold">${d.label || u}</div>
+                  <div class="small-muted mono">${u}</div>
+                  <div class="small-muted">Batch #${d.batch_id ?? '-'}</div>
+                </div>
+                <span class="badge ${d.state==='stopped'?'bg-secondary':(d.state?.includes('error')?'bg-danger':'bg-primary')}">
+                  ${d.state || 'idle'}
+                </span>
+              </div>
+              <div class="mt-2 small">
+                <div>Processed: <strong>${d.processed ?? 0}</strong> — Success: <strong>${d.success ?? 0}</strong></div>
+                <div class="text-muted">Note: ${d.note || ''}</div>
+                <div class="text-muted">Updated: ${fmtTs(d.ts)}</div>
+              </div>
+            </div>
+          </div>`;
+        frag.appendChild(col);
+      });
+      grid.appendChild(frag);
+    }
+
+    async function refreshStatus() {
+      try {
+        console.log("aaaaaaaaaa")
+        const r = await fetch('{{ url_for("status") }}', {cache: 'no-store'});
+        const s = await r.json();
+        const text = document.getElementById('status-text');
+        text.textContent = s.running ? `Running — ${s.current_step}` : 'Idle';
+        renderBatches(s.batches || []);
+        renderQueue(s.queue || []);
+        renderDevices(s.devices || {});
+        console.log("refreshing status",s.batches,s.devices)
+      } catch (e) {
+        // ignore
+      }
+    }
+
+    refreshStatus();
+    setInterval(refreshStatus, 1000);
+  </script>
+</body>
+</html>
+
