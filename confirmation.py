@@ -140,6 +140,8 @@ def _resolve_screenshot_path(base_folder: str, row: dict, visit_time: str | None
 
     
     time_component = (visit_time or '').strip() or (_flag(row, 'heure') or '').strip()
+    if time_component:
+        time_component = time_component.upper()
     if not time_component:
         time_component = (_flag(row, 'heure') or '').strip()
     passport = (row.get('numero_passport') or '').strip() or 'unknown'
