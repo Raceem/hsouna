@@ -47,5 +47,8 @@ dist/
 .DS_Store
 Thumbs.db
 
-#Json
-.Json
+# JSON files
+*.json
+
+# Logs
+*.log
