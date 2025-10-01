@@ -52,3 +52,9 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Images
+*.png
+
+# Compiled Python files
+*.pyc
