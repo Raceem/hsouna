@@ -512,6 +512,7 @@ def make_reservation(
     hijri_day: str,
 ) -> None:
     accept_privacy_if_present(driver, timeout=1)
+    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=1)
     driver.implicitly_wait(1)
     logger.info("[make_reservation] Start for row %s (passport=%s)", index, dict_row.get("numero_passport"))
     wait = WebDriverWait(driver, 10)

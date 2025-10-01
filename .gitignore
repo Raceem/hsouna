@@ -30,6 +30,8 @@ debug_pages/
 *.patch
 
 # Pipeline outputs
+*.json
+*.josn
 *.csv
 *.tsv
 *.xlsx
