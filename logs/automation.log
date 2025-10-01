@@ -10060,3 +10060,32 @@ NoSuchElementError: An element could not be located on the page using the given 
 2025-10-01 02:10:28 | INFO | reservation | login.py:69 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
 2025-10-01 02:10:28 | INFO | reservation | login.py:69 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
 2025-10-01 02:10:28 | INFO | reservation | login.py:69 | DF Update [row=0, col=date_reservation]: '' -> '03/10/2025'
+2025-10-01 02:10:29 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:11:08 | INFO | reservation | login.py:391 | [privacy] Consent sheet detected; accepting…
+2025-10-01 02:11:09 | INFO | reservation | login.py:417 | [privacy] Consent accepted.
+2025-10-01 02:11:16 | INFO | reservation | login.py:388 | [privacy] Consent sheet not present.
+2025-10-01 02:11:16 | INFO | reservation | login.py:492 | [make_reservation] Start for row 0 (passport=A42005978)
+2025-10-01 02:11:18 | INFO | reservation | login.py:388 | [privacy] Consent sheet not present.
+2025-10-01 02:11:18 | INFO | reservation | login.py:469 | [close_popup_if_present] Popup closed with direct click.
+2025-10-01 02:11:18 | INFO | reservation | login.py:504 | [make_reservation] Gender normalized: F
+2025-10-01 02:11:25 | INFO | reservation | login.py:69 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-10-01 02:11:25 | INFO | reservation | login.py:69 | DF Update [row=0, col=gender]: 'Femme' -> 'F'
+2025-10-01 02:11:28 | INFO | reservation | login.py:356 | Trying to find element with text '3'
+2025-10-01 02:11:30 | INFO | reservation | login.py:360 | Tapping '3' at (540, 509)
+2025-10-01 02:11:32 | INFO | reservation | login.py:364 | Successfully selected '3'
+2025-10-01 02:11:33 | INFO | reservation | login.py:603 | Timeslots found: ['12:20 AM', '12:40 AM', '07:20 AM', '07:40 AM']
+2025-10-01 02:11:34 | INFO | reservation | login.py:457 | Pre-book check: label='Friday, 03 October' | expect day in ['03', '3'] and month='october' -> True/True
+2025-10-01 02:11:36 | INFO | reservation | login.py:69 | DF Update [row=0, col=CREATION]: '1' -> '1'
+2025-10-01 02:11:36 | INFO | reservation | login.py:69 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-01 02:11:36 | INFO | reservation | login.py:69 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-01 02:11:36 | INFO | reservation | login.py:69 | DF Update [row=0, col=date_reservation]: '' -> '03/10/2025'
+2025-10-01 02:11:37 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:12:08 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:12:37 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:13:09 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:13:39 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:14:10 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:14:41 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:15:13 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:15:43 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-01 02:16:14 | INFO | reservation | login.py:111 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
