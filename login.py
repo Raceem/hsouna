@@ -248,13 +248,13 @@ def _parse_bounds(bstr: str):
 
 def _confirmer_is_interactable(driver) -> bool:
     try:
-        parent = driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Confirm']/..")
+        parent = driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Confirmer']/..")
         if str(parent.get_attribute("clickable")).lower() == "true":
             return True
     except Exception:
         pass
     try:
-        tv = driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Confirm']")
+        tv = driver.find_element(AppiumBy.XPATH, "//android.widget.TextView[@text='Confirmer']")
         return str(tv.get_attribute("enabled")).lower() == "true"
     except Exception:
         return False
@@ -410,7 +410,7 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
 
         if not safe_click(driver, (AppiumBy.ID, confirm_id), name="privacy_confirm", timeout=5, retries=3):
             safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR,
-                                'new UiSelector().textContains("Confirm")'),
+                                'new UiSelector().textContains("Confirmer")'),
                        name="privacy_confirm_text", timeout=3, retries=2)
 
         time.sleep(0.3)
@@ -426,10 +426,10 @@ def accept_privacy_if_present(driver, timeout: int = 3) -> bool:
 import unicodedata
 
 FR_MONTHS = {
-        "01": "january", "02": "february", "03": "march", "04": "april",
-        "05": "may", "06": "june", "07": "july", "08": "august",
-        "09": "september", "10": "october", "11": "november", "12": "december"
-    }
+    "01": "janvier", "02": "février", "03": "mars", "04": "avril",
+    "05": "mai", "06": "juin", "07": "juillet", "08": "août",
+    "09": "septembre", "10": "octobre", "11": "novembre", "12": "décembre"
+}
 
 def _strip_accents(s: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn")
@@ -576,7 +576,7 @@ def make_reservation(
     if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
         logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)
 
-    if not safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Confirm")'), name="Confirm"):
+    if not safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Confirmer")'), name="Confirmer"):
         logger.error("Could not click Confirm.")
         return
 
@@ -629,13 +629,13 @@ def make_reservation(
             elements = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_rating_3")
             if elements:
                 txt = (elements[0].text or "").strip()
-                if "Neutral" in txt:
+                if "Neutre" in txt:
                     break
         except Exception:
             pass
         time.sleep(0.25)
 
-    if elements and "Neutral" in ((elements[0].text or "").strip()):
+    if elements and "Neutre" in ((elements[0].text or "").strip()):
         year = datetime.strptime(START_DATE, "%d_%m_%Y").year
         _set_df(df, index, "CREATION", "1")
         _set_df(df, index, "RESERVATION", "1")

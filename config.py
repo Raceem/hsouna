@@ -7,16 +7,17 @@ from appium.options.android import UiAutomator2Options
 # =========================
 # Base paths & CSV settings
 # =========================
-FOLDER_NAME = "09_25__2025"
-BASE_DIR = r"C:\Users\msi\Desktop\AgenceHsounaVersionBETA\VersionBeta\hsouna"
-CSV_FILE = r'C:\Users\msi\Desktop\AgenceHsounaVersionBETA\VersionBeta\hsouna\ALL.csv'
+FOLDER_NAME = "reservation_data/09_25__2025"
+BASE_DIR = "data"
+CSV_DIR = '/csv'
+CSV_FILE = '/csv/ALL.csv'
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
 NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
 
 # CSV files used by the web UI for statistics
-ALL_CSV_PATH = os.path.join(BASE_DIR, "ALL.csv")
-HOMMES_CSV_PATH = os.path.join(BASE_DIR, "HOMMES.csv")
-FEMMES_CSV_PATH = os.path.join(BASE_DIR, "FEMMES.csv")
+ALL_CSV_PATH = os.path.join(BASE_DIR+CSV_DIR, "ALL.csv")
+HOMMES_CSV_PATH = os.path.join(BASE_DIR+CSV_DIR, "HOMMES.csv")
+FEMMES_CSV_PATH = os.path.join(BASE_DIR+CSV_DIR, "FEMMES.csv")
 
 # Default PDF path
 PDF_FILE = r"C:/Users/SBS/Desktop/Hsouna/_inbox/merged (4).pdf"
@@ -70,7 +71,7 @@ APP_ACTIVITY = os.getenv("APP_ACTIVITY", "").strip()
 # Device identifiers
 # Use a human-readable label for deviceName, and the actual ADB serial for udid
 DEVICE_LABEL = "Android"
-UDID = "R8YY70HRZWJ"
+UDID = "R8YY60023SE"
 
 # If you scale out to multiple devices, ensure unique systemPort per device
 DEVICES = [
@@ -79,7 +80,7 @@ DEVICES = [
         "udid": UDID,
         "platformVersion": PLATFORM_VERSION,
         "systemPort": 6546,
-        "appiumServer": "http://127.0.0.1:4726",
+        "appiumServer": "http://127.0.0.1:4727",
     },
     #     {
     #     "name": "redmi",
