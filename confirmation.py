@@ -537,6 +537,9 @@ def run_confirmation_on_row(
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvYes"), "OtpErrorOk", timeout=4)
             raise RuntimeError(f"otp rejected: {otp_err}")
 
+        time.sleep(1)  # laisser l'UI dessiner la popup
+        safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=1)
+        
         if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), "RawdahTile", timeout=12):
             raise RuntimeError("rawdah tile not available")
 

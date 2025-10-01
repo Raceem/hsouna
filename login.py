@@ -458,22 +458,6 @@ def verify_selected_date_label(driver, target_ddmm: str, timeout: int = 5) -> bo
                 raw, sorted(day_tokens), month, ok_day, ok_month)
     return ok_month and ok_day
 
-### Partie teb3a popUp ely tal3it jdida kbal rawtha with nusuk Challenge
-def close_popup_if_present(driver, timeout=4):
-    try:
-        el = WebDriverWait(driver, timeout, 0.3).until(
-            EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/iv_close"))
-        )
-        try:
-            el.click()
-            logger.info("[close_popup_if_present] Popup closed with direct click.")
-        except Exception:
-            b = _parse_bounds(el.get_attribute("bounds"))
-            if b:
-                tap_xy(driver, b["cx"], b["cy"], label="popup_close")
-                logger.info("[close_popup_if_present] Popup closed with tap_xy.")
-    except Exception:
-        logger.debug("[close_popup_if_present] No popup detected.")
 
 # -----------------------------------------------------------------------------
 # Reservation Flow (runtime-scoped I/O)
@@ -493,7 +477,9 @@ def make_reservation(
     wait = WebDriverWait(driver, 10)
     #haka nkoun aamilt séparation dela gestion de la popup w hakik ça ne casse pas ton flow si elle n’existe pas.
     accept_privacy_if_present(driver, timeout=1)
-    close_popup_if_present(driver, timeout=4)
+
+    time.sleep(1)  # laisser l'UI dessiner la popup
+    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=1)
 
     # Open Rawdah
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL"):
@@ -666,28 +652,16 @@ def _wait_for_post_otp_state(driver, timeout=25) -> str:
     start = time.time()
     while time.time() - start < timeout:
         try:
-            # 🎯 Si la popup Nusuk apparaît → la fermer
-            popup = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/iv_close")
-            if popup:
-                try:
-                    popup[0].click()
-                    logger.info("[post_otp] Nusuk popup closed.")
-                except Exception:
-                    b = _parse_bounds(popup[0].get_attribute("bounds"))
-                    if b:
-                        tap_xy(driver, b["cx"], b["cy"], label="popup_close")
-                        logger.info("[post_otp] Nusuk popup closed via tap_xy.")
-                time.sleep(0.5)
-
-            # Rawdah screen
             if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"):
                 return "SUCCESS"
-
-            # Privacy consent
+        except Exception:
+            pass
+        try:
             if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/check_message"):
                 return "SUCCESS"
-
-            # OTP error
+        except Exception:
+            pass
+        try:
             errs = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_error_desc")
             if errs:
                 msg = (errs[0].text or "").lower()
@@ -701,7 +675,7 @@ def _wait_for_post_otp_state(driver, timeout=25) -> str:
                     return "OTP_ERROR"
         except Exception:
             pass
-        time.sleep(0.3)
+        time.sleep(0.2)
     return "UNKNOWN"
 
 def login_user(
