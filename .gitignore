@@ -58,3 +58,6 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
+
+# Archives
+*.zip
