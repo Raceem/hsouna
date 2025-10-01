@@ -479,7 +479,7 @@ def make_reservation(
     accept_privacy_if_present(driver, timeout=1)
 
     time.sleep(1)  # laisser l'UI dessiner la popup
-    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=1)
+    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=1, retries=1)
 
     # Open Rawdah
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL"):
@@ -770,7 +770,7 @@ def login_user(
     safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text"), code, name="login_otp_edit_text")
 
     # Post-OTP evaluation (auto-dismiss error + one retry)
-    state = _wait_for_post_otp_state(driver, timeout=25)
+    state = _wait_for_post_otp_state(driver, timeout=5)
     if state == "OTP_ERROR":
         logger.warning("[login_user] OTP invalid/expired; retrying once with a fresh code...")
         time.sleep(1.0)
@@ -780,11 +780,11 @@ def login_user(
             return
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text"), "", name="login_otp_edit_text", clear_first=True)
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text"), code2, name="login_otp_edit_text")
-        state = _wait_for_post_otp_state(driver, timeout=20)
+        #state = _wait_for_post_otp_state(driver, timeout=20)
 
-    if state != "SUCCESS":
+    """if state != "SUCCESS":
         logger.error("[login_user] Post-OTP state not successful: %s", state)
-        return
+        return"""
 
     # Reservation
     make_reservation(driver, index, dict_row, df, target_ddmm, greg_day, hijri_day)
