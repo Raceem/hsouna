@@ -46,3 +46,6 @@ dist/
 # Misc
 .DS_Store
 Thumbs.db
+
+#Json
+.Json
