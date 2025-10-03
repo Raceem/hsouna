@@ -25,7 +25,7 @@ from creation_batch import (
     release_row_post_creation,
     release_row_with_update,
 )
-from login import run_login_on_row
+from login_v4 import run_login_on_row
 from CreationReservation import run_creation_on_row
 from confirmation import run_confirmation_on_row
 from annulation import run_cancellation_on_row

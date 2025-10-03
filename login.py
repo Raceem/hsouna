@@ -469,7 +469,7 @@ import unicodedata
 FR_MONTHS = {
     "01": "janvier", "02": "février", "03": "mars", "04": "avril",
     "05": "mai", "06": "juin", "07": "juillet", "08": "août",
-    "09": "septembre", "10": "octobre", "11": "novembre", "12": "décembre",
+    "09": "septembre", "10": "octobre", "11": "novembre", "12": "décembre"
 }
 
 def _strip_accents(s: str) -> str:
@@ -499,6 +499,7 @@ def verify_selected_date_label(driver, target_ddmm: str, timeout: int = 5) -> bo
                 raw, sorted(day_tokens), month, ok_day, ok_month)
     return ok_month and ok_day
 
+
 # -----------------------------------------------------------------------------
 # Reservation Flow (runtime-scoped I/O)
 
@@ -524,12 +525,16 @@ def make_reservation(
     time.sleep(1)
     logger.info("[make_reservation] Start for row %s (passport=%s)", index, dict_row.get("numero_passport"))
     wait = WebDriverWait(driver, 10)
+    #haka nkoun aamilt séparation dela gestion de la popup w hakik ça ne casse pas ton flow si elle n’existe pas.
+    accept_privacy_if_present(driver, timeout=1)
+
+    time.sleep(1)  # laisser l'UI dessiner la popup
+    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=1, retries=1)
 
     # Open Rawdah
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL",timeout=3,retries=2):
         logger.error("Could not open Noble Rawdah screen.")
         return
-
     # Gender
     gender_hint = normalize_gender(dict_row.get("gender", "Unknown"))
     logger.info("[make_reservation] Gender normalized: %s", gender_hint)
@@ -617,18 +622,17 @@ def make_reservation(
     time.sleep(1)
     # Nudge the screen a bit to stabilize calendar rendering (robust scrolling)
    
-    # screen_size = driver.get_window_size()
-    # start_x = screen_size['width'] // 2
-    # start_y = int(screen_size['height'] * 0.6)
-    # end_y = int(screen_size['height'] * 0.4)
-    # driver.swipe(start_x, start_y, start_x, end_y, 500)
-    # time.sleep(1)
+    screen_size = driver.get_window_size()
+    start_x = screen_size['width'] // 2
+    start_y = int(screen_size['height'] * 0.6)
+    end_y = int(screen_size['height'] * 0.4)
+    time.sleep(1)
     # Date selection (native)
     if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
         logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)
     time.sleep(0.1)
     if not safe_click(driver, (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Confirmer")'), name="Confirmer"):
-        logger.error("Could not click Confirmer.")
+        logger.error("Could not click Confirm.")
         return
 
     # Timeslots
@@ -845,7 +849,7 @@ def login_user(
     safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text"), code, name="login_otp_edit_text")
 
     # Post-OTP evaluation (auto-dismiss error + one retry)
-    state = _wait_for_post_otp_state(driver, timeout=25)
+    state = _wait_for_post_otp_state(driver, timeout=5)
     if state == "OTP_ERROR":
         logger.warning("[login_user] OTP invalid/expired; retrying once with a fresh code...")
         time.sleep(1.0)
@@ -855,11 +859,11 @@ def login_user(
             return
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text"), "", name="login_otp_edit_text", clear_first=True)
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text"), code2, name="login_otp_edit_text")
-        state = _wait_for_post_otp_state(driver, timeout=20)
+        #state = _wait_for_post_otp_state(driver, timeout=20)
 
-    if state != "SUCCESS":
+    """if state != "SUCCESS":
         logger.error("[login_user] Post-OTP state not successful: %s", state)
-        return
+        return"""
 
     # Reservation
     make_reservation(driver, index, dict_row, df, target_ddmm, greg_day, hijri_day)

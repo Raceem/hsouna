@@ -140,6 +140,8 @@ def _resolve_screenshot_path(base_folder: str, row: dict, visit_time: str | None
 
     
     time_component = (visit_time or '').strip() or (_flag(row, 'heure') or '').strip()
+    if time_component:
+        time_component = time_component.upper()
     if not time_component:
         time_component = (_flag(row, 'heure') or '').strip()
     passport = (row.get('numero_passport') or '').strip() or 'unknown'
@@ -534,16 +536,17 @@ def run_confirmation_on_row(
         if otp_err and "otp" in otp_err.lower():
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvYes"), "OtpErrorOk", timeout=4)
             raise RuntimeError(f"otp rejected: {otp_err}")
+
+        time.sleep(1)  # laisser l'UI dessiner la popup
         
-        
-        if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=2):
-            raise RuntimeError("bonus tile not available")
+        sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/iv_close")))
+        sign_in_button.click()
         screen_size = driver.get_window_size()
         start_x = screen_size['width'] // 2
         start_y = int(screen_size['height'] * 0.6)
         end_y = int(screen_size['height'] * 0.4)
-        driver.swipe(start_x, start_y, start_x, end_y, 500)
-        time.sleep(1)
+        driver.swipe(start_x, start_y, start_x, end_y, 450)
+        time.sleep(2)     
         if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), "RawdahTile", timeout=12):
             raise RuntimeError("rawdah tile not available")
 
