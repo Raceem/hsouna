@@ -424,7 +424,7 @@ def run_creation_on_row(
         # Creation succeeded (we’ll still confirm downstream by reservation step)
         _set(df, row_index, "CREATION", "1")
         # Post-creation privacy sheet sometimes appears
-        #accept_privacy_if_present(driver, timeout=2)
+        accept_privacy_if_present(driver, timeout=2)
 
         # -----------------------------------------------------------------------------
         # Reservation intentionally disabled in Creation.py
