@@ -512,13 +512,21 @@ def make_reservation(
     hijri_day: str,
 ) -> None:
     accept_privacy_if_present(driver, timeout=1)
-    safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=1)
     driver.implicitly_wait(1)
+    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=2):
+            return
+    
+    screen_size = driver.get_window_size()
+    start_x = screen_size['width'] // 2
+    start_y = int(screen_size['height'] * 0.6)
+    end_y = int(screen_size['height'] * 0.4)
+    driver.swipe(start_x, start_y, start_x, end_y, 500)
+    time.sleep(1)
     logger.info("[make_reservation] Start for row %s (passport=%s)", index, dict_row.get("numero_passport"))
     wait = WebDriverWait(driver, 10)
 
     # Open Rawdah
-    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL"):
+    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL",timeout=3,retries=2):
         logger.error("Could not open Noble Rawdah screen.")
         return
 
@@ -609,12 +617,12 @@ def make_reservation(
     time.sleep(1)
     # Nudge the screen a bit to stabilize calendar rendering (robust scrolling)
    
-    screen_size = driver.get_window_size()
-    start_x = screen_size['width'] // 2
-    start_y = int(screen_size['height'] * 0.6)
-    end_y = int(screen_size['height'] * 0.4)
-    driver.swipe(start_x, start_y, start_x, end_y, 500)
-    time.sleep(1)
+    # screen_size = driver.get_window_size()
+    # start_x = screen_size['width'] // 2
+    # start_y = int(screen_size['height'] * 0.6)
+    # end_y = int(screen_size['height'] * 0.4)
+    # driver.swipe(start_x, start_y, start_x, end_y, 500)
+    # time.sleep(1)
     # Date selection (native)
     if not click_calendar_pair_cell_precise(driver, greg_day=greg_day, hijri_day=hijri_day):
         logger.error("❌ Target %s/%s cell not found. Moving to next person.", greg_day, hijri_day)
@@ -712,6 +720,7 @@ def make_reservation(
 def _wait_for_post_otp_state(driver, timeout=25) -> str:
     start = time.time()
     while time.time() - start < timeout:
+
         try:
             if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"):
                 return "SUCCESS"
@@ -719,6 +728,11 @@ def _wait_for_post_otp_state(driver, timeout=25) -> str:
             pass
         try:
             if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/check_message"):
+                return "SUCCESS"
+        except Exception:
+            pass
+        try:
+            if driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/iv_close"):
                 return "SUCCESS"
         except Exception:
             pass

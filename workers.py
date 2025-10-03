@@ -28,6 +28,7 @@ from creation_batch import (
 from login import run_login_on_row
 from CreationReservation import run_creation_on_row
 from confirmation import run_confirmation_on_row
+from annulation import run_cancellation_on_row
 
 # ---------- Device cleanup/reset helpers (best-effort) ----------
 try:
@@ -321,6 +322,52 @@ class DeviceWorker(threading.Thread):
         except Exception:
             pass
 
+    def _remove_row_from_source(self) -> None:
+        with with_csv_lock(self.src_csv):
+            df = load_df(self.src_csv)
+            if df.empty:
+                return
+            if "WORKER" not in df.columns:
+                df["WORKER"] = ""
+            mask = df["WORKER"] == self.label
+            if not mask.any():
+                return
+            idx = df.index[mask][0]
+            df = df.drop(idx).reset_index(drop=True)
+            save_df(df, self.src_csv)
+
+    def _rotate_row_to_bottom(self, updated: dict | None) -> None:
+        with with_csv_lock(self.src_csv):
+            df = load_df(self.src_csv)
+            if df.empty:
+                if not updated:
+                    return
+                data = {k: ("" if v is None else str(v)) for k, v in updated.items()}
+                data.setdefault("WORKER", "")
+                save_df(pd.DataFrame([data]), self.src_csv)
+                return
+            if "WORKER" not in df.columns:
+                df["WORKER"] = ""
+            mask = df["WORKER"] == self.label
+            base = {}
+            if mask.any():
+                idx = df.index[mask][0]
+                base = df.loc[idx].to_dict()
+                df = df.drop(idx).reset_index(drop=True)
+            data = {k: ("" if v is None else str(v)) for k, v in base.items()}
+            if updated:
+                for k, v in updated.items():
+                    data[k] = "" if v is None else str(v)
+            for col in data.keys():
+                if col not in df.columns:
+                    df[col] = ""
+            for col in df.columns:
+                data.setdefault(col, "")
+            data["WORKER"] = ""
+            row_df = pd.DataFrame([data])[df.columns]
+            df = pd.concat([df, row_df], ignore_index=True)
+            save_df(df, self.src_csv)
+
     def run(self):
         drv = None
         try:
@@ -414,6 +461,7 @@ class DeviceWorker(threading.Thread):
                                     pass
                             except Exception as e_new:
                                 self._status("driver_init_failed", str(e_new))
+                                self._rotate_row_to_bottom(row_series.to_dict())
                                 break
                         else:
                             try:
@@ -548,8 +596,8 @@ class ConfirmationWorker(threading.Thread):
             )
         except Exception:
             pass
-
     def run(self):
+
         drv = None
         try:
             try:
@@ -619,6 +667,7 @@ class ConfirmationWorker(threading.Thread):
                                     pass
                             except Exception as e_new:
                                 self._status("driver_init_failed", str(e_new))
+                                self._rotate_row_to_bottom(row_series.to_dict())
                                 break
                         else:
                             try:
@@ -641,7 +690,241 @@ class ConfirmationWorker(threading.Thread):
             self._status("stopped")
         finally:
             set_device_status(self.udid, active=False)
-# --- NEW: GenderSortWorker ----------------------------------------------------
+# --- CancellationWorker -------------------------------------------------------
+
+
+class CancellationWorker(threading.Thread):
+    """Cancel reservations and rotate rows back to the main gender CSV."""
+
+    def __init__(
+        self,
+        udid: str,
+        src_csv: str,
+        dest_csv: str,
+        stop_event: threading.Event,
+        combined_target: Optional[CombinedTarget] = None,
+        label: Optional[str] = None,
+        batch_id: Optional[int] = None,
+        cancel_log_csv: str = "",
+    ):
+        super().__init__(name=f"cancel-{udid or 'default'}", daemon=True)
+        self.udid = udid
+        self.src_csv = src_csv
+        self.dest_csv = dest_csv
+        self.stop_event_shared = stop_event
+        self.local_stop_event = threading.Event()
+        self.combined_target = combined_target
+        self.label = label or self.name
+        self.batch_id = batch_id
+        self.cancel_log_csv = cancel_log_csv
+
+        self.processed = 0
+        self.success = 0
+
+        set_device_status(
+            self.udid,
+            batch_id=self.batch_id,
+            label=self.label,
+            state="init",
+            processed=self.processed,
+            success=self.success,
+            src_csv=self.src_csv,
+            dest_csv=self.dest_csv,
+            note="",
+            active=True,
+        )
+
+    def request_stop(self) -> None:
+        self.local_stop_event.set()
+
+    def _should_stop(self) -> bool:
+        return self.local_stop_event.is_set() or self.stop_event_shared.is_set()
+
+    def _status(self, state: str, note: str = "") -> None:
+        set_device_status(
+            self.udid,
+            batch_id=self.batch_id,
+            label=self.label,
+            state=state,
+            processed=self.processed,
+            success=self.success,
+            note=note,
+            active=not self._should_stop(),
+        )
+        try:
+            automation._STATE.set_step(
+                f"{self.label} | ok={self.success} proc={self.processed}",
+                f"{state} {note}".strip(),
+            )
+        except Exception:
+            pass
+
+    def _remove_row_from_source(self) -> None:
+        with with_csv_lock(self.src_csv):
+            df = load_df(self.src_csv)
+            if df.empty:
+                return
+            if "WORKER" not in df.columns:
+                df["WORKER"] = ""
+            mask = df["WORKER"] == self.label
+            if not mask.any():
+                return
+            idx = df.index[mask][0]
+            df = df.drop(idx).reset_index(drop=True)
+            save_df(df, self.src_csv)
+
+    def _rotate_row_to_bottom(self, updated: dict | None) -> None:
+        with with_csv_lock(self.src_csv):
+            df = load_df(self.src_csv)
+            if df.empty:
+                data = {k: ("" if v is None else str(v)) for k, v in (updated or {}).items()}
+                if not data:
+                    return
+                data.setdefault("WORKER", "")
+                save_df(pd.DataFrame([data]), self.src_csv)
+                return
+            if "WORKER" not in df.columns:
+                df["WORKER"] = ""
+            mask = df["WORKER"] == self.label
+            current = {}
+            if mask.any():
+                idx = df.index[mask][0]
+                current = df.loc[idx].to_dict()
+                df = df.drop(idx).reset_index(drop=True)
+            data = {k: ("" if v is None else str(v)) for k, v in current.items()}
+            if updated:
+                for k, v in updated.items():
+                    data[k] = "" if v is None else str(v)
+            for col in data.keys():
+                if col not in df.columns:
+                    df[col] = ""
+            for col in df.columns:
+                data.setdefault(col, "")
+            data["WORKER"] = ""
+            row_df = pd.DataFrame([data])[df.columns]
+            df = pd.concat([df, row_df], ignore_index=True)
+            save_df(df, self.src_csv)
+
+    def run(self):
+        drv = None
+        try:
+            try:
+                drv = config.get_driver(self.udid) if hasattr(config, "get_driver") else config.setup_driver()
+            except Exception as e:
+                self._status("driver_init_failed", str(e))
+                return
+
+            try:
+                drv.update_settings({"newCommandTimeout": 1200})
+            except Exception:
+                pass
+
+            if not self.dest_csv:
+                self._status("dest_missing", "destination CSV not configured")
+                return
+
+            self._status("started")
+
+            while not self._should_stop():
+                if self.combined_target and self.combined_target.reached():
+                    self._status("combined_target_reached")
+                    break
+
+                row_series, has_rows = claim_next_row(self.src_csv, self.label)
+                if row_series is None:
+                    if has_rows:
+                        self._status("waiting_for_row")
+                        time.sleep(0.5)
+                        continue
+                    self._status("source_empty")
+                    break
+
+                self.processed += 1
+                tmp_path = f"{self.src_csv}.{self.udid}.cancel.tmp.csv"
+                nom = str(row_series.get("nom", "") or row_series.get("NOM", ""))
+                try:
+                    save_df(pd.DataFrame([row_series]), tmp_path)
+                    self._status("cancelling", f"row={nom}")
+
+                    try:
+                        run_cancellation_on_row(drv, 0, row_series, tmp_path)
+                    except Exception as e:
+                        self._status("row_error", str(e))
+                        if _is_uia2_crash(e):
+                            try:
+                                if hasattr(config, "reset_driver"):
+                                    config.reset_driver(self.udid)
+                            except Exception:
+                                pass
+                            try:
+                                drv = config.get_driver(self.udid) if hasattr(config, "get_driver") else config.setup_driver()
+                                try:
+                                    drv.update_settings({"newCommandTimeout": 1200})
+                                except Exception:
+                                    pass
+                            except Exception as e_new:
+                                self._status("driver_init_failed", str(e_new))
+                                self._rotate_row_to_bottom(row_series.to_dict())
+                                break
+                        else:
+                            try:
+                                hard_reset_app(drv, config.APP_PACKAGE)
+                            except Exception:
+                                pass
+
+                    df_after = load_df(tmp_path)
+                    if df_after.empty:
+                        row_after = row_series.to_dict()
+                    else:
+                        row_after = df_after.iloc[0].to_dict()
+
+                    reservation_flag = str(row_after.get("RESERVATION", "")).strip()
+                    note = str(row_after.get("cancellation_note", "")).strip()
+
+                    if reservation_flag == "0":
+                        row_copy = dict(row_after)
+                        row_copy.pop("WORKER", None)
+                        try:
+                            append_row_dict(self.dest_csv, row_copy)
+                            if self.cancel_log_csv:
+                                append_row_dict(self.cancel_log_csv, row_copy)
+                        except Exception as append_err:
+                            self._rotate_row_to_bottom(row_after)
+                            self._status("append_failed_returned", str(append_err))
+                        else:
+                            self._remove_row_from_source()
+                            self.success += 1
+                            status_note = note or "cancelled"
+                            if self.combined_target:
+                                total_done, reached = self.combined_target.add_success(1)
+                                extra = f"batch {total_done}/{self.combined_target.total}"
+                                self._status("cancelled", f"{status_note} | {extra}")
+                                if reached:
+                                    self._status("combined_target_reached")
+                                    break
+                            else:
+                                self._status("cancelled", status_note)
+                    else:
+                        self._rotate_row_to_bottom(row_after)
+                        self._status("requeued", note or "pending")
+
+                finally:
+                    try:
+                        hard_reset_app(drv, config.APP_PACKAGE)
+                    except Exception:
+                        pass
+                    try:
+                        os.remove(tmp_path)
+                    except Exception:
+                        pass
+
+                time.sleep(0.1)
+
+            self._status("stopped")
+
+        finally:
+            set_device_status(self.udid, active=False)
+
 class GenderSortWorker(threading.Thread):
     """
     Multi-device sorter:

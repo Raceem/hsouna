@@ -35,6 +35,7 @@ from workers import (
     DeviceWorker,
     CreationDeviceWorker,
     ConfirmationWorker,
+    CancellationWorker,
     CombinedTarget,
     get_device_status_snapshot,
     list_connected_devices,
@@ -111,6 +112,22 @@ def _count_rows_needing_creation(csv_path: str) -> int:
     except Exception:
         return 0
 
+def _count_rows_pending_cancellation(csv_path: str) -> int:
+    if not os.path.exists(csv_path):
+        return 0
+    try:
+        df = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
+        if df.empty:
+            return 0
+        col = df.get("RESERVATION")
+        if col is None:
+            return len(df)
+        mask = col.astype(str).str.strip() == "1"
+        return int(mask.sum())
+    except Exception:
+        return 0
+
+
 
 # =========================
 # Date parsing from folder
@@ -178,7 +195,6 @@ def get_csv_stats():
             stats[key]["confirmed"] = confirmed
     return stats
 
-
 # =========================
 # Daily folders (MM_DD__YYYY)
 # =========================
@@ -191,16 +207,18 @@ def _create_daily_folder_struct(folder_name: str):
     headers = _safe_headers()
     _ensure_csv(os.path.join(target, "hommes.csv"), headers)
     _ensure_csv(os.path.join(target, "femmes.csv"), headers)
+    _ensure_csv(os.path.join(target, "cancelled_men.csv"), headers)
+    _ensure_csv(os.path.join(target, "cancelled_women.csv"), headers)
 
     os.makedirs(os.path.join(target, "hommes"), exist_ok=True)
     os.makedirs(os.path.join(target, "femmes"), exist_ok=True)
 
 
-def get_daily_folders(sort_desc: bool = True):
+def get_daily_folders(sort_desc: bool = True, *, limit: Optional[int] = None):
     items = []
     base_dir = config.BASE_DIR
     if not os.path.isdir(base_dir):
-        return items
+        return items, []
 
     for name in os.listdir(base_dir):
         if not (re.match(FOLDER_REGEX_CANON, name) or re.match(FOLDER_REGEX_SLASH, name) or re.match(r"^\d{2}\D+\d{2}\D+\d{4}$", name)):
@@ -214,13 +232,17 @@ def get_daily_folders(sort_desc: bool = True):
         hommes_csv = os.path.join(abs_folder, "hommes.csv")
         femmes_count, femmes_confirmed = _count_rows_and_confirmed(femmes_csv)
         hommes_count, hommes_confirmed = _count_rows_and_confirmed(hommes_csv)
+        femmes_pending = _count_rows_pending_cancellation(femmes_csv)
+        hommes_pending = _count_rows_pending_cancellation(hommes_csv)
 
         items.append({
             "folder": name,
             "women_count": femmes_count,
             "women_confirmed": femmes_confirmed,
+            "women_pending_cancel": femmes_pending,
             "men_count": hommes_count,
             "men_confirmed": hommes_confirmed,
+            "men_pending_cancel": hommes_pending,
             "mtime": os.path.getmtime(abs_folder),
             "subfolders": [
                 {"name": "femmes", "path": _urlpath(name, "femmes")},
@@ -235,7 +257,9 @@ def get_daily_folders(sort_desc: bool = True):
         return primary, row["mtime"]
 
     items.sort(key=_daily_sort_key, reverse=sort_desc)
-    return items
+    if limit is not None and limit >= 0:
+        return items[:limit], items[limit:]
+    return items, []
 
 
 # =========================
@@ -289,7 +313,24 @@ class QueuedJob:
     mode: str = "reservation"
     queued_ts: float = field(default_factory=time.time)
 
+    cancel_log_csv: str = ""
+
 _job_queue: list[QueuedJob] = []  # FIFO
+
+
+def _queue_snapshot() -> List[Dict[str, Any]]:
+    """Return a serializable snapshot of queued jobs. Caller must hold `_batches_lock`."""
+    return [
+        {
+            "folder": q.folder,
+            "gender": q.gender,
+            "mode": getattr(q, "mode", "reservation"),
+            "target": q.total_target,
+            "devices": q.devices,
+            "queued_ts": q.queued_ts,
+        }
+        for q in _job_queue
+    ]
 
 
 def _alloc_batch_id() -> int:
@@ -319,12 +360,9 @@ def _mark_free(udids: List[str]) -> None:
         _busy_devices.discard(u)
 
 
-def _devices_available(udids: List[str]) -> bool:
-    with _batches_lock:
-        return all(u not in _busy_devices for u in udids)
 
 
-def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_ddmm: str, total_target: int, udids: List[str], *, mode: str = "reservation", screenshot_root: str = "", prioritize_existing: bool = False) -> int:
+def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_ddmm: str, total_target: int, udids: List[str], *, mode: str = "reservation", screenshot_root: str = "", prioritize_existing: bool = False, cancel_log_csv: str = "") -> int:
     """Start a batch immediately (assumes devices are available). Returns batch id.
 
     mode: "reservation" -> DeviceWorker, "creation" -> CreationDeviceWorker
@@ -371,6 +409,17 @@ def _start_batch(folder: str, gender: str, src_csv: str, dest_csv: str, target_d
                 combined_target=batch.combined,
                 label=label,
                 batch_id=batch_id,
+            )
+        elif mode == "cancellation":
+            t = CancellationWorker(
+                udid=udid,
+                src_csv=src_csv,
+                dest_csv=dest_csv,
+                stop_event=batch.stop_event,
+                combined_target=batch.combined,
+                label=label,
+                batch_id=batch_id,
+                cancel_log_csv=cancel_log_csv,
             )
         elif mode == "gender_sort":
             # NEW: sorter reads from ALL and routes to HOMMES/FEMMES
@@ -452,6 +501,7 @@ def _dispatcher_loop():
                         mode=getattr(job_to_start, 'mode', 'reservation'),
                         screenshot_root=getattr(job_to_start, 'screenshot_root', ""),
                         prioritize_existing=getattr(job_to_start, 'prioritize_existing', False),
+                        cancel_log_csv=getattr(job_to_start, 'cancel_log_csv', ""),
                     )
                 except Exception:
                     # Failed to launch; push back to queue tail for retry
@@ -476,7 +526,12 @@ def index():
         pass
 
     csv_stats = get_csv_stats()
-    daily_folders = get_daily_folders()
+    show_all = request.args.get("show_all") == "1"
+    try:
+        default_limit = int(os.getenv("DAILY_FOLDERS_LIMIT", "8"))
+    except Exception:
+        default_limit = 8
+    daily_folders, older_daily_folders = get_daily_folders(limit=None if show_all else default_limit)
     connected = {d["udid"]: d for d in list_connected_devices()}
     configured = getattr(config, "DEVICES", [])
     # Union of configured and connected, mark connected state
@@ -495,8 +550,126 @@ def index():
         "index.html",
         csv_stats=csv_stats,
         daily_folders=daily_folders,
+        older_daily_folders=older_daily_folders,
+        show_all=show_all,
         devices=devices_for_form,
     )
+
+
+def _launch_cancellation_job(
+    folder_name: str,
+    gender: str,
+    src_csv: str,
+    dest_csv: str,
+    cancel_log_csv: str,
+    udids: List[str],
+    target_ddmm: str,
+    limit: int,
+) -> None:
+    label = "HOMMES" if gender == "men" else "FEMMES"
+    display = f"{folder_name} | {label}"
+
+    if not src_csv or not dest_csv:
+        flash(f"{display}: cancellation paths are not configured.", "danger")
+        return
+
+    _ensure_csv(src_csv, _safe_headers())
+    _ensure_csv(dest_csv, _safe_headers())
+    if cancel_log_csv:
+        _ensure_csv(cancel_log_csv, _safe_headers())
+
+    total_pending = _count_rows_pending_cancellation(src_csv)
+    if total_pending <= 0:
+        flash(f"No reservations to cancel in {display}.", "info")
+        return
+
+    if limit <= 0:
+        flash("Cancellation target must be at least 1.", "warning")
+        return
+
+    total_target = min(total_pending, limit)
+    if total_target <= 0:
+        flash(f"No reservations to cancel in {display}.", "info")
+        return
+
+    queue_label = f"{folder_name} cancel {label}"
+    target = target_ddmm or getattr(config, "TARGET_DATE", "")
+
+    with _batches_lock:
+        conflicts = [u for u in udids if u in _busy_devices]
+    if conflicts:
+        with _batches_lock:
+            _job_queue.append(QueuedJob(
+                folder=queue_label,
+                gender=gender,
+                src_csv=src_csv,
+                dest_csv=dest_csv,
+                target_ddmm=target,
+                total_target=total_target,
+                devices=udids,
+                mode="cancellation",
+                cancel_log_csv=cancel_log_csv,
+            ))
+            pos = len(_job_queue)
+        flash(f"Devices busy; cancellation queued at position {pos} for {display}.", "info")
+        return
+
+    batch_id = _start_batch(
+        folder=queue_label,
+        gender=gender,
+        src_csv=src_csv,
+        dest_csv=dest_csv,
+        target_ddmm=target,
+        total_target=total_target,
+        udids=udids,
+        mode="cancellation",
+        cancel_log_csv=cancel_log_csv,
+    )
+    flash(f"Started cancellation batch #{batch_id} for {display} on {len(udids)} device(s).", "success")
+
+
+@app.route("/cancellation/multi", methods=["POST"])
+def run_cancellation_multi():
+    try:
+        folder = (request.form.get("folder") or "").strip()
+        gender = (request.form.get("gender") or "").strip()
+        selected_udids = request.form.getlist("devices")
+        try:
+            limit = int((request.form.get("count") or "1").strip() or "1")
+        except Exception:
+            limit = 1
+        limit = max(1, limit)
+
+        target_ddmm = parse_target_date_from_folder(folder)
+        if not target_ddmm:
+            flash("Invalid folder name for cancellation.", "danger")
+            return redirect(url_for("index"))
+
+        if gender not in {"men", "women"}:
+            flash("Please select a valid gender for cancellation.", "danger")
+            return redirect(url_for("index"))
+
+        folder_path = os.path.join(config.BASE_DIR, folder)
+        src_csv = os.path.join(folder_path, "hommes.csv" if gender == "men" else "femmes.csv")
+        dest_csv = getattr(config, "HOMMES_CSV_PATH", "") if gender == "men" else getattr(config, "FEMMES_CSV_PATH", "")
+        if not dest_csv:
+            flash("Global destination CSV for cancellation is not configured.", "danger")
+            return redirect(url_for("index"))
+        cancel_log_csv = os.path.join(folder_path, "cancelled_men.csv" if gender == "men" else "cancelled_women.csv")
+
+        all_devices = getattr(config, "DEVICES", [])
+        selected = [d for d in all_devices if d.get("udid") in selected_udids]
+        udids = [d.get("udid") for d in selected if d.get("udid")]
+        if not udids:
+            flash("Please select at least one device for cancellation.", "warning")
+            return redirect(url_for("index"))
+
+        _launch_cancellation_job(folder, gender, src_csv, dest_csv, cancel_log_csv, udids, target_ddmm, limit)
+    except Exception as e:
+        flash(f"Cancellation failed: {e}", "danger")
+    return redirect(url_for("index"))
+
+
 
 @app.route("/sort_all_multi", methods=["POST"])
 def sort_all_multi():
@@ -706,7 +879,7 @@ def add_daily_folder():
         flash("Invalid date format. Please pick a date again.")
         return redirect(url_for("index"))
 
-    folder_base = chosen_dt.strftime("%m_%d__%Y")
+    folder_base = chosen_dt.strftime("%d_%m__%Y")
     candidate = folder_base
     n = 2
     while os.path.exists(os.path.join(base_dir, candidate)):
@@ -1051,17 +1224,7 @@ def status():
                 "running": b.running,
                 "created_ts": b.created_ts,
             })
-        queue = [
-            {
-                "folder": q.folder,
-                "gender": q.gender,
-                "mode": getattr(q, "mode", "reservation"),
-                "target": q.total_target,
-                "devices": q.devices,
-                "queued_ts": q.queued_ts,
-            }
-            for q in _job_queue
-        ]
+        queue = _queue_snapshot()
     devices = get_device_status_snapshot()
     return jsonify({
         "running": any(b.get("running") for b in batches),
@@ -1070,6 +1233,64 @@ def status():
         "queue": queue,
         "devices": devices,
     })
+
+@app.route("/queue/reorder", methods=["POST"])
+def queue_reorder():
+    payload = request.get_json(silent=True) or {}
+    raw_index = payload.get("index")
+    raw_target = payload.get("target_index")
+    direction = payload.get("direction")
+    try:
+        index = int(raw_index)
+    except (TypeError, ValueError):
+        return jsonify({"ok": False, "error": "invalid index"}), 400
+
+    with _batches_lock:
+        size = len(_job_queue)
+        if not (0 <= index < size):
+            return jsonify({"ok": False, "error": "index out of range", "size": size}), 400
+
+        new_index = index
+        if raw_target is not None:
+            try:
+                new_index = int(raw_target)
+            except (TypeError, ValueError):
+                return jsonify({"ok": False, "error": "invalid target_index"}), 400
+            if new_index < 0:
+                new_index = 0
+            if new_index >= size:
+                new_index = size - 1
+        else:
+            dir_norm = (direction or "").strip().lower()
+            if dir_norm == "up":
+                new_index = max(0, index - 1)
+            elif dir_norm == "down":
+                new_index = min(size - 1, index + 1)
+            elif dir_norm == "top":
+                new_index = 0
+            elif dir_norm == "bottom":
+                new_index = size - 1
+            elif dir_norm:
+                return jsonify({"ok": False, "error": "unsupported direction"}), 400
+            else:
+                return jsonify({"ok": False, "error": "missing direction"}), 400
+
+        if new_index != index:
+            job = _job_queue.pop(index)
+            _job_queue.insert(new_index, job)
+
+        snapshot = _queue_snapshot()
+
+    return jsonify({
+        "ok": True,
+        "queue": snapshot,
+        "size": len(snapshot),
+        "moved_from": index,
+        "moved_to": new_index,
+    })
+
+
+
 
 
 @app.route("/files/<path:filename>")

@@ -534,7 +534,16 @@ def run_confirmation_on_row(
         if otp_err and "otp" in otp_err.lower():
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvYes"), "OtpErrorOk", timeout=4)
             raise RuntimeError(f"otp rejected: {otp_err}")
-
+        
+        
+        if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=2):
+            raise RuntimeError("bonus tile not available")
+        screen_size = driver.get_window_size()
+        start_x = screen_size['width'] // 2
+        start_y = int(screen_size['height'] * 0.6)
+        end_y = int(screen_size['height'] * 0.4)
+        driver.swipe(start_x, start_y, start_x, end_y, 500)
+        time.sleep(1)
         if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), "RawdahTile", timeout=12):
             raise RuntimeError("rawdah tile not available")
 

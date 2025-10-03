@@ -58,6 +58,8 @@ def _determine_gender_via_permit(driver) -> str | None:
     From the home screen after creation+privacy, open Rawdah and try to click permit.
     Returns 'H' or 'F' (or None if not determinable).
     """
+    if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/iv_close"), timeout=3, retries=1):
+            raise RuntimeError("bonus tile not available")
     # Open Rawdah
     if not safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/nobleRawdahLL"), name="nobleRawdahLL"):
         return None
