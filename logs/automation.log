@@ -27284,3 +27284,617 @@ NoSuchDriverError: A session is either terminated or not started
 2025-10-04 17:48:52 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
 2025-10-04 17:48:52 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
 2025-10-04 17:48:54 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 9652
+2025-10-04 17:51:54 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:51:54 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:51:56 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 9652
+2025-10-04 17:52:15 | INFO | login2 | login_v4.py:209 | Existing previous booking detected; marking RESERVATION=-1 
+2025-10-04 17:52:15 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=RESERVATION]: '0' -> '-1'
+2025-10-04 17:52:44 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:52:44 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:52:47 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 3051
+2025-10-04 17:52:54 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 138, in _execute_login_logic
+    otp_errors = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_error_desc")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 420, in find_elements
+    return self.execute(RemoteCommand.FIND_ELEMENTS, {'using': by, 'value': value})['value'] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 313, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:39:46 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:39:47 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:39:51 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 3051
+2025-10-04 18:39:53 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:39:53 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:39:56 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 6749
+2025-10-04 18:40:09 | INFO | login2 | login_v4.py:214 | Booking exists for date: {extracted_date}
+2025-10-04 18:40:09 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:40:09 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=date_reservation]: '' -> ''
+2025-10-04 18:40:09 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:40:19 | INFO | login2 | login_v4.py:214 | Booking exists for date: {extracted_date}
+2025-10-04 18:40:19 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:40:19 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=date_reservation]: '' -> ''
+2025-10-04 18:40:19 | INFO | reservation | utils_v4.py:95 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:41:33 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 84, in _execute_login_logic
+    wait.until(EC.presence_of_element_located((AppiumBy.XPATH, f"//android.widget.TextView[@text='{nationalite}']"))).click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 104, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 313, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:41:35 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:41:35 | INFO | reservation | utils_v4.py:133 | ADB grant failed (ok to ignore): Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:41:35 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:41:35 | INFO | reservation | utils_v4.py:133 | ADB grant failed (ok to ignore): Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:41:38 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 124, in _execute_login_logic
+    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text")))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 104, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 313, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:50:30 | INFO | reservation | utils_v4.py:129 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:50:30 | INFO | reservation | utils_v4.py:129 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:50:33 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 5684
+2025-10-04 18:51:01 | INFO | reservation | utils_v4.py:129 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:51:02 | INFO | reservation | utils_v4.py:129 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:51:06 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 4383
+2025-10-04 18:51:31 | INFO | reservation | utils_v4.py:129 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:51:31 | INFO | reservation | utils_v4.py:129 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:51:34 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 4746
+2025-10-04 18:51:38 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 138, in _execute_login_logic
+    otp_errors = driver.find_elements(AppiumBy.ID, "com.moh.nusukapp:id/tv_error_desc")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 420, in find_elements
+    return self.execute(RemoteCommand.FIND_ELEMENTS, {'using': by, 'value': value})['value'] or []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElements (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:79:12)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 313, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:53:07 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:53:07 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:53:10 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 4246
+2025-10-04 18:55:14 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:55:14 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '05/10/2025'
+2025-10-04 18:55:14 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:56:26 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:56:26 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:56:29 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 5884
+2025-10-04 18:56:50 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:56:50 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '05/10/2025'
+2025-10-04 18:56:50 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:57:10 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:57:10 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:57:13 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 4829
+2025-10-04 18:57:25 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 191, in _execute_login_logic
+    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/tvNobleRawdahTitle")))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 104, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 313, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)

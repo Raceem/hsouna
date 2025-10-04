@@ -1,5 +1,6 @@
 from appium.webdriver.common.appiumby import AppiumBy
 import pandas as pd
+import unicodedata
 from config import APP_PACKAGE
 from logutil import get_shared_logger
 import re
@@ -44,32 +45,44 @@ def has_booking(driver) -> tuple[bool, str]:
             # Extraire le jour et le mois pour créer une date complète (format: "09 Oct" -> "09/10/2025")
             try:
                 # Chercher un nombre de 1 ou 2 chiffres suivi d'un espace et d'un mois abrégé
-                match = re.search(r'(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)', full_text)
+                match = re.search(r'(\d{1,2})\s+([A-Za-zÀ-ÿ\.]+)', full_text, re.IGNORECASE)
                 if match:
-                    day = match.group(1).zfill(2)  # Assurer 2 chiffres (01, 02, etc.)
-                    month_str = match.group(2)
+                    day = match.group(1).zfill(2)
+                    raw_month = match.group(2).strip().strip('.')
+                    normalized = unicodedata.normalize('NFKD', raw_month).encode('ascii', 'ignore').decode('ascii').lower()
 
-                    # Convertir le mois abrégé en numéro
-                    month_dict = {
-                        'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04',
-                        'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08',
-                        'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
+                    month_map = {
+                        'jan': '01', 'janv': '01',
+                        'feb': '02', 'fev': '02', 'febr': '02',
+                        'mar': '03',
+                        'apr': '04', 'avr': '04',
+                        'may': '05', 'mai': '05',
+                        'jun': '06', 'juin': '06',
+                        'jul': '07', 'juil': '07',
+                        'aug': '08', 'aou': '08', 'aout': '08',
+                        'sep': '09', 'sept': '09',
+                        'oct': '10',
+                        'nov': '11',
+                        'dec': '12',
                     }
-                    month = month_dict.get(month_str, '01')
+                    month = None
+                    for key in (normalized, normalized[:4], normalized[:3]):
+                        if key in month_map:
+                            month = month_map[key]
+                            break
+                    if not month:
+                        print('📅 Format de date non reconnu')
+                        return True, ''
 
-                    # Obtenir l'année courante
                     current_year = str(datetime.now().year)
-
-                    # Formater comme DD/MM/YYYY
                     extracted_date = f"{day}/{month}/{current_year}"
-                    print(f"📅 Date extraite et formatée: {extracted_date}")
+                    print(f'📅 Date extraite et formatée: {extracted_date}')
                     return True, extracted_date
                 else:
-                    print("📅 Format de date non reconnu")
-                    return True, ""
+                    print('📅 Format de date non reconnu')
+                    return True, ''
             except Exception as e:
                 print(f"📅 Erreur lors de l'extraction de la date:")
-                return True, ""
 
         except Exception as e:
             pass

@@ -489,23 +489,33 @@ class DeviceWorker(threading.Thread):
                     reserved = str(row_after.get("RESERVATION", "")).strip() == "1"
 
                     if created and reserved:
-                        # Move to destination & finalize without requeue
-                        row_after.pop("WORKER", None)
-                        append_row_dict(self.dest_csv, row_after)
-                        finalize_row(self.src_csv, self.label, row_after, requeue=False)
-
-                        # Success accounting
-                        self.success += 1
-                        note = ""
-                        if self.combined_target:
-                            total_done, reached = self.combined_target.add_success(1)
-                            note = f"batch_done={total_done}/{self.combined_target.total}"
-                            self._status("moved_to_dest", note)
-                            if reached:
-                                self._status("combined_target_reached")
-                                break
+                        target_ddmm = (self.target_ddmm or "").strip()
+                        date_value = str(row_after.get("date_reservation", "")).strip()
+                        date_ddmm = date_value[:5] if len(date_value) >= 5 else date_value
+                        if target_ddmm and date_ddmm and date_ddmm != target_ddmm:
+                            dest_verify = getattr(config, "TO_VERIFY_CSV_PATH", "")
+                            if dest_verify:
+                                row_copy = {k: ("" if v is None else str(v)) for k, v in row_after.items() if k != "WORKER"}
+                                os.makedirs(os.path.dirname(dest_verify) or ".", exist_ok=True)
+                                append_row_dict(dest_verify, row_copy)
+                            finalize_row(self.src_csv, self.label, row_after, requeue=False)
+                            self._status("routed_to_verify", f"{date_ddmm}->{target_ddmm}")
                         else:
-                            self._status("moved_to_dest", note)
+                            row_after.pop("WORKER", None)
+                            append_row_dict(self.dest_csv, row_after)
+                            finalize_row(self.src_csv, self.label, row_after, requeue=False)
+
+                            self.success += 1
+                            note = ""
+                            if self.combined_target:
+                                total_done, reached = self.combined_target.add_success(1)
+                                note = f"batch_done={total_done}/{self.combined_target.total}"
+                                self._status("moved_to_dest", note)
+                                if reached:
+                                    self._status("combined_target_reached")
+                                    break
+                            else:
+                                self._status("moved_to_dest", note)
                     else:
                         to_delete = str(row_after.get("RESERVATION", "")).strip() == "-1"
                         if to_delete:
@@ -520,7 +530,6 @@ class DeviceWorker(threading.Thread):
                             finalize_row(self.src_csv, self.label, row_after, requeue=False)
                             self._status("dropped_CREATION_-1")
                         else:
-                            # Requeue to bottom for another attempt later
                             finalize_row(self.src_csv, self.label, row_after, requeue=True)
                             self._status("rotated_to_bottom")
 

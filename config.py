@@ -19,6 +19,7 @@ HOMMES_CSV_PATH = os.path.join(BASE_DIR, "HOMMES.csv")
 FEMMES_CSV_PATH = os.path.join(BASE_DIR, "FEMMES.csv")
 
 TO_DELETE_CSV_PATH = os.path.join(BASE_DIR, "TO_DELETE.csv")
+TO_VERIFY_CSV_PATH = os.path.join(BASE_DIR, "TO_VERIFY.csv")
 # Default PDF path
 PDF_FILE = r"C:/Users/SBS/Desktop/Hsouna/_inbox/merged (4).pdf"
 # Directories where confirmation screenshots will be stored
