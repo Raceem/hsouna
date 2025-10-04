@@ -25,7 +25,7 @@ from login import (
     update_fast_settings,
 )
 
-from login_v4 import _perform_login_step
+from login_v4 import _perform_login_step, _perform_reservation_step
 from mail import get_verification_code
 from pdf import pop_first_variant
 from config import EMAIL_JSON_FILE as _EMAIL_JSON_FILE, NUMBER_JSON_FILE as _NUMBER_JSON_FILE
@@ -443,7 +443,7 @@ def run_creation_on_row(
 
         # Reservation (login_make_reservation writes back via _set in login.py; here we pass df)
         # We call the same helper you used in step 2 but adjusted to receive df/target info there.
-        _perform_login_step(driver, row_index, dict_row, df, target_ddmm, dd, dd)
+        _perform_reservation_step(driver,dict_row,df,row_index,target_ddmm)
         _save_df(df, csv_path)
         return df
 
