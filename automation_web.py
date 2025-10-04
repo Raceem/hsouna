@@ -133,20 +133,34 @@ def _count_rows_pending_cancellation(csv_path: str) -> int:
 # Date parsing from folder
 # =========================
 
-FOLDER_REGEX_CANON = r"^\d{2}_\d{2}__\d{4}$"     # MM_DD__YYYY
-FOLDER_REGEX_SLASH = r"^\d{2}/\d{2}/\d{4}$"      # MM/DD/YYYY
+FOLDER_REGEX_CANON = r"^\d{2}__\d{2}__\d{4}$"    # DD__MM__YYYY
+FOLDER_REGEX_LEGACY = r"^\d{2}_\d{2}__\d{4}$"    # MM_DD__YYYY (legacy)
+FOLDER_REGEX_SLASH = r"^\d{2}/\d{2}/\d{4}$"      # DD/MM/YYYY
 
 def parse_target_date_from_folder(folder_name: str) -> Optional[str]:
     if re.match(FOLDER_REGEX_CANON, folder_name):
-        mm, dd, yyyy = folder_name[:2], folder_name[3:5], folder_name[-4:]
+        try:
+            dd, mm, yyyy = folder_name.split("__")
+        except ValueError:
+            return None
+        return f"{dd}/{mm}"
+    if re.match(FOLDER_REGEX_LEGACY, folder_name):
+        prefix, yyyy = folder_name.rsplit("__", 1)
+        mm, dd = prefix.split("_", 1)
         return f"{dd}/{mm}"
     if re.match(FOLDER_REGEX_SLASH, folder_name):
-        mm, dd, yyyy = folder_name.split("/")
+        dd, mm, yyyy = folder_name.split("/")
         return f"{dd}/{mm}"
     m = re.match(r"^(\d{2})\D+(\d{2})\D+(\d{4})$", folder_name)
     if m:
-        mm, dd, yyyy = m.group(1), m.group(2), m.group(3)
-        return f"{dd}/{mm}"
+        first, second, yyyy = m.groups()
+        for dd, mm in ((first, second), (second, first)):
+            try:
+                datetime.strptime(f"{dd}/{mm}/{yyyy}", "%d/%m/%Y")
+                return f"{dd}/{mm}"
+            except ValueError:
+                continue
+        return f"{second}/{first}"
     return None
 
 
@@ -154,10 +168,12 @@ def _parse_folder_date(folder_name: str) -> Optional[datetime]:
     digits = re.sub(r"\D", "", folder_name)
     if len(digits) != 8:
         return None
-    try:
-        return datetime.strptime(digits, "%m%d%Y")
-    except ValueError:
-        return None
+    for fmt in ("%d%m%Y", "%m%d%Y"):
+        try:
+            return datetime.strptime(digits, fmt)
+        except ValueError:
+            continue
+    return None
 
 
 # =========================
@@ -221,7 +237,12 @@ def get_daily_folders(sort_desc: bool = True, *, limit: Optional[int] = None):
         return items, []
 
     for name in os.listdir(base_dir):
-        if not (re.match(FOLDER_REGEX_CANON, name) or re.match(FOLDER_REGEX_SLASH, name) or re.match(r"^\d{2}\D+\d{2}\D+\d{4}$", name)):
+        if not (
+            re.match(FOLDER_REGEX_CANON, name)
+            or re.match(FOLDER_REGEX_LEGACY, name)
+            or re.match(FOLDER_REGEX_SLASH, name)
+            or re.match(r"^\d{2}\D+\d{2}\D+\d{4}$", name)
+        ):
             continue
 
         abs_folder = os.path.join(base_dir, name)
@@ -879,7 +900,7 @@ def add_daily_folder():
         flash("Invalid date format. Please pick a date again.")
         return redirect(url_for("index"))
 
-    folder_base = chosen_dt.strftime("%d_%m__%Y")
+    folder_base = chosen_dt.strftime("%d__%m__%Y")
     candidate = folder_base
     n = 2
     while os.path.exists(os.path.join(base_dir, candidate)):

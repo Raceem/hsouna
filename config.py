@@ -7,10 +7,9 @@ from appium.options.android import UiAutomator2Options
 # =========================
 # Base paths & CSV settings
 # =========================
-FOLDER_NAME = "reservation_data/09_25__2025"
-BASE_DIR = "data"
-CSV_DIR = '/csv'
-CSV_FILE = '/csv/ALL.csv'
+FOLDER_NAME = "09_25__2025"
+BASE_DIR = r"C:\Users\SBS\Desktop\Hsouna"
+CSV_FILE = 'C:/Users/SBS/Desktop/Hsouna/ALL.csv'
 EMAIL_JSON_FILE = os.path.join(BASE_DIR, "email_variants.json")
 NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
 
@@ -59,7 +58,7 @@ FIELDNAMES = [
 # ===================
 APPIUM_SERVER = "http://127.0.0.1:4723"
 PLATFORM_NAME = "Android"
-PLATFORM_VERSION = "14"
+PLATFORM_VERSION = "9"
 
 # App under test
 APP_PACKAGE = os.getenv("APP_PACKAGE", "com.moh.nusukapp")
@@ -70,24 +69,24 @@ APP_ACTIVITY = os.getenv("APP_ACTIVITY", "").strip()
 # Device identifiers
 # Use a human-readable label for deviceName, and the actual ADB serial for udid
 DEVICE_LABEL = "Android"
-UDID = "R8YY60023SE"
+UDID = "DEF4C19312001213"
 
 # If you scale out to multiple devices, ensure unique systemPort per device
 DEVICES = [
             {
-        "name": "SMASUNG",
-        "udid": UDID,
+        "name": "huawei",
+        "udid": "DEF4C19312001213",
         "platformVersion": PLATFORM_VERSION,
         "systemPort": 6546,
-        "appiumServer": "http://127.0.0.1:4727",
+        "appiumServer": "http://127.0.0.1:4726",
     },
-    #     {
-    #     "name": "redmi",
-    #     "udid": "R8YY703MJKW",
-    #     "platformVersion": "15",
-    #     "systemPort": 8974,
-    #     "appiumServer": "http://127.0.0.1:4723",
-    # },
+        {
+        "name": "redmi",
+        "udid": "R8YY703MJKW",
+        "platformVersion": "15",
+        "systemPort": 8974,
+        "appiumServer": "http://127.0.0.1:4723",
+    },
 ]
 
 # =================================

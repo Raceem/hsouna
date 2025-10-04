@@ -170,11 +170,17 @@ def _parse_adb_devices_l(output: str) -> List[Dict[str, str]]:
 
 
 def list_connected_devices() -> List[Dict[str, str]]:
-    """Return connected ADB devices with a friendly label (model/device)."""
+    """Return connected ADB devices with a friendly label (preferring config-provided name)."""
     try:
         proc = subprocess.run(["adb", "devices", "-l"], capture_output=True, text=True, check=False)
         out = proc.stdout or ""
-        return _parse_adb_devices_l(out)
+        devices = _parse_adb_devices_l(out)
+        overrides = {d.get("udid"): d.get("name") for d in getattr(config, "DEVICES", [])}
+        for dev in devices:
+            override = overrides.get(dev.get("udid"))
+            if override:
+                dev["name"] = override
+        return devices
     except Exception:
         return []
 
@@ -187,13 +193,20 @@ def get_device_status_snapshot() -> Dict[str, Dict[str, Any]]:
     """
     with _STATUS_LOCK:
         snap = {k: dict(v) for k, v in _DEVICE_STATUS.items()}
+        overrides = {d.get("udid"): d.get("name") for d in getattr(config, "DEVICES", [])}
+        for udid, entry in snap.items():
+            override = overrides.get(udid)
+            if override:
+                entry["label"] = override
         try:
             for d in list_connected_devices():
+                udid = d["udid"]
+                label = overrides.get(udid) or d.get("name") or udid
                 snap.setdefault(
-                    d["udid"],
+                    udid,
                     {
-                        "udid": d["udid"],
-                        "label": d.get("name") or d["udid"],
+                        "udid": udid,
+                        "label": label,
                         "state": "idle",
                         "processed": 0,
                         "success": 0,
@@ -203,9 +216,8 @@ def get_device_status_snapshot() -> Dict[str, Dict[str, Any]]:
                         "ts": 0,
                     },
                 )
-                # Ensure label is friendly if missing
-                if not snap[d["udid"]].get("label"):
-                    snap[d["udid"]]["label"] = d.get("name") or d["udid"]
+                if overrides.get(udid) or not snap[udid].get("label"):
+                    snap[udid]["label"] = label
         except Exception:
             pass
         return snap
