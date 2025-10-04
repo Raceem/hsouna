@@ -17,6 +17,8 @@ NUMBER_JSON_FILE = os.path.join(BASE_DIR, "saudi_numbers.json")
 ALL_CSV_PATH = os.path.join(BASE_DIR, "ALL.csv")
 HOMMES_CSV_PATH = os.path.join(BASE_DIR, "HOMMES.csv")
 FEMMES_CSV_PATH = os.path.join(BASE_DIR, "FEMMES.csv")
+
+TO_DELETE_CSV_PATH = os.path.join(BASE_DIR, "TO_DELETE.csv")
 # Default PDF path
 PDF_FILE = r"C:/Users/SBS/Desktop/Hsouna/_inbox/merged (4).pdf"
 # Directories where confirmation screenshots will be stored

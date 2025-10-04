@@ -274,9 +274,10 @@ def run_creation_on_row(
         safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/imgMuslimTermsCheckbox"), "MuslimTerms")
         safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/imgTermsCheckbox"), "Terms")
         safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvCreateAccount"), "CreateAccount submit")
-
+        time.sleep(1)
         # Mobile number
         safe_send_keys(driver, (AppiumBy.ID, "com.moh.nusukapp:id/edtMobileNo"), str(data.get("numero_tlf", "")), "Mobile number")
+        print("Mobile number entered:", str(data.get("numero_tlf", "")))
         safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvContinue"), "Continue after mobile")
 
         # Email
@@ -294,7 +295,7 @@ def run_creation_on_row(
             low = err.lower()
 
             # Email already used: rotate email and retry
-            if ("email is already used" in low) or ("email" in low and ("already" in low or "used" in low or "use" in low)):
+            if ("adresse" in low) or ("email" in low and ("already" in low or "used" in low or "use" in low)):
                 new_email = pop_first_variant(EMAIL_JSON_FILE) or ""
                 if new_email:
                     email_current = new_email
@@ -345,6 +346,7 @@ def run_creation_on_row(
 
             # Account already exists / visa issues: mark and bail
             if any(k in low for k in (
+                "compte",
                 "your account",
                 "the user",
                 "visa",

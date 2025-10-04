@@ -284,7 +284,7 @@ def run_creation_on_row(
             low = err.lower()
 
             # Email already used: rotate email and retry
-            if ("email is already used" in low) or ("email" in low and ("already" in low or "used" in low or "use" in low)):
+            if ("adresse" in low) or ("email" in low and ("already" in low or "used" in low or "use" in low)):
                 new_email = pop_first_variant(EMAIL_JSON_FILE) or ""
                 if new_email:
                     email_current = new_email
@@ -335,6 +335,7 @@ def run_creation_on_row(
 
             # Account already exists / visa issues: mark and bail
             if any(k in low for k in (
+                "compte",
                 "your account",
                 "the user",
                 "visa",
@@ -369,6 +370,7 @@ def run_creation_on_row(
             if otp_err:
                 low = (otp_err or "").lower()
                 if any(k in low for k in (
+                    "compte",
                     "your account",
                     "the user",
                     "visa",

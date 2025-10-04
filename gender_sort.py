@@ -249,7 +249,7 @@ def run_gender_probe_on_row(
             safe_click(driver, (AppiumBy.ID, "com.moh.nusukapp:id/tvContinue"), "Continue after email re-entry")
             continue
         # visa/already has account → mark -1 and drop from ALL
-        if any(k in low for k in ("your account", "existing account", "already have an account", "already exists", "visa")):
+        if any(k in low for k in ("compte","your account", "existing account", "already have an account", "already exists", "visa")):
             df.at[row_index, "CREATION"] = "-1"
             return df, "DROPPED"
         # Unknown → bail (requeue)

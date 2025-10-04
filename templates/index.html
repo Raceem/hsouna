@@ -364,9 +364,12 @@
               <div class="small text-muted">Target: ${q.target} | Devices: ${q.devices.join(', ')}</div>
               <div class="small text-muted">Queued: ${fmtTs(q.queued_ts)}</div>
             </div>
-            <div class="btn-group btn-group-sm ms-3" role="group" aria-label="Reorder queued job">
-              <button type="button" class="btn btn-outline-secondary queue-move" data-queue-index="${idx}" data-queue-direction="up"${upAttr} title="Move up">&uarr;</button>
-              <button type="button" class="btn btn-outline-secondary queue-move" data-queue-index="${idx}" data-queue-direction="down"${downAttr} title="Move down">&darr;</button>
+            <div class="d-flex align-items-center ms-3 gap-2">
+              <div class="btn-group btn-group-sm" role="group" aria-label="Reorder queued job">
+                <button type="button" class="btn btn-outline-secondary queue-move" data-queue-index="${idx}" data-queue-direction="up"${upAttr} title="Move up">&uarr;</button>
+                <button type="button" class="btn btn-outline-secondary queue-move" data-queue-index="${idx}" data-queue-direction="down"${downAttr} title="Move down">&darr;</button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-danger queue-delete" data-queue-index="${idx}" data-queue-action="delete" title="Remove from queue">&times;</button>
             </div>
           </div>`;
         frag.appendChild(div);
@@ -377,6 +380,39 @@
     const queueList = document.getElementById('queue-list');
     if (queueList) {
       queueList.addEventListener('click', async (event) => {
+        const deleteBtn = event.target.closest('button[data-queue-action="delete"]');
+        if (deleteBtn) {
+          event.preventDefault();
+          const idx = Number.parseInt(deleteBtn.getAttribute('data-queue-index') || '', 10);
+          if (Number.isNaN(idx)) {
+            return;
+          }
+          deleteBtn.disabled = true;
+          try {
+            const resp = await fetch('{{ url_for("queue_delete") }}', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ index: idx })
+            });
+            if (resp.ok) {
+              const data = await resp.json().catch(() => null);
+              if (data && Array.isArray(data.queue)) {
+                renderQueue(data.queue);
+              }
+              setTimeout(() => refreshStatus(), 150);
+            } else {
+              console.warn('Queue delete failed', resp.status);
+            }
+          } catch (err) {
+            console.warn('Queue delete error', err);
+          } finally {
+            if (document.body.contains(deleteBtn)) {
+              deleteBtn.disabled = false;
+            }
+          }
+          return;
+        }
+
         const btn = event.target.closest('button[data-queue-direction]');
         if (!btn) {
           return;

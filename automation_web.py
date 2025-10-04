@@ -1255,6 +1255,38 @@ def status():
         "devices": devices,
     })
 
+@app.route("/queue/delete", methods=["POST"])
+def queue_delete():
+    payload = request.get_json(silent=True) or {}
+    raw_index = payload.get("index")
+    try:
+        index = int(raw_index)
+    except (TypeError, ValueError):
+        return jsonify({"ok": False, "error": "invalid index"}), 400
+
+    with _batches_lock:
+        size = len(_job_queue)
+        if not (0 <= index < size):
+            return jsonify({"ok": False, "error": "index out of range", "size": size}), 400
+        removed = _job_queue.pop(index)
+        snapshot = _queue_snapshot()
+
+    return jsonify({
+        "ok": True,
+        "queue": snapshot,
+        "removed": {
+            "folder": removed.folder,
+            "gender": removed.gender,
+            "mode": getattr(removed, "mode", "reservation"),
+            "target": removed.total_target,
+            "devices": removed.devices,
+            "queued_ts": removed.queued_ts,
+        },
+        "size": len(snapshot),
+    })
+
+
+
 @app.route("/queue/reorder", methods=["POST"])
 def queue_reorder():
     payload = request.get_json(silent=True) or {}
