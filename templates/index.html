@@ -71,7 +71,7 @@
     <section>
       <h2 class="mb-3">CSV Information</h2>
       <div class="row g-3">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 col-xl-3">
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h5 class="card-title mb-2">ALL</h5>
@@ -93,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 col-xl-3">
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h5 class="card-title mb-2">HOMMES</h5>
@@ -116,7 +116,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 col-xl-3">
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h5 class="card-title mb-2">FEMMES</h5>
@@ -136,6 +136,22 @@
                 </div>
                 <button class="btn btn-sm btn-outline-primary" type="submit">Run Creation.py</button>
               </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-xl-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">TO_VERIFY</h5>
+              <p class="mb-0">Rows: <span class="fs-5">{{ csv_stats['to_verify'].total }}</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-xl-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title mb-2">TO_DELETE</h5>
+              <p class="mb-0">Rows: <span class="fs-5">{{ csv_stats['to_delete'].total }}</span></p>
             </div>
           </div>
         </div>
