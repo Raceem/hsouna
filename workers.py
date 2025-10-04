@@ -507,8 +507,16 @@ class DeviceWorker(threading.Thread):
                         else:
                             self._status("moved_to_dest", note)
                     else:
-                        # Drop permanently if CREATION == -1
-                        if str(row_after.get("CREATION", "")).strip() == "-1":
+                        to_delete = str(row_after.get("RESERVATION", "")).strip() == "-1"
+                        if to_delete:
+                            dest = getattr(config, "TO_DELETE_CSV_PATH", "")
+                            if dest:
+                                row_copy = {k: ("" if v is None else str(v)) for k, v in row_after.items() if k != "WORKER"}
+                                os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
+                                append_row_dict(dest, row_copy)
+                            finalize_row(self.src_csv, self.label, row_after, requeue=False)
+                            self._status("routed_to_delete")
+                        elif str(row_after.get("CREATION", "")).strip() == "-1":
                             finalize_row(self.src_csv, self.label, row_after, requeue=False)
                             self._status("dropped_CREATION_-1")
                         else:

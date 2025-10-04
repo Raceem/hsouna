@@ -10,7 +10,7 @@ logger = get_shared_logger("reservation")
 def has_previous_booking(driver) -> bool:
     needles = [
         "You recently visited Rawdah", 
-        "Vous avez déjà une réservation"
+        "récemment"
     ]
     for t in needles:
         try:

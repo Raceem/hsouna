@@ -17,10 +17,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 
 from mail import get_verification_code
-from config import APP_PACKAGE, hard_reset_app, TO_DELETE_CSV_PATH
+from config import APP_PACKAGE, hard_reset_app
 from logutil import get_shared_logger
 from utils_v4 import _set_df, has_booking, has_previous_booking, _save_df,_load_df, has_previous_booking_before_365, pregrant_location_permissions, _pregrant_notification_permissions
-from rowstore import append_row_dict
 
 # -----------------------------------------------------------------------------/
 logger = get_shared_logger("login2")
@@ -209,12 +208,6 @@ def _execute_login_logic(driver, dict, df, index, target_date):
         if has_previous_booking(driver):
             logger.info("Existing previous booking detected; marking RESERVATION=-1 ")
             _set_df(df, index, "RESERVATION", "-1")
-            if 0 <= index < len(df):
-                row_dict = {k: ("" if v is None else v) for k, v in df.iloc[index].to_dict().items()}
-                os.makedirs(os.path.dirname(TO_DELETE_CSV_PATH), exist_ok=True)
-                append_row_dict(TO_DELETE_CSV_PATH, row_dict)
-                df.drop(index, inplace=True)
-                df.reset_index(drop=True, inplace=True)
             return
         has_booking_boolen, extracted_date = has_booking(driver)
         if has_booking_boolen:

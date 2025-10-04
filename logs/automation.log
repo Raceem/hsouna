@@ -26277,3 +26277,1010 @@ NoSuchDriverError: A session is either terminated or not started
     at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
     at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
     at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 16:45:43 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:45:50 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:46:18 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:46:25 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:46:26 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:46:27 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:46:49 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:46:55 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:47:19 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:47:42 | INFO | reservation | login.py:429 | [privacy] Consent sheet not present.
+2025-10-04 16:47:43 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:47:56 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:47:57 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:47:58 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:48:09 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:48:28 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:48:37 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:48:55 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:49:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:49:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:49:30 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:49:55 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:49:58 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:50:13 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:50:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:50:42 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:50:42 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:51:09 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:51:12 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:51:33 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:51:41 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:52:03 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:52:12 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:52:30 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:52:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:52:47 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:52:49 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:53:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:53:07 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:53:22 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:53:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:53:49 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:53:51 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:54:13 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:54:20 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:54:46 | INFO | reservation | login.py:429 | [privacy] Consent sheet not present.
+2025-10-04 16:54:47 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:54:57 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:54:58 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:54:59 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:55:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:55:27 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:55:52 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:55:52 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:55:53 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:56:00 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:56:24 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:56:25 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:56:26 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:56:27 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:56:51 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:57:03 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:57:04 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:57:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:57:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:57:33 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:57:47 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:57:48 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:57:50 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:58:10 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 16:58:11 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 16:58:12 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:58:16 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:58:39 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:58:42 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:59:06 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:59:09 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:59:30 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 16:59:42 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:00:01 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:00:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:00:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:00:38 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:00:51 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:01:04 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:01:23 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:01:24 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:01:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:01:31 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:01:48 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:02:04 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:02:05 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:02:06 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:02:13 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:02:34 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:02:47 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:02:48 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:02:49 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:03:11 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:03:12 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:03:12 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:03:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:03:38 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:03:54 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:03:54 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:03:55 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:04:06 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:04:19 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:04:42 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:04:43 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:04:44 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:04:44 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:05:08 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:05:12 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:05:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:05:49 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:05:50 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:05:51 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:05:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:06:19 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:06:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:06:47 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:06:51 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:07:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:07:16 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:07:39 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:07:49 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:07:50 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:07:51 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:08:03 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:08:27 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:08:27 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:08:27 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:08:28 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:08:52 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:09:03 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:09:04 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:09:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:09:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:09:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:09:39 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:10:01 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:10:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:10:18 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:10:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:10:45 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:10:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:03 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:13 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:21 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:31 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:39 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:50 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:11:57 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:12:08 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:12:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:12:43 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:12:46 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:12:46 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:12:47 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:13:10 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:13:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:13:37 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:13:47 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:13:47 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:13:48 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:14:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:14:27 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:14:28 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:14:28 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:14:33 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:14:57 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:15:09 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:15:10 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:15:10 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:15:21 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:15:38 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:15:46 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:16:06 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:16:17 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:16:18 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:16:19 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:16:35 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:16:42 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:17:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:17:10 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:17:11 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:17:11 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:17:29 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:17:45 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:17:46 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:17:46 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:17:55 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:18:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:18:30 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:18:31 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:18:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:18:51 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:18:52 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:18:53 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:18:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:19:25 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:19:26 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:19:26 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:19:27 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:19:27 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:19:28 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:19:57 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:19:58 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:19:59 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:20:03 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:20:04 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:20:04 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:20:24 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:20:33 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:20:55 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:20:56 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:20:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:21:00 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:21:30 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:21:31 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:21:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:21:34 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:21:35 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:21:36 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:22:03 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:22:04 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:22:04 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:22:05 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:22:22 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:22:22 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:22:39 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:22:59 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:23:00 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:23:01 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:23:07 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:23:26 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:23:47 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:23:47 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:23:48 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:23:58 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:23:59 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:24:00 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:24:17 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:24:29 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:24:44 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:25:02 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:25:03 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:25:04 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:25:11 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:25:21 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:25:44 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:25:54 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:25:55 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:25:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:26:12 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:26:22 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:26:46 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:26:48 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:26:49 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:26:50 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:27:11 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:27:25 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:27:26 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:27:27 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:27:35 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:27:55 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:28:05 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:28:06 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:28:07 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:28:23 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:28:33 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:28:53 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:29:04 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:29:05 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:29:06 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:29:29 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:29:29 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:29:30 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:29:31 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:29:58 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:30:00 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:30:01 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:30:02 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:30:25 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:30:30 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:30:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:30:56 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:31:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:31:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:31:31 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:31:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:32:00 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:32:07 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:32:08 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:32:09 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:32:31 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:32:31 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:32:32 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:32:45 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:32:46 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:32:47 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:32:58 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:33:15 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:33:33 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:33:34 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:33:35 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:33:41 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:34:13 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:34:13 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:34:14 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:34:15 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:34:16 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:34:17 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:34:45 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:34:46 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:34:47 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:34:52 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:34:53 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:34:54 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:35:11 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:35:26 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:35:27 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:35:27 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:35:46 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:35:47 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:35:48 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:35:59 | INFO | reservation | login.py:432 | [privacy] Consent sheet detected; accepting…
+2025-10-04 17:36:00 | INFO | reservation | login.py:458 | [privacy] Consent accepted.
+2025-10-04 17:36:01 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 17:36:17 | WARNING | reservation | login.py:207 | [safe_click] driver error for Continue after DOB: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | ERROR | reservation | login.py:209 | [safe_click] failed to click Continue after DOB after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | WARNING | reservation | login.py:207 | [safe_click] driver error for No mobile prompt: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | ERROR | reservation | login.py:209 | [safe_click] failed to click No mobile prompt after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | WARNING | reservation | login.py:233 | [safe_send_keys] driver error for Password: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | ERROR | reservation | login.py:235 | [safe_send_keys] failed to type into Password: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | WARNING | reservation | login.py:207 | [safe_click] driver error for MuslimTerms: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | ERROR | reservation | login.py:209 | [safe_click] failed to click MuslimTerms after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | WARNING | reservation | login.py:207 | [safe_click] driver error for Terms: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | ERROR | reservation | login.py:209 | [safe_click] failed to click Terms after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | WARNING | reservation | login.py:207 | [safe_click] driver error for CreateAccount submit: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:17 | ERROR | reservation | login.py:209 | [safe_click] failed to click CreateAccount submit after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | WARNING | reservation | login.py:233 | [safe_send_keys] driver error for Mobile number: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | ERROR | reservation | login.py:235 | [safe_send_keys] failed to type into Mobile number: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | WARNING | reservation | login.py:207 | [safe_click] driver error for Continue after mobile: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | ERROR | reservation | login.py:209 | [safe_click] failed to click Continue after mobile after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | WARNING | reservation | login.py:233 | [safe_send_keys] driver error for Email: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | ERROR | reservation | login.py:235 | [safe_send_keys] failed to type into Email: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | WARNING | reservation | login.py:207 | [safe_click] driver error for Continue after email: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:36:18 | ERROR | reservation | login.py:209 | [safe_click] failed to click Continue after email after 2 attempts: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:43:41 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:43:41 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:43:44 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 2424
+2025-10-04 17:43:46 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:43:46 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:43:49 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 7923
+2025-10-04 17:44:30 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:44:30 | INFO | reservation | utils_v4.py:133 | ADB grant failed (ok to ignore): Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:44:30 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:44:30 | INFO | reservation | utils_v4.py:133 | ADB grant failed (ok to ignore): Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:44:32 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 124, in _execute_login_logic
+    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/login_otp_edit_text")))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 104, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 313, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 17:45:28 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:45:28 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:45:31 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 7030
+2025-10-04 17:47:49 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:47:49 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:47:52 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 7030
+2025-10-04 17:48:52 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 17:48:52 | INFO | reservation | utils_v4.py:127 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 17:48:54 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 9652
