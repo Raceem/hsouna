@@ -133,7 +133,7 @@ def setup_driver() -> webdriver.Remote:
 
     # Fast UI settings (ignore failures gracefully)
     try:
-        drv.update_settings({"waitForIdleTimeout": 0, "ignoreUnimportantViews": True})
+        drv.update_settings({"waitForIdleTimeout": 0, "ignoreUnimportantViews": True,"enforceXPath1":True})
     except Exception:
         pass
 
@@ -194,7 +194,7 @@ def _new_driver_for(device: dict) -> webdriver.Remote:
             raise e
 
     try:
-        drv.update_settings({"waitForIdleTimeout": 0, "ignoreUnimportantViews": True})
+        drv.update_settings({"waitForIdleTimeout": 0, "ignoreUnimportantViews": True,"enforceXPath1":True})
     except Exception:
         pass
 

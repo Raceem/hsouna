@@ -27898,3 +27898,253 @@ NoSuchDriverError: A session is either terminated or not started
     at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
     at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
     at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 18:58:43 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:58:43 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:58:43 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:58:43 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:58:46 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 9742
+2025-10-04 18:58:46 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 4829
+2025-10-04 18:59:04 | INFO | login2 | login_v4.py:214 | Booking exists for date: {extracted_date}
+2025-10-04 18:59:04 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:59:04 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '05/10/2025'
+2025-10-04 18:59:04 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:59:05 | INFO | login2 | login_v4.py:214 | Booking exists for date: {extracted_date}
+2025-10-04 18:59:05 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:59:05 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '05/10/2025'
+2025-10-04 18:59:05 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:59:19 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:59:19 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:59:20 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:59:20 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:59:22 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 9967
+2025-10-04 18:59:23 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 2703
+2025-10-04 18:59:37 | INFO | login2 | login_v4.py:214 | Booking exists for date: {extracted_date}
+2025-10-04 18:59:37 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 18:59:37 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '05/10/2025'
+2025-10-04 18:59:37 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 18:59:49 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 18:59:49 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 18:59:52 | INFO | login2 | login_v4.py:126 | ✅ Code trouvé : 7667
+2025-10-04 18:59:59 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=CREATION]: '1' -> '-1'
+2025-10-04 19:00:12 | INFO | login2 | login_v4.py:214 | Booking exists for date: {extracted_date}
+2025-10-04 19:00:12 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:00:12 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '05/10/2025'
+2025-10-04 19:00:12 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '10:00 AM'
+2025-10-04 19:31:13 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 19:31:20 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 19:31:36 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 19:31:49 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:31:49 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:31:51 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 4842
+2025-10-04 19:32:01 | INFO | reservation | login.py:152 | Driver settings updated: waitForIdleTimeout=0, ignoreUnimportantViews=True
+2025-10-04 19:32:25 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:32:25 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:32:27 | WARNING | reservation | login.py:230 | [safe_send_keys] timeout waiting for nafath_otp_edit_text (attempt 1)
+2025-10-04 19:32:27 | ERROR | reservation | login.py:235 | [safe_send_keys] failed to type into nafath_otp_edit_text: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-10-04 19:32:28 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 2124
+2025-10-04 19:32:32 | INFO | reservation | login.py:429 | [privacy] Consent sheet not present.
+2025-10-04 19:32:34 | INFO | reservation | login.py:429 | [privacy] Consent sheet not present.
+2025-10-04 19:32:38 | WARNING | reservation | login.py:204 | [safe_click] timeout waiting for element (attempt 1)
+2025-10-04 19:32:42 | WARNING | reservation | login.py:204 | [safe_click] timeout waiting for element (attempt 2)
+2025-10-04 19:32:42 | ERROR | reservation | login.py:209 | [safe_click] failed to click element after 2 attempts: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-10-04 19:37:25 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:37:25 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:37:28 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 2124
+2025-10-04 19:37:47 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:37:47 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:37:50 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 6503
+2025-10-04 19:38:07 | INFO | login2 | login_v4.py:223 | Existing previous booking detected; marking RESERVATION=-1 
+2025-10-04 19:38:07 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '-1'
+2025-10-04 19:38:15 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:38:15 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:38:17 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 1141
+2025-10-04 19:38:29 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:38:29 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:38:31 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 5214
+2025-10-04 19:38:47 | INFO | login2 | login_v4.py:312 | ALL Done
+2025-10-04 19:38:47 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:38:47 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:38:47 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:39:02 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:39:02 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:39:04 | INFO | login2 | login_v4.py:312 | ALL Done
+2025-10-04 19:39:04 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:39:04 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:39:04 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:39:05 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 5752
+2025-10-04 19:39:35 | ERROR | login2 | login_v4.py:57 | run_login_on_row fatal: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 67, in _execute_login_logic
+    if not _perform_login_step(driver, row_dict, df, index):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 89, in _perform_login_step
+    sign_in_button = wait.until(EC.presence_of_element_located((AppiumBy.ID, "com.moh.nusukapp:id/edtSearch")))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\wait.py", line 129, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 104, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\appium\webdriver\webdriver.py", line 384, in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'POST /element' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at AndroidUiautomator2Driver.doFindElementOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\lib\commands\find.js:40:5)
+    at doFind (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:47:17)
+    at wrappedCondFn (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:141:14)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:219:20)
+    at spin (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:229:14)
+    at waitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\asyncbox\lib\asyncbox.js:236:10)
+    at AndroidUiautomator2Driver.implicitWaitForCondition (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\timeout.ts:143:12)
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\SBS\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:70:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 55, in run_login_on_row
+    _execute_login_logic(driver, row_dict, df, row_index, target_ddmm)
+  File "C:\Users\SBS\Downloads\agence\login_v4.py", line 73, in _execute_login_logic
+    driver.terminate_app("com.moh.nusukapp")
+  File "c:\Python312\Lib\site-packages\appium\webdriver\extensions\applications.py", line 162, in terminate_app
+    return self.assert_extension_exists(ext_name).execute_script(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+  File "c:\Python312\Lib\site-packages\appium\webdriver\errorhandler.py", line 125, in check_response
+    raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:311:15)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:514:15
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\body-parser\lib\read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\SBS\AppData\Roaming\npm\node_modules\appium\node_modules\raw-body\index.js:287:7)
+2025-10-04 19:42:22 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:42:22 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:42:26 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 5752
+2025-10-04 19:42:29 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:42:29 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:42:32 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 2682
+2025-10-04 19:42:57 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:42:57 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:42:57 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:42:57 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:43:10 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:43:10 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:43:13 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 5428
+2025-10-04 19:43:16 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:43:16 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:43:18 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 2191
+2025-10-04 19:43:52 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:43:52 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:43:54 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 6850
+2025-10-04 19:43:54 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:43:54 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:43:54 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:43:54 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:44:14 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:44:14 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:44:17 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 7785
+2025-10-04 19:44:23 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:44:23 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:44:23 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:44:23 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:44:41 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:44:41 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:44:44 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 5942
+2025-10-04 19:44:51 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:44:51 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:44:51 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:44:51 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:45:13 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:45:13 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:45:13 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:45:13 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:45:29 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:45:29 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:45:30 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:45:30 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:45:32 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 3298
+2025-10-04 19:45:33 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 3298
+2025-10-04 19:46:01 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:46:01 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:46:01 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:46:01 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:46:14 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:46:14 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:46:14 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:46:14 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'
+2025-10-04 19:46:18 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_FINE_LOCATION
+2025-10-04 19:46:19 | INFO | reservation | utils_v4.py:140 | ADB grant: pm grant com.moh.nusukapp android.permission.ACCESS_COARSE_LOCATION
+2025-10-04 19:46:21 | INFO | login2 | login_v4.py:134 | ✅ Code trouvé : 5229
+2025-10-04 19:46:50 | INFO | login2 | login_v4.py:318 | ALL Done
+2025-10-04 19:46:50 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=RESERVATION]: '0' -> '1'
+2025-10-04 19:46:50 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=heure]: '' -> '02:00 AM'
+2025-10-04 19:46:50 | INFO | reservation | utils_v4.py:108 | DF Update [row=0, col=date_reservation]: '' -> '31/10/2025'

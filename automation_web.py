@@ -185,6 +185,8 @@ def get_csv_stats():
         "all": ("ALL", getattr(config, "ALL_CSV_PATH", "")),
         "hommes": ("HOMMES", getattr(config, "HOMMES_CSV_PATH", "")),
         "femmes": ("FEMMES", getattr(config, "FEMMES_CSV_PATH", "")),
+        "to_verify": ("TO_VERIFY", getattr(config, "TO_VERIFY_CSV_PATH", "")),
+        "to_delete": ("TO_DELETE", getattr(config, "TO_DELETE_CSV_PATH", "")),
     }
     stats = {}
     for key, (label, path) in csv_files.items():
